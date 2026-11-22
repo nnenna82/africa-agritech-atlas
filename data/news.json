@@ -1,0 +1,317 @@
+[
+ {
+  "countries": [
+   "CMR"
+  ],
+  "date": "2026-11-17",
+  "headline": "Cameroon earmarks CFA7 billion to widen Ndop rice plain cultivation",
+  "id": "n-20261117-cameroon-ndop-rice",
+  "region": "Central",
+  "segment": "processing",
+  "source": "Business in Cameroon",
+  "summary": "Cameroon's agriculture minister announced CFA7 billion to add more than 5,000 hectares of rice land in the Ndop valley under the PIISAH import-substitution plan. A new mill there can handle 20 tonnes of paddy an hour and could yield about 65,000 tonnes of milled rice a year, against 869,039 tonnes of rice imported in 2025.",
+  "type": "policy",
+  "url": "https://www.businessincameroon.com/agriculture/1711-17201-cameroon-allocates-cfa7-billion-to-expand-ndop-rice-production-reduce-reliance-on-imports",
+  "why": "It shows the state backing land, mechanisation and milling together to cut rice imports, though the funding schedule has not been published."
+ },
+ {
+  "countries": [
+   "CMR"
+  ],
+  "date": "2026-11-17",
+  "headline": "Douala port signs deal for 300 MW gas power plant",
+  "id": "n-20261117-douala-port-gas-plant",
+  "region": "Central",
+  "segment": "energy",
+  "source": "Ecofin Agency",
+  "summary": "Douala Port Power Corporation signed with a Genertec CMC-led Chinese consortium for a 300 MW gas-fired plant at Douala-Bonabéri, valued at about CFAF628 billion (roughly $1.06 billion). The first phase covers a 102 MW unit and a gas pipeline of about 200 km from Kribi, under a 25-year build-operate-transfer concession.",
+  "type": "infrastructure",
+  "url": "https://www.ecofinagency.com/news-infrastructures/1711-60863-cameroon-douala-port-plans-300-megawatt-gas-plant-in-two-phases",
+  "why": "More reliable power at Central Africa's main port would help cold storage, agro-processing and export handling, but the lenders and gas supplier are still unnamed."
+ },
+ {
+  "countries": [
+   "BDI"
+  ],
+  "date": "2026-11-16",
+  "headline": "Burundi starts irrigation works on 1,735 hectares in Ruzizi Plain",
+  "id": "n-20261116-burundi-ruzizi-irrigation",
+  "region": "East",
+  "segment": "irrigation & water",
+  "source": "allAfrica (AfDB release)",
+  "summary": "Work has started to irrigate three sites totalling 1,735 hectares in western Burundi under a project led by the government and the AfDB, with IFAD support. The Burundi component is funded with $77.98 million in grants and aims to lift rice yields from 3.5 to 5.5 t/ha and reach about 120,000 rural households.",
+  "type": "infrastructure",
+  "url": "https://allafrica.com/stories/202611170088.html",
+  "why": "It is a concrete grant-funded irrigation build-out in a fragile state and includes agro-processing hubs and rural roads."
+ },
+ {
+  "countries": [
+   "GHA"
+  ],
+  "date": "2026-11-16",
+  "headline": "Dangote in talks to process 500,000 tonnes of Ghanaian cocoa",
+  "id": "n-20261116-dangote-ghana-cocoa",
+  "region": "West",
+  "segment": "processing",
+  "source": "Ecofin Agency",
+  "summary": "Ghana's finance minister said Aliko Dangote has proposed processing 500,000 tonnes of cocoa locally, as the 2027 budget targets 50% domestic processing by 2028. Existing grinders already run at half capacity or less because they cannot get enough beans.",
+  "type": "company",
+  "url": "https://www.ecofinagency.com/news-agriculture/1611-60832-dangote-eyes-ghana-cocoa-where-plants-already-struggle-to-find-beans",
+  "why": "A large new grinder would compete with existing plants for scarce beans, which could reshape local cocoa value addition and bean allocation."
+ },
+ {
+  "countries": [
+   "GHA",
+   "ZMB",
+   "MOZ",
+   "COD",
+   "BEN",
+   "MAR"
+  ],
+  "date": "2026-11-16",
+  "headline": "Dutch avian flu outbreaks threaten poultry supply to five African importers",
+  "id": "n-20261116-dutch-bird-flu-poultry-imports",
+  "region": "Continental",
+  "segment": "logistics & market access",
+  "source": "Ecofin Agency",
+  "summary": "After new bird flu outbreaks in the Netherlands, Morocco suspended Dutch poultry imports on 11 November. Ghana, Zambia, Mozambique, DR Congo and Benin together took about 83% of the roughly 97,000 tonnes of Dutch poultry shipped to Africa in 2025, and Dutch product made up about 54% of Zambia's poultry imports.",
+  "type": "market",
+  "url": "https://www.ecofinagency.com/news-agriculture/1611-60843-dutch-bird-flu-raises-supply-risks-for-five-major-african-poultry-importers",
+  "why": "Import bans could tighten frozen poultry supply and raise prices, which opens room for local poultry producers."
+ },
+ {
+  "countries": [
+   "ZAF"
+  ],
+  "date": "2026-11-16",
+  "headline": "South African farm employment falls by 34,000 in third quarter",
+  "id": "n-20261116-sa-agri-jobs-q3",
+  "region": "Southern",
+  "segment": "inputs & seeds",
+  "source": "Food For Mzansi",
+  "summary": "Stats SA's labour survey shows agriculture lost 34,000 jobs between Q2 and Q3 2026, with primary farm employment down about 4% to 911,000. Economists attribute the drop to rising input costs, even as total national employment grew by 101,000.",
+  "type": "market",
+  "url": "https://www.foodformzansi.co.za/sa-agriculture-sheds-34-000-jobs-as-input-costs-squeeze-farmers/",
+  "why": "Farm job losses during a period of overall job growth point to cost pressure on producers, which matters for labour planning and for policy support."
+ },
+ {
+  "countries": [
+   "TZA"
+  ],
+  "date": "2026-11-16",
+  "headline": "Tanzania negotiates $280 million Turkish loan for railway sections",
+  "id": "n-20261116-tanzania-sgr-turkish-loan",
+  "region": "East",
+  "segment": "transport",
+  "source": "Ecofin Agency",
+  "summary": "Tanzania is in final talks with Turkey's Exim Bank for $280 million to complete 533 km of its standard gauge railway between Makutupora, Tabora and Isaka. Separately, on 4 November the AfDB announced a $1.2 billion financing package for the Tabora–Kigoma section.",
+  "type": "infrastructure",
+  "url": "https://www.ecofinagency.com/news-infrastructures/1611-60841-tanzania-seeks-280-million-turkish-loan-to-complete-key-railway-sections",
+  "why": "The SGR is expected to cut freight costs from Dar es Salaam to inland and DRC markets, which would affect how farm inputs and produce move across the region."
+ },
+ {
+  "countries": [
+   "GHA"
+  ],
+  "date": "2026-11-15",
+  "headline": "Ghana industrial-zone solar plant secures $18.15 million debt commitment",
+  "id": "n-20261115-ghana-dawa-solar-industrial",
+  "region": "West",
+  "segment": "industrial zones",
+  "source": "Ecofin Agency",
+  "summary": "The Emerging Africa & Asia Infrastructure Fund committed $18.15 million to a 100 MWp solar plant at Dawa, part of a $60.6 million debt package alongside IFC and IDA. The $88.6 million project will serve more than 95 businesses in the Dawa and Tema industrial zones.",
+  "type": "infrastructure",
+  "url": "https://www.ecofinagency.com/news-industry/1511-60824-ghana-based-100-mwp-solar-project-secures-18-15-million-to-power-industrial-zones",
+  "why": "Cheaper and steadier power for industrial zones lowers operating costs for food processors and agro-industries located there."
+ },
+ {
+  "countries": [
+   "AU"
+  ],
+  "date": "2026-11-15",
+  "headline": "Higher oil prices raise food and transport costs for African importers",
+  "id": "n-20261115-oil-price-food-costs",
+  "region": "Continental",
+  "segment": "energy",
+  "source": "Ecofin Agency",
+  "summary": "The World Bank expects energy prices to rise 32% in 2026, with Brent averaging $91 a barrel, and food commodity prices to rise about 10%. Fuel-importing African countries face tighter diesel supply and higher freight costs.",
+  "type": "market",
+  "url": "https://www.ecofinagency.com/news-industry/1511-60821-global-oil-price-surge-adds-to-food-and-transport-cost-pressures-in-african-fuel-importing-countries",
+  "why": "Diesel prices feed directly into costs for mechanisation, irrigation pumping and haulage, so producers' margins will tighten."
+ },
+ {
+  "countries": [
+   "ZAF"
+  ],
+  "date": "2026-11-14",
+  "headline": "South African citrus exports slip to 201 million cartons",
+  "id": "n-20261114-sa-citrus-exports-2026",
+  "region": "Southern",
+  "segment": "logistics & market access",
+  "source": "Food For Mzansi",
+  "summary": "South Africa shipped 201 million cartons of citrus in 2026, down 1.5% on 2025 and 4% below the April forecast. Lemons grew 23% while navels fell 20%, and growers cite shipping disruption, Durban port backlogs, floods and a strong rand.",
+  "type": "market",
+  "url": "https://www.foodformzansi.co.za/sa-citrus-exports-dip-to-201-million-cartons-after-bruising-season/",
+  "why": "Port and freight bottlenecks are now a main limit on export earnings for one of Africa's largest fresh-produce industries."
+ },
+ {
+  "countries": [
+   "CIV",
+   "GHA",
+   "BFA",
+   "NGA",
+   "MLI"
+  ],
+  "date": "2026-11-13",
+  "headline": "Shea sector lacks reliable production figures across 20-plus countries",
+  "id": "n-20261113-shea-production-data-gap",
+  "region": "West",
+  "segment": "data",
+  "source": "Ecofin Agency",
+  "summary": "Analysts say no one has a clear figure for how much shea is produced or collected across a savanna belt covering more than 20 countries. The last industry-wide report covered 2010–2020, and the planned 2021–2026 update has no funding yet. Côte d'Ivoire officially recorded 51,697 tonnes of kernels in 2025/26.",
+  "type": "research",
+  "url": "https://www.ecofinagency.com/news/1311-60783-africa-s-shea-industry-flies-blind-on-how-much-it-produces",
+  "why": "Without basic supply data it is hard to plan processing investment, price kernels or design policy for a crop that matters to millions of rural women."
+ },
+ {
+  "countries": [
+   "ZWE"
+  ],
+  "date": "2026-11-12",
+  "headline": "Zimbabwe lawmakers propose $50-per-hectare levy on idle farms",
+  "id": "n-20261112-zimbabwe-idle-farm-levy",
+  "region": "Southern",
+  "segment": "policy",
+  "source": "Farmer's Weekly",
+  "summary": "A parliamentary agriculture committee proposed a yearly US$50/ha charge on large farms left idle without good reason, rising each year the land stays unused. The revenue would be ring-fenced for irrigation, extension and rural infrastructure, with exemptions for drought or hardship.",
+  "type": "policy",
+  "url": "https://www.farmersweekly.co.za/agri-news/africa/zimbabwe-portfolio-committee-proposes-annual-levy-on-idle-farms/",
+  "why": "If adopted, it would change the cost of holding unused farmland and could speed up leasing or investment in under-used land."
+ },
+ {
+  "countries": [
+   "ZAF",
+   "KEN",
+   "MAR"
+  ],
+  "date": "2026-11-11",
+  "headline": "African avocado exporters see uneven 2026 results",
+  "id": "n-20261111-african-avocado-exports-2026",
+  "region": "Continental",
+  "segment": "logistics & market access",
+  "source": "Ecofin Agency",
+  "summary": "South Africa exported 21 million 4-kg cartons, up 16%. Kenya stopped sea-freight harvesting early from 30 October because too little fruit was export-ready. Morocco expects about 100,000 tonnes of exports for 2026/27, up from roughly 70,000 tonnes last season.",
+  "type": "market",
+  "url": "https://www.ecofinagency.com/news-agriculture/1111-60709-africas-avocado-exporters-face-mixed-fortunes-in-2026-season",
+  "why": "The results show how weather, freight costs and quality rules shape returns for Africa's growing avocado export sector."
+ },
+ {
+  "countries": [
+   "EGY"
+  ],
+  "date": "2026-11-10",
+  "headline": "Egypt reports 11 million tonnes of wheat as farmland expands",
+  "id": "n-20261110-egypt-wheat-11mt",
+  "region": "North",
+  "segment": "inputs & seeds",
+  "source": "Daily News Egypt",
+  "summary": "Egypt's agriculture minister told the Senate that wheat output reached 11 million tonnes from 3.7 million feddans, with total farmland at 10.5 million feddans. Fertiliser subsidies exceeded EGP 35 billion, and farm exports reached 9.5 million tonnes.",
+  "type": "market",
+  "url": "https://dailynewsegypt.com/2026/11/10/egypts-wheat-output-reaches-11m-tonnes-agriculture-minister-tells-senate/",
+  "why": "Higher domestic wheat output in Africa's largest wheat importer affects regional grain trade and shows what large input subsidies can deliver."
+ },
+ {
+  "countries": [
+   "ETH"
+  ],
+  "date": "2026-11-09",
+  "headline": "IFC invests in Ethiopian agri-lending platform Kifiya",
+  "id": "n-20261109-kifiya-ifc-investment",
+  "region": "East",
+  "segment": "finance & insurance",
+  "source": "Disrupt Africa",
+  "summary": "The IFC made an undisclosed investment in Kifiya, whose AI credit-scoring system has supported more than $1 billion in lending. Its farmer-profiling project in Ethiopia has already registered more than 1.2 million farmers.",
+  "type": "funding",
+  "url": "https://disruptafrica.com/2026/11/09/ethiopian-fintech-kifiya-secures-ifc-investment-to-scale-agricultural-lending/",
+  "why": "Backing from a development finance institution for data-driven credit scoring could widen smallholder access to loans in markets where collateral is scarce."
+ },
+ {
+  "countries": [
+   "MAR",
+   "MRT",
+   "SEN"
+  ],
+  "date": "2026-11-09",
+  "headline": "Morocco halts new tomato export permits for African markets",
+  "id": "n-20261109-morocco-tomato-export-curb",
+  "region": "North",
+  "segment": "policy",
+  "source": "Ecofin Agency",
+  "summary": "From 5 November, Morocco stopped issuing new tomato export permits for African destinations to lower domestic prices after production problems in Souss-Massa. Mauritania alone imported about 34,000 tonnes of Moroccan tomatoes in 2025, while European shipments are unaffected.",
+  "type": "policy",
+  "url": "https://www.ecofinagency.com/news-agriculture/0911-60637-morocco-limits-tomato-exports-to-africa-as-domestic-prices-rise",
+  "why": "The move shows how quickly export controls can cut supply to West African importers and create openings for their local growers."
+ },
+ {
+  "countries": [
+   "NGA",
+   "KEN",
+   "UGA"
+  ],
+  "date": "2026-11-05",
+  "headline": "Solar refrigeration firm Koolboks secures private credit from TLG Capital",
+  "id": "n-20261105-koolboks-tlg-credit",
+  "region": "West",
+  "segment": "storage & cold chain",
+  "source": "Nairametrics",
+  "summary": "Nigeria-based Koolboks received a credit facility of undisclosed size from TLG Capital, backed by a Cascador guarantee arranged with Morgan Stanley. The company has sold more than 15,000 solar freezers and operates in Nigeria, Kenya and Uganda.",
+  "type": "funding",
+  "url": "https://nairametrics.com/2026/11/05/koolboks-secures-tlg-capital-funding-to-expand-solar-cooling-across-africa/",
+  "why": "Debt finance for off-grid cooling can expand cold storage for traders and small food businesses who lack reliable power."
+ },
+ {
+  "countries": [
+   "TZA"
+  ],
+  "date": "2026-11-04",
+  "headline": "AfDB lends $60 million to recapitalise Tanzania's agricultural development bank",
+  "id": "n-20261104-afdb-tanzania-tadb-equity",
+  "region": "East",
+  "segment": "finance & insurance",
+  "source": "allAfrica (AfDB release)",
+  "summary": "The AfDB approved a $60 million loan, which Tanzania will invest as equity in the Tanzania Agricultural Development Bank, and the government will add a matching $60 million. Agriculture employs about 65% of Tanzanians but receives only about 12% of private credit.",
+  "type": "funding",
+  "url": "https://allafrica.com/stories/202611050699.html",
+  "why": "A larger capital base should let TADB lend more to farmers and agribusinesses and help narrow an estimated $1.5 billion annual financing gap."
+ },
+ {
+  "countries": [
+   "AU"
+  ],
+  "date": "2026-11-04",
+  "headline": "AU Commission chair calls for agrifood overhaul at zero-hunger meeting",
+  "id": "n-20261104-au-ifrc-zero-hunger",
+  "region": "Continental",
+  "segment": "policy",
+  "source": "APO Group / Africa Newsroom (AU release)",
+  "summary": "At an AU–IFRC meeting on ending hunger, AU Commission chair Mahmoud Ali Youssouf called for climate-resilient farming, more intra-African trade and the use of technology such as AI to raise farm productivity. He presented the CAADP 2026–2035 plan as the framework for this work.",
+  "type": "policy",
+  "url": "https://www.africa-newsroom.com/press/advancing-africas-path-towards-zero-hunger-through-stronger-partnerships?lang=en",
+  "why": "It signals continental priorities under the new CAADP Kampala agenda, which governments and donors use to align their agriculture spending."
+ },
+ {
+  "countries": [
+   "GHA"
+  ],
+  "date": "2026-11-04",
+  "headline": "Ghanaian agritech Wami Agro gets follow-on backing from Sahara, Acumen",
+  "id": "n-20261104-wami-agro-follow-on",
+  "region": "West",
+  "segment": "finance & insurance",
+  "source": "Dealroom News",
+  "summary": "Sahara Impact Ventures and Acumen provided follow-on grant funding of undisclosed size to Wami Agro, which supplies inputs on credit, repaid at harvest, to more than 60,000 smallholders. The company plans a processing facility and aims to reach 100,000 farmers by 2027.",
+  "type": "funding",
+  "url": "https://dealroom.co/news/169766-sahara-impact-ventures-acumen-back-ghanas-wami-agro-in-follow-on-grant/",
+  "why": "Input credit repaid at harvest, tied to buyer links, is a model several Ghanaian agritechs are now scaling."
+ }
+]

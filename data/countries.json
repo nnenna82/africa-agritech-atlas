@@ -1,0 +1,3093 @@
+[
+ {
+  "ag_gdp_pct": 13.1,
+  "ag_jobs_pct": 9.3,
+  "aidi_rank": 8,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Algiers",
+  "deep": false,
+  "electricity_access_pct": 100,
+  "flagship_programs": [
+   "Plan d'Action Agricole / Feuille de route agricole 2020-2024",
+   "Desert agriculture expansion (Adrar, El Menia) programme"
+  ],
+  "internet_users_pct": 77.4,
+  "iso3": "DZA",
+  "name": "Algeria",
+  "population_m": 46.16,
+  "recs": [
+   "AMU"
+  ],
+  "region": "North",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge"
+  ],
+  "summary": "Agriculture contributes about 13.1% of GDP and employs about 9.3% of workers, with no score in the 4th CAADP Biennial Review (did not report in 2023). Around 100% of the population has electricity access and 77.4% use the internet, with an AfDB AIDI 2024 rank of 8/54.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 35.3,
+    "ag_spend_pct_budget": 4.3,
+    "ag_va_per_worker_usd": 21681,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 1.54,
+    "electricity_pct": 100,
+    "fertilizer_kg_ha": 18.24,
+    "internet_pct": 77.4,
+    "irrigated_pct_cropland": 14.76
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 23,
+    "infrastructure": 94,
+    "inputs_water": 70,
+    "policy": 43,
+    "productivity": 76
+   },
+   "score": 61
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 13.7,
+  "ag_jobs_pct": 18.7,
+  "aidi_rank": 2,
+  "aidi_score": 91.43,
+  "caadp_br4_score": 6.83,
+  "capital": "Cairo",
+  "deep": true,
+  "electricity_access_pct": 100,
+  "flagship_programs": [
+   "Sustainable Agricultural Development Strategy 2030",
+   "New Delta / Toshka land reclamation projects",
+   "Hayah Karima (Decent Life) rural initiative"
+  ],
+  "internet_users_pct": 74.6,
+  "iso3": "EGY",
+  "name": "Egypt",
+  "narrative": "Egypt is ahead on state-led scale: it is reclaiming desert land under a centrally run megaproject model (the New Delta, about 2.2 million feddans, roughly LE800bn / $15bn spent so far, inaugurated May 2026), and it has paired this with drainage-water reuse, silos, logistics corridors and a digital Farmer's Card used for fertilizer payments. Policy is consistent, because agriculture is framed as a national-security issue. The government says it is self-sufficient in rice, sugar, poultry, eggs and fresh milk, and it is targeting 50% wheat self-sufficiency. The weak points are structural. Agriculture is almost entirely irrigated, so it depends on a fixed Nile allocation. Old-lands holdings are tiny and fragmented. Public investment runs through military-linked bodies (the Future of Egypt Authority, the Armed Forces Engineering Authority and NSPO), which crowds out private and smallholder-led models and makes the data less transparent. Research capacity is deep (ARC, ASRT), but extension has eroded and agri-tech startups are still small. Donors (Italy's AgriTech4Egypt, CGIAR, EBRD) fill much of the innovation-finance gap. Overall, Egypt leads on irrigation, storage and land-expansion infrastructure, and lags on farmer-level productivity, inclusive finance and water-use efficiency in the old lands.",
+  "population_m": 114.54,
+  "recs": [
+   "COMESA"
+  ],
+  "region": "North",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf",
+   "https://intelpoint.co/insights/seychelles-tops-africas-2024-infrastructure-index-with-a-near-perfect-score-of-99-77/",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge",
+   "https://english.ahram.org.eg/News/565382.aspx",
+   "https://www.egypttoday.com/Article/1/146530/Agriculture-Min-announces-self-sufficiency-in-5-essential-commodity-groups",
+   "https://www.thenationalnews.com/news/mena/2026/05/17/egypts-president-opens-new-delta-project-to-grow-wheat-in-desert-with-artificial-river/",
+   "https://alliancebioversityciat.org/stories/agritech4egypt-strategic-egypt-italy-partnership-translating-research-market-ready-solutions",
+   "https://allafrica.com/stories/202512290294.html",
+   "https://egyptian-gazette.com/egypt/toshka-back-on-track/",
+   "https://www.sekem.com/en/takreem-awards-ceo-helmy-abouleish-in-grand-celebration-of-arab-excellence/"
+  ],
+  "strengths": [
+   "Fully irrigated system, with very large state investment in land reclamation (New Delta, Toshka, Sinai) and drainage-water treatment (El Hammam, up to 7.5 million m3/day)",
+   "Policy consistency: the 2030 Sustainable Agricultural Development Strategy and a 5-pillar food-security strategy (2026)",
+   "Self-sufficiency claimed in rice, sugar, poultry, eggs and fresh milk (MoALR, April 2026)",
+   "Strong research base: Agricultural Research Centre (ARC) and ASRT, with about 14 new varieties expected to be registered in 2026",
+   "Digital farmer registry and Farmer's Card for subsidized fertilizer payments, targeted for nationwide rollout by 2026",
+   "Export-oriented horticulture with access to EU and Gulf markets"
+  ],
+  "summary": "Agriculture contributes about 13.7% of GDP and employs about 18.7% of workers, with a 4th CAADP Biennial Review score of 6.83/10 against the 9.29 benchmark (not on track). Around 100% of the population has electricity access and 74.6% use the internet, with an AfDB AIDI 2024 score of 91.43 (rank 2/54).",
+  "atlas": {
+   "indicators": {
+    "account_pct": 43.1,
+    "ag_spend_pct_budget": 2.2,
+    "ag_va_per_worker_usd": 8942,
+    "caadp_br4": 6.83,
+    "cereal_yield_t_ha": 7.36,
+    "electricity_pct": 100,
+    "fertilizer_kg_ha": 407.39,
+    "internet_pct": 74.6,
+    "irrigated_pct_cropland": 89.95
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 40,
+    "infrastructure": 91,
+    "inputs_water": 100,
+    "policy": 48,
+    "productivity": 94
+   },
+   "score": 75
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 1.7,
+  "ag_jobs_pct": 8.7,
+  "aidi_rank": 3,
+  "aidi_score": 85.84,
+  "caadp_br4_score": null,
+  "capital": "Tripoli",
+  "deep": false,
+  "electricity_access_pct": 70.2,
+  "flagship_programs": [
+   "Great Man-Made River Project"
+  ],
+  "internet_users_pct": 82,
+  "iso3": "LBY",
+  "name": "Libya",
+  "population_m": 7.31,
+  "recs": [
+   "AMU",
+   "COMESA"
+  ],
+  "region": "North",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://intelpoint.co/insights/seychelles-tops-africas-2024-infrastructure-index-with-a-near-perfect-score-of-99-77/",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge"
+  ],
+  "summary": "Agriculture contributes about 1.7% of GDP and employs about 8.7% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 70.2% of the population has electricity access and 82% use the internet, with an AfDB AIDI 2024 score of 85.84 (rank 3/54).",
+  "atlas": {
+   "indicators": {
+    "account_pct": 33.1,
+    "ag_spend_pct_budget": null,
+    "ag_va_per_worker_usd": 8540,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.66,
+    "electricity_pct": 70.2,
+    "fertilizer_kg_ha": 18.49,
+    "internet_pct": 82,
+    "irrigated_pct_cropland": 22.93
+   },
+   "n_pillars": 4,
+   "pillars": {
+    "finance": 21,
+    "infrastructure": 82,
+    "inputs_water": 76,
+    "policy": null,
+    "productivity": 51
+   },
+   "score": 58
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 18.6,
+  "ag_jobs_pct": 32.7,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Nouakchott",
+  "deep": false,
+  "electricity_access_pct": 47.7,
+  "flagship_programs": [
+   "Programme National d'Investissement Agricole et de Securite Alimentaire (PNIASAN)"
+  ],
+  "internet_users_pct": 45.8,
+  "iso3": "MRT",
+  "name": "Mauritania",
+  "population_m": 5.02,
+  "recs": [
+   "AMU"
+  ],
+  "region": "North",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 18.6% of GDP and employs about 32.7% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 47.7% of the population has electricity access and 45.8% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 27.3,
+    "ag_spend_pct_budget": 5.4,
+    "ag_va_per_worker_usd": 5080,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 1.54,
+    "electricity_pct": 47.7,
+    "fertilizer_kg_ha": 8.34,
+    "internet_pct": 45.8,
+    "irrigated_pct_cropland": 9.78
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 17,
+    "infrastructure": 46,
+    "inputs_water": 58,
+    "policy": 54,
+    "productivity": 68
+   },
+   "score": 49
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 10.1,
+  "ag_jobs_pct": 29.6,
+  "aidi_rank": 7,
+  "aidi_score": null,
+  "caadp_br4_score": 6.99,
+  "capital": "Rabat",
+  "deep": true,
+  "electricity_access_pct": 100,
+  "flagship_programs": [
+   "Generation Green 2020-2030",
+   "National Water Supply and Irrigation Programme 2020-2027"
+  ],
+  "internet_users_pct": 91.2,
+  "iso3": "MAR",
+  "name": "Morocco",
+  "narrative": "Morocco is the continent's most commercially advanced agricultural economy. Two decades of continuous strategy (Plan Maroc Vert 2008-2020, then Generation Green 2020-2030) have brought 108bn dirhams of contracted investment since 2020 across 20 programme contracts. Drip irrigation has reached ~930,000 ha toward a 1m-ha target, and OCP's fertiliser, agronomy and digital advisory ecosystem (Al Moutmir, UM6P) is world class. Ports (Tanger Med), roads and a high-renewables power system support export horticulture to Europe. The binding constraint is water. Multi-year droughts depleted dam reserves (agricultural dams were 26% full in Jan 2025), and the state's answer is the 2020-2027 National Drinking Water and Irrigation Programme plus 1.7bn m3/yr of desalination by 2030. The Generation Green mid-term review (BCG, 2026) is looking at an uneven split: export agriculture has thrived, while rain-fed smallholders, livestock and the rural 'middle class' target still lag. Collective and fragmented land tenure (soulaliyate lands) holds back investment. A new government (PM Fatima Ezzahra El Mansouri, Oct 2026) moved the agriculture portfolio to Khalid Hatimy and renamed it to include 'Food Sovereignty', which signals a shift toward domestic food security.",
+  "population_m": 37.71,
+  "recs": [
+   "AMU"
+  ],
+  "region": "North",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge",
+   "https://www.moroccoworldnews.com/2026/10/342433/khalid-hatimys-journey-from-agribusiness-to-being-moroccos-agriculture-minister/",
+   "https://www.moroccoworldnews.com/2026/10/342414/king-mohammed-vi-presides-over-ceremony-to-appoint-new-government-members/",
+   "https://old.medias24.com/2026/04/21/to-accelerate-its-transformation-ocp-overhauls-its-internal-organization-and-reshapes-its-top-leadership-1663207/",
+   "https://africa24tv.com/morocco-108-billion-dirhams-invested-since-2020-to-transform-agriculture/",
+   "https://hortidaily.com/article/9639707/morocco-wants-to-equip-one-million-hectares-with-localized-irrigation-by-2030",
+   "https://www.moroccoworldnews.com/2025/07/228204/morocco-sets-sights-on-2030-water-security-with-boost-to-desalination-dam-projects/"
+  ],
+  "strengths": [
+   "Long-term strategy continuity (Plan Maroc Vert to Generation Green) with contract-based delivery",
+   "~930,000 ha under drip irrigation with state subsidy (FDA)",
+   "OCP/UM6P ecosystem: fertiliser, soil mapping, agronomic advisory, R&D",
+   "World-class logistics (Tanger Med) and strong renewable energy build-out",
+   "Export-oriented horticulture with EU market access"
+  ],
+  "summary": "Agriculture contributes about 10.1% of GDP and employs about 29.6% of workers, with a 4th CAADP Biennial Review score of 6.99/10 against the 9.29 benchmark (not on track). Around 100% of the population has electricity access and 91.2% use the internet, with an AfDB AIDI 2024 rank of 7/54.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 44.4,
+    "ag_spend_pct_budget": 3.8,
+    "ag_va_per_worker_usd": 3898,
+    "caadp_br4": 6.99,
+    "cereal_yield_t_ha": 1.24,
+    "electricity_pct": 100,
+    "fertilizer_kg_ha": 40.18,
+    "internet_pct": 91.2,
+    "irrigated_pct_cropland": 20.08
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 43,
+    "infrastructure": 98,
+    "inputs_water": 84,
+    "policy": 56,
+    "productivity": 59
+   },
+   "score": 68
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 9.3,
+  "ag_jobs_pct": 12.8,
+  "aidi_rank": 6,
+  "aidi_score": 74.18,
+  "caadp_br4_score": null,
+  "capital": "Tunis",
+  "deep": false,
+  "electricity_access_pct": 100,
+  "flagship_programs": [
+   "Water strategy Eau 2050"
+  ],
+  "internet_users_pct": 76.5,
+  "iso3": "TUN",
+  "name": "Tunisia",
+  "population_m": 12.2,
+  "recs": [
+   "AMU",
+   "COMESA"
+  ],
+  "region": "North",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://intelpoint.co/insights/seychelles-tops-africas-2024-infrastructure-index-with-a-near-perfect-score-of-99-77/",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge"
+  ],
+  "summary": "Agriculture contributes about 9.3% of GDP and employs about 12.8% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 100% of the population has electricity access and 76.5% use the internet, with an AfDB AIDI 2024 score of 74.18 (rank 6/54).",
+  "atlas": {
+   "indicators": {
+    "account_pct": 37.8,
+    "ag_spend_pct_budget": 3.1,
+    "ag_va_per_worker_usd": 10315,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 1.89,
+    "electricity_pct": 100,
+    "fertilizer_kg_ha": 28.55,
+    "internet_pct": 76.5,
+    "irrigated_pct_cropland": 7.92
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 28,
+    "infrastructure": 93,
+    "inputs_water": 75,
+    "policy": 31,
+    "productivity": 84
+   },
+   "score": 62
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 24.2,
+  "ag_jobs_pct": 28,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 6,
+  "capital": "Porto-Novo",
+  "deep": false,
+  "electricity_access_pct": 42,
+  "flagship_programs": [
+   "Plan Strategique de Developpement du Secteur Agricole (PSDSA) 2025",
+   "Glo-Djigbe Special Economic Zone"
+  ],
+  "internet_users_pct": 34,
+  "iso3": "BEN",
+  "name": "Benin",
+  "population_m": 14.11,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 24.2% of GDP and employs about 28% of workers, with a 4th CAADP Biennial Review score of 6.00/10 against the 9.29 benchmark (not on track). Around 42% of the population has electricity access and 34% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 51.8,
+    "ag_spend_pct_budget": 3.6,
+    "ag_va_per_worker_usd": 1994,
+    "caadp_br4": 6,
+    "cereal_yield_t_ha": 1.36,
+    "electricity_pct": 42,
+    "fertilizer_kg_ha": 28.22,
+    "internet_pct": 34,
+    "irrigated_pct_cropland": 0.41
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 55,
+    "infrastructure": 34,
+    "inputs_water": 44,
+    "policy": 50,
+    "productivity": 52
+   },
+   "score": 47
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 18.6,
+  "ag_jobs_pct": 31.4,
+  "aidi_rank": null,
+  "aidi_score": 22.11,
+  "caadp_br4_score": 5.73,
+  "capital": "Ouagadougou",
+  "deep": false,
+  "electricity_access_pct": 19,
+  "flagship_programs": [
+   "Offensive agropastorale et halieutique 2023-2025",
+   "PNSR II (Programme National du Secteur Rural)"
+  ],
+  "internet_users_pct": 28.3,
+  "iso3": "BFA",
+  "name": "Burkina Faso",
+  "population_m": 23.03,
+  "recs": [
+   "AES"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://intelpoint.co/insights/burkina-fasos-infrastructure-development-as-indicated-by-the-aidi-reached-its-highest-recorded-score-of-22-11-in-2024-highlighting-substantial-infrastructure-deficits/"
+  ],
+  "summary": "Agriculture contributes about 18.6% of GDP and employs about 31.4% of workers, with a 4th CAADP Biennial Review score of 5.73/10 against the 9.29 benchmark (not on track). Around 19% of the population has electricity access and 28.3% use the internet, with an AfDB AIDI 2024 score of 22.11.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 51.4,
+    "ag_spend_pct_budget": 3.5,
+    "ag_va_per_worker_usd": 778,
+    "caadp_br4": 5.73,
+    "cereal_yield_t_ha": 1.2,
+    "electricity_pct": 19,
+    "fertilizer_kg_ha": 16.31,
+    "internet_pct": 28.3,
+    "irrigated_pct_cropland": 0.64
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 53,
+    "infrastructure": 20,
+    "inputs_water": 38,
+    "policy": 48,
+    "productivity": 32
+   },
+   "score": 38
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 4.7,
+  "ag_jobs_pct": 9.9,
+  "aidi_rank": 9,
+  "aidi_score": null,
+  "caadp_br4_score": 5.09,
+  "capital": "Praia",
+  "deep": false,
+  "electricity_access_pct": 98.6,
+  "flagship_programs": [
+   "PEDS II (Strategic Plan for Sustainable Development)"
+  ],
+  "internet_users_pct": 74.7,
+  "iso3": "CPV",
+  "name": "Cabo Verde",
+  "population_m": 0.52,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge"
+  ],
+  "summary": "Agriculture contributes about 4.7% of GDP and employs about 9.9% of workers, with a 4th CAADP Biennial Review score of 5.09/10 against the 9.29 benchmark (not on track). Around 98.6% of the population has electricity access and 74.7% use the internet, with an AfDB AIDI 2024 rank of 9/54.",
+  "atlas": {
+   "indicators": {
+    "account_pct": null,
+    "ag_spend_pct_budget": 3,
+    "ag_va_per_worker_usd": 5127,
+    "caadp_br4": 5.09,
+    "cereal_yield_t_ha": 0.04,
+    "electricity_pct": 98.6,
+    "fertilizer_kg_ha": 3.28,
+    "internet_pct": 74.7,
+    "irrigated_pct_cropland": 6.48
+   },
+   "n_pillars": 4,
+   "pillars": {
+    "finance": null,
+    "infrastructure": 88,
+    "inputs_water": 44,
+    "policy": 42,
+    "productivity": 40
+   },
+   "score": 54
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 17.9,
+  "ag_jobs_pct": 45.2,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 3.96,
+  "capital": "Yamoussoukro",
+  "deep": true,
+  "electricity_access_pct": 71.1,
+  "flagship_programs": [
+   "PNIA 2 (Programme National d'Investissement Agricole 2018-2025)",
+   "Agropoles programme"
+  ],
+  "internet_users_pct": 41.4,
+  "iso3": "CIV",
+  "name": "Cote d'Ivoire",
+  "narrative": "Côte d'Ivoire is among West Africa's best performers. It is the world leader in cocoa, cashew and rubber. Agriculture provides about 17% of GDP, 40% of exports and 40% of jobs, and total output exceeded 37 million tonnes in 2025, with food crops up 9% to 25.8 million tonnes. The main driver is policy consistency. Two successive National Agricultural Investment Programmes ran under the same leadership: PNIA 1 (2012-2017, ~2,040bn FCFA) and PNIA 2 (2018-2025, ~12,391bn FCFA). PNIA 3 was launched in June 2026 under the 2026-2030 National Development Plan, with axes on food sovereignty, competitiveness, financing, rural land security and climate resilience. The Conseil du Café-Cacao has stabilized farm-gate prices (at least 60% of the CIF price). Local processing has reached roughly 41% for cocoa and 43% for cashew, supported by good ports (Abidjan, San-Pédro), relatively reliable power and the AfDB headquarters in Abidjan. The country is held back by rural land insecurity (only about 2 million ha certified as of late 2026), low irrigation and mechanization in food crops (rice still largely imported), thin agricultural credit, and ageing cocoa orchards under swollen-shoot disease and deforestation scrutiny (EUDR). The government changed in January 2026, when Bruno Koné replaced Kobenan Adjoumani, but it has signalled continuity.",
+  "population_m": 31.17,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://fr.allafrica.com/stories/202601290583.html",
+   "https://connectionivoirienne.net/2026/01/23/cote-divoire-le-gouvernement-mambe-ii-marque-par-la-sortie-dadjoumani/",
+   "https://www.aip.ci/cote-divoire-aip-le-ministre-bruno-kone-dresse-le-bilan-2025-du-secteur-agricole-et-annonce-les-perspectives-du-pnia-iii/",
+   "https://www.alwihdainfo.com/cote-divoire-bilan-agricole-2025-et-perspectives-du-pnia-iii/",
+   "https://connectionivoirienne.net/2026/06/19/economie-le-pm-mambe-lance-le-processus-dinvestissement-agricole-de-3eme-generation-pnia-3/",
+   "https://www.fratmat.info/article/2644229/economie/10e-edition-des-journees-nationales-du-cacao-et-du-chocolat-la-jeunesse-appelee-a-prendre-le-relais-pour-assurer-lavenir-de-la-filiere",
+   "https://www.fratmat.info/article/2645025/economie/securisation-fonciere-2-millions-dhectares-certifies",
+   "https://launchbaseafrica.com/orange-the-eu-and-giz-launch-8m-funding-initiative-to-back-agritech-startups-in-cote-divoire/?amp=1",
+   "https://launchbaseafrica.com/2024/10/22/gates-foundation-backs-ivorian-agritech-startup-grainotech"
+  ],
+  "strengths": [
+   "Policy continuity over three PNIA generations, with large investment envelopes",
+   "Global leadership in cocoa, cashew and rubber, and rising local processing (cocoa ~41%, cashew ~43%)",
+   "Strong logistics and power by regional standards (Abidjan and San-Pédro ports, relatively reliable grid)",
+   "Producer-financed research and extension model (FIRCA, CNRA, ANADER) and a new 2026-2035 research strategy",
+   "Active digital and agritech push (Orange, EU and GIZ DigiGreen & Agri fund; Yello Startup agritech prizes)"
+  ],
+  "summary": "Agriculture contributes about 17.9% of GDP and employs about 45.2% of workers, with a 4th CAADP Biennial Review score of 3.96/10 against the 9.29 benchmark (not on track). Around 71.1% of the population has electricity access and 41.4% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 57.6,
+    "ag_spend_pct_budget": 1.1,
+    "ag_va_per_worker_usd": 2368,
+    "caadp_br4": 3.96,
+    "cereal_yield_t_ha": 2.54,
+    "electricity_pct": 71.1,
+    "fertilizer_kg_ha": 14.71,
+    "internet_pct": 41.4,
+    "irrigated_pct_cropland": 0.51
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 68,
+    "infrastructure": 62,
+    "inputs_water": 34,
+    "policy": 27,
+    "productivity": 74
+   },
+   "score": 53
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 24.1,
+  "ag_jobs_pct": 29.1,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 5.79,
+  "capital": "Banjul",
+  "deep": false,
+  "electricity_access_pct": 63.7,
+  "flagship_programs": [
+   "Gambia National Agricultural Investment Plan (GNAIP II)"
+  ],
+  "internet_users_pct": 49.5,
+  "iso3": "GMB",
+  "name": "Gambia",
+  "population_m": 2.7,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 24.1% of GDP and employs about 29.1% of workers, with a 4th CAADP Biennial Review score of 5.79/10 against the 9.29 benchmark (not on track). Around 63.7% of the population has electricity access and 49.5% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 38.2,
+    "ag_spend_pct_budget": 2.2,
+    "ag_va_per_worker_usd": 2218,
+    "caadp_br4": 5.79,
+    "cereal_yield_t_ha": 1,
+    "electricity_pct": 63.7,
+    "fertilizer_kg_ha": 15.33,
+    "internet_pct": 49.5,
+    "irrigated_pct_cropland": 1.12
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 30,
+    "infrastructure": 61,
+    "inputs_water": 44,
+    "policy": 42,
+    "productivity": 42
+   },
+   "score": 44
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 20.7,
+  "ag_jobs_pct": 35.4,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 6.68,
+  "capital": "Accra",
+  "deep": true,
+  "electricity_access_pct": 89.5,
+  "flagship_programs": [
+   "Planting for Food and Jobs (PFJ 2.0)",
+   "Feed Ghana Programme"
+  ],
+  "internet_users_pct": 72.2,
+  "iso3": "GHA",
+  "name": "Ghana",
+  "narrative": "Ghana sits in the middle of the pack. It has a vibrant agri-tech ecosystem (Farmerline, Complete Farmer) and high mobile-money penetration, but public agriculture policy resets with each change of government. Planting for Food and Jobs (2017-2024) gave way to the Feed Ghana Programme in 2025 under Minister Eric Opoku. Feed Ghana has focused on irrigation rehabilitation, small dams, solar boreholes, rice seed and Farmer Service Centres. Food inflation fell from 28.3% in January 2025 to 9.5% in October 2025, although macro stabilization contributed. Execution is constrained by fiscal stress. In 2026 the finance and agriculture ministries publicly disputed releases: MoFA said its H1 allotment was capped at GH¢910m, with only GH¢4.5m for the Feed Ghana line itself. Public agricultural spending remains well below the Malabo 10% target. Irrigation is minimal, with roughly 210,000 ha developed against about 1.9 million ha of potential, and existing schemes are often vandalized or left incomplete. COCOBOD's debt crisis and stranded beans weigh on the flagship export chain, and the 2026 reforms push toward local processing. Ghana is ahead of most peers on digital rails and on investor appetite for agritech, and behind on irrigation, mechanization and stable public finance.",
+  "population_m": 33.79,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://www.myjoyonline.com/agric-minister-outlines-key-developments-under-feed-ghana-programme-in-past-nine-months/",
+   "https://www.myjoyonline.com/finance-agriculture-ministries-clash-over-gh%c2%a21-6bn-funding-claims/",
+   "https://allafrica.com/stories/202602120458.html",
+   "https://mobile.ghanaweb.com/GhanaHomePage/business/MiDA-CEO-raises-alarm-over-wasted-agricultural-assets-2026298",
+   "https://graphic.com.gh/news/general-news/govt-restructuring-irrigation-sector-for-private-participation-wilson-darkwa.html",
+   "https://www.heifer.org/about-us/inside-heifer/board-of-directors/alloysius-attah",
+   "https://techafricanews.com/2026/08/20/complete-farmer-ceo-desmond-koney-joins-endeavors-global-entrepreneur-network/",
+   "https://www.graphic.com.gh/news/general-news/ghana-news-adb-md-lauds-feed-ghana-initiative.html"
+  ],
+  "strengths": [
+   "Dynamic agritech scene (Farmerline, Complete Farmer) with access to DFI and VC capital (IFC, Oikocredit, EU AgriFI)",
+   "High mobile-money penetration and digital farmer-profiling platforms",
+   "Feed Ghana Programme (2025) reprioritizing irrigation, seed systems, Farmer Service Centres and the poultry programme (Nkoko Nkitinkiti)",
+   "Food inflation fell to 9.5% by October 2025",
+   "MiDA, the GIDA board and ADB are aligned behind brownfield irrigation and agro-processing"
+  ],
+  "summary": "Agriculture contributes about 20.7% of GDP and employs about 35.4% of workers, with a 4th CAADP Biennial Review score of 6.68/10 against the 9.29 benchmark (not on track). Around 89.5% of the population has electricity access and 72.2% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 81.2,
+    "ag_spend_pct_budget": 0.4,
+    "ag_va_per_worker_usd": 3747,
+    "caadp_br4": 6.68,
+    "cereal_yield_t_ha": 2.63,
+    "electricity_pct": 89.5,
+    "fertilizer_kg_ha": 18.35,
+    "internet_pct": 72.2,
+    "irrigated_pct_cropland": 2.83
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 96,
+    "infrastructure": 80,
+    "inputs_water": 57,
+    "policy": 38,
+    "productivity": 80
+   },
+   "score": 70
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 29.6,
+  "ag_jobs_pct": 58.2,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 4.11,
+  "capital": "Conakry",
+  "deep": false,
+  "electricity_access_pct": 46.8,
+  "flagship_programs": [
+   "PNIASAN 2018-2025",
+   "Simandou 2040"
+  ],
+  "internet_users_pct": 33.3,
+  "iso3": "GIN",
+  "name": "Guinea",
+  "population_m": 14.41,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 29.6% of GDP and employs about 58.2% of workers, with a 4th CAADP Biennial Review score of 4.11/10 against the 9.29 benchmark (not on track). Around 46.8% of the population has electricity access and 33.3% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 36,
+    "ag_spend_pct_budget": 1.2,
+    "ag_va_per_worker_usd": 1608,
+    "caadp_br4": 4.11,
+    "cereal_yield_t_ha": 1.35,
+    "electricity_pct": 46.8,
+    "fertilizer_kg_ha": 2.4,
+    "internet_pct": 33.3,
+    "irrigated_pct_cropland": 1.3
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 26,
+    "infrastructure": 36,
+    "inputs_water": 24,
+    "policy": 28,
+    "productivity": 47
+   },
+   "score": 32
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 36.8,
+  "ag_jobs_pct": 50,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 2.75,
+  "capital": "Bissau",
+  "deep": false,
+  "electricity_access_pct": 35.8,
+  "flagship_programs": [
+   "PNIA II (National Agricultural Investment Programme)"
+  ],
+  "internet_users_pct": 29.8,
+  "iso3": "GNB",
+  "name": "Guinea-Bissau",
+  "population_m": 2.15,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 36.8% of GDP and employs about 50% of workers, with a 4th CAADP Biennial Review score of 2.75/10 against the 9.29 benchmark (not on track). Around 35.8% of the population has electricity access and 29.8% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": null,
+    "ag_spend_pct_budget": 2.9,
+    "ag_va_per_worker_usd": 1149,
+    "caadp_br4": 2.75,
+    "cereal_yield_t_ha": 1.33,
+    "electricity_pct": 35.8,
+    "fertilizer_kg_ha": 8.34,
+    "internet_pct": 29.8,
+    "irrigated_pct_cropland": 3.87
+   },
+   "n_pillars": 4,
+   "pillars": {
+    "finance": null,
+    "infrastructure": 26,
+    "inputs_water": 49,
+    "policy": 30,
+    "productivity": 38
+   },
+   "score": 36
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 33.6,
+  "ag_jobs_pct": 38.9,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 3.46,
+  "capital": "Monrovia",
+  "deep": false,
+  "electricity_access_pct": 29.8,
+  "flagship_programs": [
+   "Liberia Agriculture Sector Investment Plan (LASIP II)"
+  ],
+  "internet_users_pct": 32.2,
+  "iso3": "LBR",
+  "name": "Liberia",
+  "population_m": 5.49,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 33.6% of GDP and employs about 38.9% of workers, with a 4th CAADP Biennial Review score of 3.46/10 against the 9.29 benchmark (not on track). Around 29.8% of the population has electricity access and 32.2% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 52.2,
+    "ag_spend_pct_budget": 0.3,
+    "ag_va_per_worker_usd": 1424,
+    "caadp_br4": 3.46,
+    "cereal_yield_t_ha": 1.11,
+    "electricity_pct": 29.8,
+    "fertilizer_kg_ha": 8.34,
+    "internet_pct": 32.2,
+    "irrigated_pct_cropland": 0.43
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 57,
+    "infrastructure": 26,
+    "inputs_water": 28,
+    "policy": 20,
+    "productivity": 37
+   },
+   "score": 34
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 33.4,
+  "ag_jobs_pct": 67.8,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 6.51,
+  "capital": "Bamako",
+  "deep": false,
+  "electricity_access_pct": 53.4,
+  "flagship_programs": [
+   "Office du Niger irrigation scheme",
+   "PNISA (Plan National d'Investissement dans le Secteur Agricole)"
+  ],
+  "internet_users_pct": 36.8,
+  "iso3": "MLI",
+  "name": "Mali",
+  "population_m": 23.77,
+  "recs": [
+   "AES"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 33.4% of GDP and employs about 67.8% of workers, with a 4th CAADP Biennial Review score of 6.51/10 against the 9.29 benchmark (not on track). Around 53.4% of the population has electricity access and 36.8% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 54.7,
+    "ag_spend_pct_budget": 3.3,
+    "ag_va_per_worker_usd": 1277,
+    "caadp_br4": 6.51,
+    "cereal_yield_t_ha": 1.66,
+    "electricity_pct": 53.4,
+    "fertilizer_kg_ha": 8.25,
+    "internet_pct": 36.8,
+    "irrigated_pct_cropland": 4.38
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 62,
+    "infrastructure": 47,
+    "inputs_water": 50,
+    "policy": 52,
+    "productivity": 49
+   },
+   "score": 52
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 33.8,
+  "ag_jobs_pct": 70.6,
+  "aidi_rank": null,
+  "aidi_score": 8.12,
+  "caadp_br4_score": 4.32,
+  "capital": "Niamey",
+  "deep": false,
+  "electricity_access_pct": 18.6,
+  "flagship_programs": [
+   "Initiative 3N (Les Nigeriens Nourrissent les Nigeriens)",
+   "Kandadji Dam programme"
+  ],
+  "internet_users_pct": 39.5,
+  "iso3": "NER",
+  "name": "Niger",
+  "population_m": 26.16,
+  "recs": [
+   "AES"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://intelpoint.co/?p=4720"
+  ],
+  "summary": "Agriculture contributes about 33.8% of GDP and employs about 70.6% of workers, with a 4th CAADP Biennial Review score of 4.32/10 against the 9.29 benchmark (not on track). Around 18.6% of the population has electricity access and 39.5% use the internet, with an AfDB AIDI 2024 score of 8.12.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 14.8,
+    "ag_spend_pct_budget": 4.7,
+    "ag_va_per_worker_usd": 756,
+    "caadp_br4": 4.32,
+    "cereal_yield_t_ha": 0.58,
+    "electricity_pct": 18.6,
+    "fertilizer_kg_ha": 0.77,
+    "internet_pct": 39.5,
+    "irrigated_pct_cropland": 1.5
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 9,
+    "infrastructure": 28,
+    "inputs_water": 23,
+    "policy": 47,
+    "productivity": 12
+   },
+   "score": 24
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 20.4,
+  "ag_jobs_pct": 34.3,
+  "aidi_rank": null,
+  "aidi_score": 25.7,
+  "caadp_br4_score": 6.28,
+  "capital": "Abuja",
+  "deep": true,
+  "electricity_access_pct": 57.9,
+  "flagship_programs": [
+   "National Agricultural Technology and Innovation Policy (NATIP 2022-2027)",
+   "Special Agro-Industrial Processing Zones (SAPZ)"
+  ],
+  "internet_users_pct": 41.2,
+  "iso3": "NGA",
+  "name": "Nigeria",
+  "narrative": "Nigeria has scale: Africa's largest population and arable base, a deep agri-fintech and commodity-exchange scene in Lagos, and active DFI money, including AfDB's $2.2bn phase-2 SAPZ mobilisation and a $200m NAGS-AP loan in 2026. On outcomes it lags. Federal agriculture spending was only about 1-2% of the budget over the last decade, and the 2026 allocation is about N1.45trn (~2.4-2.8%), against the 10% Maputo/Malabo pledge. Release and execution gaps make that worse. Insecurity across northern food belts (banditry, kidnapping, farmer-herder conflict), FX shocks and very low irrigation (~154,000 ha) push down output: maize fell from 12.9mt in 2022 to ~11mt in 2024. The programmes keep changing names (ATA, Anchor Borrowers, NAGS-AP, SAPZ) and implementation is slow; AfDB rated SAPZ unsatisfactory at 12% disbursement. Recent pluses are a NIN-linked national farmer registry, mechanisation and cooperative reforms, and reported Q2-2026 sector growth of 4.39%.",
+  "population_m": 227.88,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://intelpoint.co/insights/seychelles-tops-africas-2024-infrastructure-index-with-a-near-perfect-score-of-99-77/",
+   "https://fmino.gov.ng/fg-inaugurates-coa-farmers-as-agriculture-sector-records-4-39-growth-strongest-since-2021/",
+   "https://fmino.gov.ng/statement-by-the-honourable-minister-of-state-for-agriculture-and-food-security-sen-dr-aliyu-sabi-abdullahi-con-on-the-occasion-of-world-food-day-2026/",
+   "https://niser.gov.ng/v2/niser-policy-brief-strengthening-agricultural-investment-for-food-security-and-economic-diversification-policy-implications-of-nigerias-2026-federal-budget/",
+   "https://allafrica.com/stories/202607210024.html",
+   "https://www.thecable.ng/afdb-secures-2-2bn-for-phase-two-of-sapz-in-nigeria",
+   "https://nairametrics.com/2026/02/14/african-development-bank-funds-200-million-nigerias-climate-smart-farming",
+   "https://techeconomy.ng/thriveagric-raises-53bn-in-oversubscribed-debut-commercial-paper-issuance",
+   "https://gazettengr.com/iita-releases-200-improved-crop-varieties/"
+  ],
+  "strengths": [
+   "Large domestic market and diversified agro-ecologies (cereals, roots and tubers, tree crops)",
+   "Vibrant private agri-tech, commodity-exchange and fintech ecosystem (AFEX, ThriveAgric, Lagos fintechs)",
+   "Strong DFI pipeline: AfDB-led SAPZ phase 2 across 24 states; NAGS-AP phase II loan",
+   "IITA headquarters in Ibadan plus the ARCN research network",
+   "Domestic fertiliser (urea) manufacturing capacity, e.g. Dangote and Indorama"
+  ],
+  "summary": "Agriculture contributes about 20.4% of GDP and employs about 34.3% of workers, with a 4th CAADP Biennial Review score of 6.28/10 against the 9.29 benchmark (not on track). Around 57.9% of the population has electricity access and 41.2% use the internet, with an AfDB AIDI 2024 score of 25.7.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 63.3,
+    "ag_spend_pct_budget": 2.4,
+    "ag_va_per_worker_usd": 3495,
+    "caadp_br4": 6.28,
+    "cereal_yield_t_ha": 1.56,
+    "electricity_pct": 57.9,
+    "fertilizer_kg_ha": 3.54,
+    "internet_pct": 41.2,
+    "irrigated_pct_cropland": 0.66
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 79,
+    "infrastructure": 54,
+    "inputs_water": 22,
+    "policy": 46,
+    "productivity": 62
+   },
+   "score": 53
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 15.5,
+  "ag_jobs_pct": 21.6,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 4.06,
+  "capital": "Dakar",
+  "deep": false,
+  "electricity_access_pct": 68,
+  "flagship_programs": [
+   "Senegal 2050 national agenda (agro-poles)",
+   "PNIASAN"
+  ],
+  "internet_users_pct": 60.1,
+  "iso3": "SEN",
+  "name": "Senegal",
+  "population_m": 18.08,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 15.5% of GDP and employs about 21.6% of workers, with a 4th CAADP Biennial Review score of 4.06/10 against the 9.29 benchmark (not on track). Around 68% of the population has electricity access and 60.1% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 76.5,
+    "ag_spend_pct_budget": 5.3,
+    "ag_va_per_worker_usd": 2432,
+    "caadp_br4": 4.06,
+    "cereal_yield_t_ha": 2,
+    "electricity_pct": 68,
+    "fertilizer_kg_ha": 8.32,
+    "internet_pct": 60.1,
+    "irrigated_pct_cropland": 3.07
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 91,
+    "infrastructure": 69,
+    "inputs_water": 46,
+    "policy": 48,
+    "productivity": 70
+   },
+   "score": 65
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 25.4,
+  "ag_jobs_pct": 43,
+  "aidi_rank": null,
+  "aidi_score": 14.04,
+  "caadp_br4_score": 5.9,
+  "capital": "Freetown",
+  "deep": false,
+  "electricity_access_pct": 27.5,
+  "flagship_programs": [
+   "Feed Salone"
+  ],
+  "internet_users_pct": 25.1,
+  "iso3": "SLE",
+  "name": "Sierra Leone",
+  "population_m": 8.46,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://intelpoint.co/?p=4720"
+  ],
+  "summary": "Agriculture contributes about 25.4% of GDP and employs about 43% of workers, with a 4th CAADP Biennial Review score of 5.90/10 against the 9.29 benchmark (not on track). Around 27.5% of the population has electricity access and 25.1% use the internet, with an AfDB AIDI 2024 score of 14.04.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 38.6,
+    "ag_spend_pct_budget": 0.3,
+    "ag_va_per_worker_usd": 2550,
+    "caadp_br4": 5.9,
+    "cereal_yield_t_ha": 1.37,
+    "electricity_pct": 27.5,
+    "fertilizer_kg_ha": 2.42,
+    "internet_pct": 25.1,
+    "irrigated_pct_cropland": 1.72
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 32,
+    "infrastructure": 20,
+    "inputs_water": 29,
+    "policy": 34,
+    "productivity": 57
+   },
+   "score": 34
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 18,
+  "ag_jobs_pct": 30.3,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 4.8,
+  "capital": "Lome",
+  "deep": false,
+  "electricity_access_pct": 55.7,
+  "flagship_programs": [
+   "Agropoles programme (PNIASAN)",
+   "Plateforme Industrielle d'Adetikope (PIA)"
+  ],
+  "internet_users_pct": 39.5,
+  "iso3": "TGO",
+  "name": "Togo",
+  "population_m": 9.3,
+  "recs": [
+   "ECOWAS"
+  ],
+  "region": "West",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 18% of GDP and employs about 30.3% of workers, with a 4th CAADP Biennial Review score of 4.80/10 against the 9.29 benchmark (not on track). Around 55.7% of the population has electricity access and 39.5% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 57.4,
+    "ag_spend_pct_budget": 2.3,
+    "ag_va_per_worker_usd": 1577,
+    "caadp_br4": 4.8,
+    "cereal_yield_t_ha": 1.2,
+    "electricity_pct": 55.7,
+    "fertilizer_kg_ha": 16.32,
+    "internet_pct": 39.5,
+    "irrigated_pct_cropland": 0.25
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 66,
+    "infrastructure": 50,
+    "inputs_water": 32,
+    "policy": 38,
+    "productivity": 42
+   },
+   "score": 46
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 25.3,
+  "ag_jobs_pct": 85.1,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 6.41,
+  "capital": "Gitega",
+  "deep": false,
+  "electricity_access_pct": 11.6,
+  "flagship_programs": [
+   "PNIA 2018-2027"
+  ],
+  "internet_users_pct": 8.6,
+  "iso3": "BDI",
+  "name": "Burundi",
+  "population_m": 13.69,
+  "recs": [
+   "COMESA",
+   "EAC",
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 25.3% of GDP and employs about 85.1% of workers, with a 4th CAADP Biennial Review score of 6.41/10 against the 9.29 benchmark (not on track). Around 11.6% of the population has electricity access and 8.6% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 7.1,
+    "ag_spend_pct_budget": 2.5,
+    "ag_va_per_worker_usd": 211,
+    "caadp_br4": 6.41,
+    "cereal_yield_t_ha": 1.16,
+    "electricity_pct": 11.6,
+    "fertilizer_kg_ha": 30.8,
+    "internet_pct": 8.6,
+    "irrigated_pct_cropland": 1.38
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 2,
+    "infrastructure": 2,
+    "inputs_water": 58,
+    "policy": 47,
+    "productivity": 20
+   },
+   "score": 26
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 17.4,
+  "ag_jobs_pct": 43.4,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Yaounde",
+  "deep": false,
+  "electricity_access_pct": 65.4,
+  "flagship_programs": [
+   "SND30 (National Development Strategy 2020-2030)",
+   "Import-substitution agricultural plan (PIISAH)"
+  ],
+  "internet_users_pct": 46.3,
+  "iso3": "CMR",
+  "name": "Cameroon",
+  "population_m": 28.37,
+  "recs": [
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 17.4% of GDP and employs about 43.4% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 65.4% of the population has electricity access and 46.3% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 60.9,
+    "ag_spend_pct_budget": 2.4,
+    "ag_va_per_worker_usd": 1574,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 1.77,
+    "electricity_pct": 65.4,
+    "fertilizer_kg_ha": 12.87,
+    "internet_pct": 46.3,
+    "irrigated_pct_cropland": 0.37
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 72,
+    "infrastructure": 60,
+    "inputs_water": 30,
+    "policy": 24,
+    "productivity": 55
+   },
+   "score": 48
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 32.5,
+  "ag_jobs_pct": 70.5,
+  "aidi_rank": null,
+  "aidi_score": 13.23,
+  "caadp_br4_score": null,
+  "capital": "Bangui",
+  "deep": false,
+  "electricity_access_pct": 15.7,
+  "flagship_programs": [
+   "PNIASAN"
+  ],
+  "internet_users_pct": 13.8,
+  "iso3": "CAF",
+  "name": "Central African Republic",
+  "population_m": 5.15,
+  "recs": [
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://intelpoint.co/?p=4720"
+  ],
+  "summary": "Agriculture contributes about 32.5% of GDP and employs about 70.5% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 15.7% of the population has electricity access and 13.8% use the internet, with an AfDB AIDI 2024 score of 13.23.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 13.7,
+    "ag_spend_pct_budget": 7.8,
+    "ag_va_per_worker_usd": 548,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.79,
+    "electricity_pct": 15.7,
+    "fertilizer_kg_ha": 0.03,
+    "internet_pct": 13.8,
+    "irrigated_pct_cropland": 0.04
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 6,
+    "infrastructure": 8,
+    "inputs_water": 0,
+    "policy": 78,
+    "productivity": 15
+   },
+   "score": 21
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 32.2,
+  "ag_jobs_pct": 69.1,
+  "aidi_rank": null,
+  "aidi_score": 10.14,
+  "caadp_br4_score": null,
+  "capital": "N'Djamena",
+  "deep": false,
+  "electricity_access_pct": 12,
+  "flagship_programs": [
+   "PNISR (Plan National d'Investissement du Secteur Rural)"
+  ],
+  "internet_users_pct": 12.6,
+  "iso3": "TCD",
+  "name": "Chad",
+  "population_m": 19.32,
+  "recs": [
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf",
+   "https://intelpoint.co/?p=4720"
+  ],
+  "summary": "Agriculture contributes about 32.2% of GDP and employs about 69.1% of workers, with no score in the 4th CAADP Biennial Review (did not report in 2023). Around 12% of the population has electricity access and 12.6% use the internet, with an AfDB AIDI 2024 score of 10.14.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 20.9,
+    "ag_spend_pct_budget": 4.2,
+    "ag_va_per_worker_usd": 1539,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.83,
+    "electricity_pct": 12,
+    "fertilizer_kg_ha": 6.48,
+    "internet_pct": 12.6,
+    "irrigated_pct_cropland": 0.56
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 13,
+    "infrastructure": 5,
+    "inputs_water": 24,
+    "policy": 42,
+    "productivity": 30
+   },
+   "score": 23
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 9.4,
+  "ag_jobs_pct": 30.2,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Brazzaville",
+  "deep": false,
+  "electricity_access_pct": 49.7,
+  "flagship_programs": [
+   "PND 2022-2026 (agriculture pillar)"
+  ],
+  "internet_users_pct": 47.3,
+  "iso3": "COG",
+  "name": "Congo",
+  "population_m": 6.18,
+  "recs": [
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 9.4% of GDP and employs about 30.2% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 49.7% of the population has electricity access and 47.3% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 55.6,
+    "ag_spend_pct_budget": 1.4,
+    "ag_va_per_worker_usd": 1271,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.87,
+    "electricity_pct": 49.7,
+    "fertilizer_kg_ha": 8.73,
+    "internet_pct": 47.3,
+    "irrigated_pct_cropland": 0.31
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 64,
+    "infrastructure": 52,
+    "inputs_water": 27,
+    "policy": 14,
+    "productivity": 28
+   },
+   "score": 37
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 17.1,
+  "ag_jobs_pct": 55.1,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Kinshasa",
+  "deep": false,
+  "electricity_access_pct": 20.8,
+  "flagship_programs": [
+   "PNIA 2 / Agricultural growth poles",
+   "Inga hydropower development"
+  ],
+  "internet_users_pct": 19.7,
+  "iso3": "COD",
+  "name": "DR Congo",
+  "population_m": 105.79,
+  "recs": [
+   "COMESA",
+   "EAC",
+   "ECCAS",
+   "SADC"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf"
+  ],
+  "summary": "Agriculture contributes about 17.1% of GDP and employs about 55.1% of workers, with no score in the 4th CAADP Biennial Review (did not report in 2023). Around 20.8% of the population has electricity access and 19.7% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 39.2,
+    "ag_spend_pct_budget": 2.2,
+    "ag_va_per_worker_usd": 286,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.87,
+    "electricity_pct": 20.8,
+    "fertilizer_kg_ha": 2.45,
+    "internet_pct": 19.7,
+    "irrigated_pct_cropland": 0.07
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 36,
+    "infrastructure": 16,
+    "inputs_water": 8,
+    "policy": 22,
+    "productivity": 12
+   },
+   "score": 19
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 3.1,
+  "ag_jobs_pct": 55.9,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Malabo",
+  "deep": false,
+  "electricity_access_pct": 66.8,
+  "flagship_programs": [
+   "Agenda Guinea Ecuatorial 2035"
+  ],
+  "internet_users_pct": 63.3,
+  "iso3": "GNQ",
+  "name": "Equatorial Guinea",
+  "population_m": 1.85,
+  "recs": [
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 3.1% of GDP and employs about 55.9% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 66.8% of the population has electricity access and 63.3% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": null,
+    "ag_spend_pct_budget": 1.3,
+    "ag_va_per_worker_usd": 724,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": null,
+    "electricity_pct": 66.8,
+    "fertilizer_kg_ha": 6.49,
+    "internet_pct": 63.3,
+    "irrigated_pct_cropland": null
+   },
+   "n_pillars": 4,
+   "pillars": {
+    "finance": null,
+    "infrastructure": 69,
+    "inputs_water": 29,
+    "policy": 13,
+    "productivity": 16
+   },
+   "score": 32
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 6.2,
+  "ag_jobs_pct": 29.2,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Libreville",
+  "deep": false,
+  "electricity_access_pct": 97.1,
+  "flagship_programs": [
+   "GRAINE agricultural programme",
+   "Plan d'Acceleration de la Transformation (PAT)"
+  ],
+  "internet_users_pct": 68.7,
+  "iso3": "GAB",
+  "name": "Gabon",
+  "population_m": 2.48,
+  "recs": [
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 6.2% of GDP and employs about 29.2% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 97.1% of the population has electricity access and 68.7% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 68.2,
+    "ag_spend_pct_budget": 1.5,
+    "ag_va_per_worker_usd": 6503,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 1.59,
+    "electricity_pct": 97.1,
+    "fertilizer_kg_ha": 33,
+    "internet_pct": 68.7,
+    "irrigated_pct_cropland": 0.81
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 83,
+    "infrastructure": 82,
+    "inputs_water": 53,
+    "policy": 15,
+    "productivity": 72
+   },
+   "score": 61
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 12.8,
+  "ag_jobs_pct": 11.1,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Sao Tome",
+  "deep": false,
+  "electricity_access_pct": 81.3,
+  "flagship_programs": [
+   "PNIASAN"
+  ],
+  "internet_users_pct": 59.1,
+  "iso3": "STP",
+  "name": "Sao Tome and Principe",
+  "population_m": 0.23,
+  "recs": [
+   "ECCAS"
+  ],
+  "region": "Central",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf"
+  ],
+  "summary": "Agriculture contributes about 12.8% of GDP and employs about 11.1% of workers, with no score in the 4th CAADP Biennial Review (did not report in 2023). Around 81.3% of the population has electricity access and 59.1% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": null,
+    "ag_spend_pct_budget": 3.1,
+    "ag_va_per_worker_usd": 7165,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 2,
+    "electricity_pct": 81.3,
+    "fertilizer_kg_ha": 6.48,
+    "internet_pct": 59.1,
+    "irrigated_pct_cropland": 23.81
+   },
+   "n_pillars": 4,
+   "pillars": {
+    "finance": null,
+    "infrastructure": 72,
+    "inputs_water": 59,
+    "policy": 31,
+    "productivity": 84
+   },
+   "score": 62
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 36.6,
+  "ag_jobs_pct": 34.4,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Moroni",
+  "deep": false,
+  "electricity_access_pct": 89.8,
+  "flagship_programs": [
+   "Plan Comores Emergent 2030"
+  ],
+  "internet_users_pct": 32.5,
+  "iso3": "COM",
+  "name": "Comoros",
+  "population_m": 0.85,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 36.6% of GDP and employs about 34.4% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 89.8% of the population has electricity access and 32.5% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 45.5,
+    "ag_spend_pct_budget": 3.7,
+    "ag_va_per_worker_usd": 3895,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 1.72,
+    "electricity_pct": 89.8,
+    "fertilizer_kg_ha": 2.22,
+    "internet_pct": 32.5,
+    "irrigated_pct_cropland": 0.11
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 45,
+    "infrastructure": 58,
+    "inputs_water": 6,
+    "policy": 37,
+    "productivity": 69
+   },
+   "score": 43
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 2.6,
+  "ag_jobs_pct": 1.1,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Djibouti",
+  "deep": false,
+  "electricity_access_pct": 65.4,
+  "flagship_programs": [
+   "Djibouti Vision 2035",
+   "Doraleh Multipurpose Port"
+  ],
+  "internet_users_pct": 65.3,
+  "iso3": "DJI",
+  "name": "Djibouti",
+  "population_m": 1.15,
+  "recs": [
+   "COMESA",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 2.6% of GDP and employs about 1.1% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 65.4% of the population has electricity access and 65.3% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 12.3,
+    "ag_spend_pct_budget": 4.7,
+    "ag_va_per_worker_usd": 49475,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 2.04,
+    "electricity_pct": 65.4,
+    "fertilizer_kg_ha": 21.98,
+    "internet_pct": 65.3,
+    "irrigated_pct_cropland": 25.64
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 4,
+    "infrastructure": 70,
+    "inputs_water": 80,
+    "policy": 47,
+    "productivity": 92
+   },
+   "score": 59
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": null,
+  "ag_jobs_pct": 60.9,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Asmara",
+  "deep": false,
+  "electricity_access_pct": 52.5,
+  "flagship_programs": [
+   "Integrated soil and water conservation (dam) programme"
+  ],
+  "internet_users_pct": 14.3,
+  "iso3": "ERI",
+  "name": "Eritrea",
+  "population_m": 3.47,
+  "recs": [
+   "COMESA",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf"
+  ],
+  "summary": "Agriculture contributes about n/a of GDP and employs about 60.9% of workers, with no score in the 4th CAADP Biennial Review (did not report in 2023). Around 52.5% of the population has electricity access and 14.3% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": null,
+    "ag_spend_pct_budget": null,
+    "ag_va_per_worker_usd": null,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.64,
+    "electricity_pct": 52.5,
+    "fertilizer_kg_ha": 1.87,
+    "internet_pct": 14.3,
+    "irrigated_pct_cropland": 3.03
+   },
+   "n_pillars": 3,
+   "pillars": {
+    "finance": null,
+    "infrastructure": 28,
+    "inputs_water": 30,
+    "policy": null,
+    "productivity": 12
+   },
+   "score": null
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 34.9,
+  "ag_jobs_pct": 62.4,
+  "aidi_rank": null,
+  "aidi_score": 13.09,
+  "caadp_br4_score": null,
+  "capital": "Addis Ababa",
+  "deep": true,
+  "electricity_access_pct": 54.2,
+  "flagship_programs": [
+   "Ten-Year Development Plan (2021-2030)",
+   "Grand Ethiopian Renaissance Dam (GERD)",
+   "Lowland irrigated wheat initiative"
+  ],
+  "internet_users_pct": 21.4,
+  "iso3": "ETH",
+  "name": "Ethiopia",
+  "narrative": "Ethiopia stands out for steady, state-led agricultural policy and long-term public spending. Agriculture averaged about 10.3% of public expenditure over 2009-2021, one of few African countries near the CAADP/Malabo target, although the share has slipped below 10% in recent years (FAO MAFAP). The Agricultural Transformation Institute (ATI) has driven cluster farming, which reached about 12.3m ha in 2024/25, and a large lowland irrigated-wheat push for import substitution. A 2025-2032 Digital Agriculture Roadmap is now in place. Second-level land certification (30m+ plots) and the 2024 Rural Land Proclamation allow use-rights to be leased and pledged as collateral. Even so, the state still owns all land, and FX shortages and high inflation limit fertiliser and machinery imports. Conflict in Amhara and Oromia, and before that Tigray, hurts production. Digital, power distribution and logistics infrastructure is weak, and Ethiopia is landlocked and depends on the Djibouti corridor. A new cabinet sworn in after the 2026 elections kept Addisu Arega at Agriculture, which signals continuity.",
+  "population_m": 128.69,
+  "recs": [
+   "COMESA",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://intelpoint.co/?p=4720",
+   "https://capitalethiopia.com/2026/10/08/pm-abiy-forms-new-cabinet-with-39-womens-representation/",
+   "https://addisfortune.news/breaking-news/prime-minister-abiy-reshuffles-agriculture-portfolio-taps-party-insider-as-minister",
+   "https://www.ena.et/web/eng/w/eng_8580001",
+   "https://fao.org/in-action/mafap/where-we-work/ethiopia/3/en",
+   "https://capitalethiopia.com/2025/02/10/ethiopia-bets-big-on-digital-agriculture-to-boost-food-security-with-2025-2032-roadmap",
+   "https://leap.unep.org/en/countries/et/national-legislation/rural-land-administration-and-use-proclamation-no-13242024",
+   "https://www.thereporterethiopia.com/38266/",
+   "https://www.capitalethiopia.com/2022/08/19/contract-farming-bill-passed/"
+  ],
+  "strengths": [
+   "Long-run public investment in agriculture near the CAADP 10% benchmark (avg 10.3% 2009-2021)",
+   "Dedicated delivery unit (ATI) with cluster farming covering ~12.3m ha and a Digital Agriculture Roadmap 2025-2032",
+   "Large-scale land certification (30m+ plots) enabling use-right collateral",
+   "Large hydropower base (incl. GERD) offering low-cost electricity potential for irrigation and agro-processing",
+   "Dense public extension network (development agents) and active irrigated-wheat import-substitution programme"
+  ],
+  "summary": "Agriculture contributes about 34.9% of GDP and employs about 62.4% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 54.2% of the population has electricity access and 21.4% use the internet, with an AfDB AIDI 2024 score of 13.09.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 48.8,
+    "ag_spend_pct_budget": 3.1,
+    "ag_va_per_worker_usd": 1154,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 2.63,
+    "electricity_pct": 54.2,
+    "fertilizer_kg_ha": 40.27,
+    "internet_pct": 21.4,
+    "irrigated_pct_cropland": 0.98
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 47,
+    "infrastructure": 37,
+    "inputs_water": 57,
+    "policy": 31,
+    "productivity": 62
+   },
+   "score": 47
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 21.3,
+  "ag_jobs_pct": 32.3,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 6.28,
+  "capital": "Nairobi",
+  "deep": true,
+  "electricity_access_pct": 76.2,
+  "flagship_programs": [
+   "Agricultural Sector Transformation and Growth Strategy (ASTGS 2019-2029)",
+   "Bottom-Up Economic Transformation Agenda (BETA)"
+  ],
+  "internet_users_pct": 35,
+  "iso3": "KEN",
+  "name": "Kenya",
+  "narrative": "Kenya leads East Africa on agri-tech because mobile money (M-Pesa) gives it a dense digital rail that startups such as Pula, Apollo Agriculture and One Acre Fund-style input-credit models build on. Strong research institutions (KALRO, ILRI, CIFOR-ICRAF, AGRA HQ) and a deep impact-investor ecosystem in Nairobi add to this. Policy direction has been relatively steady since the 2019 ASTGS, and the state now runs a digital farmer registry (KIAMIS, about 7 million farmers) to target subsidised fertiliser. Public money is the weak spot: the agriculture ministry got about Ksh75.5bn (~2.7% of the national budget) in FY2026/27 planning, and the wider sector sits near 3%, far below the CAADP/Malabo 10% target. Irrigation is also thin, with about 664,000 irrigated acres (2021/22 baseline) against a 1.29m-acre target for 2027/28. Devolution split extension and some agriculture functions to 47 counties, and an ageing extension workforce leaves a real gap between digital ambition and on-farm advice.",
+  "population_m": 55.34,
+  "recs": [
+   "COMESA",
+   "EAC",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://citizen.digital/article/cs-kagwe-pushes-for-more-budget-allocation-in-agriculture-sector-to-safeguard-food-security-n377722",
+   "https://citizen.digital/article/kenya-targets-doubling-irrigated-land-to-boost-food-security-by-2028-n383910",
+   "https://dairybusinessmea.com/2026/01/30/kalro-names-patrick-ketiem-as-director-general-after-kiregers-exit/",
+   "https://ag.purdue.edu/events/department/ansc/2026/10/better-lives-better-planet-through-livestock-science-partnerships-and-ilris-vision-to-2030.html",
+   "https://agra.org/agra-appoints-alice-ruhweza-as-next-president/",
+   "https://www.pula-advisors.com/about/",
+   "https://www.the-star.co.ke/counties/central/2026-01-15-government-rolls-out-125-million-subsidised-fertiliser-bags-ahead-of-long-rains",
+   "https://fsd.kilimo.go.ke/pdfs/agricultural-sector-transformation-and-growth-strategy.pdf",
+   "https://allafrica.com/stories/202601260517.html"
+  ],
+  "strengths": [
+   "Mobile-money and agri-fintech ecosystem (M-Pesa rails; insurtech such as Pula with 20m+ farmers insured across markets)",
+   "Regional hub for CGIAR and agri-development HQs (ILRI, CIFOR-ICRAF, AGRA) plus KALRO's national research network",
+   "Digital farmer registry (KIAMIS) used to target e-subsidy fertiliser, with about 7m farmers registered",
+   "Mostly renewable grid (geothermal and hydro) and relatively strong rural connectivity compared with peers",
+   "Export horticulture, tea and dairy value chains with established cold-chain and air-freight links"
+  ],
+  "summary": "Agriculture contributes about 21.3% of GDP and employs about 32.3% of workers, with a 4th CAADP Biennial Review score of 6.28/10 against the 9.29 benchmark (not on track). Around 76.2% of the population has electricity access and 35% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 90.1,
+    "ag_spend_pct_budget": 2.6,
+    "ag_va_per_worker_usd": 1633,
+    "caadp_br4": 6.28,
+    "cereal_yield_t_ha": 1.69,
+    "electricity_pct": 76.2,
+    "fertilizer_kg_ha": 44.81,
+    "internet_pct": 35,
+    "irrigated_pct_cropland": 3.6
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 100,
+    "infrastructure": 58,
+    "inputs_water": 72,
+    "policy": 47,
+    "productivity": 57
+   },
+   "score": 67
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 22.5,
+  "ag_jobs_pct": 69.4,
+  "aidi_rank": null,
+  "aidi_score": 13.43,
+  "caadp_br4_score": null,
+  "capital": "Antananarivo",
+  "deep": false,
+  "electricity_access_pct": 35.1,
+  "flagship_programs": [
+   "Plan Emergence Madagascar"
+  ],
+  "internet_users_pct": 18.7,
+  "iso3": "MDG",
+  "name": "Madagascar",
+  "population_m": 31.2,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://intelpoint.co/?p=4720"
+  ],
+  "summary": "Agriculture contributes about 22.5% of GDP and employs about 69.4% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 35.1% of the population has electricity access and 18.7% use the internet, with an AfDB AIDI 2024 score of 13.43.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 24.5,
+    "ag_spend_pct_budget": 4.5,
+    "ag_va_per_worker_usd": 306,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 2.39,
+    "electricity_pct": 35.1,
+    "fertilizer_kg_ha": 6.06,
+    "internet_pct": 18.7,
+    "irrigated_pct_cropland": 30.17
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 15,
+    "infrastructure": 18,
+    "inputs_water": 60,
+    "policy": 45,
+    "productivity": 47
+   },
+   "score": 37
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 4.3,
+  "ag_jobs_pct": 5.3,
+  "aidi_rank": 4,
+  "aidi_score": 82.77,
+  "caadp_br4_score": null,
+  "capital": "Port Louis",
+  "deep": false,
+  "electricity_access_pct": 100,
+  "flagship_programs": [
+   "Food and agricultural sector strategy (food security fund)"
+  ],
+  "internet_users_pct": 73.3,
+  "iso3": "MUS",
+  "name": "Mauritius",
+  "population_m": 1.27,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://intelpoint.co/insights/seychelles-tops-africas-2024-infrastructure-index-with-a-near-perfect-score-of-99-77/",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge"
+  ],
+  "summary": "Agriculture contributes about 4.3% of GDP and employs about 5.3% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 100% of the population has electricity access and 73.3% use the internet, with an AfDB AIDI 2024 score of 82.77 (rank 4/54).",
+  "atlas": {
+   "indicators": {
+    "account_pct": 89.6,
+    "ag_spend_pct_budget": 1.7,
+    "ag_va_per_worker_usd": 20796,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 11.89,
+    "electricity_pct": 100,
+    "fertilizer_kg_ha": 96.09,
+    "internet_pct": 73.3,
+    "irrigated_pct_cropland": 20.01
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 98,
+    "infrastructure": 90,
+    "inputs_water": 92,
+    "policy": 17,
+    "productivity": 98
+   },
+   "score": 79
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 24.6,
+  "ag_jobs_pct": 54.8,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 8.07,
+  "capital": "Kigali",
+  "deep": true,
+  "electricity_access_pct": 48.7,
+  "flagship_programs": [
+   "PSTA 5 (Strategic Plan for Agriculture Transformation 2024/25-2028/29)",
+   "Crop Intensification Programme"
+  ],
+  "internet_users_pct": 31.7,
+  "iso3": "RWA",
+  "name": "Rwanda",
+  "narrative": "Rwanda punches above its weight because policy is unusually consistent and well executed. It has run five successive Strategic Plans for Agriculture Transformation, and the current PSTA5 (2024-2029, ~US$5.1bn, 44% expected from the private sector) aligns with NST2 and has strong monitoring. It also has digital government and land registration that covers almost the whole country. Agricultural exports passed US$1bn for the first time in FY2025/26 on the back of NAEB's coffee, tea and horticulture work. The 2026/27 budget raised MINAGRI's allocation by 41%, which made it the biggest gainer, but agriculture's share of the total is still well under the Malabo 10%. Physical limits are hard: land is very scarce and hilly with tiny plots, and only ~75,000 ha (15% of irrigable land) is irrigated, with a target of 133k ha by 2029. Logistics are landlocked and costly, and agriculture gets only ~6% of commercial lending. Ministerial turnover in MINAGRI has been frequent (most recently Dec 2025), though technocratic continuity has softened its effect.",
+  "population_m": 13.95,
+  "recs": [
+   "COMESA",
+   "EAC",
+   "ECCAS"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf",
+   "https://www.minagri.gov.rw/updates/news-details/rwanda-launches-5th-strategic-plan-for-agriculture-transformation",
+   "https://www.minagri.gov.rw/updates/news-details/rwanda-agricultural-show-2026-stakeholders-urged-to-leverage-innovation-and-strategic-partnerships-for-agri-food-systems-transformation",
+   "https://allafrica.com/stories/202512020109.html",
+   "https://www.cia.gov/resources/world-leaders/historical-data/2026-july/rwanda/",
+   "https://allafrica.com/stories/202602030013.html",
+   "https://www.ktpress.rw/2026/07/rwandas-2026-27-budget-agriculture-biggest-winner-disaster-management-funding-down-70/",
+   "https://www.newtimes.co.rw/article/38119/news/agriculture/rwandas-annual-agricultural-exports-surpass-1bn-for-first-time",
+   "https://www.rab.gov.rw/1-1/news-details/dr-florence-receives-a-senegalese-delegation"
+  ],
+  "strengths": [
+   "Consistent, results-monitored strategy cycle (PSTA1-5) aligned with NST2",
+   "Agricultural exports surpassed US$1.1bn in FY2025/26 (coffee, tea, horticulture)",
+   "Near-universal land registration and strong digital-government rails (Irembo, mobile money)",
+   "Concessional ag-lending scheme halving rates (RWF 55bn approved, 30.9bn disbursed via 31 institutions)",
+   "Kigali as a regional innovation and convening hub (AGRF, investor-friendly RDB)"
+  ],
+  "summary": "Agriculture contributes about 24.6% of GDP and employs about 54.8% of workers, with a 4th CAADP Biennial Review score of 8.07/10 against the 9.29 benchmark (not on track). Around 48.7% of the population has electricity access and 31.7% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 42.1,
+    "ag_spend_pct_budget": 2.2,
+    "ag_va_per_worker_usd": 1615,
+    "caadp_br4": 8.07,
+    "cereal_yield_t_ha": 1.78,
+    "electricity_pct": 48.7,
+    "fertilizer_kg_ha": 24.64,
+    "internet_pct": 31.7,
+    "irrigated_pct_cropland": 5.01
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 38,
+    "infrastructure": 35,
+    "inputs_water": 68,
+    "policy": 54,
+    "productivity": 59
+   },
+   "score": 51
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 2.5,
+  "ag_jobs_pct": null,
+  "aidi_rank": 1,
+  "aidi_score": 99.77,
+  "caadp_br4_score": 2.69,
+  "capital": "Victoria",
+  "deep": false,
+  "electricity_access_pct": 100,
+  "flagship_programs": [
+   "Seychelles Blue Economy Strategic Framework"
+  ],
+  "internet_users_pct": 87.8,
+  "iso3": "SYC",
+  "name": "Seychelles",
+  "population_m": 0.13,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://esaff.org/index-php/wp-content/uploads/2024/07/Policy-Brief-SADC-Performance-in-the-CAADP-BR-Report-wb.pdf",
+   "https://intelpoint.co/insights/seychelles-tops-africas-2024-infrastructure-index-with-a-near-perfect-score-of-99-77/",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge"
+  ],
+  "summary": "Agriculture contributes about 2.5% of GDP and employs about n/a of workers, with a 4th CAADP Biennial Review score of 2.69/10 against the 9.29 benchmark (not on track). Around 100% of the population has electricity access and 87.8% use the internet, with an AfDB AIDI 2024 score of 99.77 (rank 1/54).",
+  "atlas": {
+   "indicators": {
+    "account_pct": null,
+    "ag_spend_pct_budget": 2.5,
+    "ag_va_per_worker_usd": null,
+    "caadp_br4": 2.69,
+    "cereal_yield_t_ha": null,
+    "electricity_pct": 100,
+    "fertilizer_kg_ha": 55.69,
+    "internet_pct": 87.8,
+    "irrigated_pct_cropland": 19.35
+   },
+   "n_pillars": 3,
+   "pillars": {
+    "finance": null,
+    "infrastructure": 96,
+    "inputs_water": 86,
+    "policy": 27,
+    "productivity": null
+   },
+   "score": null
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": null,
+  "ag_jobs_pct": 26,
+  "aidi_rank": 54,
+  "aidi_score": 7.1,
+  "caadp_br4_score": null,
+  "capital": "Mogadishu",
+  "deep": false,
+  "electricity_access_pct": 49.3,
+  "flagship_programs": [
+   "National Development Plan (NDP-9)"
+  ],
+  "internet_users_pct": 27.9,
+  "iso3": "SOM",
+  "name": "Somalia",
+  "population_m": 18.36,
+  "recs": [
+   "COMESA",
+   "EAC",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://intelpoint.co/?p=4720"
+  ],
+  "summary": "Agriculture contributes about n/a of GDP and employs about 26% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 49.3% of the population has electricity access and 27.9% use the internet, with an AfDB AIDI 2024 score of 7.1 (rank 54/54).",
+  "atlas": {
+   "indicators": {
+    "account_pct": 38.7,
+    "ag_spend_pct_budget": null,
+    "ag_va_per_worker_usd": null,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.36,
+    "electricity_pct": 49.3,
+    "fertilizer_kg_ha": null,
+    "internet_pct": 27.9,
+    "irrigated_pct_cropland": 17.71
+   },
+   "n_pillars": 4,
+   "pillars": {
+    "finance": 34,
+    "infrastructure": 33,
+    "inputs_water": 83,
+    "policy": null,
+    "productivity": 4
+   },
+   "score": 38
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 10.4,
+  "ag_jobs_pct": 59.2,
+  "aidi_rank": null,
+  "aidi_score": 7.38,
+  "caadp_br4_score": 3.51,
+  "capital": "Juba",
+  "deep": false,
+  "electricity_access_pct": 7.1,
+  "flagship_programs": [
+   "Comprehensive Agriculture Master Plan (CAMP)"
+  ],
+  "internet_users_pct": 6.67,
+  "iso3": "SSD",
+  "name": "South Sudan",
+  "population_m": 11.48,
+  "recs": [
+   "EAC",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf",
+   "https://intelpoint.co/?p=4720"
+  ],
+  "summary": "Agriculture contributes about 10.4% of GDP and employs about 59.2% of workers, with a 4th CAADP Biennial Review score of 3.51/10 against the 9.29 benchmark (not on track). Around 7.1% of the population has electricity access and 6.67% use the internet, with an AfDB AIDI 2024 score of 7.38.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 5.8,
+    "ag_spend_pct_budget": 27.2,
+    "ag_va_per_worker_usd": null,
+    "caadp_br4": 3.51,
+    "cereal_yield_t_ha": 0.94,
+    "electricity_pct": 7.1,
+    "fertilizer_kg_ha": 0.18,
+    "internet_pct": 6.67,
+    "irrigated_pct_cropland": 3.88
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 0,
+    "infrastructure": 0,
+    "inputs_water": 32,
+    "policy": 69,
+    "productivity": 27
+   },
+   "score": 26
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 22.1,
+  "ag_jobs_pct": null,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Khartoum",
+  "deep": false,
+  "electricity_access_pct": 61.8,
+  "flagship_programs": [
+   "Gezira irrigation scheme"
+  ],
+  "internet_users_pct": 18.6,
+  "iso3": "SDN",
+  "name": "Sudan",
+  "population_m": 50.04,
+  "recs": [
+   "COMESA",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://eoai-africa.org/wp-content/uploads/2024/03/4th_CAADP_Biennial_Review_Report-COMPLETE.pdf"
+  ],
+  "summary": "Agriculture contributes about 22.1% of GDP and employs about n/a of workers, with no score in the 4th CAADP Biennial Review (did not report in 2023). Around 61.8% of the population has electricity access and 18.6% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 15.3,
+    "ag_spend_pct_budget": 2.9,
+    "ag_va_per_worker_usd": 4706,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.58,
+    "electricity_pct": 61.8,
+    "fertilizer_kg_ha": 7.03,
+    "internet_pct": 18.6,
+    "irrigated_pct_cropland": 7.39
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 11,
+    "infrastructure": 35,
+    "inputs_water": 52,
+    "policy": 29,
+    "productivity": 42
+   },
+   "score": 34
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 23.4,
+  "ag_jobs_pct": 65.4,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 5.76,
+  "capital": "Dodoma",
+  "deep": true,
+  "electricity_access_pct": 42.7,
+  "flagship_programs": [
+   "Agenda 10/30",
+   "Building a Better Tomorrow (BBT) youth agribusiness",
+   "Agricultural Sector Development Programme II (ASDP II)"
+  ],
+  "internet_users_pct": 31.2,
+  "iso3": "TZA",
+  "name": "Tanzania",
+  "narrative": "Tanzania is on an upward trajectory driven by a clear political mandate. Under Agenda 10/30, launched in 2022, the agriculture budget roughly tripled (TZS 294bn in 2021/22 to 954bn in 2022/23, then about TZS 1.1 trillion for 2026/27), and the irrigation budget rose more than sevenfold. Agenda 10/30 targets more than 10% sector growth, 8.5 million irrigated hectares and agro-processing raised from 10% to 50% by 2030. Outputs are rising. The country reports 130% food self-sufficiency, 23.8 million tonnes of food crops (2024/25) and 1.6 million tonnes of cash crops, and agriculture grew 4.0% in 2025, still well below the 10% target. Delivery leans on state programmes: NIRC borehole and scheme drilling, BBT youth block farms, and subsidized fertilizer and seed. A new National Agricultural Extension Services Agency (NAESA) starts in July 2026. The sector remains behind on irrigated area relative to its huge potential, mechanization, cold chain, rural power, and private finance and insurance. Even after the increases, the ministry vote is still only a few percent of the national budget, short of the Malabo 10% target. Cabinet continuity after the 2025 election (Minister Daniel Chongolo replaced Hussein Bashe) has so far preserved the agenda.",
+  "population_m": 66.62,
+  "recs": [
+   "EAC",
+   "SADC"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://esaff.org/index-php/wp-content/uploads/2024/07/Policy-Brief-SADC-Performance-in-the-CAADP-BR-Report-wb.pdf",
+   "https://dailynews.co.tz/tanzania-tasks-the-ministry-to-ensure-agriculture-delivers-outcomes-attracts-investment/",
+   "https://www.tanzaniainvest.com/agriculture/agriculture-budget-2026-2027-cash-crop-target",
+   "https://www.tanzaniainvest.com/agriculture/irrigation-borehole-drilling-program",
+   "https://dailynews.co.tz/what-agriculture-reforms-promise-2030/",
+   "https://thecitizen.co.tz/tanzania/news/national/bbt-programme-anchors-sh1trn-agriculture-budget-5440148",
+   "https://launchbaseafrica.com/2026/07/15/mazaohubs-josephat-urassa-engineer-behind-tanzanias-soil-data-farming-platform-dies/",
+   "https://www.wearetech.africa/en/fils-uk/tech-stars/baraka-chijenga-tackles-food-waste-through-kilimo-fresh",
+   "https://thecitizen.co.tz/tanzania/news/national/tanzania-needs-sh33-trillion-to-transform-food-systems-by-2030-4690704"
+  ],
+  "strengths": [
+   "Strong political commitment and budget growth under Agenda 10/30 (sector budget ~TZS 1.1tn in 2026/27)",
+   "Large land and water resources, food self-sufficiency (~130%) and a role as a regional food exporter",
+   "Rapid irrigation push: NIRC schemes, dams and a 67,000-borehole smallholder programme",
+   "Growing horticulture and avocado exports, and the SAGCOT corridor investment framework",
+   "High mobile-money penetration (M-Pesa, Tigo Pesa/Mixx, Airtel) enabling digital agri-services (MazaoHub, Kilimo Fresh)"
+  ],
+  "summary": "Agriculture contributes about 23.4% of GDP and employs about 65.4% of workers, with a 4th CAADP Biennial Review score of 5.76/10 against the 9.29 benchmark (not on track). Around 42.7% of the population has electricity access and 31.2% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 59.8,
+    "ag_spend_pct_budget": 7.7,
+    "ag_va_per_worker_usd": 855,
+    "caadp_br4": 5.76,
+    "cereal_yield_t_ha": 1.87,
+    "electricity_pct": 42.7,
+    "fertilizer_kg_ha": 18.01,
+    "internet_pct": 31.2,
+    "irrigated_pct_cropland": 1.19
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 70,
+    "infrastructure": 29,
+    "inputs_water": 48,
+    "policy": 70,
+    "productivity": 50
+   },
+   "score": 53
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 24.7,
+  "ag_jobs_pct": 65.9,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 6.76,
+  "capital": "Kampala",
+  "deep": false,
+  "electricity_access_pct": 45.2,
+  "flagship_programs": [
+   "Parish Development Model",
+   "Agro-industrialisation programme (NDP III/IV)"
+  ],
+  "internet_users_pct": 8.95,
+  "iso3": "UGA",
+  "name": "Uganda",
+  "population_m": 48.66,
+  "recs": [
+   "COMESA",
+   "EAC",
+   "IGAD"
+  ],
+  "region": "East",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://www.jica.go.jp/english/jica_ri/publication/knowledge/__icsFiles/afieldfile/2024/12/20/Knowledge_Report_No10.pdf"
+  ],
+  "summary": "Agriculture contributes about 24.7% of GDP and employs about 65.9% of workers, with a 4th CAADP Biennial Review score of 6.76/10 against the 9.29 benchmark (not on track). Around 45.2% of the population has electricity access and 8.95% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 72.8,
+    "ag_spend_pct_budget": 2.5,
+    "ag_va_per_worker_usd": 804,
+    "caadp_br4": 6.76,
+    "cereal_yield_t_ha": 1.92,
+    "electricity_pct": 45.2,
+    "fertilizer_kg_ha": 2.53,
+    "internet_pct": 8.95,
+    "irrigated_pct_cropland": 0.12
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 87,
+    "infrastructure": 16,
+    "inputs_water": 10,
+    "policy": 49,
+    "productivity": 50
+   },
+   "score": 42
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 16.4,
+  "ag_jobs_pct": 56.2,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 1.43,
+  "capital": "Luanda",
+  "deep": false,
+  "electricity_access_pct": 51.1,
+  "flagship_programs": [
+   "PLANAGRAO (National Plan for Grain Production)",
+   "Lobito Corridor"
+  ],
+  "internet_users_pct": 40.7,
+  "iso3": "AGO",
+  "name": "Angola",
+  "population_m": 36.75,
+  "recs": [
+   "ECCAS",
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://esaff.org/index-php/wp-content/uploads/2024/07/Policy-Brief-SADC-Performance-in-the-CAADP-BR-Report-wb.pdf"
+  ],
+  "summary": "Agriculture contributes about 16.4% of GDP and employs about 56.2% of workers, with a 4th CAADP Biennial Review score of 1.43/10 against the 9.29 benchmark (not on track). Around 51.1% of the population has electricity access and 40.7% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 29.3,
+    "ag_spend_pct_budget": 0.5,
+    "ag_va_per_worker_usd": 2574,
+    "caadp_br4": 1.43,
+    "cereal_yield_t_ha": 1.11,
+    "electricity_pct": 51.1,
+    "fertilizer_kg_ha": 5.67,
+    "internet_pct": 40.7,
+    "irrigated_pct_cropland": 1.51
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 19,
+    "infrastructure": 48,
+    "inputs_water": 32,
+    "policy": 10,
+    "productivity": 49
+   },
+   "score": 32
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 1.7,
+  "ag_jobs_pct": 18,
+  "aidi_rank": 10,
+  "aidi_score": 42.13,
+  "caadp_br4_score": 3.14,
+  "capital": "Gaborone",
+  "deep": false,
+  "electricity_access_pct": 93.1,
+  "flagship_programs": [
+   "ISPAAD (Integrated Support Programme for Arable Agriculture Development)"
+  ],
+  "internet_users_pct": 57.5,
+  "iso3": "BWA",
+  "name": "Botswana",
+  "population_m": 2.48,
+  "recs": [
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://esaff.org/index-php/wp-content/uploads/2024/07/Policy-Brief-SADC-Performance-in-the-CAADP-BR-Report-wb.pdf",
+   "https://intelpoint.co/insights/seychelles-tops-africas-2024-infrastructure-index-with-a-near-perfect-score-of-99-77/",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge"
+  ],
+  "summary": "Agriculture contributes about 1.7% of GDP and employs about 18% of workers, with a 4th CAADP Biennial Review score of 3.14/10 against the 9.29 benchmark (not on track). Around 93.1% of the population has electricity access and 57.5% use the internet, with an AfDB AIDI 2024 score of 42.13 (rank 10/54).",
+  "atlas": {
+   "indicators": {
+    "account_pct": 61.4,
+    "ag_spend_pct_budget": 2.3,
+    "ag_va_per_worker_usd": 1899,
+    "caadp_br4": 3.14,
+    "cereal_yield_t_ha": 0.9,
+    "electricity_pct": 93.1,
+    "fertilizer_kg_ha": 92.37,
+    "internet_pct": 57.5,
+    "irrigated_pct_cropland": 0.95
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 74,
+    "infrastructure": 74,
+    "inputs_water": 62,
+    "policy": 28,
+    "productivity": 38
+   },
+   "score": 55
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 6.8,
+  "ag_jobs_pct": 13.8,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 5.63,
+  "capital": "Mbabane",
+  "deep": false,
+  "electricity_access_pct": 86.4,
+  "flagship_programs": [
+   "Lower Usuthu Smallholder Irrigation Project (LUSIP)"
+  ],
+  "internet_users_pct": 63.4,
+  "iso3": "SWZ",
+  "name": "Eswatini",
+  "population_m": 1.23,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://esaff.org/index-php/wp-content/uploads/2024/07/Policy-Brief-SADC-Performance-in-the-CAADP-BR-Report-wb.pdf"
+  ],
+  "summary": "Agriculture contributes about 6.8% of GDP and employs about 13.8% of workers, with a 4th CAADP Biennial Review score of 5.63/10 against the 9.29 benchmark (not on track). Around 86.4% of the population has electricity access and 63.4% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 65.1,
+    "ag_spend_pct_budget": 1.2,
+    "ag_va_per_worker_usd": 6090,
+    "caadp_br4": 5.63,
+    "cereal_yield_t_ha": 1.08,
+    "electricity_pct": 86.4,
+    "fertilizer_kg_ha": 73.48,
+    "internet_pct": 63.4,
+    "irrigated_pct_cropland": 25.64
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 81,
+    "infrastructure": 75,
+    "inputs_water": 92,
+    "policy": 36,
+    "productivity": 58
+   },
+   "score": 68
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 6.5,
+  "ag_jobs_pct": 29.2,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Maseru",
+  "deep": false,
+  "electricity_access_pct": 50.4,
+  "flagship_programs": [
+   "Lesotho Highlands Water Project"
+  ],
+  "internet_users_pct": 51.8,
+  "iso3": "LSO",
+  "name": "Lesotho",
+  "population_m": 2.31,
+  "recs": [
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 6.5% of GDP and employs about 29.2% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 50.4% of the population has electricity access and 51.8% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 61.6,
+    "ag_spend_pct_budget": 2.5,
+    "ag_va_per_worker_usd": 602,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.6,
+    "electricity_pct": 50.4,
+    "fertilizer_kg_ha": 8.6,
+    "internet_pct": 51.8,
+    "irrigated_pct_cropland": 0.33
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 77,
+    "infrastructure": 54,
+    "inputs_water": 27,
+    "policy": 25,
+    "productivity": 12
+   },
+   "score": 39
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 32.4,
+  "ag_jobs_pct": 61.7,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 5.25,
+  "capital": "Lilongwe",
+  "deep": false,
+  "electricity_access_pct": 14.2,
+  "flagship_programs": [
+   "Malawi 2063",
+   "Agricultural Inputs Programme (AIP)",
+   "Shire Valley Transformation Programme"
+  ],
+  "internet_users_pct": 19,
+  "iso3": "MWI",
+  "name": "Malawi",
+  "population_m": 21.1,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://esaff.org/index-php/wp-content/uploads/2024/07/Policy-Brief-SADC-Performance-in-the-CAADP-BR-Report-wb.pdf"
+  ],
+  "summary": "Agriculture contributes about 32.4% of GDP and employs about 61.7% of workers, with a 4th CAADP Biennial Review score of 5.25/10 against the 9.29 benchmark (not on track). Around 14.2% of the population has electricity access and 19% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 50.4,
+    "ag_spend_pct_budget": 14.3,
+    "ag_va_per_worker_usd": 495,
+    "caadp_br4": 5.25,
+    "cereal_yield_t_ha": 1.88,
+    "electricity_pct": 14.2,
+    "fertilizer_kg_ha": 83.2,
+    "internet_pct": 19,
+    "irrigated_pct_cropland": 1.76
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 51,
+    "infrastructure": 12,
+    "inputs_water": 71,
+    "policy": 78,
+    "productivity": 42
+   },
+   "score": 51
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 26.3,
+  "ag_jobs_pct": 69.5,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Maputo",
+  "deep": false,
+  "electricity_access_pct": 31.5,
+  "flagship_programs": [
+   "PEDSA II (Strategic Plan for Agricultural Development 2030)",
+   "SUSTENTA programme"
+  ],
+  "internet_users_pct": 20.5,
+  "iso3": "MOZ",
+  "name": "Mozambique",
+  "population_m": 33.64,
+  "recs": [
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 26.3% of GDP and employs about 69.5% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 31.5% of the population has electricity access and 20.5% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 54.4,
+    "ag_spend_pct_budget": 0.8,
+    "ag_va_per_worker_usd": 498,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.78,
+    "electricity_pct": 31.5,
+    "fertilizer_kg_ha": 14.13,
+    "internet_pct": 20.5,
+    "irrigated_pct_cropland": 1.95
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 60,
+    "infrastructure": 20,
+    "inputs_water": 49,
+    "policy": 8,
+    "productivity": 13
+   },
+   "score": 30
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 7.3,
+  "ag_jobs_pct": 21.5,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Windhoek",
+  "deep": false,
+  "electricity_access_pct": 97.4,
+  "flagship_programs": [
+   "Green Scheme (irrigation)"
+  ],
+  "internet_users_pct": 64.9,
+  "iso3": "NAM",
+  "name": "Namibia",
+  "population_m": 2.96,
+  "recs": [
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 7.3% of GDP and employs about 21.5% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 97.4% of the population has electricity access and 64.9% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 72.9,
+    "ag_spend_pct_budget": 1.9,
+    "ag_va_per_worker_usd": 3836,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 0.18,
+    "electricity_pct": 97.4,
+    "fertilizer_kg_ha": 26.66,
+    "internet_pct": 64.9,
+    "irrigated_pct_cropland": 0.99
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 89,
+    "infrastructure": 81,
+    "inputs_water": 52,
+    "policy": 19,
+    "productivity": 36
+   },
+   "score": 55
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 2.9,
+  "ag_jobs_pct": 18.8,
+  "aidi_rank": 5,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Pretoria",
+  "deep": true,
+  "electricity_access_pct": 99.7,
+  "flagship_programs": [
+   "Agriculture and Agro-processing Master Plan (AAMP)"
+  ],
+  "internet_users_pct": 78.4,
+  "iso3": "ZAF",
+  "name": "South Africa",
+  "narrative": "South Africa is the continent's most commercialized and export-oriented agricultural sector (exports of about US$14bn in 2025). Its advantages are deep private capital, commercial banks with agri desks, strong organized agriculture (Agbiz, Agri SA, commodity bodies) and a capable research base (ARC, universities). The Agriculture and Agro-processing Master Plan (AAMP, launched May 2022) gives a social-compact framework, and stakeholders credit it with better coordination. Implementation remains stronger at the strategic level than on the ground, and access to blended finance for emerging farmers is still limited. Leadership churn has been significant. Willie Aucamp replaced John Steenhuisen as Minister of Agriculture on 30 June 2026, amid the country's largest-ever foot-and-mouth disease (FMD) outbreak, which has disrupted red-meat exports. Land Bank leadership has turned over repeatedly. The binding constraints are outside the farm gate: underperforming Transnet ports and rail, neglected rural roads, electricity reliability, and slow land-reform and title transfer. Public agriculture spending is a small share of the budget, well below 10%, but private investment does much of the work.",
+  "population_m": 63.21,
+  "recs": [
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://africa.com/top-10-news/africas-infrastructure-race-the-10-countries-leading-the-charge",
+   "https://engineeringnews.co.za/article/da-reshuffles-gnu-team-aucamp-replaces-steenhuisen-as-agriculture-minister-2026-06-17",
+   "https://en.wikipedia.org/wiki/Minister_of_Agriculture_(South_Africa)",
+   "https://www.foodformzansi.co.za/aucamp-outlines-strategy-for-biosecurity-trade-and-infrastructure/",
+   "https://www.foodformzansi.co.za/three-years-on-is-the-master-plan-delivering-for-farmers/",
+   "https://www.thecommonsense.co.za/politics/ramaphosa-appoints-sihlobo-new-agriculture-envoy",
+   "https://www.engineeringnews.co.za/article/agbiz-elects-vkp-group-ceo-pg-strauss-as-chairperson-2026-06-04",
+   "https://www.engineeringnews.co.za/article/land-bank-appoints-jabu-mphambo-acting-ceo-2026-02-17",
+   "https://www.foodformzansi.co.za/arc-leader-envisions-resilient-tech-driven-farming-future/",
+   "https://www.gov.za/node/816933"
+  ],
+  "strengths": [
+   "Highly commercial, export-competitive sector (citrus, deciduous fruit, wine, grains) with sophisticated agribusiness and finance",
+   "AAMP social compact (2022) with public-private dialogue platforms",
+   "Strong research and agritech base: ARC, Stellenbosch and Pretoria universities, Aerobotics, Khula!",
+   "Organized commodity bodies and private extension and data",
+   "Deep commercial agri-finance (Absa AgriBusiness, Standard Bank, Land Bank)"
+  ],
+  "summary": "Agriculture contributes about 2.9% of GDP and employs about 18.8% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 99.7% of the population has electricity access and 78.4% use the internet, with an AfDB AIDI 2024 rank of 5/54.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 81.1,
+    "ag_spend_pct_budget": 1.6,
+    "ag_va_per_worker_usd": 10818,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 4.56,
+    "electricity_pct": 99.7,
+    "fertilizer_kg_ha": 67.16,
+    "internet_pct": 78.4,
+    "irrigated_pct_cropland": 13.45
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 94,
+    "infrastructure": 92,
+    "inputs_water": 84,
+    "policy": 16,
+    "productivity": 95
+   },
+   "score": 76
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 1.8,
+  "ag_jobs_pct": 55.4,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": null,
+  "capital": "Lusaka",
+  "deep": false,
+  "electricity_access_pct": 46.7,
+  "flagship_programs": [
+   "Comprehensive Agriculture Transformation Support Programme (CATSP)",
+   "Lobito Corridor"
+  ],
+  "internet_users_pct": 17.1,
+  "iso3": "ZMB",
+  "name": "Zambia",
+  "population_m": 20.72,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"
+  ],
+  "summary": "Agriculture contributes about 1.8% of GDP and employs about 55.4% of workers, with a 4th CAADP Biennial Review score not captured in this dataset. Around 46.7% of the population has electricity access and 17.1% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 72.7,
+    "ag_spend_pct_budget": 1.1,
+    "ag_va_per_worker_usd": 304,
+    "caadp_br4": null,
+    "cereal_yield_t_ha": 2.32,
+    "electricity_pct": 46.7,
+    "fertilizer_kg_ha": 76.48,
+    "internet_pct": 17.1,
+    "irrigated_pct_cropland": 4.06
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 85,
+    "infrastructure": 20,
+    "inputs_water": 78,
+    "policy": 11,
+    "productivity": 45
+   },
+   "score": 48
+  },
+  "last_verified": "2026-11-03"
+ },
+ {
+  "ag_gdp_pct": 5.4,
+  "ag_jobs_pct": 52.5,
+  "aidi_rank": null,
+  "aidi_score": null,
+  "caadp_br4_score": 5.45,
+  "capital": "Harare",
+  "deep": false,
+  "electricity_access_pct": 49,
+  "flagship_programs": [
+   "Agriculture Food Systems and Rural Development Strategy 2025-2030",
+   "Pfumvudza/Intwasa conservation farming"
+  ],
+  "internet_users_pct": 41.6,
+  "iso3": "ZWE",
+  "name": "Zimbabwe",
+  "population_m": 16.34,
+  "recs": [
+   "COMESA",
+   "SADC"
+  ],
+  "region": "Southern",
+  "sources": [
+   "https://en.wikipedia.org/wiki/List_of_African_countries_by_population",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_sector_composition",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_sector_composition_of_the_labor_force",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_electrification_rate",
+   "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users",
+   "https://esaff.org/index-php/wp-content/uploads/2024/07/Policy-Brief-SADC-Performance-in-the-CAADP-BR-Report-wb.pdf"
+  ],
+  "summary": "Agriculture contributes about 5.4% of GDP and employs about 52.5% of workers, with a 4th CAADP Biennial Review score of 5.45/10 against the 9.29 benchmark (not on track). Around 49% of the population has electricity access and 41.6% use the internet, with no AIDI 2024 score captured here.",
+  "atlas": {
+   "indicators": {
+    "account_pct": 49.5,
+    "ag_spend_pct_budget": null,
+    "ag_va_per_worker_usd": 826,
+    "caadp_br4": 5.45,
+    "cereal_yield_t_ha": 1.07,
+    "electricity_pct": 49,
+    "fertilizer_kg_ha": 25.91,
+    "internet_pct": 41.6,
+    "irrigated_pct_cropland": 4.28
+   },
+   "n_pillars": 5,
+   "pillars": {
+    "finance": 49,
+    "infrastructure": 48,
+    "inputs_water": 67,
+    "policy": 59,
+    "productivity": 28
+   },
+   "score": 50
+  },
+  "last_verified": "2026-11-03"
+ }
+]

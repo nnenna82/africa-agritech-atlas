@@ -1,0 +1,2245 @@
+[
+ {
+  "id": "ministry-of-agriculture-and-land-reclamation-moalr-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Ministry of Agriculture and Land Reclamation (MoALR)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "data"
+  ],
+  "type": "gov",
+  "website": "https://www.agri.gov.eg",
+  "what": "Lead ministry for food security, land reclamation and the Farmer's Card digital registry.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-water-resources-and-irrigation-mwri-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Ministry of Water Resources and Irrigation (MWRI)",
+  "sector_tags": [
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "https://www.mwri.gov.eg",
+  "what": "Allocates Nile water, runs the canal network and modernizes field irrigation.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "future-of-egypt-authority-for-sustainable-development-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Future of Egypt Authority for Sustainable Development",
+  "sector_tags": [
+   "irrigation & water",
+   "storage & cold chain",
+   "industrial zones"
+  ],
+  "type": "gov",
+  "website": null,
+  "what": "Military-linked state body that operates the New Delta megaproject and strategic commodity imports.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agricultural-research-centre-arc-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Agricultural Research Centre (ARC)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "data"
+  ],
+  "type": "research",
+  "website": "https://www.arc.sci.eg",
+  "what": "Main national agricultural research system. It breeds varieties and co-implements AgriTech4Egypt.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "academy-of-scientific-research-and-technology-asrt-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Academy of Scientific Research and Technology (ASRT)",
+  "sector_tags": [
+   "data",
+   "processing"
+  ],
+  "type": "research",
+  "website": "https://www.asrt.sci.eg",
+  "what": "National science funder that co-implements AgriTech4Egypt and runs innovation grants.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agricultural-bank-of-egypt-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Agricultural Bank of Egypt",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://www.abe.com.eg",
+  "what": "State agricultural lender with a nationwide rural branch network.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sekem-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "SEKEM",
+  "sector_tags": [
+   "processing",
+   "climate & extension",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://www.sekem.com",
+  "what": "Organic/biodynamic agribusiness group, a carbon-credit pioneer and founder of Heliopolis University.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "alliance-of-bioversity-international-and-ciat-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Alliance of Bioversity International and CIAT",
+  "sector_tags": [
+   "data",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://alliancebioversityciat.org",
+  "what": "CGIAR centre leading the Italy-funded AgriTech4Egypt innovation programme.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "italian-agency-for-development-cooperation-aics-cairo-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Italian Agency for Development Cooperation (AICS) Cairo",
+  "sector_tags": [
+   "finance & insurance",
+   "data"
+  ],
+  "type": "multilateral",
+  "website": "https://ilcairo.aics.gov.it",
+  "what": "Bilateral donor funding agritech innovation and rural development in Egypt.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "hassan-allam-holding-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Hassan Allam Holding",
+  "sector_tags": [
+   "irrigation & water",
+   "transport"
+  ],
+  "type": "corporate",
+  "website": "https://www.hassanallam.com",
+  "what": "Engineering and construction contractor for Toshka irrigation infrastructure.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "croptimus-egy",
+  "countries": [
+   "EGY"
+  ],
+  "name": "Croptimus",
+  "sector_tags": [
+   "inputs & seeds",
+   "processing"
+  ],
+  "type": "corporate",
+  "website": null,
+  "what": "Agritech startup that turns farm residues into biochar and bio-inputs.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-agriculture-maritime-fisheries-and-food-sovereig",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Ministry of Agriculture, Maritime Fisheries and Food Sovereignty",
+  "sector_tags": [
+   "irrigation & water",
+   "inputs & seeds",
+   "climate & extension"
+  ],
+  "type": "gov",
+  "website": "https://www.agriculture.gov.ma",
+  "what": "Lead ministry; owns Generation Green and FDA subsidies",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-equipment-water-and-forests-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Ministry of Equipment, Water and Forests",
+  "sector_tags": [
+   "irrigation & water",
+   "transport"
+  ],
+  "type": "gov",
+  "website": "",
+  "what": "Dams, water transfers, desalination and public works",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-energy-mines-and-sustainable-development-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Ministry of Energy, Mines and Sustainable Development",
+  "sector_tags": [
+   "energy"
+  ],
+  "type": "gov",
+  "website": "",
+  "what": "Energy transition and power policy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agence-pour-le-developpement-agricole-ada-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Agence pour le Développement Agricole (ADA)",
+  "sector_tags": [
+   "finance & insurance",
+   "processing"
+  ],
+  "type": "gov",
+  "website": "https://www.ada.gov.ma",
+  "what": "Agribusiness investment promotion and solidarity agriculture projects",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "institut-national-de-la-recherche-agronomique-inra-maroc-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Institut National de la Recherche Agronomique (INRA Maroc)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://www.inra.org.ma",
+  "what": "National agricultural research institute",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "onssa-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "ONSSA",
+  "sector_tags": [
+   "inputs & seeds",
+   "logistics & market access"
+  ],
+  "type": "regulator",
+  "website": "https://www.onssa.gov.ma",
+  "what": "Food safety, plant and animal health regulator",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ocp-group-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "OCP Group",
+  "sector_tags": [
+   "inputs & seeds",
+   "data",
+   "climate & extension",
+   "energy"
+  ],
+  "type": "corporate",
+  "website": "https://www.ocpgroup.ma",
+  "what": "State phosphate and fertiliser champion; Al Moutmir advisory; green utilities",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "universite-mohammed-vi-polytechnique-um6p-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Université Mohammed VI Polytechnique (UM6P)",
+  "sector_tags": [
+   "data",
+   "inputs & seeds",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://www.um6p.ma",
+  "what": "OCP-backed university leading agri R&D, AgTech incubation",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "credit-agricole-du-maroc-tamwil-el-fellah-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Crédit Agricole du Maroc / Tamwil El Fellah",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://www.creditagricole.ma",
+  "what": "State-backed agricultural bank and smallholder finance arm",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "masen-moroccan-agency-for-sustainable-energy-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "MASEN (Moroccan Agency for Sustainable Energy)",
+  "sector_tags": [
+   "energy"
+  ],
+  "type": "gov",
+  "website": "https://www.masen.ma",
+  "what": "Renewable energy developer (Noor solar complex)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "tanger-med-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "Tanger Med",
+  "sector_tags": [
+   "transport",
+   "logistics & market access",
+   "industrial zones"
+  ],
+  "type": "corporate",
+  "website": "https://www.tangermed.ma",
+  "what": "Mediterranean port and industrial-zone complex",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "onee-mar",
+  "countries": [
+   "MAR"
+  ],
+  "name": "ONEE",
+  "sector_tags": [
+   "energy",
+   "irrigation & water"
+  ],
+  "type": "corporate",
+  "website": "https://www.one.org.ma",
+  "what": "National electricity and drinking-water utility",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministere-de-l-agriculture-du-developpement-rural-et-des-pro",
+  "countries": [
+   "CIV"
+  ],
+  "name": "Ministère de l'Agriculture, du Développement rural et des Productions vivrières (MINADER)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "https://www.agriculture.gouv.ci",
+  "what": "Lead agriculture ministry steering PNIA 3.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "conseil-du-cafe-cacao-ccc-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "Conseil du Café-Cacao (CCC)",
+  "sector_tags": [
+   "processing",
+   "logistics & market access"
+  ],
+  "type": "regulator",
+  "website": "https://www.conseilcafecacao.ci",
+  "what": "Regulates cocoa and coffee marketing, the farm-gate price and forward sales.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agence-fonciere-rurale-afor-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "Agence Foncière Rurale (AFOR)",
+  "sector_tags": [
+   "finance & insurance",
+   "data"
+  ],
+  "type": "gov",
+  "website": null,
+  "what": "Rural land certification and village boundary delimitation.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "firca-fonds-interprofessionnel-pour-la-recherche-et-le-conse",
+  "countries": [
+   "CIV"
+  ],
+  "name": "FIRCA (Fonds Interprofessionnel pour la Recherche et le Conseil Agricoles)",
+  "sector_tags": [
+   "climate & extension",
+   "inputs & seeds"
+  ],
+  "type": "gov",
+  "website": "https://firca.ci",
+  "what": "Producer-levy fund financing research and extension. GCF-accredited entity.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "cnra-centre-national-de-recherche-agronomique-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "CNRA (Centre National de Recherche Agronomique)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://www.cnra.ci",
+  "what": "National agronomic research centre implementing the 2026-2035 research strategy.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "anader-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "ANADER",
+  "sector_tags": [
+   "climate & extension"
+  ],
+  "type": "gov",
+  "website": "https://www.anader.ci",
+  "what": "National rural development and extension agency.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "african-development-bank-afdb-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "African Development Bank (AfDB)",
+  "sector_tags": [
+   "finance & insurance",
+   "transport",
+   "industrial zones"
+  ],
+  "type": "DFI",
+  "website": "https://www.afdb.org",
+  "what": "Headquartered in Abidjan. Finances agropoles, agro-industrial processing zones and rural infrastructure.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "orange-cote-d-ivoire-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "Orange Côte d'Ivoire",
+  "sector_tags": [
+   "digital connectivity",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://www.orange.ci",
+  "what": "Telco and mobile-money operator leading the DigiGreen & Agri agritech fund with the EU and GIZ.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "giz-eu-delegation-team-europe-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "GIZ / EU Delegation (Team Europe)",
+  "sector_tags": [
+   "finance & insurance",
+   "data"
+  ],
+  "type": "multilateral",
+  "website": "https://www.giz.de",
+  "what": "Co-funders of the €7.6m agritech fund and cocoa sustainability programmes.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "grainotech-civ",
+  "countries": [
+   "CIV"
+  ],
+  "name": "Grainotech",
+  "sector_tags": [
+   "inputs & seeds",
+   "processing"
+  ],
+  "type": "corporate",
+  "website": null,
+  "what": "Integrated agritech (feed, breeding farms, digitized distribution) backed by the Gates Foundation.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-food-and-agriculture-mofa-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Ministry of Food and Agriculture (MoFA)",
+  "sector_tags": [
+   "inputs & seeds",
+   "irrigation & water",
+   "climate & extension"
+  ],
+  "type": "gov",
+  "website": "https://mofa.gov.gh",
+  "what": "Lead ministry and implementer of the Feed Ghana Programme.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ghana-irrigation-development-authority-gida-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Ghana Irrigation Development Authority (GIDA)",
+  "sector_tags": [
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "https://gida.gov.gh",
+  "what": "Develops and regulates public irrigation schemes.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ghana-cocoa-board-cocobod-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Ghana Cocoa Board (COCOBOD)",
+  "sector_tags": [
+   "processing",
+   "logistics & market access",
+   "finance & insurance"
+  ],
+  "type": "regulator",
+  "website": "https://cocobod.gh",
+  "what": "Regulates and markets cocoa, Ghana's top agricultural export.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "millennium-development-authority-mida-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Millennium Development Authority (MiDA)",
+  "sector_tags": [
+   "energy",
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "https://mida.gov.gh",
+  "what": "Government delivery agency that is assessing brownfield irrigation and agro-infrastructure investments.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "national-food-buffer-stock-company-nafco-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "National Food Buffer Stock Company (NAFCO)",
+  "sector_tags": [
+   "storage & cold chain",
+   "logistics & market access"
+  ],
+  "type": "gov",
+  "website": "https://nafco.gov.gh",
+  "what": "Buys and stores grain for price stabilization and school feeding.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agricultural-development-bank-adb-plc-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Agricultural Development Bank (ADB PLC)",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://www.agricbank.com",
+  "what": "State-linked agri bank providing financing and advisory for Feed Ghana. Slated for recapitalization in 2026.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "csir-crops-research-institute-sari-etc-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "CSIR (Crops Research Institute, SARI, etc.)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://www.csir.org.gh",
+  "what": "National agricultural research council that breeds varieties and develops agronomy packages.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "farmerline-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Farmerline",
+  "sector_tags": [
+   "data",
+   "inputs & seeds",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://farmerline.co",
+  "what": "Agritech serving 2.2 million+ digitized farmers with inputs, advisory and data (Mergdata).",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "complete-farmer-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Complete Farmer",
+  "sector_tags": [
+   "logistics & market access",
+   "finance & insurance",
+   "data"
+  ],
+  "type": "corporate",
+  "website": "https://www.completefarmer.com",
+  "what": "Aggregator linking 72,000+ smallholders in Ghana and Togo to export buyers, with input marketplace and credit.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ifc-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "IFC",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://www.ifc.org",
+  "what": "Lender to agritech and agribusiness, including Complete Farmer.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "korea-rural-community-corporation-krc-gha",
+  "countries": [
+   "GHA"
+  ],
+  "name": "Korea Rural Community Corporation (KRC)",
+  "sector_tags": [
+   "irrigation & water",
+   "inputs & seeds"
+  ],
+  "type": "multilateral",
+  "website": null,
+  "what": "Partner on a 100 ha irrigated rice-seed project.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "federal-ministry-of-agriculture-and-food-security-fmafs-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "Federal Ministry of Agriculture and Food Security (FMAFS)",
+  "sector_tags": [
+   "inputs & seeds",
+   "mechanization",
+   "data"
+  ],
+  "type": "gov",
+  "website": "https://agriculture.gov.ng",
+  "what": "Lead ministry: NAGS-AP, mechanisation, farmer registry, food reserves",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "special-agro-industrial-processing-zones-programme-sapz-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "Special Agro-Industrial Processing Zones Programme (SAPZ)",
+  "sector_tags": [
+   "industrial zones",
+   "processing"
+  ],
+  "type": "gov",
+  "website": "https://sapz.gov.ng",
+  "what": "Federal/state/AfDB programme building agro-industrial hubs and transformation centres",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agricultural-research-council-of-nigeria-arcn-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "Agricultural Research Council of Nigeria (ARCN)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://arcn.gov.ng",
+  "what": "Coordinates national agricultural research institutes",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "international-institute-of-tropical-agriculture-iita-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "International Institute of Tropical Agriculture (IITA)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "processing"
+  ],
+  "type": "research",
+  "website": "https://www.iita.org",
+  "what": "CGIAR centre HQ in Ibadan; crop varieties, soil health, youth agribusiness",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "nirsal-plc-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "NIRSAL Plc",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://nirsal.com",
+  "what": "Credit-risk guarantee and agri-finance de-risking vehicle (CBN-owned)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "bank-of-agriculture-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "Bank of Agriculture",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "",
+  "what": "State agricultural development bank being recapitalised for affordable farm credit",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "african-development-bank-afdb-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "African Development Bank (AfDB)",
+  "sector_tags": [
+   "industrial zones",
+   "inputs & seeds",
+   "finance & insurance"
+  ],
+  "type": "multilateral",
+  "website": "https://www.afdb.org",
+  "what": "Lead financier of SAPZ and NAGS-AP phase II",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "afex-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "AFEX",
+  "sector_tags": [
+   "storage & cold chain",
+   "logistics & market access",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://afex.africa",
+  "what": "Commodity exchange, warehousing and input finance network",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "thriveagric-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "ThriveAgric",
+  "sector_tags": [
+   "finance & insurance",
+   "logistics & market access"
+  ],
+  "type": "corporate",
+  "website": "https://thriveagric.com",
+  "what": "Agri-tech financing outgrowers and aggregating commodities; N50bn CP programme",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "dangote-group-fertiliser-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "Dangote Group (Fertiliser)",
+  "sector_tags": [
+   "inputs & seeds",
+   "processing"
+  ],
+  "type": "corporate",
+  "website": "https://www.dangote.com",
+  "what": "Large urea fertiliser producer and agro-processing investor",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "nigerian-communications-commission-ncc-nga",
+  "countries": [
+   "NGA"
+  ],
+  "name": "Nigerian Communications Commission (NCC)",
+  "sector_tags": [
+   "digital connectivity"
+  ],
+  "type": "regulator",
+  "website": "https://www.ncc.gov.ng",
+  "what": "Telecom regulator relevant to rural broadband and digital extension",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-agriculture-moa-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ministry of Agriculture (MoA)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "data"
+  ],
+  "type": "gov",
+  "website": "https://www.moa.gov.et",
+  "what": "Lead ministry for crops, livestock, extension and land administration",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-irrigation-and-lowlands-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ministry of Irrigation and Lowlands",
+  "sector_tags": [
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "",
+  "what": "Develops irrigation schemes and pastoral lowland programmes",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-water-and-energy-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ministry of Water and Energy",
+  "sector_tags": [
+   "energy",
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "",
+  "what": "Water resources and power policy (incl. GERD and grid)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ethiopian-agricultural-transformation-institute-ati-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ethiopian Agricultural Transformation Institute (ATI)",
+  "sector_tags": [
+   "data",
+   "climate & extension",
+   "inputs & seeds"
+  ],
+  "type": "gov",
+  "website": "https://www.ata.gov.et",
+  "what": "Delivery and innovation unit behind cluster farming and Digital Agriculture Roadmap",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ethiopian-institute-of-agricultural-research-eiar-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ethiopian Institute of Agricultural Research (EIAR)",
+  "sector_tags": [
+   "inputs & seeds",
+   "mechanization"
+  ],
+  "type": "research",
+  "website": "https://www.eiar.gov.et",
+  "what": "Federal agricultural research system and variety release",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ethiopia-commodity-exchange-ecx-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ethiopia Commodity Exchange (ECX)",
+  "sector_tags": [
+   "logistics & market access",
+   "storage & cold chain"
+  ],
+  "type": "regulator",
+  "website": "https://www.ecx.com.et",
+  "what": "Commodity exchange and warehouse system for coffee, sesame, pulses",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-innovation-and-technology-mint-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ministry of Innovation and Technology (MInT)",
+  "sector_tags": [
+   "digital connectivity",
+   "data"
+  ],
+  "type": "gov",
+  "website": "https://www.mint.gov.et",
+  "what": "Digital economy, startup and innovation policy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ethio-telecom-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Ethio Telecom",
+  "sector_tags": [
+   "digital connectivity",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://www.ethiotelecom.et",
+  "what": "State telco; telebirr mobile money",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "safaricom-ethiopia-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Safaricom Ethiopia",
+  "sector_tags": [
+   "digital connectivity",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://www.safaricom.et",
+  "what": "Private telco and M-Pesa operator since 2022 liberalisation",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "gates-foundation-ethiopia-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "Gates Foundation (Ethiopia)",
+  "sector_tags": [
+   "data",
+   "climate & extension"
+  ],
+  "type": "NGO",
+  "website": "https://www.gatesfoundation.org",
+  "what": "Key funder of ATI and Digital Agriculture Roadmap",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ilri-addis-ababa-campus-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "ILRI Addis Ababa campus",
+  "sector_tags": [
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://www.ilri.org",
+  "what": "Major CGIAR livestock research presence in Ethiopia",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "world-bank-ethiopia-eth",
+  "countries": [
+   "ETH"
+  ],
+  "name": "World Bank (Ethiopia)",
+  "sector_tags": [
+   "irrigation & water",
+   "finance & insurance"
+  ],
+  "type": "multilateral",
+  "website": "https://www.worldbank.org/en/country/ethiopia",
+  "what": "Financier of land certification, food-systems resilience and irrigation programmes",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-agriculture-and-livestock-development-moald-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "Ministry of Agriculture and Livestock Development (MoALD)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "data"
+  ],
+  "type": "gov",
+  "website": "https://kilimo.go.ke",
+  "what": "Lead ministry; runs ASTGS, KIAMIS registry and fertiliser e-subsidy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "state-department-for-irrigation-national-irrigation-authorit",
+  "countries": [
+   "KEN"
+  ],
+  "name": "State Department for Irrigation / National Irrigation Authority",
+  "sector_tags": [
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "",
+  "what": "Plans and develops public irrigation schemes under NISIP (Galana Kulalu, Bura, Mwea)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "kenya-agricultural-and-livestock-research-organization-kalro",
+  "countries": [
+   "KEN"
+  ],
+  "name": "Kenya Agricultural and Livestock Research Organization (KALRO)",
+  "sector_tags": [
+   "inputs & seeds",
+   "mechanization",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://www.kalro.org",
+  "what": "National agricultural research body: seed varieties, livestock, mechanisation research",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agriculture-and-food-authority-afa-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "Agriculture and Food Authority (AFA)",
+  "sector_tags": [
+   "processing",
+   "logistics & market access"
+  ],
+  "type": "regulator",
+  "website": "https://www.afa.go.ke",
+  "what": "Regulates crop value chains (tea, coffee, horticulture, sugar), licensing and export compliance",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "kenya-plant-health-inspectorate-service-kephis-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "Kenya Plant Health Inspectorate Service (KEPHIS)",
+  "sector_tags": [
+   "inputs & seeds",
+   "logistics & market access"
+  ],
+  "type": "regulator",
+  "website": "https://www.kephis.go.ke",
+  "what": "Seed certification and phytosanitary regulator for exports",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "international-livestock-research-institute-ilri-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "International Livestock Research Institute (ILRI)",
+  "sector_tags": [
+   "climate & extension",
+   "data"
+  ],
+  "type": "research",
+  "website": "https://www.ilri.org",
+  "what": "CGIAR livestock research centre headquartered in Nairobi",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agra-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "AGRA",
+  "sector_tags": [
+   "inputs & seeds",
+   "logistics & market access",
+   "finance & insurance"
+  ],
+  "type": "NGO",
+  "website": "https://agra.org",
+  "what": "Pan-African food-systems organisation headquartered in Nairobi",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "safaricom-m-pesa-digifarm-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "Safaricom (M-Pesa / DigiFarm)",
+  "sector_tags": [
+   "digital connectivity",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://www.safaricom.co.ke",
+  "what": "Telco and mobile-money rail for agri payments, credit and advisory",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "pula-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "Pula",
+  "sector_tags": [
+   "finance & insurance",
+   "data"
+  ],
+  "type": "corporate",
+  "website": "https://www.pula-advisors.com",
+  "what": "Nairobi agri-insurtech; bundled index insurance for smallholders across Africa and Asia",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "apollo-agriculture-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "Apollo Agriculture",
+  "sector_tags": [
+   "inputs & seeds",
+   "finance & insurance",
+   "data"
+  ],
+  "type": "corporate",
+  "website": "https://www.apolloagriculture.com",
+  "what": "Input financing and advisory for smallholders using satellite and ML credit scoring",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "one-acre-fund-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "One Acre Fund",
+  "sector_tags": [
+   "inputs & seeds",
+   "finance & insurance",
+   "climate & extension"
+  ],
+  "type": "NGO",
+  "website": "https://oneacrefund.org",
+  "what": "Asset-based input credit and training for smallholders in Kenya and the region",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "kengen-ken",
+  "countries": [
+   "KEN"
+  ],
+  "name": "KenGen",
+  "sector_tags": [
+   "energy"
+  ],
+  "type": "corporate",
+  "website": "https://www.kengen.co.ke",
+  "what": "State-majority power generator (geothermal and hydro); supplies Olkaria-based industrial parks",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-agriculture-and-animal-resources-minagri-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "Ministry of Agriculture and Animal Resources (MINAGRI)",
+  "sector_tags": [
+   "inputs & seeds",
+   "irrigation & water",
+   "climate & extension"
+  ],
+  "type": "gov",
+  "website": "https://www.minagri.gov.rw",
+  "what": "Lead ministry; owns PSTA5 and fertiliser subsidy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "rwanda-agriculture-and-animal-resources-development-board-ra",
+  "countries": [
+   "RWA"
+  ],
+  "name": "Rwanda Agriculture and Animal Resources Development Board (RAB)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "irrigation & water"
+  ],
+  "type": "research",
+  "website": "https://www.rab.gov.rw",
+  "what": "Research, extension and irrigation implementation agency",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "national-agricultural-export-development-board-naeb-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "National Agricultural Export Development Board (NAEB)",
+  "sector_tags": [
+   "logistics & market access",
+   "processing",
+   "storage & cold chain"
+  ],
+  "type": "gov",
+  "website": "https://www.naeb.gov.rw",
+  "what": "Promotes coffee, tea and horticulture exports",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-ict-and-innovation-minict-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "Ministry of ICT and Innovation (MINICT)",
+  "sector_tags": [
+   "digital connectivity",
+   "data"
+  ],
+  "type": "gov",
+  "website": "https://www.minict.gov.rw",
+  "what": "Digital economy and innovation policy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-infrastructure-mininfra-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "Ministry of Infrastructure (MININFRA)",
+  "sector_tags": [
+   "energy",
+   "transport",
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "https://www.mininfra.gov.rw",
+  "what": "Energy, transport and water infrastructure",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "rwanda-development-board-rdb-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "Rwanda Development Board (RDB)",
+  "sector_tags": [
+   "industrial zones"
+  ],
+  "type": "gov",
+  "website": "https://rdb.rw",
+  "what": "Investment promotion and special economic zones",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "development-bank-of-rwanda-brd-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "Development Bank of Rwanda (BRD)",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://www.brd.rw",
+  "what": "Development finance, incl. agriculture and guarantee facilities",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "rwanda-energy-group-reg-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "Rwanda Energy Group (REG)",
+  "sector_tags": [
+   "energy"
+  ],
+  "type": "corporate",
+  "website": "https://www.reg.rw",
+  "what": "State utility for generation, transmission and rural electrification",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "one-acre-fund-tubura-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "One Acre Fund (Tubura)",
+  "sector_tags": [
+   "inputs & seeds",
+   "finance & insurance",
+   "climate & extension"
+  ],
+  "type": "NGO",
+  "website": "https://oneacrefund.org",
+  "what": "Large smallholder input-credit and training operation in Rwanda",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agra-rwanda-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "AGRA (Rwanda)",
+  "sector_tags": [
+   "inputs & seeds",
+   "logistics & market access"
+  ],
+  "type": "NGO",
+  "website": "https://agra.org",
+  "what": "Food-systems partner to MINAGRI",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "european-union-delegation-to-rwanda-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "name": "European Union Delegation to Rwanda",
+  "sector_tags": [
+   "irrigation & water",
+   "climate & extension"
+  ],
+  "type": "multilateral",
+  "website": "",
+  "what": "Funder of climate-smart agriculture and irrigation (EUR 40m commitment)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ministry-of-agriculture-wizara-ya-kilimo-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "Ministry of Agriculture (Wizara ya Kilimo)",
+  "sector_tags": [
+   "inputs & seeds",
+   "irrigation & water",
+   "climate & extension"
+  ],
+  "type": "gov",
+  "website": "https://www.kilimo.go.tz",
+  "what": "Lead ministry for Agenda 10/30 and BBT.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "national-irrigation-commission-nirc-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "National Irrigation Commission (NIRC)",
+  "sector_tags": [
+   "irrigation & water"
+  ],
+  "type": "gov",
+  "website": "https://www.nirc.go.tz",
+  "what": "Develops irrigation schemes, dams and the smallholder borehole programme.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "tanzania-agricultural-research-institute-tari-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "Tanzania Agricultural Research Institute (TARI)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension"
+  ],
+  "type": "research",
+  "website": "https://www.tari.go.tz",
+  "what": "National crop research, seed and seedling multiplication.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agricultural-seed-agency-asa-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "Agricultural Seed Agency (ASA)",
+  "sector_tags": [
+   "inputs & seeds"
+  ],
+  "type": "gov",
+  "website": "https://www.asa.go.tz",
+  "what": "Produces and distributes certified seed.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "national-agricultural-extension-services-agency-naesa-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "National Agricultural Extension Services Agency (NAESA)",
+  "sector_tags": [
+   "climate & extension"
+  ],
+  "type": "gov",
+  "website": null,
+  "what": "New extension agency operational from July 2026.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "tanzania-agricultural-development-bank-tadb-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "Tanzania Agricultural Development Bank (TADB)",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://www.tadb.co.tz",
+  "what": "State agri DFI providing credit and guarantees.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sagcot-centre-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "SAGCOT Centre",
+  "sector_tags": [
+   "logistics & market access",
+   "industrial zones"
+  ],
+  "type": "NGO",
+  "website": "https://sagcot.co.tz",
+  "what": "PPP platform for the Southern Agricultural Growth Corridor.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "tanzania-cooperative-development-commission-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "Tanzania Cooperative Development Commission",
+  "sector_tags": [
+   "logistics & market access",
+   "finance & insurance"
+  ],
+  "type": "regulator",
+  "website": null,
+  "what": "Regulates agricultural marketing cooperatives (AMCOS).",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "world-bank-ifad-afdb-gafsp-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "World Bank / IFAD / AfDB (GAFSP)",
+  "sector_tags": [
+   "finance & insurance",
+   "storage & cold chain",
+   "irrigation & water"
+  ],
+  "type": "multilateral",
+  "website": "https://www.worldbank.org",
+  "what": "Major financiers of irrigation, post-harvest centres and food-systems resilience.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "crdb-bank-foundation-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "CRDB Bank Foundation",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "investor",
+  "website": "https://crdbbankfoundation.org",
+  "what": "Bank foundation partnering with MazaoHub on smart, inclusive farming finance.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mazaohub-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "MazaoHub",
+  "sector_tags": [
+   "data",
+   "inputs & seeds",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://mazaohub.com",
+  "what": "Soil-data and AI agronomy platform linking smallholders to finance and markets ($2m pre-seed).",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "kilimo-fresh-tza",
+  "countries": [
+   "TZA"
+  ],
+  "name": "Kilimo Fresh",
+  "sector_tags": [
+   "logistics & market access",
+   "storage & cold chain"
+  ],
+  "type": "corporate",
+  "website": null,
+  "what": "Tech-enabled fresh-produce supply chain linking farmers to retailers and HoReCa.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "department-of-agriculture-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Department of Agriculture",
+  "sector_tags": [
+   "climate & extension",
+   "inputs & seeds",
+   "logistics & market access"
+  ],
+  "type": "gov",
+  "website": "https://www.gov.za",
+  "what": "National department leading AAMP, biosecurity and producer support.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "department-of-land-reform-and-rural-development-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Department of Land Reform and Rural Development",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "gov",
+  "website": "https://www.dalrrd.gov.za",
+  "what": "Land redistribution, restitution and tenure reform.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agricultural-research-council-arc-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Agricultural Research Council (ARC)",
+  "sector_tags": [
+   "inputs & seeds",
+   "climate & extension",
+   "data"
+  ],
+  "type": "research",
+  "website": "https://www.arc.agric.za",
+  "what": "National agricultural research agency covering cultivars, animal health and agritech.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "land-bank-land-and-agricultural-development-bank-of-sa-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Land Bank (Land and Agricultural Development Bank of SA)",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "DFI",
+  "website": "https://landbank.co.za",
+  "what": "State agricultural DFI running the blended-finance scheme with the department.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "onderstepoort-biological-products-obp-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Onderstepoort Biological Products (OBP)",
+  "sector_tags": [
+   "climate & extension"
+  ],
+  "type": "corporate",
+  "website": "https://www.obpvaccines.co.za",
+  "what": "State-owned veterinary vaccine manufacturer that is central to the FMD response.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agbiz-agricultural-business-chamber-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Agbiz (Agricultural Business Chamber)",
+  "sector_tags": [
+   "data",
+   "logistics & market access"
+  ],
+  "type": "NGO",
+  "website": "https://agbiz.co.za",
+  "what": "Agribusiness association and AAMP social partner.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agri-sa-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Agri SA",
+  "sector_tags": [
+   "logistics & market access"
+  ],
+  "type": "NGO",
+  "website": "https://agrisa.co.za",
+  "what": "National farmers' federation.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "transnet-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Transnet",
+  "sector_tags": [
+   "transport",
+   "logistics & market access"
+  ],
+  "type": "corporate",
+  "website": "https://www.transnet.net",
+  "what": "State freight rail and ports operator, and the key export bottleneck.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "eskom-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Eskom",
+  "sector_tags": [
+   "energy"
+  ],
+  "type": "corporate",
+  "website": "https://www.eskom.co.za",
+  "what": "State power utility serving farms and agro-processors.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "absa-agribusiness-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Absa AgriBusiness",
+  "sector_tags": [
+   "finance & insurance"
+  ],
+  "type": "investor",
+  "website": "https://www.absa.co.za",
+  "what": "Commercial agri-finance desk and strategic investor in agritech Khula!.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "aerobotics-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Aerobotics",
+  "sector_tags": [
+   "data"
+  ],
+  "type": "corporate",
+  "website": "https://www.aerobotics.com",
+  "what": "Cape Town agritech using drone and satellite imagery with AI for orchard crops.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "khula-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "name": "Khula!",
+  "sector_tags": [
+   "logistics & market access",
+   "inputs & seeds",
+   "finance & insurance"
+  ],
+  "type": "corporate",
+  "website": "https://www.khula.co.za",
+  "what": "Digital marketplace for inputs and produce, plus funding for emerging farmers.",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "acumen-resilient-agriculture-fund-ken",
+  "countries": [
+   "KEN",
+   "GHA",
+   "NGA",
+   "UGA",
+   "COD"
+  ],
+  "funder": true,
+  "name": "Acumen (Resilient Agriculture Fund)",
+  "sector_tags": [],
+  "subtype": "impact investor",
+  "type": "investor",
+  "website": "https://acumen.org",
+  "what": "Climate-resilient smallholder agtech; backed Farmerline, Victory Farms and Complete Farmer; also an off-grid energy lender (d.light) and a Husk DRC grant",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mercy-corps-ventures-tza",
+  "countries": [
+   "TZA",
+   "TUN",
+   "KEN",
+   "NGA"
+  ],
+  "funder": true,
+  "name": "Mercy Corps Ventures",
+  "sector_tags": [],
+  "subtype": "VC (impact)",
+  "type": "investor",
+  "website": "https://www.mercycorpsventures.com",
+  "what": "Pre-seed and seed climate-resilience and agri-fintech; backed MazaoHub and Seabex",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "catalyst-fund-bfa-global-tza",
+  "countries": [
+   "TZA",
+   "MLI",
+   "CIV",
+   "KEN"
+  ],
+  "funder": true,
+  "name": "Catalyst Fund (BFA Global)",
+  "sector_tags": [],
+  "subtype": "accelerator / pre-seed VC",
+  "type": "investor",
+  "website": "https://catalystfund.bfaglobal.com",
+  "what": "Climate-adaptation startups; led rounds in MazaoHub (2025) and OKO (2025)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "british-international-investment-bii-nga",
+  "countries": [
+   "NGA",
+   "KEN",
+   "GHA"
+  ],
+  "funder": true,
+  "name": "British International Investment (BII)",
+  "sector_tags": [],
+  "subtype": "DFI (UK)",
+  "type": "DFI",
+  "website": "https://www.bii.co.uk",
+  "what": "Agri value chains and off-grid energy; backed AFEX ($26.5M), SunCulture and Babban Gona ($7.5M debt)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "fmo-gha",
+  "countries": [
+   "GHA",
+   "ZAF",
+   "KEN"
+  ],
+  "funder": true,
+  "name": "FMO",
+  "sector_tags": [],
+  "subtype": "DFI (Netherlands)",
+  "type": "DFI",
+  "website": "https://www.fmo.nl",
+  "what": "Agtech and digital infrastructure; invested in Farmerline, Aerobotics, Mawingu and d.light facilities",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ifc-world-bank-group-nga",
+  "countries": [
+   "NGA",
+   "GHA",
+   "KEN"
+  ],
+  "funder": true,
+  "name": "IFC (World Bank Group)",
+  "sector_tags": [],
+  "subtype": "DFI",
+  "type": "DFI",
+  "website": "https://www.ifc.org",
+  "what": "Agri finance and logistics; investor in Kobo360, lender to Complete Farmer ($2.4M)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "novastar-ventures-ken",
+  "countries": [
+   "KEN",
+   "NGA"
+  ],
+  "funder": true,
+  "name": "Novastar Ventures",
+  "sector_tags": [],
+  "subtype": "VC",
+  "type": "investor",
+  "website": "https://www.novastarventures.com",
+  "what": "East and West Africa growth VC; led Sistema.bio's $3.5M round (2025)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "tlcom-capital-nga",
+  "countries": [
+   "NGA",
+   "KEN"
+  ],
+  "funder": true,
+  "name": "TLcom Capital",
+  "sector_tags": [],
+  "subtype": "VC",
+  "type": "investor",
+  "website": "https://www.tlcomcapital.com",
+  "what": "Tech VC (Series A/B), including agri-logistics (Kobo360)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "shell-foundation-nga",
+  "countries": [
+   "NGA",
+   "KEN",
+   "UGA"
+  ],
+  "funder": true,
+  "name": "Shell Foundation",
+  "sector_tags": [],
+  "subtype": "foundation (grant / catalytic)",
+  "type": "investor",
+  "website": "https://shellfoundation.org",
+  "what": "Off-grid productive use and cold chain; grantor to Koolboks",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "all-on-nga",
+  "countries": [
+   "NGA"
+  ],
+  "funder": true,
+  "name": "All On",
+  "sector_tags": [],
+  "subtype": "impact investor (Shell-backed)",
+  "type": "investor",
+  "website": "https://www.all-on.com",
+  "what": "Nigerian off-grid energy and cooling; co-led Koolboks Series A",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "kawisafi-ventures-ken",
+  "countries": [
+   "KEN",
+   "NGA"
+  ],
+  "funder": true,
+  "name": "KawiSafi Ventures",
+  "sector_tags": [],
+  "subtype": "VC (climate)",
+  "type": "investor",
+  "website": "https://www.kawisafiventures.com",
+  "what": "Clean energy and climate tech; co-led Koolboks Series A",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "aruwa-capital-nga",
+  "countries": [
+   "NGA"
+  ],
+  "funder": true,
+  "name": "Aruwa Capital",
+  "sector_tags": [],
+  "subtype": "VC (gender-lens)",
+  "type": "investor",
+  "website": "https://www.aruwacapital.com",
+  "what": "West African growth companies; co-led Koolboks Series A",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "goodwell-investments-zmb",
+  "countries": [
+   "ZMB",
+   "KEN",
+   "NGA",
+   "ZAF"
+  ],
+  "funder": true,
+  "name": "Goodwell Investments",
+  "sector_tags": [],
+  "subtype": "VC (impact)",
+  "type": "investor",
+  "website": "https://goodwell.nl",
+  "what": "Inclusive agri value chains; led Good Nature Agro Series B",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "oikocredit-gha",
+  "countries": [
+   "GHA",
+   "ZMB"
+  ],
+  "funder": true,
+  "name": "Oikocredit",
+  "sector_tags": [],
+  "subtype": "impact investor / cooperative lender",
+  "type": "investor",
+  "website": "https://www.oikocredit.coop",
+  "what": "Agri-SME equity and debt; backed Farmerline and Good Nature Agro",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "waterequity-ken",
+  "countries": [
+   "KEN"
+  ],
+  "funder": true,
+  "name": "WaterEquity",
+  "sector_tags": [],
+  "subtype": "impact fund manager",
+  "type": "investor",
+  "website": "https://waterequity.org",
+  "what": "Water and climate resilience; first deal of its new fund was SunCulture ($5M)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "symbiotics-gha",
+  "countries": [
+   "GHA"
+  ],
+  "funder": true,
+  "name": "Symbiotics",
+  "sector_tags": [],
+  "subtype": "impact debt",
+  "type": "investor",
+  "website": "https://symbioticsgroup.com",
+  "what": "Private debt to agri-SMEs; $5M to Complete Farmer (2025)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "village-capital-nga",
+  "countries": [
+   "NGA"
+  ],
+  "funder": true,
+  "name": "Village Capital",
+  "sector_tags": [],
+  "subtype": "accelerator / investor",
+  "type": "investor",
+  "website": "https://vilcap.com",
+  "what": "Peer-selected investment in agri-fintech; backed Crop2Cash",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "uncdf-ken",
+  "countries": [
+   "KEN",
+   "UGA"
+  ],
+  "funder": true,
+  "name": "UNCDF",
+  "sector_tags": [],
+  "subtype": "UN development finance",
+  "type": "investor",
+  "website": "https://www.uncdf.org",
+  "what": "Catalytic loans for agri-infrastructure; lent $500K to SokoFresh",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "pembani-remgro-infrastructure-managers-ken",
+  "countries": [
+   "KEN",
+   "TZA"
+  ],
+  "funder": true,
+  "name": "Pembani Remgro Infrastructure Managers",
+  "sector_tags": [],
+  "subtype": "infrastructure PE",
+  "type": "investor",
+  "website": "https://www.pembaniremgro.com",
+  "what": "African infrastructure, including rural digital connectivity; led Mawingu's $20M Series C",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "infraco-africa-pidg-ken",
+  "countries": [
+   "KEN"
+  ],
+  "funder": true,
+  "name": "InfraCo Africa (PIDG)",
+  "sector_tags": [],
+  "subtype": "infrastructure developer / investor",
+  "type": "investor",
+  "website": "https://www.infracoafrica.com",
+  "what": "Early-stage infrastructure such as rural ISPs and energy; Mawingu shareholder",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agrifi-eu-gha",
+  "countries": [
+   "GHA"
+  ],
+  "funder": true,
+  "name": "AgriFI (EU)",
+  "sector_tags": [],
+  "subtype": "EU blended-finance facility",
+  "type": "investor",
+  "website": "https://www.agrifi.eu",
+  "what": "Smallholder agri-value-chain SMEs; $2.5M to Complete Farmer",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "partech-africa-nga",
+  "countries": [
+   "NGA",
+   "KEN",
+   "EGY",
+   "SEN",
+   "ZAF"
+  ],
+  "funder": true,
+  "name": "Partech Africa",
+  "sector_tags": [],
+  "subtype": "VC + research",
+  "type": "investor",
+  "website": "https://partechpartners.com",
+  "what": "Pan-African VC; publishes the annual Africa Tech VC report (2025: $4.1B, 41% debt)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "briter-agbase-africa-wide",
+  "countries": [
+   "AFRICA-WIDE"
+  ],
+  "funder": true,
+  "name": "Briter (AgBase)",
+  "sector_tags": [],
+  "subtype": "data / intelligence",
+  "type": "investor",
+  "website": "https://www.briter.co",
+  "what": "State of Agtech Investment in Africa reports; AgBase deal database",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "africa-the-big-deal-africa-wide",
+  "countries": [
+   "AFRICA-WIDE"
+  ],
+  "funder": true,
+  "name": "Africa: The Big Deal",
+  "sector_tags": [],
+  "subtype": "data / intelligence",
+  "type": "investor",
+  "website": "https://thebigdeal.substack.com",
+  "what": "Deal-level funding database for African startups (>$100K rounds)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agdevco-zmb",
+  "countries": [
+   "ZMB",
+   "UGA",
+   "GHA",
+   "MOZ",
+   "TZA",
+   "MWI",
+   "RWA"
+  ],
+  "funder": true,
+  "name": "AgDevCo",
+  "sector_tags": [],
+  "subtype": "specialist agri investor (DFI-backed)",
+  "type": "DFI",
+  "website": "https://www.agdevco.com",
+  "what": "Equity and debt for African agribusiness and agri-infrastructure.",
+  "needs_review": true,
+  "review_note": "NOT re-verified this session (page fetch blocked",
+  "last_verified": "2026-11-03"
+ }
+]

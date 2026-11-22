@@ -1,0 +1,1396 @@
+[
+ {
+  "id": "alaa-farouk-egy",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora": false,
+  "focus": "Food-security strategy, land reclamation and digital farmer services",
+  "name": "Alaa Farouk",
+  "organization": "MoALR",
+  "public_links": [
+   "https://english.ahram.org.eg/News/565382.aspx"
+  ],
+  "role": "Minister of Agriculture and Land Reclamation",
+  "source": "Ahram Online, 6 Apr 2026; Egypt Today, 20 Apr 2026 (post Feb-2026 reshuffle)",
+  "talk_to_about": "The 5-pillar food-security strategy, the Farmer's Card and investment climate for agribusiness",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "adel-abdelazim-egy",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora": false,
+  "focus": "National agricultural research and variety development",
+  "name": "Adel Abdelazim",
+  "organization": "Agricultural Research Centre (ARC)",
+  "public_links": [
+   "https://alliancebioversityciat.org/stories/agritech4egypt-strategic-egypt-italy-partnership-translating-research-market-ready-solutions"
+  ],
+  "role": "President",
+  "source": "Alliance Bioversity-CIAT, 9 Mar 2026",
+  "talk_to_about": "Co-developing and pilot-testing agritech with ARC institutes",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "gina-el-feky-egy",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora": false,
+  "focus": "Science funding and research-to-market translation",
+  "name": "Gina El-Feky",
+  "organization": "Academy of Scientific Research and Technology (ASRT)",
+  "public_links": [
+   "https://alliancebioversityciat.org/stories/agritech4egypt-strategic-egypt-italy-partnership-translating-research-market-ready-solutions"
+  ],
+  "role": "President",
+  "source": "Alliance Bioversity-CIAT, 9 Mar 2026",
+  "talk_to_about": "Innovation challenges and research grants for agri-food startups",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "tiberio-chiari-egy",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora": false,
+  "focus": "Donor funding for AgriTech4Egypt and rural development",
+  "name": "Tiberio Chiari",
+  "organization": "Italian Agency for Development Cooperation (AICS)",
+  "public_links": [
+   "https://alliancebioversityciat.org/stories/agritech4egypt-strategic-egypt-italy-partnership-translating-research-market-ready-solutions"
+  ],
+  "role": "Head of Cairo Office",
+  "source": "Alliance Bioversity-CIAT, 9 Mar 2026",
+  "talk_to_about": "Co-funding and piloting agritech under Italy's Piano Mattei",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "helmy-abouleish-egy",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora": false,
+  "focus": "Organic agriculture, soil carbon and the Economy of Love certification",
+  "name": "Helmy Abouleish",
+  "organization": "SEKEM",
+  "public_links": [
+   "https://www.sekem.com/en/takreem-awards-ceo-helmy-abouleish-in-grand-celebration-of-arab-excellence/",
+   "https://www.weforum.org/people/helmy-abouleish"
+  ],
+  "role": "CEO",
+  "source": "SEKEM.com; WEF profile",
+  "talk_to_about": "Regenerative agriculture, carbon credits and smallholder organic supply chains",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ahmed-hassanein-egy",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora": false,
+  "focus": "Biochar and bio-inputs from agricultural residues",
+  "name": "Ahmed Hassanein",
+  "organization": "Croptimus",
+  "public_links": [
+   "https://allafrica.com/stories/202512290294.html"
+  ],
+  "role": "Co-founder",
+  "source": "AllAfrica, 29 Dec 2025",
+  "talk_to_about": "Water- and fertilizer-saving soil amendments, and circular agriculture",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "abdelrahman-alatrash-egy",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora": false,
+  "focus": "Agri-waste valorization technology",
+  "name": "Abdelrahman AlAtrash",
+  "organization": "Croptimus",
+  "public_links": [
+   "https://allafrica.com/stories/202512290294.html",
+   "https://www.startuplist.africa/people/abdelrahman-alatrash"
+  ],
+  "role": "Co-founder",
+  "source": "AllAfrica, 29 Dec 2025",
+  "talk_to_about": "Scaling bio-inputs regionally",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "khalid-hatimy-bounouni-mar",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora": false,
+  "focus": "Appointed 16 Oct 2026; former agribusiness executive (Zniber Group) and MP for Taroudant",
+  "name": "Khalid Hatimy Bounouni",
+  "organization": "Ministry of Agriculture",
+  "public_links": [],
+  "role": "Minister of Agriculture, Maritime Fisheries and Food Sovereignty",
+  "source": "https://www.moroccoworldnews.com/2026/10/342433/khalid-hatimys-journey-from-agribusiness-to-being-moroccos-agriculture-minister/",
+  "talk_to_about": "Generation Green recalibration, food sovereignty agenda, drought response",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "nizar-baraka-mar",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora": false,
+  "focus": "Dams, inter-basin transfers, desalination, PNAEPI 2020-2027",
+  "name": "Nizar Baraka",
+  "organization": "Ministry of Equipment, Water and Forests",
+  "public_links": [],
+  "role": "Minister of Equipment, Water and Forests",
+  "source": "https://www.moroccoworldnews.com/2026/10/342414/king-mohammed-vi-presides-over-ceremony-to-appoint-new-government-members/",
+  "talk_to_about": "Water allocation to agriculture, desalination-for-irrigation projects",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "charafat-afailal-mar",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora": false,
+  "focus": "Energy transition; appointed Oct 2026",
+  "name": "Charafat Afailal",
+  "organization": "Ministry of Energy",
+  "public_links": [],
+  "role": "Minister of Energy, Mines and Sustainable Development",
+  "source": "https://www.moroccoworldnews.com/2026/10/342414/king-mohammed-vi-presides-over-ceremony-to-appoint-new-government-members/",
+  "talk_to_about": "Renewable power for pumping and desalination",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "abdessamad-kayouh-mar",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora": false,
+  "focus": "Transport and logistics policy (retained Oct 2026)",
+  "name": "Abdessamad Kayouh",
+  "organization": "Ministry of Transport and Logistics",
+  "public_links": [],
+  "role": "Minister of Transport and Logistics",
+  "source": "https://www.moroccoworldnews.com/2026/10/342414/king-mohammed-vi-presides-over-ceremony-to-appoint-new-government-members/",
+  "talk_to_about": "Export logistics, rural transport links",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mostafa-terrab-mar",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora": false,
+  "focus": "Fertiliser strategy, African soil-health partnerships, green ammonia",
+  "name": "Mostafa Terrab",
+  "organization": "OCP Group",
+  "public_links": [
+   "https://www.weforum.org/people/mostafa-terrab/"
+  ],
+  "role": "Chairman and CEO",
+  "source": "https://old.medias24.com/2026/04/21/to-accelerate-its-transformation-ocp-overhauls-its-internal-organization-and-reshapes-its-top-leadership-1663207/",
+  "talk_to_about": "Customised fertilisers, soil data, Africa fertiliser supply",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "hicham-el-habti-mar",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora": false,
+  "focus": "Research, innovation, digital and AI for agriculture and industry",
+  "name": "Hicham El Habti",
+  "organization": "UM6P / OCP Group",
+  "public_links": [
+   "https://parispeaceforum.org/speakers/hicham-el-habti-president-university-mohammed-vi-polytechnic"
+  ],
+  "role": "President, UM6P; head of OCP Innovation & Learning pole",
+  "source": "https://old.medias24.com/2026/04/21/to-accelerate-its-transformation-ocp-overhauls-its-internal-organization-and-reshapes-its-top-leadership-1663207/",
+  "talk_to_about": "AgTech R&D partnerships, startup incubation, digital agriculture",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "hanane-mouchrid-mar",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora": false,
+  "focus": "Water (desalination), renewable energy and green hydrogen at OCP",
+  "name": "Hanane Mouchrid",
+  "organization": "OCP Group",
+  "public_links": [],
+  "role": "Head of Sustainability & Green Utilities pole",
+  "source": "https://old.medias24.com/2026/04/21/to-accelerate-its-transformation-ocp-overhauls-its-internal-organization-and-reshapes-its-top-leadership-1663207/",
+  "talk_to_about": "Desalination and renewable-energy models for agriculture",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "bruno-nabagne-kone-civ",
+  "countries": [
+   "CIV"
+  ],
+  "diaspora": false,
+  "focus": "PNIA 3, value-chain organization, storage and finance",
+  "name": "Bruno Nabagné Koné",
+  "organization": "MINADER",
+  "public_links": [
+   "https://fr.allafrica.com/stories/202601290583.html",
+   "https://www.aip.ci/cote-divoire-aip-le-ministre-bruno-kone-dresse-le-bilan-2025-du-secteur-agricole-et-annonce-les-perspectives-du-pnia-iii/"
+  ],
+  "role": "Minister of Agriculture, Rural Development and Food Production (since Jan 2026)",
+  "source": "AllAfrica, 28 Jan 2026; AIP, 5 Jun 2026",
+  "talk_to_about": "PNIA 3 investment priorities, land security and processing incentives",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "bernard-kini-comoe-civ",
+  "countries": [
+   "CIV"
+  ],
+  "diaspora": false,
+  "focus": "Food crops and agronomic research strategy 2026-2035",
+  "name": "Bernard Kini Comoé",
+  "organization": "MINADER",
+  "public_links": [
+   "https://www.incotedivoire.net/economic/new/Agricultural%20Sector%20Development:%20Minister%20Bernard%20Kini%20Como%C3%A9%20Launches%20Strategic%20Planning%20for%20Agronomic%20Research%20%282026%E2%80%932035%29"
+  ],
+  "role": "Minister Delegate for Food Crop Production",
+  "source": "InCoteDivoire, 23 Mar 2026",
+  "talk_to_about": "Food sovereignty, seeds and CNRA research priorities",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "yves-brahima-kone-civ",
+  "countries": [
+   "CIV"
+  ],
+  "diaspora": false,
+  "focus": "Cocoa regulation, farm-gate pricing and youth succession",
+  "name": "Yves Brahima Koné",
+  "organization": "Conseil du Café-Cacao",
+  "public_links": [
+   "https://www.fratmat.info/article/2644229/economie/10e-edition-des-journees-nationales-du-cacao-et-du-chocolat-la-jeunesse-appelee-a-prendre-le-relais-pour-assurer-lavenir-de-la-filiere"
+  ],
+  "role": "Director General",
+  "source": "Fraternité Matin, 1 Sept 2026",
+  "talk_to_about": "Cocoa traceability, processing and farmer income",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mathias-koffi-civ",
+  "countries": [
+   "CIV"
+  ],
+  "diaspora": false,
+  "focus": "Rural land certification operations",
+  "name": "Mathias Koffi",
+  "organization": "Agence Foncière Rurale (AFOR)",
+  "public_links": [
+   "https://www.fratmat.info/article/2645025/economie/securisation-fonciere-2-millions-dhectares-certifies"
+  ],
+  "role": "Director of Technical Operations",
+  "source": "Fraternité Matin, 7 Oct 2026",
+  "talk_to_about": "Land certification progress and digital cadastre",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "daniel-oulai-civ",
+  "countries": [
+   "CIV"
+  ],
+  "diaspora": false,
+  "focus": "Integrated feed and livestock agritech with digitized distribution",
+  "name": "Daniel Oulai",
+  "organization": "Grainotech",
+  "public_links": [
+   "https://launchbaseafrica.com/2024/10/22/gates-foundation-backs-ivorian-agritech-startup-grainotech",
+   "https://wearetech.africa/en/fils-uk/tech-stars/daniel-oulai-turns-scraps-into-farming-solutions-in-cote-d-ivoire"
+  ],
+  "role": "Founder",
+  "source": "Launch Base Africa, Oct 2024",
+  "talk_to_about": "Circular agri-inputs and women's rural production",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "robert-beugre-mambe-civ",
+  "countries": [
+   "CIV"
+  ],
+  "diaspora": false,
+  "focus": "Launched the PNIA 3 formulation process (June 2026)",
+  "name": "Robert Beugré Mambé",
+  "organization": "Government of Côte d'Ivoire",
+  "public_links": [
+   "https://connectionivoirienne.net/2026/06/19/economie-le-pm-mambe-lance-le-processus-dinvestissement-agricole-de-3eme-generation-pnia-3/"
+  ],
+  "role": "Prime Minister",
+  "source": "Connectionivoirienne, 19 Jun 2026",
+  "talk_to_about": "Cross-government agricultural investment priorities (high-level only)",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "eric-opoku-gha",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora": false,
+  "focus": "Feed Ghana Programme, irrigation and youth in agriculture",
+  "name": "Eric Opoku",
+  "organization": "MoFA",
+  "public_links": [
+   "https://en.wikipedia.org/wiki/Eric_Opoku_(politician)",
+   "https://www.myjoyonline.com/agric-minister-outlines-key-developments-under-feed-ghana-programme-in-past-nine-months/"
+  ],
+  "role": "Minister for Food and Agriculture",
+  "source": "MyJoyOnline Nov 2025; MoFA statements Jun 2026",
+  "talk_to_about": "Feed Ghana priorities, irrigation PPPs and agro-industrial linkages",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "randy-ransford-abbey-gha",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora": false,
+  "focus": "Cocoa financing reform and local processing",
+  "name": "Randy (Ransford) Abbey",
+  "organization": "Ghana Cocoa Board (COCOBOD)",
+  "public_links": [
+   "https://allafrica.com/stories/202602120458.html"
+  ],
+  "role": "Chief Executive Officer",
+  "source": "AllAfrica, 12 Feb 2026 (under political pressure; minority has called for his removal)",
+  "talk_to_about": "Cocoa value addition, processor partnerships and supply-chain traceability",
+  "needs_review": true,
+  "review_note": "Under pressure to resign in 2026",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "alex-mould-gha",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora": false,
+  "focus": "Brownfield irrigation and agro-infrastructure",
+  "name": "Alex Mould",
+  "organization": "Millennium Development Authority (MiDA)",
+  "public_links": [
+   "https://mobile.ghanaweb.com/GhanaHomePage/business/MiDA-CEO-raises-alarm-over-wasted-agricultural-assets-2026298"
+  ],
+  "role": "Chief Executive Officer",
+  "source": "GhanaWeb, 18 Mar 2026",
+  "talk_to_about": "Rehabilitating stranded irrigation schemes and linked rice mills",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "edward-ato-sarpong-gha",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora": false,
+  "focus": "Agricultural lending for Feed Ghana value chains",
+  "name": "Edward Ato Sarpong",
+  "organization": "Agricultural Development Bank (ADB PLC)",
+  "public_links": [
+   "https://www.graphic.com.gh/news/general-news/ghana-news-adb-md-lauds-feed-ghana-initiative.html"
+  ],
+  "role": "Managing Director",
+  "source": "Graphic Online, Jul 2025 (verify still in post)",
+  "talk_to_about": "Credit lines, blended finance and guarantees for agribusiness",
+  "needs_review": true,
+  "review_note": "Confirmed only to July 2025",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "alloysius-attah-gha",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora": false,
+  "focus": "Digital farmer services, input distribution and data",
+  "name": "Alloysius Attah",
+  "organization": "Farmerline",
+  "public_links": [
+   "https://www.heifer.org/about-us/inside-heifer/board-of-directors/alloysius-attah",
+   "https://www.weforum.org/people/alloysius-attah"
+  ],
+  "role": "Co-founder and CEO",
+  "source": "Heifer International board bio",
+  "talk_to_about": "Last-mile input distribution, farmer data and francophone expansion",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "desmond-koney-gha",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora": false,
+  "focus": "Smallholder aggregation for export markets",
+  "name": "Desmond Koney",
+  "organization": "Complete Farmer",
+  "public_links": [
+   "https://techafricanews.com/2026/08/20/complete-farmer-ceo-desmond-koney-joins-endeavors-global-entrepreneur-network/"
+  ],
+  "role": "Founder and CEO",
+  "source": "TechAfricaNews, 20 Aug 2026",
+  "talk_to_about": "Export-grade aggregation, fulfilment centres and data-driven farmer credit",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sen-abubakar-kyari-nga",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": false,
+  "focus": "Food price stabilisation, NAGS-AP, mechanisation; Nigeria chairs IFAD Governing Council (2026)",
+  "name": "Sen. Abubakar Kyari",
+  "organization": "FMAFS",
+  "public_links": [
+   "https://fmino.gov.ng/fg-inaugurates-coa-farmers-as-agriculture-sector-records-4-39-growth-strongest-since-2021/"
+  ],
+  "role": "Minister of Agriculture and Food Security",
+  "source": "https://fmino.gov.ng/fg-inaugurates-coa-farmers-as-agriculture-sector-records-4-39-growth-strongest-since-2021/",
+  "talk_to_about": "Federal programme priorities, SAPZ, farmer registry",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sen-dr-aliyu-sabi-abdullahi-nga",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": false,
+  "focus": "Cooperative reform (RH-CRRP 2030), soil health programme, e-extension",
+  "name": "Sen. Dr Aliyu Sabi Abdullahi",
+  "organization": "FMAFS",
+  "public_links": [
+   "https://fmino.gov.ng/statement-by-the-honourable-minister-of-state-for-agriculture-and-food-security-sen-dr-aliyu-sabi-abdullahi-con-on-the-occasion-of-world-food-day-2026/"
+  ],
+  "role": "Minister of State for Agriculture and Food Security",
+  "source": "https://fmino.gov.ng/statement-by-the-honourable-minister-of-state-for-agriculture-and-food-security-sen-dr-aliyu-sabi-abdullahi-con-on-the-occasion-of-world-food-day-2026/",
+  "talk_to_about": "Cooperatives, soil mapping, digital extension",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "dr-simeon-ehui-nga",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": false,
+  "focus": "Crop variety release, soil health, African-led agrifood innovation",
+  "name": "Dr Simeon Ehui",
+  "organization": "IITA",
+  "public_links": [
+   "https://www.cgiar.org/news-events/news/iita-welcomes-dr-simeon-ehui-new-director-general-and-cgiar-director-for-africa"
+  ],
+  "role": "Director General, IITA and CGIAR Regional Director for Continental Africa",
+  "source": "https://gazettengr.com/iita-releases-200-improved-crop-varieties/",
+  "talk_to_about": "Seed systems, research-to-scale partnerships",
+  "needs_review": true,
+  "review_note": "Role last confirmed Sept 2025",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "uka-eje-nga",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": false,
+  "focus": "Outgrower finance, commodity aggregation, capital-markets funding for agri",
+  "name": "Uka Eje",
+  "organization": "ThriveAgric",
+  "public_links": [
+   "https://www.crunchbase.com/person/uka-eje"
+  ],
+  "role": "CEO and Co-founder",
+  "source": "https://techeconomy.ng/thriveagric-raises-53bn-in-oversubscribed-debut-commercial-paper-issuance",
+  "talk_to_about": "Agri-finance structures, smallholder aggregation data",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ayodeji-balogun-nga",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": false,
+  "focus": "Commodity exchange, warehousing and structured trade across Nigeria, Kenya, Uganda",
+  "name": "Ayodeji Balogun",
+  "organization": "AFEX",
+  "public_links": [
+   "https://millingmea.com/ayodeji-balogun-steps-up-to-become-afex-group-ceo-focuses-on-growing-firm-to-billion-dollar-status/"
+  ],
+  "role": "Group CEO",
+  "source": "https://millingmea.com/ayodeji-balogun-steps-up-to-become-afex-group-ceo-focuses-on-growing-firm-to-billion-dollar-status/",
+  "talk_to_about": "Warehouse receipts, commodity market infrastructure, grain data",
+  "needs_review": true,
+  "review_note": "Source from 2023 or undated",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "chief-emmanuel-anoh-nga",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": false,
+  "focus": "Umbrella of 99 farmer and commodity associations",
+  "name": "Chief Emmanuel Anoh",
+  "organization": "Coalition of Farmers Associations for Food Security in Nigeria (COA-FARMERS)",
+  "public_links": [],
+  "role": "National President",
+  "source": "https://fmino.gov.ng/fg-inaugurates-coa-farmers-as-agriculture-sector-records-4-39-growth-strongest-since-2021/",
+  "talk_to_about": "Farmer-side views on input delivery and the direct-to-farm model",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "addisu-arega-kitessa-eth",
+  "countries": [
+   "ETH"
+  ],
+  "diaspora": false,
+  "focus": "Appointed Aug 2025; retained in Oct 2026 cabinet",
+  "name": "Addisu Arega Kitessa",
+  "organization": "Ministry of Agriculture",
+  "public_links": [],
+  "role": "Minister of Agriculture",
+  "source": "https://capitalethiopia.com/2026/10/08/pm-abiy-forms-new-cabinet-with-39-womens-representation/",
+  "talk_to_about": "Cluster farming, wheat self-sufficiency, fertiliser supply, land certification",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sultan-weli-eth",
+  "countries": [
+   "ETH"
+  ],
+  "diaspora": false,
+  "focus": "Irrigation scheme development and pastoral lowlands",
+  "name": "Sultan Weli",
+  "organization": "Ministry of Irrigation and Lowlands",
+  "public_links": [],
+  "role": "Minister of Irrigation and Lowlands",
+  "source": "https://capitalethiopia.com/2026/10/08/pm-abiy-forms-new-cabinet-with-39-womens-representation/",
+  "talk_to_about": "Irrigation pipeline, lowland livestock and water programmes",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "habtamu-itefa-eth",
+  "countries": [
+   "ETH"
+  ],
+  "diaspora": false,
+  "focus": "Water resources and power sector",
+  "name": "Habtamu Itefa",
+  "organization": "Ministry of Water and Energy",
+  "public_links": [],
+  "role": "Minister of Water and Energy",
+  "source": "https://capitalethiopia.com/2026/10/08/pm-abiy-forms-new-cabinet-with-39-womens-representation/",
+  "talk_to_about": "Rural electrification for irrigation and agro-processing",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "frehiwot-tamiru-eth",
+  "countries": [
+   "ETH"
+  ],
+  "diaspora": false,
+  "focus": "Former Ethio Telecom CEO; digital economy policy",
+  "name": "Frehiwot Tamiru",
+  "organization": "MInT",
+  "public_links": [],
+  "role": "Minister of Innovation and Technology",
+  "source": "https://capitalethiopia.com/2026/10/08/pm-abiy-forms-new-cabinet-with-39-womens-representation/",
+  "talk_to_about": "Rural connectivity, digital ID and payments for agriculture",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "fisseha-yitagesu-eth",
+  "countries": [
+   "ETH"
+  ],
+  "diaspora": false,
+  "focus": "Industrial policy incl. integrated agro-industrial parks",
+  "name": "Fisseha Yitagesu",
+  "organization": "Ministry of Industry",
+  "public_links": [],
+  "role": "Minister of Industry",
+  "source": "https://capitalethiopia.com/2026/10/08/pm-abiy-forms-new-cabinet-with-39-womens-representation/",
+  "talk_to_about": "Agro-industrial parks, processing investment",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "dr-mandefro-nigussie-eth",
+  "countries": [
+   "ETH"
+  ],
+  "diaspora": false,
+  "focus": "Cluster farming, Digital Agriculture Roadmap 2025-2032",
+  "name": "Dr Mandefro Nigussie",
+  "organization": "Ethiopian Agricultural Transformation Institute",
+  "public_links": [],
+  "role": "Director-General",
+  "source": "https://www.ena.et/web/eng/w/eng_8580001",
+  "talk_to_about": "Digital ag data, farmer profiles, cluster-based delivery",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mutahi-kagwe-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "Sector budget, fertiliser subsidy, strategic food reserves, sugar reforms",
+  "name": "Mutahi Kagwe",
+  "organization": "MoALD",
+  "public_links": [
+   "https://kilimo.go.ke"
+  ],
+  "role": "Cabinet Secretary for Agriculture and Livestock Development",
+  "source": "https://citizen.digital/article/cs-kagwe-pushes-for-more-budget-allocation-in-agriculture-sector-to-safeguard-food-security-n377722",
+  "talk_to_about": "Public-investment priorities, KIAMIS and e-subsidy data, food reserve policy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ephantus-kimotho-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "National Irrigation Sector Investment Plan (NISIP), Galana Kulalu, rice expansion",
+  "name": "Ephantus Kimotho",
+  "organization": "Ministry of Water, Sanitation and Irrigation",
+  "public_links": [],
+  "role": "Principal Secretary, State Department for Irrigation",
+  "source": "https://citizen.digital/article/kenya-targets-doubling-irrigated-land-to-boost-food-security-by-2028-n383910",
+  "talk_to_about": "Irrigation pipeline, PPP schemes, ASAL irrigation mapping",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "dr-patrick-ketiem-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "Agricultural engineering and mechanisation research; national research agenda",
+  "name": "Dr Patrick Ketiem",
+  "organization": "KALRO",
+  "public_links": [
+   "https://www.kalro.org"
+  ],
+  "role": "Director General",
+  "source": "https://dairybusinessmea.com/2026/01/30/kalro-names-patrick-ketiem-as-director-general-after-kiregers-exit/",
+  "talk_to_about": "Seed and variety pipelines, mechanisation trials, research partnerships",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "prof-appolinaire-djikeng-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "Livestock genomics, animal health and livestock systems across Africa",
+  "name": "Prof. Appolinaire Djikeng",
+  "organization": "ILRI",
+  "public_links": [
+   "https://www.ilri.org/news/appolinaire-djikeng-appointed-director-general"
+  ],
+  "role": "Director General",
+  "source": "https://ag.purdue.edu/events/department/ansc/2026/10/better-lives-better-planet-through-livestock-science-partnerships-and-ilris-vision-to-2030.html",
+  "talk_to_about": "Livestock data, vaccines, dairy and pastoral resilience programmes",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "alice-ruhweza-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "Food-systems transformation, policy support to African governments",
+  "name": "Alice Ruhweza",
+  "organization": "AGRA",
+  "public_links": [
+   "https://agra.org/agra-appoints-alice-ruhweza-as-next-president/"
+  ],
+  "role": "President",
+  "source": "https://agra.org/agra-appoints-alice-ruhweza-as-next-president/",
+  "talk_to_about": "Seed systems, regional trade, state-capability programmes",
+  "needs_review": true,
+  "review_note": "No 2026 confirmation of role found",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "thomas-njeru-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "Area-yield index insurance bundled with inputs and credit",
+  "name": "Thomas Njeru",
+  "organization": "Pula",
+  "public_links": [
+   "https://www.pula-advisors.com/about/"
+  ],
+  "role": "CEO and Co-founder",
+  "source": "https://www.pula-advisors.com/about/",
+  "talk_to_about": "Agri-insurance design, government and insurer partnerships, yield data",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "rose-goslinga-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "Agri-insurance scale-up and partnerships",
+  "name": "Rose Goslinga",
+  "organization": "Pula",
+  "public_links": [
+   "https://www.pula-advisors.com/about/"
+  ],
+  "role": "President and Co-founder",
+  "source": "https://www.pula-advisors.com/about/",
+  "talk_to_about": "Public-private insurance schemes, climate-risk finance",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "eli-pollak-ken",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora": false,
+  "focus": "Input credit and advisory for smallholders using remote sensing and ML",
+  "name": "Eli Pollak",
+  "organization": "Apollo Agriculture",
+  "public_links": [
+   "https://mulagofoundation.org/fellows/eli-pollak"
+  ],
+  "role": "Co-founder and CEO",
+  "source": "https://mulagofoundation.org/fellows/eli-pollak",
+  "talk_to_about": "Digital input-finance models, credit scoring for farmers",
+  "needs_review": true,
+  "review_note": "Source from 2023 or undated",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "dr-telesphore-ndabamenye-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "diaspora": false,
+  "focus": "Appointed Dec 2025; former RAB DG and Minister of State",
+  "name": "Dr Telesphore Ndabamenye",
+  "organization": "MINAGRI",
+  "public_links": [
+   "https://www.minagri.gov.rw"
+  ],
+  "role": "Minister of Agriculture and Animal Resources",
+  "source": "https://www.minagri.gov.rw/updates/news-details/rwanda-agricultural-show-2026-stakeholders-urged-to-leverage-innovation-and-strategic-partnerships-for-agri-food-systems-transformation",
+  "talk_to_about": "PSTA5 delivery, irrigation expansion, fertiliser subsidy, ag finance",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "solange-uwituze-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "diaspora": false,
+  "focus": "Animal resources background (former acting DG, Animal Resources Development at RAB)",
+  "name": "Solange Uwituze",
+  "organization": "MINAGRI",
+  "public_links": [
+   "https://interacademies.org/person/solange-uwituze"
+  ],
+  "role": "Minister of State for Agriculture and Animal Resources",
+  "source": "https://www.cia.gov/resources/world-leaders/historical-data/2026-july/rwanda/",
+  "talk_to_about": "Livestock value chains, animal health",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "paula-ingabire-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "diaspora": false,
+  "focus": "Digital economy, innovation ecosystem, AI policy",
+  "name": "Paula Ingabire",
+  "organization": "MINICT",
+  "public_links": [
+   "https://www.weforum.org/people/paula-ingabire"
+  ],
+  "role": "Minister of ICT and Innovation",
+  "source": "https://www.cia.gov/resources/world-leaders/historical-data/2026-july/rwanda/",
+  "talk_to_about": "Digital public infrastructure for agri services, data sharing",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "dr-damien-murwanashyaka-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "diaspora": false,
+  "focus": "Energy, transport and water infrastructure",
+  "name": "Dr Damien Murwanashyaka",
+  "organization": "MININFRA",
+  "public_links": [],
+  "role": "Minister of Infrastructure",
+  "source": "https://www.cia.gov/resources/world-leaders/historical-data/2026-july/rwanda/",
+  "talk_to_about": "Feeder roads, rural power, irrigation water infrastructure",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "antoine-marie-kajangwe-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "diaspora": false,
+  "focus": "Trade and industrial policy",
+  "name": "Antoine Marie Kajangwe",
+  "organization": "MINICOM",
+  "public_links": [],
+  "role": "Minister of Trade and Industry",
+  "source": "https://www.cia.gov/resources/world-leaders/historical-data/2026-july/rwanda/",
+  "talk_to_about": "Agro-processing, SEZs, regional trade",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "dr-florence-uwamahoro-rwa",
+  "countries": [
+   "RWA"
+  ],
+  "diaspora": false,
+  "focus": "Agricultural research and extension delivery",
+  "name": "Dr Florence Uwamahoro",
+  "organization": "RAB",
+  "public_links": [
+   "https://www.rab.gov.rw"
+  ],
+  "role": "Acting Director General",
+  "source": "https://www.rab.gov.rw/1-1/news-details/dr-florence-receives-a-senegalese-delegation",
+  "talk_to_about": "Variety release, extension, irrigation implementation",
+  "needs_review": true,
+  "review_note": "Acting DG as of Jan 2026; may have been replaced",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "daniel-chongolo-tza",
+  "countries": [
+   "TZA"
+  ],
+  "diaspora": false,
+  "focus": "Agenda 10/30, the 2026/27 budget and BBT",
+  "name": "Daniel Chongolo",
+  "organization": "Ministry of Agriculture",
+  "public_links": [
+   "https://www.tanzaniainvest.com/agriculture/agriculture-budget-2026-2027-cash-crop-target",
+   "https://dailynews.co.tz/tanzania-tasks-the-ministry-to-ensure-agriculture-delivers-outcomes-attracts-investment/"
+  ],
+  "role": "Minister for Agriculture",
+  "source": "TanzaniaInvest, Apr 2026; Daily News, 14 Apr 2026",
+  "talk_to_about": "Irrigation PPPs, the avocado and cash-crop export push, and investment facilitation",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "david-silinde-tza",
+  "countries": [
+   "TZA"
+  ],
+  "diaspora": false,
+  "focus": "Cooperative governance and institutional reform",
+  "name": "David Silinde",
+  "organization": "Ministry of Agriculture",
+  "public_links": [
+   "https://dailynews.co.tz/tanzania-tasks-the-ministry-to-ensure-agriculture-delivers-outcomes-attracts-investment/"
+  ],
+  "role": "Deputy Minister for Agriculture",
+  "source": "Daily News, 14 Apr 2026",
+  "talk_to_about": "Cooperatives, crop boards and marketing systems",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "gerald-mweli-tza",
+  "countries": [
+   "TZA"
+  ],
+  "diaspora": false,
+  "focus": "Ministry administration and programme delivery",
+  "name": "Gerald Mweli",
+  "organization": "Ministry of Agriculture",
+  "public_links": [
+   "https://dailynews.co.tz/tanzania-tasks-the-ministry-to-ensure-agriculture-delivers-outcomes-attracts-investment/"
+  ],
+  "role": "Permanent Secretary",
+  "source": "Daily News, 14 Apr 2026",
+  "talk_to_about": "Programme implementation and donor coordination",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "raymond-mndolwa-tza",
+  "countries": [
+   "TZA"
+  ],
+  "diaspora": false,
+  "focus": "Irrigation schemes, dams and the 67,000-borehole programme",
+  "name": "Raymond Mndolwa",
+  "organization": "National Irrigation Commission (NIRC)",
+  "public_links": [
+   "https://www.tanzaniainvest.com/agriculture/irrigation-borehole-drilling-program"
+  ],
+  "role": "Director General",
+  "source": "TanzaniaInvest, 2 Aug 2026",
+  "talk_to_about": "Irrigation scheme pipeline, solar pumps and contractor opportunities",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "geophrey-tenganamba-tza",
+  "countries": [
+   "TZA"
+  ],
+  "diaspora": false,
+  "focus": "Soil testing, AI agronomy and smallholder market linkage",
+  "name": "Geophrey Tenganamba",
+  "organization": "MazaoHub",
+  "public_links": [
+   "https://launchbaseafrica.com/2026/07/15/mazaohubs-josephat-urassa-engineer-behind-tanzanias-soil-data-farming-platform-dies/"
+  ],
+  "role": "Co-founder",
+  "source": "Launch Base Africa, 15 Jul 2026 (title not stated)",
+  "talk_to_about": "Data-driven advisory and embedded finance for smallholders",
+  "needs_review": true,
+  "review_note": "Title not stated in source",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "baraka-chijenga-tza",
+  "countries": [
+   "TZA"
+  ],
+  "diaspora": false,
+  "focus": "Produce supply chain and demand forecasting",
+  "name": "Baraka Chijenga",
+  "organization": "Kilimo Fresh",
+  "public_links": [
+   "https://www.wearetech.africa/en/fils-uk/tech-stars/baraka-chijenga-tackles-food-waste-through-kilimo-fresh"
+  ],
+  "role": "Founder and CEO",
+  "source": "WeAreTech Africa, Jun 2025",
+  "talk_to_about": "Reducing post-harvest waste and urban market access",
+  "needs_review": true,
+  "review_note": "Source from June 2025",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "willie-aucamp-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora": false,
+  "focus": "FMD control, trade access, AAMP acceleration and rural infrastructure",
+  "name": "Willie Aucamp",
+  "organization": "Department of Agriculture",
+  "public_links": [
+   "https://www.gov.za/about-government/contact-directory/agriculture-ministry/willie-aucamp-mr",
+   "https://www.foodformzansi.co.za/aucamp-outlines-strategy-for-biosecurity-trade-and-infrastructure/"
+  ],
+  "role": "Minister of Agriculture (since 30 June 2026)",
+  "source": "gov.za; Food For Mzansi, 2 Sept 2026",
+  "talk_to_about": "Biosecurity and vaccination strategy, export market access and AAMP revisions",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "rosemary-capa-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora": false,
+  "focus": "Producer development and rural support",
+  "name": "Rosemary Capa",
+  "organization": "Department of Agriculture",
+  "public_links": [
+   "https://en.wikipedia.org/wiki/Minister_of_Agriculture_(South_Africa)"
+  ],
+  "role": "Deputy Minister of Agriculture",
+  "source": "Wikipedia list of ministers (start date not confirmed)",
+  "talk_to_about": "Emerging-farmer support programmes",
+  "needs_review": true,
+  "review_note": "Only Wikipedia lists her; no start date",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "wandile-sihlobo-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora": false,
+  "focus": "Agricultural economics, land reform and trade",
+  "name": "Wandile Sihlobo",
+  "organization": "Agbiz / The Presidency",
+  "public_links": [
+   "https://www.thecommonsense.co.za/politics/ramaphosa-appoints-sihlobo-new-agriculture-envoy",
+   "https://wilsoncenter.org/person/wandile-sihlobo"
+  ],
+  "role": "Chief Economist, Agbiz; Presidential Envoy on Agriculture and Land",
+  "source": "The Common Sense, 23 Feb 2026",
+  "talk_to_about": "Sector outlook, AAMP, land reform and trade policy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "litha-magingxa-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora": false,
+  "focus": "Productivity research, regulatory agility for GMO and gene editing, and agritech",
+  "name": "Litha Magingxa",
+  "organization": "Agricultural Research Council (ARC)",
+  "public_links": [
+   "https://www.foodformzansi.co.za/arc-leader-envisions-resilient-tech-driven-farming-future/"
+  ],
+  "role": "President and CEO",
+  "source": "Food For Mzansi, Dec 2024 (verify still in post)",
+  "talk_to_about": "Research partnerships, cultivar programmes and vaccine pipeline",
+  "needs_review": true,
+  "review_note": "Latest source Dec 2024",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "pg-strauss-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora": false,
+  "focus": "Agribusiness representation and grain value chain",
+  "name": "PG Strauss",
+  "organization": "Agbiz / VKB Group",
+  "public_links": [
+   "https://www.engineeringnews.co.za/article/agbiz-elects-vkp-group-ceo-pg-strauss-as-chairperson-2026-06-04"
+  ],
+  "role": "Chairperson, Agbiz; Group CEO, VKB Group",
+  "source": "Engineering News, 4 Jun 2026",
+  "talk_to_about": "Agribusiness priorities in AAMP, and grain storage and logistics",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "karidas-tshintsholo-zaf",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora": false,
+  "focus": "Digital input and produce marketplace and funding for emerging farmers",
+  "name": "Karidas Tshintsholo",
+  "organization": "Khula!",
+  "public_links": [
+   "https://www.theafricaceoforum.com/forum-2026/en/intervenant/karidas-tshintsholo/",
+   "https://www.foodformzansi.co.za/icymi-khula-and-absa-to-revolutionise-agritech/"
+  ],
+  "role": "Co-founder and CEO",
+  "source": "Africa CEO Forum 2026 speaker page; Food For Mzansi",
+  "talk_to_about": "Market access and input finance for emerging farmers",
+  "needs_review": true,
+  "review_note": "Only 2026 source is a speaker list",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sara-menker-eth",
+  "based_in": "USA",
+  "countries": [
+   "ETH",
+   "KEN"
+  ],
+  "diaspora": true,
+  "focus": "Founded the AI agri-climate data company Gro (New York and Nairobi); the board replaced her as CEO before the 2024 wind-down",
+  "name": "Sara Menker",
+  "organization": "Gro Intelligence (shut down 2024)",
+  "public_links": [
+   "https://techcabal.com/2024/06/02/kenya-data-analytics-gro-intelligence-shuts-down/"
+  ],
+  "role": "Founder and former CEO",
+  "source": "https://techcabal.com/2024/06/02/kenya-data-analytics-gro-intelligence-shuts-down/ (Ethiopian origin is public record but not stated on this page)",
+  "talk_to_about": "Lessons from building and winding down a global agri-data business; food-security analytics",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "jehiel-oliver-nga",
+  "based_in": "KEN",
+  "countries": [
+   "NGA",
+   "KEN",
+   "GHA"
+  ],
+  "diaspora": true,
+  "focus": "African-American founder (historic diaspora) of an IoT tractor-sharing platform; former investment banker and consultant",
+  "name": "Jehiel Oliver",
+  "organization": "Hello Tractor",
+  "public_links": [
+   "https://mulagofoundation.org/rainer-arnhold-fellow/jehiel-oliver",
+   "https://ke.linkedin.com/in/jehiel"
+  ],
+  "role": "Founder and CEO",
+  "source": "https://mulagofoundation.org/rainer-arnhold-fellow/jehiel-oliver",
+  "talk_to_about": "Mechanization-as-a-service, asset financing for tractors, OEM partnerships",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "obi-ozor-nga",
+  "based_in": "NGA",
+  "countries": [
+   "NGA",
+   "GHA",
+   "KEN",
+   "TGO"
+  ],
+  "diaspora": true,
+  "focus": "US-educated returnee (UPenn, ex-JP Morgan, ex-Uber); former Enugu State Transport Commissioner who reacquired Kobo360 in 2025",
+  "name": "Obi Ozor",
+  "organization": "Kobo360",
+  "public_links": [
+   "https://nairametrics.com/obi-ozor-the-co-founder-of-kobo360",
+   "https://businesspost.ng/technology/obi-ozor-reacquires-freight-logistics-startup-kobo360-from-investors/"
+  ],
+  "role": "Co-founder and CEO (returned 2025)",
+  "source": "https://nairametrics.com/obi-ozor-the-co-founder-of-kobo360",
+  "talk_to_about": "Freight and agri-logistics, truck financing, state-level transport policy",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ikenna-nzewi-nga",
+  "based_in": "NGA",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": true,
+  "focus": "Leads Releaf, which decentralizes palm-kernel processing; the founders are a US-educated returnee team",
+  "name": "Ikenna Nzewi",
+  "organization": "Releaf",
+  "public_links": [
+   "https://techpoint.africa/insight/releaf-change-food-processing/"
+  ],
+  "role": "Co-founder and CEO",
+  "source": "https://techpoint.africa/insight/releaf-change-food-processing/ (the diaspora/returnee label is based on Ayogu's US background; Nzewi's own background is not stated on the page)",
+  "talk_to_about": "Agro-processing hardware, FMCG supply contracts, rural industrialization",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "uzoma-ayogu-nga",
+  "based_in": "NGA",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora": true,
+  "focus": "Duke mechanical engineer and ex-GE who builds Releaf's Kraken palm-nut cracking machines",
+  "name": "Uzoma Ayogu",
+  "organization": "Releaf",
+  "public_links": [
+   "https://techpoint.africa/insight/releaf-change-food-processing/"
+  ],
+  "role": "Co-founder and CTO",
+  "source": "https://techpoint.africa/insight/releaf-change-food-processing/",
+  "talk_to_about": "Hardware for agro-processing; engineering talent returning from the diaspora",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ayoola-dominic-nga",
+  "based_in": "FRA/NGA",
+  "countries": [
+   "NGA",
+   "CIV",
+   "SEN",
+   "KEN",
+   "UGA"
+  ],
+  "diaspora": true,
+  "focus": "Runs a Paris-headquartered solar refrigeration company whose largest market is Nigeria",
+  "name": "Ayoola Dominic",
+  "organization": "Koolboks (HQ Paris)",
+  "public_links": [
+   "https://techcabal.com/2025/09/03/koolboks-raises-11-million-for-africa-expansion/",
+   "https://urbangeekz.com/2025/09/paris-based-koolboks-11m-solar-africa/"
+  ],
+  "role": "Co-founder and CEO",
+  "source": "https://urbangeekz.com/2025/09/paris-based-koolboks-11m-solar-africa/ (the page confirms the Paris HQ, not his nationality)",
+  "talk_to_about": "Off-grid cold chain, PAYG cooling, local assembly in Nigeria",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "seabex-founding-team-tun",
+  "based_in": "FRA",
+  "countries": [
+   "TUN"
+  ],
+  "diaspora": true,
+  "focus": "AI precision-irrigation startup founded by Tunisian diaspora engineers in France",
+  "name": "Seabex founding team",
+  "organization": "Seabex",
+  "public_links": [
+   "https://www.waterunite.org/blog/post/22202/agri-tech-startup-seabex-closes-successful-seed-funding-round-led-by-water-unite-impact/",
+   "https://managers.tn/2022/02/07/la-chambre-dagriculture-du-loiret-selectionne-une-startup-fondee-par-3-tunisiens-pour-la-gestion-deau-dirrigation"
+  ],
+  "role": "Founders (three Tunisians in France)",
+  "source": "https://www.waterunite.org/blog/post/22202/agri-tech-startup-seabex-closes-successful-seed-funding-round-led-by-water-unite-impact/",
+  "talk_to_about": "Water efficiency in North African agriculture",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "nextprotein-founding-team-tun",
+  "based_in": "FRA",
+  "countries": [
+   "TUN"
+  ],
+  "diaspora": true,
+  "focus": "France-based insect-protein company producing in Tunisia; raised about $20M Series B in 2025",
+  "name": "nextProtein founding team",
+  "organization": "nextProtein",
+  "public_links": [
+   "https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025"
+  ],
+  "role": "Founders",
+  "source": "https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025",
+  "talk_to_about": "Insect-based feed and fertilizer manufacturing in North Africa",
+  "needs_review": true,
+  "review_note": "NOT verified this session",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "africa-diaspora-network-adn-africa-wide",
+  "based_in": "USA",
+  "countries": [
+   "AFRICA-WIDE"
+  ],
+  "diaspora": true,
+  "focus": "Silicon Valley-based network that mobilizes diaspora capital and runs entrepreneur programs",
+  "name": "Africa Diaspora Network (ADN)",
+  "organization": "Africa Diaspora Network",
+  "public_links": [
+   "https://www.africadiasporanetwork.org"
+  ],
+  "role": "Diaspora network",
+  "source": "",
+  "talk_to_about": "Diaspora investor syndication and accelerator partnerships",
+  "needs_review": true,
+  "review_note": "NOT verified this session (page fetch blocked",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "african-development-bank-diaspora-initiatives-africa-wide",
+  "based_in": "CIV",
+  "countries": [
+   "AFRICA-WIDE"
+  ],
+  "diaspora": true,
+  "focus": "AfDB engagement with diaspora investment and remittances, alongside its Feed Africa / TAAT agri programmes",
+  "name": "African Development Bank diaspora initiatives",
+  "organization": "AfDB",
+  "public_links": [
+   "https://www.afdb.org"
+  ],
+  "role": "DFI programmes",
+  "source": "",
+  "talk_to_about": "Co-financing and diaspora-investment instruments",
+  "needs_review": true,
+  "review_note": "NOT verified this session (search budget exhausted",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "thomas-njeru-ken-2",
+  "based_in": "KEN",
+  "countries": [
+   "KEN",
+   "ZMB",
+   "ETH",
+   "NGA"
+  ],
+  "diaspora": true,
+  "focus": "Kenyan co-founder of an agri-insurtech operating in 22 countries; not diaspora, included as a key ecosystem counterpart",
+  "name": "Thomas Njeru",
+  "organization": "Pula",
+  "public_links": [
+   "https://techcrunch.com/2024/04/14/pula-raises-20m-series-b/"
+  ],
+  "role": "Co-founder and CEO",
+  "source": "https://techcrunch.com/2024/04/14/pula-raises-20m-series-b/",
+  "talk_to_about": "Embedded crop insurance and government area-yield schemes",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "jean-claude-homawoo-ken",
+  "based_in": "KEN",
+  "countries": [
+   "KEN",
+   "UGA"
+  ],
+  "diaspora": true,
+  "focus": "Leads Lori Systems through its restructuring and bank-financed trip model; diaspora background NOT verified",
+  "name": "Jean-Claude Homawoo",
+  "organization": "Lori Systems",
+  "public_links": [
+   "https://techcabal.com/2025/04/21/lori-120-million-valuation-dips-to-5-million/"
+  ],
+  "role": "CEO",
+  "source": "https://techcabal.com/2025/04/21/lori-120-million-valuation-dips-to-5-million/",
+  "talk_to_about": "Freight finance, invoice discounting with banks",
+  "needs_review": true,
+  "review_note": "Status or market details not verified",
+  "last_verified": "2026-11-03"
+ }
+]

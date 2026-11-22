@@ -1,0 +1,80 @@
+{
+ "as_of": "2026-11-03",
+ "lead_drivers": [
+  {
+   "driver": "Sustained public investment in R&D and extension, with institutional autonomy",
+   "examples": "Brazil's Embrapa (TFP 3.08%/yr, 80% of output growth), US land-grant/Hatch/Smith-Lever system, China's Science and Technology Backyards, Netherlands WUR. Contrast: ~60% of SSA countries spend under 0.5% of AgGDP (ASTI).",
+   "explanation": "Leaders fund research at or above 1% of AgGDP over decades through autonomous, performance-managed institutions linked to extension. Productivity (TFP), not land expansion, then drives growth."
+  },
+  {
+   "driver": "Bundled input packages delivered at scale (seed + fertilizer + water + credit)",
+   "examples": "India Green Revolution (Punjab), Indonesia BIMAS (12 to 39 Mt rice, 1968-85), Ethiopia irrigated wheat clusters, AU Fertilizer Action Plan targeting 54 kg/ha.",
+   "explanation": "Single interventions fail; Green Revolutions packaged HYVs with assured water, affordable fertilizer, credit and advisory, first in high-potential zones."
+  },
+  {
+   "driver": "Secure, tradable land rights and market freedom for smallholders",
+   "examples": "Vietnam Resolution 10 (1988) and the 1993 Land Law took it from rice importer to a 9 Mt exporter. China's household responsibility system. Africa: only ~10% of rural land registered; Rwanda and Ethiopia certification as African analogues.",
+   "explanation": "When farmers own output and can lease, mortgage and invest in land, supply responds quickly and credit can flow."
+  },
+  {
+   "driver": "Infrastructure first: water, power, roads and storage",
+   "examples": "Asia has ~37% of cropland irrigated vs ~6% in Africa. Bangladesh shallow tubewells. China SEZ/infrastructure (Shenzhen GDP 10,000x). Mission 300 and PIDA as African responses.",
+   "explanation": "Irrigation, reliable electricity and rural roads lower unit costs and make inputs, mechanization, cold chains and processing viable."
+  },
+  {
+   "driver": "Digital public infrastructure and farmer registries",
+   "examples": "India UPI (24bn transactions/month), PM-KISAN (93m farmers by DBT), AgriStack (110m farmer IDs), e-NAM. Africa leads in mobile money but lacks interoperable registries.",
+   "explanation": "Open ID, payments and registries cut the cost of reaching each farmer with subsidies, credit, insurance and advice, and they create the data for targeting."
+  },
+  {
+   "driver": "Predictable, long-horizon policy and delivery units with political ownership",
+   "examples": "Brazil annual Plano Safra, EU CAP strategic plans, Ethiopia ATA (Asian delivery-unit model), Dakar 2 presidential delivery councils. Contrast: no country on track in the Malabo 4th Biennial Review.",
+   "explanation": "Countries that lead keep agricultural and industrial policy stable for decades and run them through empowered delivery units with clear metrics and heads-of-state attention."
+  },
+  {
+   "driver": "Value addition anchored by industrial champions and export discipline",
+   "examples": "OCP Morocco (69% of ~US$10bn revenue from fertilizers, not rock), Vietnam cashew/coffee processing, Shenzhen SEZ. Contrast: ~75% of West African cocoa and ~95% of cashew exported raw.",
+   "explanation": "Leaders move up the value chain with scaled champions, export-processing zones and standards, rather than shipping raw commodities."
+  },
+  {
+   "driver": "Market integration and openness to regional and global trade",
+   "examples": "EU single market, China rural e-commerce (5,425 Taobao villages), India e-NAM. Africa: intra-African trade ~15%; India's rice ban cost SSA consumers ~US$3.8bn; AfCFTA and regional seed harmonization are the fix.",
+   "explanation": "Large integrated markets reward scale in seed, processing and logistics, and reduce exposure to export bans by single suppliers."
+  }
+ ],
+ "market_note": {
+  "sources": [
+   "https://www.briter.co/insights/reports/state-of-agtech-investment-in-africa-2025",
+   "https://techeconomy.ng/african-agtech-funding-decline-2025-capital-shift-agbase-report/",
+   "https://techcabal.com/2026/01/29/agritech-funding-in-africa-falls-to-168-million/",
+   "https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025",
+   "https://allafrica.com/stories/202601250064.html"
+  ],
+  "summary": "Briter's State of Agtech Investment in Africa 2025 (AgBase) puts African agtech funding at just under $170M in 2025, about 20% below the roughly $200M of 2024. Both funding and deal count fell in the same year for the first time, and equity dropped from about $328M in 2022 to about $80M, so debt, hybrid instruments and grants made up most of the capital. Briter data cited by TechCabal gives $168.1M across 135 deals (2024: $206.9M, 146 deals), against the peak of $483M in 2022. Africa: The Big Deal counts $169.45M across 87 deals (>$100K), about 5% of African tech funding. Capital is spreading out geographically: Kenya's share fell from over 50% in 2023-24 to about 25%. Egypt ($52.4M), Nigeria ($29.6M), South Africa ($28.9M) and Tunisia ($24.2M) led in 2025, and the largest deals were Tagaddod ($26M), nextProtein ($20.7M), Nile ($11.3M), Koolboks ($11.2M), Pula ($10.4M) and SwiftVEE ($10.1M). Across all African tech, Partech counts $4.1B in 2025 (+25%), with debt at 41% of capital (31% in 2024). This mirrors agtech's turn toward infrastructure-backed debt, as in d.light's $300M receivables deal and ThriveAgric's N5.3bn commercial paper, while 2024-25 also brought restructurings and failures (Gro, iProcure, Lori's down round, Twiga)."
+ },
+ "score_method": {
+  "version": "2026-11-09",
+  "pillars": {
+   "productivity": [
+    "Cereal yield t/ha (FAO via OWID, 2024)",
+    "Ag value added per worker, constant US$ (World Bank WDI via OWID, 2025)"
+   ],
+   "inputs_water": [
+    "Fertilizer kg/ha of cropland (FAO via OWID, 2023)",
+    "Irrigated area as % of cropland (CIA irrigated land 2012-2020 / FAO cropland 2023; Rwanda, Kenya and Ghana from national figures in the deep dives)"
+   ],
+   "policy": [
+    "CAADP 4th Biennial Review score vs 9.29 benchmark",
+    "Ag share of public spending vs 10% target (SDG 2.a.1 orientation index x ag % of GDP, 2023)"
+   ],
+   "infrastructure": [
+    "Electricity access %",
+    "Internet users %"
+   ],
+   "finance": [
+    "Adults with a bank or mobile-money account % (Global Findex, 2024)"
+   ]
+  },
+  "rule": "Indicators are ranked 0-100 against the other African countries (CAADP and spending scored against their targets); a pillar averages its indicators; the composite averages pillars and needs at least 4 of 5."
+ }
+}

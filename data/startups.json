@@ -1,0 +1,1090 @@
+[
+ {
+  "id": "twiga-foods",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora_founded": false,
+  "founded": 2014,
+  "hq_iso3": "KEN",
+  "model": "B2B food and FMCG distribution from farm or manufacturer to informal retailers",
+  "name": "Twiga Foods",
+  "notable_funding": "$50M Series C (2021) and $35M (2023)",
+  "segment": "logistics & market access",
+  "source": "https://dabafinance.com/en/news/twiga-foods-acquiert-trois-firmes-fmcg-pour-largir-lempreinte-kenyane ; https://techeconomy.ng/twiga-foods-suspends-nairobi-operations/ ; https://businesstoday.co.ke/creditor-moves-to-liquidate-twiga-tatu-sez/",
+  "stage": "Series C+ / restructuring",
+  "status": "active (restructuring): paused Nairobi ops for 60 days in Jun 2025 to move its hub; Apr 2025 bought majority stakes in 3 FMCG distributors; a creditor petitioned in Jan 2026 to liquidate affiliate Twiga Tatu SEZ",
+  "website": "https://twiga.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "apollo-agriculture",
+  "countries": [
+   "KEN",
+   "ZMB"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "KEN",
+  "model": "Input bundles on credit plus agronomy advice, with satellite and ML credit scoring",
+  "name": "Apollo Agriculture",
+  "notable_funding": "$40M Series B led by SoftBank Vision Fund 2 (Mar 2022)",
+  "segment": "finance & insurance",
+  "source": "https://www.africaprivateequitynews.com/p/apollo-agriculture-raises-40m-led-by-softbank-vision-fund-2",
+  "stage": "Series B",
+  "status": "active (latest verified round: 2022)",
+  "website": "https://www.apolloagriculture.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sunculture",
+  "countries": [
+   "KEN",
+   "UGA",
+   "CIV",
+   "ETH",
+   "ZMB",
+   "TGO"
+  ],
+  "diaspora_founded": false,
+  "founded": 2013,
+  "hq_iso3": "KEN",
+  "model": "Pay-as-you-grow solar water pumps and irrigation for smallholders, with carbon-credit financing",
+  "name": "SunCulture",
+  "notable_funding": "$27M (2024); $4M BII carbon-finance facility (Feb 2025); $5M from WaterEquity (Sep 2025); about $80.5M raised in total",
+  "segment": "irrigation & water",
+  "source": "https://launchbaseafrica.com/2025/09/11/kenyas-sunculture-lands-5m-for-its-solar-powered-water-pumps/",
+  "stage": "Series B+",
+  "status": "active",
+  "website": "https://sunculture.io",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "coldhubs",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2015,
+  "hq_iso3": "NGA",
+  "model": "Solar-powered walk-in cold rooms at farm gates and markets, paid per crate per day",
+  "name": "ColdHubs",
+  "notable_funding": "Grants and impact capital, undisclosed",
+  "segment": "storage & cold chain",
+  "source": "https://coldhubs.com/2025/07/30/a-decade-of-impact-innovation-sustainability/",
+  "stage": "grant/impact-funded",
+  "status": "active (58 hubs in 28 states, Jul 2025)",
+  "website": "https://coldhubs.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "gro-intelligence",
+  "countries": [
+   "KEN",
+   "USA"
+  ],
+  "diaspora_founded": true,
+  "founded": 2012,
+  "hq_iso3": "USA",
+  "model": "AI agri-commodity and climate data platform; wound down after failing to raise beyond a March 2024 bridge round",
+  "name": "Gro Intelligence",
+  "notable_funding": "Raised about $100M+ (Series B 2021)",
+  "segment": "data",
+  "source": "https://techcabal.com/2024/06/02/kenya-data-analytics-gro-intelligence-shuts-down/",
+  "stage": "Series B",
+  "status": "shut down (2024)",
+  "website": "https://gro-intelligence.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "thriveagric",
+  "countries": [
+   "NGA",
+   "GHA",
+   "KEN",
+   "UGA",
+   "RWA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2017,
+  "hq_iso3": "NGA",
+  "model": "Input finance, aggregation and commodity trading for 1.2M farmers across 26 Nigerian states",
+  "name": "ThriveAgric",
+  "notable_funding": "N5.3bn debut commercial paper, oversubscribed (Aug 2026), under a N50bn programme",
+  "segment": "finance & insurance",
+  "source": "https://www.thisdaylive.com/2026/08/27/thriveagric-raises-n5-3bn-via-commercial-paper-to-support-smallholder-farmers/",
+  "stage": "Series A + debt capital markets",
+  "status": "active",
+  "website": "https://thriveagric.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "aerobotics",
+  "countries": [
+   "ZAF",
+   "USA",
+   "AUS"
+  ],
+  "diaspora_founded": false,
+  "founded": 2014,
+  "hq_iso3": "ZAF",
+  "model": "Drone and satellite imagery analytics for tree crops (yield estimation, pest detection)",
+  "name": "Aerobotics",
+  "notable_funding": "$17M Series B led by Naspers (Jan 2021), with FMO and Cathay AfricInvest",
+  "segment": "data",
+  "source": "https://techcentral.co.za/aerobotics-raises-r250-million-in-naspers-led-funding-round/104345/",
+  "stage": "Series B",
+  "status": "active (latest verified round: 2021)",
+  "website": "https://www.aerobotics.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "wefarm",
+  "countries": [
+   "KEN",
+   "UGA",
+   "TZA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2015,
+  "hq_iso3": "GBR",
+  "model": "SMS peer-to-peer farmer Q&A network, later an input marketplace (Wefarm Shop, closed 2022)",
+  "name": "Wefarm",
+  "notable_funding": ">$10M VC",
+  "segment": "climate & extension",
+  "source": "https://en.wikipedia.org/wiki/WeFarm ; https://cioafrica.co/agritech-start-up-wefarm-shop-closes-down",
+  "stage": "Series A",
+  "status": "shut down (2022)",
+  "website": "https://wefarm.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "hello-tractor",
+  "countries": [
+   "NGA",
+   "KEN",
+   "GHA"
+  ],
+  "diaspora_founded": true,
+  "founded": 2014,
+  "hq_iso3": "KEN",
+  "model": "IoT-tracked tractor-sharing marketplace connecting tractor owners, booking agents and farmers",
+  "name": "Hello Tractor",
+  "notable_funding": "Grants and impact debt (Rockefeller, OPEC Fund among backers)",
+  "segment": "mechanization",
+  "source": "https://www.businessdailyafrica.com/bd/corporate/enterprise/how-i-built-a-successful-tractor-hailing-app-business-4943372 ; https://mulagofoundation.org/rainer-arnhold-fellow/jehiel-oliver",
+  "stage": "growth (grant + debt)",
+  "status": "active (profiled Feb 2025)",
+  "website": "https://hellotractor.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "complete-farmer",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2017,
+  "hq_iso3": "GHA",
+  "model": "Farmer network that bundles inputs, finance and offtake to supply crops to buyers",
+  "name": "Complete Farmer",
+  "notable_funding": "$10.4M Series A; $2.5M from EU AgriFI (Jun 2025); $5M debt from Symbiotics (Aug 2025); about $18.4M raised in total",
+  "segment": "logistics & market access",
+  "source": "https://nextbillion.net/news/ghanas-complete-farmer-secures-5-million-funding-from-symbiotics-to-strengthen-smallholder-farming",
+  "stage": "Series A + debt",
+  "status": "active",
+  "website": "https://completefarmer.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "releaf",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora_founded": true,
+  "founded": 2017,
+  "hq_iso3": "NGA",
+  "model": "Decentralized palm-nut cracking (Kraken) and supply contracts with FMCG manufacturers",
+  "name": "Releaf",
+  "notable_funding": "$4.2M seed + grants (2021); $3.3M pre-Series A led by Samurai Incubate Africa (c. 2023)",
+  "segment": "processing",
+  "source": "https://leadership.ng/releaf-secures-3-3m-funding-to-drive-manufacturers-profitability ; https://techpoint.africa/insight/releaf-change-food-processing/",
+  "stage": "pre-Series A",
+  "status": "active",
+  "website": "https://releaf.africa",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "pula",
+  "countries": [
+   "KEN",
+   "ZMB",
+   "ETH",
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2015,
+  "hq_iso3": "KEN",
+  "model": "B2B2C embedded index and yield insurance bundled with inputs and credit; operates in 22 countries",
+  "name": "Pula",
+  "notable_funding": "$20M Series B (Apr 2024); $10.4M (Jan 2025)",
+  "segment": "finance & insurance",
+  "source": "https://techcrunch.com/2024/04/14/pula-raises-20m-series-b/ ; https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025",
+  "stage": "Series B",
+  "status": "active",
+  "website": "https://www.pula-advisors.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "iprocure",
+  "countries": [
+   "KEN",
+   "UGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2013,
+  "hq_iso3": "KEN",
+  "model": "B2B procurement and distribution platform for agro-input retailers",
+  "name": "iProcure",
+  "notable_funding": "$17.2M raised (backers include Safaricom Spark Fund)",
+  "segment": "inputs & seeds",
+  "source": "https://independent.co.ug/kenyas-agritech-startup-iprocure-placed-under-administration",
+  "stage": "Series A",
+  "status": "under administration (KPMG appointed, 2024)",
+  "website": "https://iprocu.re",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "kobo360",
+  "countries": [
+   "NGA",
+   "GHA",
+   "KEN",
+   "TGO"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "NGA",
+  "model": "Digital freight brokerage connecting cargo owners (including agri-processors) with truckers",
+  "name": "Kobo360",
+  "notable_funding": "About $79M raised (IFC, TLcom, Juven and others)",
+  "segment": "transport",
+  "source": "https://businesspost.ng/technology/obi-ozor-reacquires-freight-logistics-startup-kobo360-from-investors/",
+  "stage": "Series A (distressed)",
+  "status": "active (restructured): founder Obi Ozor bought back investors' shares (except IFC's) in Mar 2025 after cash-flow problems",
+  "website": "https://www.kobo360.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "farmcrowdy",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "NGA",
+  "model": "Began as farm crowdfunding; now value-chain services and the FC Foods fresh-food business",
+  "name": "Farmcrowdy",
+  "notable_funding": "$2.4M equity raised in total",
+  "segment": "finance & insurance",
+  "source": "https://www.foodbusinessmea.com/farmcrowdy-bids-farewell-to-chairman-onyeka-akumah-as-new-leadership-takes-over/",
+  "stage": "seed",
+  "status": "pivoted (crowdfarming became 'Farmcrowdy 3.0' with foods, aggregation and insurance units); latest verified update is from 2022",
+  "website": "https://www.farmcrowdy.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sendy",
+  "countries": [
+   "KEN",
+   "NGA",
+   "UGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2015,
+  "hq_iso3": "KEN",
+  "model": "Logistics and fulfilment, including a fresh-produce supply arm",
+  "name": "Sendy",
+  "notable_funding": "About $26.5M (Toyota Tsusho and others)",
+  "segment": "logistics & market access",
+  "source": "https://techcrunch.com/2023/08/08/kenyan-logistics-startup-sendy-shuts-down-embarks-on-asset-sale/",
+  "stage": "Series B",
+  "status": "shut down (Aug 2023; went into administration)",
+  "website": "https://www.sendyit.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "agrocenta",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2015,
+  "hq_iso3": "GHA",
+  "model": "Digital food distribution and aggregation platform for smallholders (AgroTrade, AgroPay)",
+  "name": "AgroCenta",
+  "notable_funding": "Undisclosed",
+  "segment": "logistics & market access",
+  "source": "https://vc4a.com/blog/2020/10/01/founder-series-michael-ocansey-1/",
+  "stage": "seed",
+  "status": "status unverified (latest source is from 2020)",
+  "website": "https://agrocenta.com",
+  "needs_review": true,
+  "review_note": "Status or market details not verified",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "selina-wamucii",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora_founded": false,
+  "founded": 2015,
+  "hq_iso3": "KEN",
+  "model": "Agri-export sourcing marketplace linking cooperatives to global buyers, with M-Pesa payouts",
+  "name": "Selina Wamucii",
+  "notable_funding": "Grants and small seed rounds",
+  "segment": "logistics & market access",
+  "source": "https://en.wikipedia.org/wiki/Selina_Wamucii",
+  "stage": "seed",
+  "status": "active, unverified since 2021 (latest dated development: Kuzi locust tool, Jan 2021)",
+  "website": "https://www.selinawamucii.com",
+  "needs_review": true,
+  "review_note": "Status or market details not verified",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "koolboks",
+  "countries": [
+   "NGA",
+   "CIV",
+   "SEN",
+   "KEN",
+   "UGA"
+  ],
+  "diaspora_founded": true,
+  "founded": 2018,
+  "hq_iso3": "FRA",
+  "model": "PAYG solar freezers and cold rooms (10,000+ units in 25 countries); offices in Lagos, Nairobi and Kampala",
+  "name": "Koolboks",
+  "notable_funding": "$11M Series A co-led by KawiSafi, Aruwa and All On (Aug-Sep 2025)",
+  "segment": "storage & cold chain",
+  "source": "https://techcabal.com/2025/09/03/koolboks-raises-11-million-for-africa-expansion/ ; https://urbangeekz.com/2025/09/paris-based-koolboks-11m-solar-africa/",
+  "stage": "Series A",
+  "status": "active",
+  "website": "https://koolboks.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "lori-systems",
+  "countries": [
+   "KEN",
+   "UGA",
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "KEN",
+  "model": "Digital freight platform for haulage across East Africa",
+  "name": "Lori Systems",
+  "notable_funding": "Over $46M raised in total; $2M bridge led by Delta40",
+  "segment": "transport",
+  "source": "https://techcabal.com/2025/04/21/lori-120-million-valuation-dips-to-5-million/",
+  "stage": "bridge / down round",
+  "status": "pivoted: raised a $2M bridge at a $5M valuation (down from about $120M) and moved trip financing to bank invoice facilities",
+  "website": "https://lori.co.ke",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mazaohub",
+  "countries": [
+   "TZA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2021,
+  "hq_iso3": "TZA",
+  "model": "Soil kits, AI agronomy and franchised 'Farm Clinics' run in agro-vet shops",
+  "name": "MazaoHub",
+  "notable_funding": "$2M pre-seed led by Catalyst Fund (Sep 2025)",
+  "segment": "climate & extension",
+  "source": "https://launchbaseafrica.com/2025/09/29/we-carry-the-weight-for-others-inside-the-2m-raise-for-tanzanias-hybrid-agritech-pioneer-mazaohub/",
+  "stage": "pre-seed",
+  "status": "active",
+  "website": "https://mazaohub.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "khula",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "ZAF",
+  "model": "Inputs app, trading marketplace and lender de-risking for emerging farmers",
+  "name": "Khula!",
+  "notable_funding": "R126M (about $6.7M) Series A from Absa, AECI, E Squared and PepsiCo Kgodiso (Mar 2025)",
+  "segment": "logistics & market access",
+  "source": "https://weetracker.com/2025/03/04/sa-agritech-khula-raises-series-a/",
+  "stage": "Series A",
+  "status": "active",
+  "website": "https://khula.co.za",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "wayawaya",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "KEN",
+  "model": "Janja payment and chat bots; listed for completeness",
+  "name": "WayaWaya",
+  "notable_funding": "Undisclosed; MEST Africa Summit prize (2019)",
+  "segment": "data",
+  "source": "https://weetracker.com/2021/04/28/kenyas-ajua-acquires-wayawaya/",
+  "stage": "acquired",
+  "status": "acquired by Ajua (Apr 2021). It was an AI messaging and payments company, not core agtech",
+  "website": "",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "vitalite-zambia",
+  "countries": [
+   "ZMB"
+  ],
+  "diaspora_founded": false,
+  "founded": 2013,
+  "hq_iso3": "ZMB",
+  "model": "PAYG solar home systems, phones and cookstoves; over 100,000 customers",
+  "name": "VITALITE Zambia",
+  "notable_funding": "$1.5M from EDFI ElectriFI (2023)",
+  "segment": "energy",
+  "source": "https://solarpanda.com/solar-panda-acquires-vitalite-zambia-limited-marking-expansion-into-3rd-country-in-africa/",
+  "stage": "growth",
+  "status": "acquired by Solar Panda (Jun 2025); VITALITE Malawi was not part of the deal",
+  "website": "https://vitalitegroup.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "solar-panda",
+  "countries": [
+   "KEN",
+   "SEN",
+   "ZMB"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "CAN",
+  "model": "Off-grid PAYG solar; acquired VITALITE Zambia",
+  "name": "Solar Panda",
+  "notable_funding": "Undisclosed",
+  "segment": "energy",
+  "source": "https://solarpanda.com/solar-panda-acquires-vitalite-zambia-limited-marking-expansion-into-3rd-country-in-africa/",
+  "stage": "pre-Series B",
+  "status": "active (raising a Series B in 2025)",
+  "website": "https://solarpanda.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "ignite-power",
+  "countries": [
+   "RWA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2014,
+  "hq_iso3": "RWA",
+  "model": "PAYG solar kits for rural households and productive-use loads; over 1.1M people connected (2019)",
+  "name": "Ignite Power",
+  "notable_funding": "Rwanda Renewable Energy Fund (BRD, World Bank, SIDA) financing (2020)",
+  "segment": "energy",
+  "source": "https://www.london.edu/think/changemakers-yariv-cohen ; https://www.newtimes.co.rw/business/brd-world-bank-commence-fundraising-ignite-power",
+  "stage": "growth",
+  "status": "active (operating in Rwanda; other markets",
+  "website": "https://ignite.solar",
+  "needs_review": true,
+  "review_note": "not verified this session",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "d-light",
+  "countries": [
+   "KEN",
+   "UGA",
+   "TZA",
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2007,
+  "hq_iso3": "KEN",
+  "model": "PAYG solar home systems and appliances financed via receivables securitization",
+  "name": "d.light",
+  "notable_funding": "$176M securitization (Jul 2024); $300M receivables financing (Jul 2025); $842M securitized in total",
+  "segment": "energy",
+  "source": "https://launchbaseafrica.com/2025/07/01/kenyas-d-light-secures-300m-to-scale-solar-lending-across-africa/",
+  "stage": "late stage (structured finance)",
+  "status": "active",
+  "website": "https://www.dlight.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "afex",
+  "countries": [
+   "NGA",
+   "KEN",
+   "UGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2014,
+  "hq_iso3": "NGA",
+  "model": "Private commodities exchange, warehouse receipts and input finance for smallholders",
+  "name": "AFEX",
+  "notable_funding": "$26.5M from BII (Nov 2023)",
+  "segment": "storage & cold chain",
+  "source": "https://dailytrust.com/afex-expands-operations-to-kenya-launches-1m-loan-programme/",
+  "stage": "growth (DFI equity/debt)",
+  "status": "active",
+  "website": "https://afex.africa",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "farmerline",
+  "countries": [
+   "GHA",
+   "CIV"
+  ],
+  "diaspora_founded": false,
+  "founded": 2013,
+  "hq_iso3": "GHA",
+  "model": "Input distribution, finance and Mergdata farmer-data SaaS used by 60+ partners",
+  "name": "Farmerline",
+  "notable_funding": "$14.4M pre-Series A (FMO, Acumen ARAF, Oikocredit; 2022)",
+  "segment": "inputs & seeds",
+  "source": "https://agfundernews.com/farmerline-nets-1-5m-from-oikocredit-in-second-close-of-14m-pre-series-a-round",
+  "stage": "pre-Series A",
+  "status": "active",
+  "website": "https://farmerline.co",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "victory-farms",
+  "countries": [
+   "KEN",
+   "RWA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2015,
+  "hq_iso3": "KEN",
+  "model": "Vertically integrated tilapia aquaculture and cold-chain distribution",
+  "name": "Victory Farms",
+  "notable_funding": "$35M Series B led by Creadev (Apr 2023)",
+  "segment": "processing",
+  "source": "https://www.africaprivateequitynews.com/p/kenya-victory-farms-raises-35m",
+  "stage": "Series B",
+  "status": "active (latest verified round: 2023)",
+  "website": "https://victoryfarmskenya.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "good-nature-agro",
+  "countries": [
+   "ZMB",
+   "MWI"
+  ],
+  "diaspora_founded": false,
+  "founded": 2014,
+  "hq_iso3": "ZMB",
+  "model": "Certified legume seed outgrower model with input finance and a guaranteed offtake",
+  "name": "Good Nature Agro",
+  "notable_funding": "$8.5M Series B led by Goodwell (Nov 2023)",
+  "segment": "inputs & seeds",
+  "source": "https://innovation-village.com/zambias-good-nature-agro-raises-8-5-million-in-a-series-b-round-led-by-goodwell-investments",
+  "stage": "Series B",
+  "status": "active",
+  "website": "https://goodnatureagro.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mozare3",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora_founded": false,
+  "founded": 2020,
+  "hq_iso3": "EGY",
+  "model": "Agri-fintech offering smallholders input finance, market access and agronomy",
+  "name": "Mozare3",
+  "notable_funding": "Over $1M round led by Disruptech Ventures (Jun 2021)",
+  "segment": "finance & insurance",
+  "source": "https://salaamgateway.com/story/disruptech-ventures-leads-funding-round-for-mozare3-egypts-first-agri-fintech-platform",
+  "stage": "pre-seed / seed",
+  "status": "status unverified since 2021",
+  "website": "https://mozare3.com",
+  "needs_review": true,
+  "review_note": "Status or market details not verified",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sowit",
+  "countries": [
+   "MAR"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "MAR",
+  "model": "Satellite and drone farm diagnostics used for agri-lending decisions",
+  "name": "SOWIT",
+  "notable_funding": "Stake taken by SEAF Morocco Growth Fund (2019)",
+  "segment": "data",
+  "source": "https://www.findevgateway.org/news/bcp-sowit-partner-boost-financial-inclusion-moroccan-farmers",
+  "stage": "seed",
+  "status": "active (bank partnerships with BCP and Credit Agricole du Maroc)",
+  "website": "https://sowit.fr",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "oko",
+  "countries": [
+   "MLI",
+   "CIV",
+   "UGA",
+   "MOZ",
+   "AGO"
+  ],
+  "diaspora_founded": false,
+  "founded": 2017,
+  "hq_iso3": "MLI",
+  "model": "Mobile index-based crop insurance for smallholders",
+  "name": "OKO",
+  "notable_funding": "Six-figure round led by Catalyst Fund (Oct 2025); $1.2M seed earlier",
+  "segment": "finance & insurance",
+  "source": "https://weetracker.com/2025/10/01/oko-climate-insurance-funding/",
+  "stage": "seed",
+  "status": "active",
+  "website": "https://oko.finance",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "lersha",
+  "countries": [
+   "ETH"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "ETH",
+  "model": "One-stop digital shop for inputs, mechanization, finance and advisory",
+  "name": "Lersha",
+  "notable_funding": "$100K+ GSMA Innovation Fund for Climate grant",
+  "segment": "climate & extension",
+  "source": "https://shega.co/news/agritech-startup-lersha-lands-over-100000-in-grant",
+  "stage": "seed / grants",
+  "status": "active (GSMA Innovation Fund grantee 2022; partnered with ATI to reach 1M farmers)",
+  "website": "https://lersha.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "mawingu",
+  "countries": [
+   "KEN",
+   "TZA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2013,
+  "hq_iso3": "KEN",
+  "model": "Solar-powered rural ISP that grows by buy-and-build (acquired Tanzania's Habari)",
+  "name": "Mawingu",
+  "notable_funding": "$20M Series C led by Pembani Remgro (Oct 2025); $15M (2024)",
+  "segment": "digital connectivity",
+  "source": "https://launchbaseafrica.com/2025/10/01/mawingu-raises-20m-to-expand-affordable-internet-across-rural-kenya/",
+  "stage": "Series C",
+  "status": "active",
+  "website": "https://www.mawingu.co",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "seabex",
+  "countries": [
+   "TUN",
+   "FRA"
+  ],
+  "diaspora_founded": true,
+  "founded": 2019,
+  "hq_iso3": "FRA",
+  "model": "AI irrigation recommendations that do not need field sensors",
+  "name": "Seabex",
+  "notable_funding": "Seed round led by Water Unite Impact with Mercy Corps Ventures and Digital Africa (Jun 2024)",
+  "segment": "irrigation & water",
+  "source": "https://www.waterunite.org/blog/post/22202/agri-tech-startup-seabex-closes-successful-seed-funding-round-led-by-water-unite-impact/",
+  "stage": "seed",
+  "status": "active",
+  "website": "https://seabex.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sokofresh",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora_founded": false,
+  "founded": 2019,
+  "hq_iso3": "KEN",
+  "model": "Pay-per-use mobile solar cold rooms at the farm gate plus buyer linkage (avocado exports)",
+  "name": "SokoFresh",
+  "notable_funding": "$500K catalytic loan from UNCDF with Bayer Foundation (May 2026)",
+  "segment": "storage & cold chain",
+  "source": "https://enviu.org/sokofresh-secures-500k-from-uncdf-to-expand-cold-storage-for-farmers-in-kenya/",
+  "stage": "seed",
+  "status": "active",
+  "website": "https://sokofresh.co.ke",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "amitruck",
+  "countries": [
+   "KEN",
+   "UGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2019,
+  "hq_iso3": "KEN",
+  "model": "Truck-booking marketplace where transporters bid on cargo",
+  "name": "Amitruck",
+  "notable_funding": "$4M seed led by Better Tomorrow Ventures (Feb 2022)",
+  "segment": "transport",
+  "source": "https://cioafrica.co/amitruck-secures-4m-seed-funding-to-accelerate-expansion-across-east-africa",
+  "stage": "seed",
+  "status": "active (latest verified round: 2022)",
+  "website": "https://amitruck.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "trella",
+  "countries": [
+   "EGY",
+   "ARE",
+   "SAU"
+  ],
+  "diaspora_founded": false,
+  "founded": 2018,
+  "hq_iso3": "EGY",
+  "model": "B2B freight matching platform",
+  "name": "Trella",
+  "notable_funding": "$42M Series A co-led by Maersk (2021); $3.5M bridge from Avanz (2023)",
+  "segment": "transport",
+  "source": "https://enterpriseam.com/logistics/2023/06/14/logistics-startup-trella-gets-usd-3-5-mn-from-avanz-capital-as-part-of-ongoing-bridge-round/",
+  "stage": "Series A + bridge",
+  "status": "active (exited Pakistan in 2023; latest verified round is a 2023 bridge)",
+  "website": "https://trella.app",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "crop2cash",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2019,
+  "hq_iso3": "NGA",
+  "model": "Farmer digital payments, credit, inputs, warehousing and insurance via USSD and agents",
+  "name": "Crop2Cash",
+  "notable_funding": "$350K from Village Capital (Jun 2024)",
+  "segment": "finance & insurance",
+  "source": "https://lucidityinsights.com/news/crop2cash-350k-investment",
+  "stage": "seed",
+  "status": "active",
+  "website": "https://crop2cash.com.ng",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "akorion-ezyagric",
+  "countries": [
+   "UGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2014,
+  "hq_iso3": "UGA",
+  "model": "Agent network and app for farm mapping, inputs, advisory and market linkage",
+  "name": "Akorion (EzyAgric)",
+  "notable_funding": "Strategic investment from K+S and MFS Africa (2019)",
+  "segment": "climate & extension",
+  "source": "https://fertilizerdaily.com/20191209-ks-group-and-mfs-africa-have-partnered-to-invest-in-akorion-ezyagric",
+  "stage": "seed / strategic",
+  "status": "status unverified since 2019",
+  "website": "https://ezyagric.com",
+  "needs_review": true,
+  "review_note": "Status or market details not verified",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "husk-power-systems",
+  "countries": [
+   "NGA",
+   "COD"
+  ],
+  "diaspora_founded": false,
+  "founded": 2008,
+  "hq_iso3": "USA",
+  "model": "Solar mini-grids for rural communities and businesses",
+  "name": "Husk Power Systems",
+  "notable_funding": "$43M Series D + $60M debt (Oct 2023); seeking up to $400M (2025)",
+  "segment": "energy",
+  "source": "https://african.business/2025/02/energy-resources/husk-power-seeks-400m-to-boost-nigeria-operations",
+  "stage": "Series D",
+  "status": "active (50 mini-grids in Nigeria; entered DRC in 2025)",
+  "website": "https://huskpowersystems.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "trotro-tractor",
+  "countries": [
+   "GHA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2016,
+  "hq_iso3": "GHA",
+  "model": "Uber-style tractor booking via app and USSD; GPS-metered work, 10% commission",
+  "name": "TROTRO Tractor",
+  "notable_funding": "$50K from Kosmos Energy (2016)",
+  "segment": "mechanization",
+  "source": "https://www.howwemadeitinafrica.com/linking-farmers-with-tractors-the-business-model-of-ghanas-trotro-tractor/146275/ ; https://www.briter.co/companies/trotro-tractor",
+  "stage": "seed",
+  "status": "status unverified (latest profile is from 2022)",
+  "website": "https://trotrotractor.com",
+  "needs_review": true,
+  "review_note": "Status or market details not verified",
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "tagaddod",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "EGY",
+  "model": "Collects used cooking oil and organic waste and turns it into biofuel feedstock",
+  "name": "Tagaddod",
+  "notable_funding": "$26M (2025), Africa's largest agtech-adjacent deal of 2025",
+  "segment": "processing",
+  "source": "https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025",
+  "stage": "Series A",
+  "status": "active",
+  "website": "https://tagaddod.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "nextprotein",
+  "countries": [
+   "TUN",
+   "FRA"
+  ],
+  "diaspora_founded": true,
+  "founded": null,
+  "hq_iso3": "FRA",
+  "model": "Insect protein (black soldier fly) for animal feed and fertilizer, produced in Tunisia",
+  "name": "nextProtein",
+  "notable_funding": "About $19.4-20.7M Series B (Nov 2025)",
+  "segment": "inputs & seeds",
+  "source": "https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025 ; https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "Series B",
+  "status": "active",
+  "website": "https://www.nextprotein.co",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "nile",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "ZAF",
+  "model": "B2B fresh-produce marketplace linking farmers to buyers",
+  "name": "Nile",
+  "notable_funding": "$11.3M (Jun 2025)",
+  "segment": "logistics & market access",
+  "source": "https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025",
+  "stage": "Series A",
+  "status": "active",
+  "website": "https://nile.ag",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "swiftvee",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "ZAF",
+  "model": "Digital livestock auction and trading platform",
+  "name": "SwiftVEE",
+  "notable_funding": "$10.0-10.1M Series A (Dec 2025)",
+  "segment": "logistics & market access",
+  "source": "https://agsafari.beehiiv.com/p/african-agtechs-raised-169-5-million-in-2025 ; https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "Series A",
+  "status": "active",
+  "website": "https://swiftvee.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "babban-gona",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": 2012,
+  "hq_iso3": "NGA",
+  "model": "Franchise model for smallholder farmer groups: credit, inputs, training and marketing",
+  "name": "Babban Gona",
+  "notable_funding": "$7.5M debt from BII (Sep 2025)",
+  "segment": "finance & insurance",
+  "source": "https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "debt",
+  "status": "active",
+  "website": "https://babbangona.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "karmsolar",
+  "countries": [
+   "EGY"
+  ],
+  "diaspora_founded": false,
+  "founded": 2011,
+  "hq_iso3": "EGY",
+  "model": "Off-grid solar for agricultural pumping and agribusiness",
+  "name": "KarmSolar",
+  "notable_funding": "Debt led by Eurobank (Nov 2025); $5.4M raised in total per au-startups",
+  "segment": "energy",
+  "source": "https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "debt",
+  "status": "active",
+  "website": "https://karmsolar.com",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "sistema-bio",
+  "countries": [
+   "KEN",
+   "NGA",
+   "MEX",
+   "IND"
+  ],
+  "diaspora_founded": false,
+  "founded": 2010,
+  "hq_iso3": "MEX",
+  "model": "Biodigesters that turn farm waste into biogas and bio-fertilizer, with large Kenya operations",
+  "name": "Sistema.bio",
+  "notable_funding": "$3.5M led by Novastar Ventures (Jan 2025); $56.5M raised in total",
+  "segment": "energy",
+  "source": "https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "growth",
+  "status": "active",
+  "website": "https://sistema.bio",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "synnefa",
+  "countries": [
+   "KEN"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "KEN",
+  "model": "Greenhouse kits, IoT farm sensors (FarmCloud) and training",
+  "name": "Synnefa",
+  "notable_funding": "$300K P4G grant (Nov 2025)",
+  "segment": "climate & extension",
+  "source": "https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "grant",
+  "status": "active",
+  "website": "https://synnefa.io",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "winich-farms",
+  "countries": [
+   "NGA"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "NGA",
+  "model": "Farm produce aggregation and agri-commerce",
+  "name": "Winich Farms",
+  "notable_funding": "Undisclosed round (Jun 2025); $3.8M raised in total",
+  "segment": "logistics & market access",
+  "source": "https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "seed",
+  "status": "active",
+  "website": "",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ },
+ {
+  "id": "immobazyme",
+  "countries": [
+   "ZAF"
+  ],
+  "diaspora_founded": false,
+  "founded": null,
+  "hq_iso3": "ZAF",
+  "model": "Biotech using enzymes and microbial fermentation for food and agri ingredients",
+  "name": "Immobazyme",
+  "notable_funding": "$1.4M (Dec 2025); $2.8M raised in total",
+  "segment": "processing",
+  "source": "https://au-startups.com/rounds/sector/agritech/2025/africa",
+  "stage": "seed",
+  "status": "active",
+  "website": "",
+  "needs_review": false,
+  "last_verified": "2026-11-03"
+ }
+]

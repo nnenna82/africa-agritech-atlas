@@ -1,0 +1,425 @@
+<title>Crop Journeys</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: crop picker, a clickable stage chain with the farm gate marked, a stage panel beside a "lingo" notebook, then a hands-on lab and a quiz per crop. Same field-green and millet-gold system as the Atlas. */
+:root{
+  --bg:#f5f6f2; --surface:#ffffff; --sunk:#eceee7; --fg:#18231d; --muted:#4f5a52; --line:#d9ddd3;
+  --accent:#1f6b4f; --accent-soft:#dcebe3; --gold:#b5821b; --gold-ink:#6e4c0c; --gold-soft:#f3e7cb;
+  --up:#6a8fb3; --farm:#5f9a6e; --mid:#c08a2a; --down:#a35d4a;
+  --good:#22663a; --bad:#a3352b; --bad-soft:#f7e1de; --good-soft:#e3f1e7;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111713; --surface:#18201b; --sunk:#0d120f; --fg:#e7ece6; --muted:#a3ada5; --line:#2c3730;
+  --accent:#6cc39b; --accent-soft:#1f3a2e; --gold:#e0b55a; --gold-ink:#e8c477; --gold-soft:#3a2f17;
+  --up:#8fb2d6; --farm:#86c494; --mid:#e0b55a; --down:#d98d77;
+  --good:#7bd39a; --bad:#f08a7e; --bad-soft:#3d1f1b; --good-soft:#1c3424; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111713; --surface:#18201b; --sunk:#0d120f; --fg:#e7ece6; --muted:#a3ada5; --line:#2c3730;
+  --accent:#6cc39b; --accent-soft:#1f3a2e; --gold:#e0b55a; --gold-ink:#e8c477; --gold-soft:#3a2f17;
+  --up:#8fb2d6; --farm:#86c494; --mid:#e0b55a; --down:#d98d77;
+  --good:#7bd39a; --bad:#f08a7e; --bad-soft:#3d1f1b; --good-soft:#1c3424; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+a{color:var(--accent)}
+header.top{padding-block:28px 8px;display:flex;flex-direction:column;gap:10px}
+.eyebrow{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,4.4vw,46px)/1.05 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance;max-width:20ch}
+h2{font:700 22px/1.2 var(--display);margin:0;text-wrap:balance}
+h3{font:600 15px/1.3 var(--body);margin:0}
+.lead{font-size:17px;max-width:64ch;margin:0;color:var(--muted)}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:6px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);gap:2px}
+.seg button{border:0;background:transparent;padding:7px 14px;border-radius:999px;font-weight:600;font-size:13px;min-height:36px}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.crops{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
+@media(max-width:760px){.crops{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.crop{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:4px;min-height:44px;transition:border-color .15s,transform .15s}
+.crop b{font:700 19px var(--display)}
+.crop span{font-size:12.5px;color:var(--muted)}
+.crop .prog{font:500 11px var(--mono);color:var(--muted);margin-top:4px}
+.crop[aria-pressed="true"]{border:2px solid var(--accent);padding:13px;background:var(--accent-soft)}
+.crop:hover{border-color:var(--accent)}
+main{padding-block:20px 72px;display:flex;flex-direction:column;gap:28px}
+.intro{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.intro p{margin:4px 0 0;max-width:62ch}
+.countries{display:flex;gap:6px;flex-wrap:wrap}
+.countries button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-weight:600;font-size:13px;min-height:36px}
+.countries button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+/* chain */
+.chainwrap{overflow-x:auto;padding-bottom:6px}
+.chain{display:flex;gap:4px;min-width:720px;position:relative;padding-top:26px}
+.chev{flex:1;position:relative;border:0;padding:12px 18px 12px 26px;min-height:78px;text-align:left;background:var(--sunk);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%);display:flex;flex-direction:column;gap:2px;transition:background .15s}
+.chev:first-child{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%);padding-left:14px}
+.chev .n{font:500 11px var(--mono);color:var(--muted)}
+.chev .t{font-weight:600;font-size:13.5px;line-height:1.25}
+.chev .dot{position:absolute;right:22px;top:10px;width:8px;height:8px;border-radius:50%;background:transparent}
+.chev.seen .dot{background:var(--accent)}
+.chev::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px}
+.chev.up::after{background:var(--up)}.chev.farm::after{background:var(--farm)}.chev.mid::after{background:var(--mid)}.chev.down::after{background:var(--down)}
+.chev[aria-current="step"]{background:var(--fg);color:var(--bg)}
+.chev[aria-current="step"] .n{color:var(--bg);opacity:.75}
+.gate{position:absolute;top:0;bottom:0;border-left:2px dashed var(--gold);pointer-events:none}
+.gate span{position:absolute;top:0;left:6px;font:600 11px var(--mono);color:var(--gold-ink);white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:4px;margin-right:6px;vertical-align:middle}
+/* stage */
+.stagegrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}
+@media(max-width:900px){.stagegrid{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel .segname{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.panel h2{font-size:26px}
+.story{font-size:16.5px;line-height:1.6;margin:0;max-width:64ch}
+.term{border:0;background:none;padding:0 1px;font:inherit;color:inherit;text-decoration:underline dotted var(--gold);text-decoration-thickness:2px;text-underline-offset:3px;min-height:auto}
+.term.known{text-decoration-style:solid}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.fact{background:var(--sunk);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.fact .k{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.vl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:560px){.vl{grid-template-columns:minmax(0,1fr)}}
+.vl div{border-radius:8px;padding:12px 14px;font-size:14px}
+.vl .v{background:var(--good-soft)} .vl .l{background:var(--bad-soft)}
+.vl b{display:block;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.vl .v b{color:var(--good)} .vl .l b{color:var(--bad)}
+.country{border-left:3px solid var(--accent);padding:4px 0 4px 14px;font-size:14.5px}
+.country b{font-size:12px;font-family:var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.versus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:560px){.versus{grid-template-columns:minmax(0,1fr)}}
+.versus div{border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14.5px}
+.versus b{display:block;font:600 12px var(--mono);letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.expert{border-top:1px dashed var(--line);padding-top:12px;font-size:14px;color:var(--muted)}
+.expert b{color:var(--fg)}
+.nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--bg);padding:10px 16px;border-radius:8px;font-weight:600;min-height:44px}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:disabled{opacity:.4;cursor:default}
+/* notebook */
+.notebook{position:sticky;top:12px;background:var(--gold-soft);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.notebook h3{font:700 17px var(--display)}
+.def{background:var(--surface);border-radius:8px;padding:12px;font-size:14px;display:flex;flex-direction:column;gap:4px}
+.def b{font-size:15px}
+.wordlist{display:flex;flex-wrap:wrap;gap:6px}
+.wordlist button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:12.5px;min-height:30px}
+.meter{height:6px;border-radius:3px;background:var(--surface);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--gold)}
+.small{font-size:12.5px;color:var(--muted)}
+/* lab */
+.lab{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:16px}
+.lab .head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.stack{display:flex;height:56px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.stack div{display:flex;align-items:center;justify-content:center;font:600 12px var(--mono);color:#fff;min-width:0;overflow:hidden;white-space:nowrap;transition:flex-basis .4s}
+.keyrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;font-size:13.5px}
+.keyrow div{display:flex;gap:8px;align-items:baseline}
+.keyrow i{width:10px;height:10px;border-radius:2px;flex-shrink:0;display:inline-block}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono)}
+.big{font:700 30px var(--display);font-variant-numeric:tabular-nums}
+.controls{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.controls label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted);min-width:220px;flex:1}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.outcomes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.out{border-radius:10px;padding:14px;background:var(--sunk);display:flex;flex-direction:column;gap:4px}
+.out.win{background:var(--good-soft)}
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:170px minmax(0,1fr) 110px;gap:10px;align-items:center;font-size:14px}
+@media(max-width:560px){.bar{grid-template-columns:110px minmax(0,1fr) 84px;font-size:13px}}
+.bar .track{height:16px;border-radius:3px;background:var(--sunk);overflow:hidden}
+.bar .fill{height:100%;transition:width .5s}
+.crates{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:3px;max-width:520px}
+.crates i{aspect-ratio:1;border-radius:2px;background:var(--farm);transition:background .3s}
+.crates i.hit{background:var(--bad)}
+.road{position:relative;height:40px;border-bottom:2px dashed var(--line);margin:4px 0 6px}
+.truck{position:absolute;bottom:4px;left:0;font:600 12px var(--mono);background:var(--fg);color:var(--bg);padding:3px 8px;border-radius:4px;transition:left 1.6s ease-in-out}
+@media (prefers-reduced-motion:reduce){.truck,.stack div,.bar .fill,.crates i{transition:none}}
+/* quiz */
+.quiz{background:var(--fg);color:var(--bg);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.quiz h2{color:var(--bg)}
+.quiz .opts{display:grid;gap:8px}
+.quiz .opts button{text-align:left;border:1px solid color-mix(in srgb,var(--bg) 35%,transparent);background:transparent;color:var(--bg);border-radius:8px;padding:12px 14px;min-height:44px}
+.quiz .opts button.right{background:var(--good);border-color:var(--good);color:#fff}
+.quiz .opts button.wrong{background:var(--bad);border-color:var(--bad);color:#fff}
+.quiz .why{font-size:14.5px;opacity:.9}
+.done{display:inline-flex;gap:8px;align-items:center;font:600 12px var(--mono);background:var(--gold);color:var(--fg);padding:4px 10px;border-radius:999px;letter-spacing:.04em}
+footer{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+footer a{overflow-wrap:anywhere}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">Africa AgriTech Atlas · Learn</span>
+    <h1>Follow a crop from seed to shelf</h1>
+    <p class="lead">Pick a crop, walk it through every stage, and see where the money goes and where the harvest is lost. Tap any underlined word to add it to your notebook.</p>
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="Reading level">
+        <button id="lvl-begin" aria-pressed="true">Beginner</button>
+        <button id="lvl-expert" aria-pressed="false">Expert</button>
+      </div>
+      <span class="small" id="overall"></span>
+    </div>
+    <div class="crops" id="crops" role="group" aria-label="Choose a crop"></div>
+  </header>
+  <main id="main"></main>
+  <footer class="wrap" id="foot" style="padding-left:0;padding-right:0;padding-bottom:32px"></footer>
+</div>
+
+<script>
+const GLOSS={
+ "value chain":"Every step from inputs to the consumer, and the value added (and money earned) at each one.",
+ "upstream":"The steps before the farm: seed, fertilizer, tools, advice.",
+ "downstream":"The steps after the crop leaves the farm: processing, branding, selling.",
+ "midstream":"The middle: collecting, storing, moving and first processing.",
+ "farm gate":"The point where the crop leaves the farmer's hands. The price paid here is the farmgate price.",
+ "farmgate price":"What the farmer is paid at the farm, before transport, processing or retail margins.",
+ "smallholder":"A farmer on a small plot, usually under 2 hectares, using mostly family labor.",
+ "yield":"Output per area, usually tonnes per hectare (t/ha). One hectare is about two and a half acres.",
+ "inputs":"What a farmer buys to grow a crop: seed, fertilizer, pesticide, tools.",
+ "extension":"Advice to farmers on better practices, from government officers, companies, hotlines or apps.",
+ "hybrid seed":"Seed bred by crossing two parent lines for higher yield. It has to be bought again each season.",
+ "e-voucher":"A digital coupon, often sent by text message, that lets a registered farmer buy subsidized inputs.",
+ "post-harvest loss":"Crop lost after harvest to rot, pests, bruising, spillage or poor storage.",
+ "aflatoxin":"A poison made by mould on badly dried or stored grain. It causes liver cancer and can kill at high doses.",
+ "hermetic bag":"An airtight storage bag. Insects inside run out of oxygen and die, with no chemicals.",
+ "aggregator":"A trader or co-op that buys small amounts from many farmers and bulks them into truckloads.",
+ "strategic reserve":"Grain a government stores to release during shortages or price spikes.",
+ "warehouse receipt":"A certificate for stored grain that can be sold or borrowed against without moving the grain.",
+ "fermentation":"For cocoa, heaping wet beans for 5–7 days so microbes develop the chocolate flavor.",
+ "forward sales":"Selling a crop months before harvest at a price agreed today.",
+ "grinding":"Roasting and crushing cocoa beans into liquor, then pressing it into cocoa butter and powder.",
+ "traceability":"Being able to track a bag back to the farm or plot it came from.",
+ "cherry":"The red fruit of the coffee tree. The coffee bean is the seed inside.",
+ "washing station":"A shared facility that pulps, ferments, washes and dries coffee cherries into higher-value washed coffee.",
+ "green coffee":"Hulled, sorted, unroasted coffee beans. This is what gets exported.",
+ "specialty coffee":"Coffee scoring 80+ out of 100 in professional tasting (cupping). It earns premium prices.",
+ "commodity exchange":"A market where graded produce is traded on standard terms, like the Ethiopia Commodity Exchange.",
+ "cold chain":"Unbroken refrigeration from farm to shop: cold rooms, refrigerated trucks, chilled shelves.",
+ "packhouse":"A facility where fresh produce is washed, sorted, graded, packed and cooled.",
+ "reefer":"A refrigerated truck or shipping container.",
+ "tariff-rate quota":"A set volume a country can export at low or zero import duty; above it, higher duty applies.",
+ "drip irrigation":"Watering each plant through small tubes, drop by drop, using far less water than flooding fields."
+};
+const SEGS={up:"Upstream",farm:"On the farm",mid:"Midstream",down:"Downstream"};
+const T=s=>s; // marker helper for readability
+
+const CROPS=[
+{id:"cocoa",name:"Cocoa",sub:"Export cash crop",countries:[["CIV","Côte d'Ivoire"],["GHA","Ghana"]],
+ intro:"The two countries grow over half the world's cocoa, yet most of a chocolate bar's value is made in Europe. Watch how a fixed [[farmgate price]] shields farmers from crashes but kept them from the 2024 boom.",
+ stages:[
+ {seg:"up",t:"Seedlings and inputs",story:"Before a pod is ever cut, farmers need planting material, fertilizer and pest control. These [[inputs]] are the biggest lever on [[yield]], and new trees take 3–5 years to bear fruit.",who:"National research institutes and the state cocoa boards",num:"3–5 years until a new tree produces",v:"Better inputs can more than double yields.",l:"Free inputs have sometimes been diverted or resold.",c:{CIV:"Research institute CNRA breeds varieties; the Conseil du Café-Cacao and companies distribute inputs.",GHA:"COCOBOD hands out free fertilizer, pesticides and hybrid seedlings through its productivity schemes."},x:"Chocolate companies run their own input and sustainability programs, so farmers often deal with several overlapping schemes."},
+ {seg:"farm",t:"Growing and harvest",story:"Cocoa grows on small family farms, often shaded and mixed with food crops. Pods are cut by hand with machetes. Most farms are [[smallholder]] plots of a few hectares.",who:"Farming families",num:"~0.4 t/ha, against 1+ t/ha possible",v:"The farm produces the raw bean, the physical heart of the product.",l:"Old trees, swollen shoot virus and drought cut output.",c:{CIV:"1.2m+ farmers on plots of 1.5–5 ha. Yields fell from 0.52 to about 0.40 t/ha between 2022/23 and 2024/25.",GHA:"Swollen shoot virus infected 31% of cocoa land in 2023, up from 17% in 2017. Illegal gold mining is also destroying farms."},x:"About 12% of Ivorian producers farm inside protected forests, which is a direct risk under the EU's deforestation rule."},
+ {seg:"farm",t:"Fermenting and drying",story:"Farmers heap the wet beans under banana leaves to ferment for 5–7 days, which creates the chocolate flavor. Then the beans are sun-dried for 1–2 weeks. This [[fermentation]] step sets the grade.",who:"Farm families",num:"Dried to about 7–8% moisture",v:"Good fermentation earns a quality premium. Ghana is known for it.",l:"Poorly dried beans grow mould and are rejected or discounted.",c:{CIV:"The guaranteed price applies only to well-fermented, well-dried, sorted beans.",GHA:"Ghana's consistent fermentation historically earned it a premium over other origins."},x:"Some startups now turn the discarded cocoa pulp into juice, adding a small new income stream."},
+ {seg:"mid",t:"Collecting and pricing",story:"Buyers collect beans from villages, grade them and truck them to port. The state fixes the [[farmgate price]] each season and sells most of the crop through [[forward sales]] months ahead.",who:"Village buyers (pisteurs), co-ops, licensed buying companies, state boards",num:"CI 2026/27: 1,200 FCFA/kg (~US$2,070/t)",v:"Fixed prices protect farmers when world prices crash.",l:"Farmers missed most of the 2024 price spike; payments ran late in 2025/26.",c:{CIV:"The Conseil du Café-Cacao sells 70–80% of the crop forward and sets the farm price at about 60% of the export reference price.",GHA:"COCOBOD sets the price; licensed buyers deliver to its quality-control arm. A 2026 law guarantees farmers at least 70% of the export price."},x:"Ghana's decades-old bank loan that pre-financed each crop collapsed in 2023/24; it now finances purchases with domestic cocoa bonds (US$288m raised in October 2026). Smuggling between the two countries runs to about 60,000 t a year."},
+ {seg:"mid",t:"Grinding",story:"Factories roast and crush beans into cocoa liquor, then press it into butter and powder. This [[grinding]] is the first processing step, and Côte d'Ivoire is now the world's largest grinder.",who:"Cargill, Barry Callebaut, ofi, Touton and local firms",num:"CI ground ~764,000 t in 2024/25, about 17% of world grinding",v:"Keeps some processing jobs and value in the country.",l:"Grinding earns only about 6% of a bar's retail value.",c:{CIV:"Target: process 50% of the crop locally.",GHA:"Says 30–40% is processed at home, aiming for 50%; estimates of its grinding volume conflict."},x:"Tax breaks attract grinders, but about 95% of Ivorian semi-processed cocoa is still exported rather than made into chocolate locally."},
+ {seg:"mid",t:"Export",story:"Beans, butter and powder are shipped from West African ports, mostly to Europe. From 30 December 2026, the EU requires [[traceability]] to prove each bag comes from land not cleared after 2020.",who:"Licensed exporters",num:"Over two-thirds of CI's crop goes to the EU",v:"Export taxes and levies fund governments.",l:"Farms without GPS mapping risk losing EU buyers.",c:{CIV:"Ships through Abidjan and San Pedro; only about half of supply was fully traceable in 2026.",GHA:"Ships through Tema and Takoradi; says its traceability system is fully deployed."},x:"Both countries add a US$400/t Living Income Differential premium. Buyers have partly offset it by cutting other origin premiums."},
+ {seg:"down",t:"Chocolate making",story:"In Europe and North America, cocoa is mixed with sugar and milk, refined, molded and branded. This is where the biggest share of value is made, almost all of it outside Africa.",who:"Mars, Mondelez, Nestlé, Ferrero, Hershey, Lindt",num:"Brands take ~37% of a dark chocolate bar's price",v:"Branding and manufacturing capture the largest margin.",l:"Higher import duties on processed cocoa than on raw beans keep manufacturing abroad.",x:"This is called tariff escalation: rich-country tariffs rise with each processing step, discouraging producer countries from moving up the chain."},
+ {seg:"down",t:"Retail",story:"Supermarkets and shops sell the finished bar. In the French study used here, retailers took about as much of the price as the brands did.",who:"Supermarkets and shops",num:"Retail ~38% of the bar's price",v:"Shelf space and consumer access.",l:"None of this reaches producing countries.",x:"Figures come from BASIC/FAO (2020), using French prices from 2018. No full update has been published since the 2024 price spike."}
+ ],
+ lab:"cocoa",
+ quiz:{q:"In December 2024 world cocoa hit a record of about US$12,900 per tonne. Why didn't Ivorian farmers get most of that?",o:["Exporters refused to buy their beans","The farm price was fixed in advance, based on crop sold forward at lower prices","The beans were too poor in quality","Retailers kept the extra money"],a:1,why:"The state sold most of the crop forward months earlier and fixed the farm price at 1,800 FCFA/kg (about US$2,900/t). Fixed prices protect farmers in a crash but slow down gains in a boom."},
+ src:[["BASIC/FAO chocolate value chain, 2020","https://lebasic.com/v2/content/uploads/2020/06/Chaine-de-valeur-cacao-France_Resume-executif_UK.pdf"],["USDA FAS Côte d'Ivoire cocoa overview, 2025","https://www.startmag.it/wp-content/uploads/Cote-dIvoire-Cocoa-Sector-Overview-2025_Accra_Cote-dIvoire_IV2025-0001.pdf"],["Global Agriculture, 2026/27 prices","https://www.global-agriculture.com/farming-agriculture/cocoa-price-gap-between-ivory-coast-and-ghana-widens-sharply-for-new-season/"],["GNA, Ghana 2026/27 price","https://gna.org.gh/2026/09/ghana-opens-2026-27-cocoa-season-with-producer-price-of-ghc-42400-per-tonne/"],["Ecofin, West African grindings","https://www.ecofinagency.com/news-industry/1008-48009-with-a-record-109-431-tons-of-cocoa-processing-cameroon-brings-west-africa-current-grind-to-more-than-1-24-million-tons"],["VinciWorks, EUDR timeline","https://vinciworks.com/blog/eudr-update-the-commission-holds-the-line-but-scope-changes-are-coming/"]]},
+{id:"maize",name:"Maize",sub:"Staple food",countries:[["KEN","Kenya"],["TZA","Tanzania"],["NGA","Nigeria"]],
+ intro:"Maize feeds East and West Africa, and governments step in at almost every stage. Yields are a third of the world average, and up to 30% of grain is lost after harvest. Try the storage lab to see why a bag can matter as much as a seed.",
+ stages:[
+ {seg:"up",t:"Seed and fertilizer",story:"Before the rains, farmers buy [[hybrid seed]] and fertilizer from small rural shops. Many governments now subsidize fertilizer through an [[e-voucher]].",who:"Seed companies, agro-dealers, government subsidy schemes",num:"Kenya's subsidized bag: KSh 2,500, down from ~KSh 7,000 in 2022",v:"Better seed and fertilizer are the main route to higher yields.",l:"Fake or late inputs; better-off farmers capture subsidies.",c:{KEN:"7.1m farmers are registered on the KIAMIS system. Uptake rose from 1.4m bags in 2022 to about 10.1m in 2025.",TZA:"A national subsidy since 2022 delivered about 1.45 Mt of fertilizer; use rose from ~360,000 t to ~840,000 t a year.",NGA:"An AfDB-backed scheme (NAGS-AP) has offered a 50% input subsidy since 2023; high costs are pushing some farmers to sorghum and sesame."},x:"Fake fertilizer was reported inside Kenya's subsidy scheme in 2024, a reminder that delivery systems matter as much as the subsidy itself."},
+ {seg:"farm",t:"Growing",story:"Maize is planted when the rains start and weeded mostly by hand. Almost all of it is rain-fed, so a failed season means a failed harvest. Most growers are [[smallholder]] farmers.",who:"Millions of smallholders (4.5m+ in Kenya alone)",num:"Yields ~1.6–2.3 t/ha vs a world average near 6",v:"The grain is where most farm income is made, or lost.",l:"Drought and fall armyworm, a pest costing Africa an estimated US$9.4bn a year.",c:{KEN:"About 1.6 t/ha. Output fell 6% in 2024 on erratic rains.",TZA:"1–2 t/ha. Government and USDA production estimates differ sharply (11.7 vs 6.1 Mt).",NGA:"About 2.3 t/ha; the only one of the three to release genetically modified TELA maize (2024)."},x:"Kenya lifted its GMO ban in 2022, but a March 2025 Court of Appeal injunction has paused GM maize while the appeal is heard."},
+ {seg:"farm",t:"Drying and storing",story:"Cobs are dried, often on bare ground, shelled and bagged. Grain stored damp grows mould and [[aflatoxin]]; insects eat grain in ordinary sacks. This is a major [[post-harvest loss]] point.",who:"Farmers, mobile shellers, storage providers",num:"17–30% of grain lost after harvest",v:"Good storage lets farmers wait for better prices.",l:"16% of Kenyan maize flour samples exceeded the aflatoxin limit in a 2025 study.",x:"APHLIS loss estimates barely change year to year, which suggests they are modeled, not measured. Kenya's policy institute quotes about 30%."},
+ {seg:"mid",t:"Trading and reserves",story:"Brokers buy a few bags at a time and bulk them into lorries. An [[aggregator]] might sell to millers, to the state's [[strategic reserve]], or across a border. Some farmers store grain against a [[warehouse receipt]].",who:"Traders, NCPB (Kenya), NFRA (Tanzania), AFEX (Nigeria)",num:"Kenya's board paid KSh 4,000 per 90 kg in January 2026",v:"Moving grain from surplus to deficit areas, and across seasons.",l:"Distress sales at harvest; export permits cut farm prices.",c:{KEN:"The state board bought only 180,000 bags against a 2m target as private millers paid up to KSh 5,400.",TZA:"The reserve held ~486,000 t in mid-2025. Export permits cut Kenya's imports from Tanzania by 42%.",NGA:"AFEX runs 200+ warehouses and a commodity exchange backed by warehouse receipts."},x:"Tanzania's export permits keep its own farm prices low while raising consumer prices in Kenya: a classic regional trade friction AfCFTA is meant to ease."},
+ {seg:"mid",t:"Milling and feed",story:"Millers grind grain into flour, called unga in Kenya, or into animal feed. Grain is over 80% of a miller's costs, so milling adds relatively little value.",who:"Unga Group and ~150 large Kenyan millers; 33,700 small mills in Tanzania; feed millers in Nigeria",num:"Maize is 60–70% of poultry feed in Nigeria",v:"Packaged, fortified flour and feed by-products.",l:"Food and feed millers compete for the same grain.",x:"Tanzania's small mills make about 95% of its maize flour, so formal processing is a small share of the chain."},
+ {seg:"down",t:"Shops and kitchens",story:"Flour is sold in 1–2 kg packets in shops and supermarkets and cooked into ugali, posho or pap. When drought hits, flour prices become a political issue.",who:"Supermarkets, small shops, open markets",num:"2-kg flour in Kenya: KSh 250 (2022) to ~KSh 130 (mid-2026)",v:"Convenience and branding.",l:"Price spikes hit the poorest households hardest.",x:"Farmers get roughly half to three-quarters of the flour price (our estimate). That is high compared with cocoa, because milling adds little cost."}
+ ],
+ lab:"maize",
+ quiz:{q:"A Kenyan farmer has 40 bags of maize. Which single change most protects her income if she waits to sell?",o:["Selling straight after harvest","Storing in hermetic bags","Buying more fertilizer next season","Selling to a broker instead of the state board"],a:1,why:"In field trials, hermetic bags lost about 1–3% over eight months, against 15–40% in ordinary sacks. Without good storage, waiting for a better price can lose more grain than it gains."},
+ src:[["KIPPRA maize value chain","https://kippra.or.ke/unlocking-employment-opportunities-in-kenyas-maize-value-chain/"],["The Star, KIAMIS fertilizer subsidy","https://www.the-star.co.ke/news/2026-04-01-subsidised-fertiliser-farmers-speak-of-big-savings-high-income"],["The Star, NCPB price","https://www.the-star.co.ke/counties/rift-valley/2026-01-15-cereals-board-raises-maize-price-to-sh4000"],["APHLIS Kenya maize losses","https://www.aphlis.net/en/data/tables/overview/KE/maize/all-years"],["Stathers et al., hermetic storage trials","https://gala.gre.ac.uk/id/eprint/16695/13/16695%20STATHERS_Field_Efficacy_of_Hermetic_%26_Other_Maize_Grain_Storage_Options_2017.pdf"],["MillingMEA, Kenya–Tanzania trade","https://millingmea.com/kenya-loses-42-of-tanzania-maize-imports-on-tariff-restrictions/"],["CropGPT, TELA maize in Nigeria","https://cropgpt.ai/nigeria-maize-commercial-release-of-tela-varieties"]]},
+{id:"coffee",name:"Coffee",sub:"Quality-driven export",countries:[["ETH","Ethiopia"],["RWA","Rwanda"]],
+ intro:"Coffee shows how careful processing and [[traceability]] can multiply what a farmer's crop is worth. Ethiopia is the giant birthplace of Arabica; Rwanda is small but sells almost everything as premium washed coffee.",
+ stages:[
+ {seg:"up",t:"Varieties and seedlings",story:"Seedlings are raised in nurseries; old trees are cut back so they regrow. The variety sets how the coffee will taste, and renovation takes 4–5 years to pay off.",who:"Research centres and coffee boards",num:"~80% of Ethiopia's trees need renovation",v:"Genetics drive cup quality and the specialty premium.",l:"Farmers can rarely get loans long enough to replant.",c:{ETH:"Thousands of local 'heirloom' varieties, many wild-derived; selections from the Jimma research centre.",RWA:"About 95% of trees are Bourbon varieties, known for sweetness; NAEB distributes seedlings."},x:"Microloans usually run a year at most, while replanting takes 4–5 years to break even: a finance gap, not a knowledge gap."},
+ {seg:"farm",t:"Growing",story:"Coffee grows on tiny [[smallholder]] plots, often under shade. Yields are low by world standards, and prices swing with global markets.",who:"Farm families",num:"Ethiopia ~0.7 t/ha vs Brazil 1.6 and Vietnam 2.8",v:"Growing the raw fruit.",l:"Low yields; Ethiopian cherry prices fell by more than half from 2022 to 2023.",c:{ETH:"6m+ smallholders on farms under 2 ha; about half the crop is drunk at home.",RWA:"~400,000 farmers, usually on less than a quarter of a hectare."},x:"Only about 6% of Ethiopian growers used good agricultural practices in a 2017 baseline, against about 40% in Rwanda."},
+ {seg:"farm",t:"Picking cherries",story:"Ripe red [[cherry]] fruit is picked by hand and rushed to processing within hours, before quality drops.",who:"Farm families; local collectors in Ethiopia",num:"Rwanda's 2026 minimum cherry price: Rwf 750/kg",v:"Selective picking of only ripe cherries raises quality.",l:"Unripe picking and delays lower the grade.",c:{ETH:"Local collectors called akrabi buy cherries for washing stations.",RWA:"Buyers paid an average of Rwf 900/kg in 2025, above the minimum."}},
+ {seg:"mid",t:"Washing and drying",story:"At a [[washing station]], cherries are pulped, fermented, washed and dried into parchment. Alternatively, whole cherries are sun-dried as naturals. A dry mill then hulls them into [[green coffee]].",who:"Washing stations and dry mills",num:"Rwanda: 300+ washing stations since the first in 2001",v:"The key quality step: fully washed, traceable lots earn premiums.",l:"Rain during drying; wastewater pollution.",c:{ETH:"Both washed and natural coffees; the south produces many washed lots, the west and Harar mostly naturals.",RWA:"Moved from low-grade home processing to fully washed coffee after 2001, with donor support."},x:"This is the stage where Rwanda reinvented its industry, and the clearest example of value moving closer to the farm."},
+ {seg:"mid",t:"Trading",story:"Coffee is sold through a [[commodity exchange]] or directly to exporters. Direct routes keep the farm's name attached, which buyers pay more for.",who:"Ethiopia Commodity Exchange and regulator ECTA; Rwanda's NAEB",num:"~40% of Ethiopia's exports bypassed the exchange by 2021",v:"Traceability lets buyers pay premiums to a named station or farm.",l:"Ethiopian farmers get ~60% of the export price vs ~87% in Brazil.",c:{ETH:"Reforms since 2017 let farmers, co-ops and stations export directly with traceable lots.",RWA:"NAEB sets the minimum cherry price and licenses stations and exporters."},x:"Before 2017, the exchange stripped each lot down to region and grade, so a great farm could not build a name."},
+ {seg:"mid",t:"Export",story:"Green beans travel overland to ports and on to buyers in Europe, the US, the Middle East and Asia.",who:"Licensed exporters and co-op unions",num:"Ethiopia ~US$3bn (2025/26); Rwanda US$148.6m (2025)",v:"Record earnings on high world prices.",l:"Landlocked routes add cost.",c:{ETH:"Exports via Djibouti; coffee is over 30% of export earnings.",RWA:"23,860 t at an average US$6.2/kg; exports via Mombasa or Dar es Salaam."}},
+ {seg:"down",t:"Roasting and cafés",story:"Roasting happens close to drinkers because roasted coffee goes stale. Brands and cafés capture most of the value.",who:"Nestlé, JDE Peet's, Starbucks, specialty roasters",num:"All green coffee exports are ≤10% of global retail coffee sales",v:"Roasting, brands and café service.",l:"Almost none of this value stays in producing countries.",x:"Between 1982 and 2018, retail roasted coffee prices rose 98% while the world bean price fell 27% (Coffee Barometer 2023)."},
+ {seg:"down",t:"Specialty auctions",story:"The very best lots are scored by expert tasters and auctioned online as [[specialty coffee]], sometimes for a hundred times the normal price.",who:"Cup of Excellence, Best of Rwanda",num:"Record lots: US$445/lb (Ethiopia, 2024); ~US$452/kg (Rwanda, Oct 2026)",v:"Money goes straight to named producers.",l:"Only a tiny volume sells this way.",c:{ETH:"A private Ethiopian auction reached US$1,739/kg in 2025.",RWA:"The 2025 Best of Rwanda auction's top lot sold for US$88/kg."}}
+ ],
+ lab:"coffee",
+ quiz:{q:"What did Rwanda change after 2001 that most raised the value of its coffee?",o:["It planted a new variety","It built washing stations to produce fully washed coffee","It started roasting all coffee at home","It joined a commodity exchange"],a:1,why:"Before 2001, farmers processed at home into low-grade coffee. Over 300 washing stations later, nearly all Rwandan coffee sells as fully washed, traceable lots."},
+ src:[["Food Business MEA, Ethiopia exports","https://www.foodbusinessmea.com/ethiopias-coffee-exports-hit-record-us2-65b-in-2024-25-fiscal-year/"],["FOLU Ethiopia coffee study","https://www.foodandlandusecoalition.org/wp-content/uploads/2025/11/FOLU-Ethiopia-Coffee-Scoping-Study.pdf"],["NAEB, Rwanda 2025 exports","https://www.naeb.gov.rw/publications/news/rwanda-coffee-export-revenues-hit-record-150m-in-2025"],["New Times, Best of Rwanda record","https://www.newtimes.co.rw/article/39894/news/featured/best-of-rwanda-coffee-fetches-record-rwf670000-on-a-kilo"],["GCR, Cup of Excellence record","https://gcrmag.com/ethiopian-cup-of-excellence-auction-sets-new-record"],["ICO at UNCTAD","https://unctad.org/node/38855"]]},
+{id:"tomatoes",name:"Tomatoes",sub:"Perishable",countries:[["NGA","Nigeria"],["MAR","Morocco"]],compare:true,
+ intro:"Same crop, two outcomes. Nigeria grows more tomatoes but loses 25–50% of them. Morocco grows under plastic, ships through a [[cold chain]], and exported a record 745,000 t in 2024/25. Every stage is shown side by side.",
+ stages:[
+ {seg:"up",t:"Inputs and water",story:"How a tomato is grown decides almost everything after. Open fields with saved seed, or greenhouses with [[drip irrigation]]?",num:"Morocco's greenhouse yields are ~15× Nigeria's",vs:{NGA:"Open fields, basic seed, simple river irrigation in Kano and Kaduna, which grow over half the crop.",MAR:"Plastic greenhouses, hybrid seed, grafted seedlings, drip irrigation with dissolved fertilizer, and desalinated water from the Chtouka plant."},x:"Morocco's binding constraint is water: six drought years since 2018. Desalinated water costs about five times conventional water, with a 40% subsidy."},
+ {seg:"farm",t:"Growing",story:"Yield, pests and timing decide what reaches the market.",num:"~5.5 t/ha (Nigeria) vs ~80 t/ha (Morocco)",vs:{NGA:"In 2016 a pest nicknamed 'tomato Ebola' (Tuta absoluta) cut yields by over 80% in hit areas; prices rose up to 400%.",MAR:"Season timed to Europe's winter gap (October–May); a shift to cherry and plum tomatoes, now ~59% of exports."}},
+ {seg:"mid",t:"Harvest and packing",story:"The first minutes after picking matter. A [[packhouse]] turns farm produce into a supermarket product.",num:"Raffia baskets: ~41% of fruit damaged in transit vs ~5% in plastic crates",vs:{NGA:"Tipped into deep raffia baskets of ~50 kg; no washing, grading or cooling.",MAR:"Sorted, graded, packed and pre-cooled to buyer standards."}},
+ {seg:"mid",t:"Transport",story:"Fresh tomatoes are alive and fragile. Heat and crushing decide how much survives the road.",num:"Kano to Lagos: 998 km, overnight, unrefrigerated",vs:{NGA:"Trucks run overnight to Mile 12 market in Lagos; a trailer load cost ~N2m in May 2026.",MAR:"[[reefer]] trucks to Tanger Med port, ferry to Spain, then road across Europe."},x:"Tanger Med handles 500,000–700,000 trucks a year; inspection queues of 2–3 days, with cooling running, are a growing cost."},
+ {seg:"mid",t:"Markets",story:"When supply is uneven and nothing can be stored, prices swing wildly.",num:"A 50-kg basket in Nigeria: ~N14,000 (Jan 2025 glut) to ~N120,000 (May 2026)",vs:{NGA:"10–30% more is lost at markets; gluts mean unsold fruit rots.",MAR:"France takes about half of exports and the UK 15–18%; Morocco supplies ~24% of EU tomato imports."}},
+ {seg:"down",t:"Processing",story:"Processing could absorb gluts by turning surplus into paste. It only works with steady supply.",num:"Nigeria imports US$360–400m+ of tomato paste a year",vs:{NGA:"Dangote's US$20m paste plant has been idle since 2019 for lack of steady supply; Tomato Jos is building a farm-linked paste business.",MAR:"Almost all value is in fresh exports; rejected fruit goes to the local market."}},
+ {seg:"down",t:"Trade rules",story:"Market access is negotiated. A [[tariff-rate quota]] can decide whether a whole industry exists.",num:"Morocco: 285,000 t duty-free into the EU each season",vs:{NGA:"Paste import tariffs were raised to protect local processors, but enforcement is weak.",MAR:"A 2024 EU court ruling requires produce grown in Western Sahara to be labeled as such, not as Moroccan."}}
+ ],
+ lab:"tomatoes",
+ quiz:{q:"Nigeria's farmers keep about three-quarters of the price in local markets. Why are they still poor?",o:["Traders take most of the money","They lose up to half the crop before it is sold","Morocco undercuts their prices","Tomatoes are taxed heavily"],a:1,why:"A high share of a sale means little if much of the harvest never gets sold. One study found losses cut farmers' gross margin from about 80% to 17%."},
+ src:[["IFDC HortiNigeria post-harvest losses","https://ifdc.org/wp-content/uploads/2024/01/Scoping-and-Mapping-of-Postharvest-Losses-HortiNigeria.pdf"],["PwC Nigeria tomato industry","https://www.pwc.com/ng/en/assets/pdf/nigeria-tomato-industry.pdf"],["Food Business MEA, prices triple","https://www.foodbusinessmea.com/nigerian-tomato-prices-triple-as-supply-shortages-transport-costs-drive-basket-price-to-us78/"],["Morocco World News, export record","https://www.moroccoworldnews.com/2025/09/259686/morocco-breaks-tomato-export-record-with-745000-tons-ranks-3rd/"],["HortiDaily, Chtouka desalination","https://www.hortidaily.com/article/9855922/morocco-brings-atlantic-water-to-15-000-hectares-of-intensive-crops-in-chtouka/"],["FreshPlaza, Tanger Med congestion","https://www.freshplaza.com/article/9853155/congestion-at-tangier-med-disrupts-morocco-s-fresh-produce-exports/"]]}
+];
+
+/* ---------- state ---------- */
+const store={get(k,d){try{const v=localStorage.getItem("cj_"+k);return v?JSON.parse(v):d}catch{return d}},set(k,v){try{localStorage.setItem("cj_"+k,JSON.stringify(v))}catch{}}};
+const S={crop:"cocoa",i:0,country:{},expert:store.get("expert",false),seen:store.get("seen",{}),words:store.get("words",[]),quiz:store.get("quiz",{}),term:null,lab:{}};
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const crop=()=>CROPS.find(c=>c.id===S.crop);
+const linkTerms=s=>esc(s).replace(/\[\[([^\]]+)\]\]/g,(m,t)=>`<button class="term${S.words.includes(t)?" known":""}" data-term="${esc(t)}">${esc(t)}</button>`);
+const seenSet=id=>new Set(S.seen[id]||[]);
+function markSeen(){const c=crop();const s=seenSet(c.id);s.add(S.i);S.seen[c.id]=[...s];store.set("seen",S.seen)}
+function addWord(t){if(!GLOSS[t])return;S.term=t;if(!S.words.includes(t)){S.words.push(t);store.set("words",S.words)}}
+
+/* ---------- render ---------- */
+function renderCrops(){
+  $("#crops").innerHTML=CROPS.map(c=>{const n=seenSet(c.id).size;const q=S.quiz[c.id]!=null;return `<button class="crop" aria-pressed="${c.id===S.crop}" data-crop="${c.id}"><b>${c.name}</b><span>${c.sub} · ${c.countries.map(x=>x[1]).join(", ")}</span><span class="prog">${n}/${c.stages.length} stages${q?" · quiz done":""}</span></button>`}).join("");
+  const total=CROPS.reduce((a,c)=>a+c.stages.length,0),done=CROPS.reduce((a,c)=>a+seenSet(c.id).size,0);
+  $("#overall").textContent=`You've explored ${done} of ${total} stages and collected ${S.words.length} of ${Object.keys(GLOSS).length} words.`;
+}
+function chain(c){
+  const gateIdx=c.stages.findIndex(s=>s.seg==="mid");
+  const seen=seenSet(c.id);
+  return `<div class="chainwrap"><div class="chain" id="chain">${c.stages.map((s,i)=>`<button class="chev ${s.seg}${seen.has(i)?" seen":""}" data-step="${i}" ${i===S.i?'aria-current="step"':""} aria-label="Stage ${i+1}: ${esc(s.t)}"><span class="dot" aria-hidden="true"></span><span class="n">${i+1} · ${SEGS[s.seg]}</span><span class="t">${esc(s.t)}</span></button>`).join("")}<div class="gate" id="gate" data-gate="${gateIdx}"><span>Farm gate</span></div></div></div>
+  <div class="legend">${Object.entries(SEGS).map(([k,v])=>`<span><i style="background:var(--${k})"></i>${v}</span>`).join("")}<span>· a green dot means you've visited</span></div>`;
+}
+function stagePanel(c){
+  const s=c.stages[S.i];const cc=S.country[c.id]||c.countries[0][0];
+  const segColor=`var(--${s.seg})`;
+  let countryBlock="";
+  if(c.compare&&s.vs){countryBlock=`<div class="versus">${c.countries.map(([k,n])=>`<div><b style="color:${k==="MAR"?"var(--accent)":"var(--bad)"}">${n}</b>${linkTerms(s.vs[k])}</div>`).join("")}</div>`}
+  else if(s.c&&s.c[cc]){const nm=c.countries.find(x=>x[0]===cc)[1];countryBlock=`<div class="country"><b>In ${esc(nm)}</b><br>${linkTerms(s.c[cc])}</div>`}
+  return `<article class="panel" aria-live="polite">
+    <span class="segname" style="color:${segColor}">Stage ${S.i+1} of ${c.stages.length} · ${SEGS[s.seg]}</span>
+    <h2>${esc(s.t)}</h2>
+    <p class="story">${linkTerms(s.story)}</p>
+    <div class="facts">${s.who?`<div class="fact"><span class="k">Who does it</span>${esc(s.who)}</div>`:""}<div class="fact"><span class="k">The number to know</span>${esc(s.num)}</div></div>
+    ${s.v||s.l?`<div class="vl">${s.v?`<div class="v"><b>Where value is added</b>${esc(s.v)}</div>`:""}${s.l?`<div class="l"><b>Where it leaks</b>${esc(s.l)}</div>`:""}</div>`:""}
+    ${countryBlock}
+    ${S.expert&&s.x?`<div class="expert"><b>Expert note.</b> ${linkTerms(s.x)}</div>`:""}
+    ${!S.expert&&s.x?`<p class="small">Switch to Expert for a deeper note on this stage.</p>`:""}
+    <div class="nav"><button class="btn ghost" id="prev" ${S.i===0?"disabled":""}>← Previous stage</button><button class="btn" id="next">${S.i===c.stages.length-1?"Try the lab ↓":"Next stage →"}</button></div>
+  </article>`;
+}
+function notebook(){
+  const t=S.term;const total=Object.keys(GLOSS).length;
+  return `<aside class="notebook" aria-label="Your lingo notebook"><h3>Your lingo notebook</h3>
+    ${t?`<div class="def"><b>${esc(t)}</b>${esc(GLOSS[t])}</div>`:`<div class="def">Tap any word with a dotted underline to see what it means. It is saved here as you go.</div>`}
+    <div class="meter" aria-hidden="true"><i style="width:${S.words.length/total*100}%"></i></div>
+    <span class="small">${S.words.length} of ${total} words collected</span>
+    <div class="wordlist">${S.words.map(w=>`<button data-term="${esc(w)}">${esc(w)}</button>`).join("")}</div>
+  </aside>`;
+}
+/* labs */
+function labCocoa(){
+  const price=S.lab.cocoaPrice??3;const parts=[["Farmer",11.3,"var(--farm)"],["Collection and export",7.3,"var(--up)"],["Grinding",6.1,"var(--mid)"],["Chocolate brand",37,"var(--down)"],["Retailer",38.3,"var(--muted)"]];
+  const sum=parts.reduce((a,p)=>a+p[1],0);
+  const era=S.lab.cocoaEra??0;const E=[{l:"December 2024",world:12931,farm:2900,note:"World price at its record. Ivorian farmers were paid the fixed 2024/25 price of 1,800 FCFA/kg."},{l:"Early 2026",world:4000,farm:2070,note:"World price had crashed. Côte d'Ivoire cut its mid-crop price to 1,200 FCFA/kg after exporters stopped buying at 2,800."}][era];
+  return `<section class="lab"><div class="head"><div><span class="eyebrow">Lab · where your chocolate money goes</span><h2>Slide the price of a dark chocolate bar</h2></div><span class="small">Shares from BASIC/FAO (2020), French prices, 2018</span></div>
+  <div class="controls"><label for="cp">Bar price: <b class="num" data-dyn="cpv" style="color:var(--fg)">€${price.toFixed(2)}</b><input type="range" id="cp" min="1" max="6" step="0.25" value="${price}"></label>
+  <div class="out win" data-dyn="cpo" style="min-width:200px"><span class="small">The farmer receives</span><span class="big">€${(price*11.3/100).toFixed(2)}</span><span class="small">about 11% of the price</span></div></div>
+  <div class="stack" data-dyn="cps" role="img" aria-label="Price split of a dark chocolate bar">${parts.map(p=>`<div style="flex-basis:${p[1]/sum*100}%;background:${p[2]}" title="${p[0]}">${p[1]>9?Math.round(p[1])+"%":""}</div>`).join("")}</div>
+  <div class="keyrow" data-dyn="cpk">${parts.map(p=>`<div><i style="background:${p[2]}"></i><span>${p[0]}: <b class="num">€${(price*p[1]/100).toFixed(2)}</b> (${p[1]}%)</span></div>`).join("")}</div>
+  <div style="border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:12px">
+   <div class="head"><h3>The 2024 price spike: world price vs what an Ivorian farmer was paid</h3><div class="seg" role="group" aria-label="Pick a moment">${["Dec 2024","Early 2026"].map((l,i)=>`<button data-era="${i}" aria-pressed="${era===i}">${l}</button>`).join("")}</div></div>
+   <div class="bars">
+    <div class="bar"><span>World price</span><div class="track"><div class="fill" style="width:${E.world/12931*100}%;background:var(--down)"></div></div><span class="num">US$${E.world.toLocaleString()}/t</span></div>
+    <div class="bar"><span>Farmer's price</span><div class="track"><div class="fill" style="width:${E.farm/12931*100}%;background:var(--farm)"></div></div><span class="num">~US$${E.farm.toLocaleString()}/t</span></div>
+   </div>
+   <p class="small">${E.note} Farmer got about <b>${Math.round(E.farm/E.world*100)}%</b> of the world price. Dollar values are approximate conversions.</p>
+  </div></section>`;
+}
+function labMaize(){
+  const bags=S.lab.bags??40,st=S.lab.store??"sack";
+  const loss=st==="sack"?0.275:0.02;const lossRange=st==="sack"?"15–40%":"1–3%";
+  const now=bags*3200,keep=Math.round(bags*(1-loss)),later=keep*4000;
+  const better=later>now;
+  return `<section class="lab"><div class="head"><div><span class="eyebrow">Lab · the storage decision</span><h2>Sell at harvest, or store and wait?</h2></div><span class="small">Kenya, 90-kg bags · illustrative</span></div>
+  <div class="controls"><label for="bags">Harvest: <b class="num" data-dyn="bv" style="color:var(--fg)">${bags} bags</b><input type="range" id="bags" min="5" max="100" step="5" value="${bags}"></label>
+   <div class="seg" role="group" aria-label="Storage">${[["sack","Ordinary sacks"],["hermetic","Hermetic bags"]].map(([k,l])=>`<button data-store="${k}" aria-pressed="${st===k}">${l}</button>`).join("")}</div></div>
+  <div class="outcomes" data-dyn="mo">
+   <div class="out ${!better?"win":""}"><span class="small">Sell at harvest (~KSh 3,200/bag, a typical distress price)</span><span class="big">KSh ${now.toLocaleString()}</span><span class="small">${bags} bags sold</span></div>
+   <div class="out ${better?"win":""}"><span class="small">Store ~8 months, sell at KSh 4,000/bag (board price, Jan 2026)</span><span class="big">KSh ${later.toLocaleString()}</span><span class="small">${keep} bags survive · ${lossRange} lost in ${st==="sack"?"ordinary sacks":"hermetic bags"} (midpoint used)</span></div>
+  </div>
+  <p class="small" data-dyn="mp">${better?`Waiting pays here: <b>KSh ${(later-now).toLocaleString()}</b> more.`:`Waiting loses money here: storage losses eat the higher price.`} Switch the storage type to see the difference. Bag costs, credit and price risk are left out; loss ranges come from on-farm trials (Stathers et al., 2017).</p></section>`;
+}
+function labCoffee(){
+  const mode=S.lab.coffee??"ladder";
+  const L=[["Rwanda, average export (2025)",6.2],["Best of Rwanda top lot (2025)",88],["Best of Rwanda record (Oct 2026)",452],["Ethiopia Cup of Excellence record (2024)",981]];
+  const max=Math.log10(1000);
+  const exp=S.lab.exp??6;
+  return `<section class="lab"><div class="head"><div><span class="eyebrow">Lab · the value ladder</span><h2>What quality does to a kilo of green coffee</h2></div><div class="seg" role="group" aria-label="View">${[["ladder","Price ladder"],["share","Farmer share"]].map(([k,l])=>`<button data-coffee="${k}" aria-pressed="${mode===k}">${l}</button>`).join("")}</div></div>
+  ${mode==="ladder"?`<div class="bars">${L.map(([n,v])=>`<div class="bar"><span>${n}</span><div class="track"><div class="fill" style="width:${Math.max(4,Math.log10(v)/max*100)}%;background:var(--mid)"></div></div><span class="num">US$${v.toLocaleString()}/kg</span></div>`).join("")}</div>
+  <p class="small">Bars use a log scale, so each step to the right is ten times more. The top lot sold for about 70× Rwanda's average export price. Ethiopia's record (US$445/lb) is converted to kilos. Only tiny volumes sell at these prices.</p>`:
+  `<div class="controls"><label for="exp">Export price of green coffee: <b class="num" data-dyn="ev" style="color:var(--fg)">US$${exp.toFixed(1)}/kg</b><input type="range" id="exp" min="2" max="12" step="0.5" value="${exp}"></label></div>
+  <div class="outcomes" data-dyn="eo"><div class="out"><span class="small">Ethiopian farmer gets ~60%</span><span class="big">US$${(exp*0.6).toFixed(2)}</span></div><div class="out win"><span class="small">Brazilian or Colombian farmer gets ~87%</span><span class="big">US$${(exp*0.87).toFixed(2)}</span></div></div>
+  <p class="small">Same export price, different chains. More layers of middlemen in Ethiopia mean less reaches the farm (FOLU, 2025).</p>`}</section>`;
+}
+function labTomatoes(){
+  const pack=S.lab.pack??"raffia",ran=S.lab.ran??false;const rate=pack==="raffia"?0.41:0.05;
+  const n=100,hit=Math.round(n*rate);
+  return `<section class="lab"><div class="head"><div><span class="eyebrow">Lab · ride the truck</span><h2>Send 100 crates of tomatoes from Kano to Lagos</h2></div><div class="seg" role="group" aria-label="Packaging">${[["raffia","Raffia baskets"],["crates","Plastic crates"]].map(([k,l])=>`<button data-pack="${k}" aria-pressed="${pack===k}">${l}</button>`).join("")}</div></div>
+  <div class="road" aria-hidden="true"><span class="truck" id="truck" style="left:${ran?"calc(100% - 90px)":"0"}">Kano → Lagos</span></div>
+  <div class="crates" role="img" aria-label="${ran?hit+" of 100 loads damaged":"100 loads ready to leave"}">${Array.from({length:n},(_,i)=>`<i class="${ran&&i<hit?"hit":""}"></i>`).join("")}</div>
+  <div class="controls"><button class="btn" id="drive">${ran?"Drive again":"Start the 998 km drive"}</button><span>${ran?`<b class="big" style="color:var(--bad)">${hit}%</b> of fruit arrives damaged in ${pack==="raffia"?"raffia baskets":"plastic crates"}.`:"Pick packaging, then drive."}</span></div>
+  <p class="small">Damage rates from a study of the Kano–Lagos route (Babarinsa et al., 2018, cited by IFDC): ~41% in raffia baskets, ~5% in plastic crates. In Morocco, fruit is packed and cooled in packhouses and travels in refrigerated trucks.</p></section>`;
+}
+function quiz(c){
+  const ans=S.quiz[c.id];
+  return `<section class="quiz"><span class="eyebrow" style="color:var(--bg);opacity:.75">Check yourself</span><h2>${esc(c.quiz.q)}</h2><div class="opts">${c.quiz.o.map((o,i)=>`<button data-ans="${i}" class="${ans!=null?(i===c.quiz.a?"right":(i===ans?"wrong":"")):""}" ${ans!=null?"disabled":""}>${esc(o)}</button>`).join("")}</div>${ans!=null?`<p class="why">${ans===c.quiz.a?"Right. ":"Not quite. "}${esc(c.quiz.why)}</p>${seenSet(c.id).size===c.stages.length?`<span class="done">Journey complete</span>`:`<span class="small" style="color:var(--bg)">Visit every stage to complete this journey.</span>`}`:""}</section>`;
+}
+function labHTML(){return {cocoa:labCocoa,maize:labMaize,coffee:labCoffee,tomatoes:labTomatoes}[crop().lab]()}
+function patchLab(){const tmp=document.createElement("div");tmp.innerHTML=labHTML();tmp.querySelectorAll("[data-dyn]").forEach(n=>{const live=document.querySelector(`[data-dyn="${n.dataset.dyn}"]`);if(live)live.outerHTML=n.outerHTML})}
+function render(){
+  const c=crop();
+  if(S.i>=c.stages.length)S.i=0;
+  markSeen();renderCrops();
+  $("#lvl-begin").setAttribute("aria-pressed",String(!S.expert));$("#lvl-expert").setAttribute("aria-pressed",String(S.expert));
+  const cc=S.country[c.id]||c.countries[0][0];
+  const lab=labHTML();
+  $("#main").innerHTML=`
+   <div class="intro"><div><span class="eyebrow">${esc(c.sub)}</span><h2 style="font-size:30px">${esc(c.name)}</h2><p>${linkTerms(c.intro)}</p></div>
+   ${c.compare?`<span class="small">Side-by-side: ${c.countries.map(x=>x[1]).join(" vs ")}</span>`:`<div class="countries" role="group" aria-label="Country">${c.countries.map(([k,n])=>`<button data-country="${k}" aria-pressed="${cc===k}">${n}</button>`).join("")}</div>`}</div>
+   ${chain(c)}
+   <div class="stagegrid">${stagePanel(c)}${notebook()}</div>
+   <div id="labanchor">${lab}</div>
+   ${quiz(c)}`;
+  $("#foot").innerHTML=`Sources for ${esc(c.name)}: ${c.src.map(([n,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(" · ")}. Part of the Africa AgriTech Atlas. Figures as of November 2026.`;
+  placeGate();
+}
+function placeGate(){const g=$("#gate");if(!g)return;const i=+g.dataset.gate;const b=document.querySelector(`.chev[data-step="${i}"]`);if(!b){g.hidden=true;return}g.style.left=(b.offsetLeft-2)+"px"}
+addEventListener("resize",placeGate);
+
+/* ---------- events ---------- */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button");if(!t)return;
+  const c=crop();
+  if(t.dataset.crop){S.crop=t.dataset.crop;S.i=0;S.term=null;history.replaceState(null,"","#"+S.crop);render();return}
+  if(t.dataset.step){S.i=+t.dataset.step;render();return}
+  if(t.dataset.term){addWord(t.dataset.term);render();return}
+  if(t.dataset.country){S.country[c.id]=t.dataset.country;render();return}
+  if(t.id==="prev"){S.i=Math.max(0,S.i-1);render();return}
+  if(t.id==="next"){if(S.i<c.stages.length-1){S.i++;render()}else{$("#labanchor").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}return}
+  if(t.id==="lvl-begin"||t.id==="lvl-expert"){S.expert=t.id==="lvl-expert";store.set("expert",S.expert);render();return}
+  if(t.dataset.era){S.lab.cocoaEra=+t.dataset.era;render();return}
+  if(t.dataset.store){S.lab.store=t.dataset.store;render();return}
+  if(t.dataset.coffee){S.lab.coffee=t.dataset.coffee;render();return}
+  if(t.dataset.pack){S.lab.pack=t.dataset.pack;S.lab.ran=false;render();return}
+  if(t.id==="drive"){if(S.lab.ran){S.lab.ran=false;render();requestAnimationFrame(()=>requestAnimationFrame(()=>{S.lab.ran=true;render()}))}else{S.lab.ran=true;render()}return}
+  if(t.dataset.ans){S.quiz[c.id]=+t.dataset.ans;store.set("quiz",S.quiz);render();return}
+});
+document.addEventListener("input",e=>{
+  const id=e.target.id;const v=+e.target.value;
+  const key={cp:"cocoaPrice",bags:"bags",exp:"exp"}[id];if(!key)return;
+  S.lab[key]=v;patchLab();
+});
+function fromHash(){const h=location.hash.slice(1);if(CROPS.some(c=>c.id===h)){S.crop=h;S.i=0}}
+addEventListener("hashchange",()=>{fromHash();render()});
+fromHash();render();
+</script>

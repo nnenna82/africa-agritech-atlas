@@ -1,0 +1,727 @@
+<title>Africa AgriTech Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.world.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky top bar with section tabs; a single content column (max 1180px) of filter rows, tables and card grids. */
+:root{
+  --bg:#f5f6f2; --surface:#ffffff; --sunk:#eceee7; --fg:#18231d; --muted:#5b665e; --line:#d9ddd3;
+  --accent:#1f6b4f; --accent-soft:#dcebe3; --gold:#b5821b; --gold-soft:#f3e7cb;
+  --good:#2f7d4a; --warn:#a8660f; --bad:#b23b30;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111713; --surface:#18201b; --sunk:#0c110e; --fg:#e7ece6; --muted:#9aa69d; --line:#2c3730;
+  --accent:#6cc39b; --accent-soft:#1f3a2e; --gold:#e0b55a; --gold-soft:#3a2f17;
+  --good:#6cc38a; --warn:#e3a54a; --bad:#ef7d70; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111713; --surface:#18201b; --sunk:#0c110e; --fg:#e7ece6; --muted:#9aa69d; --line:#2c3730;
+  --accent:#6cc39b; --accent-soft:#1f3a2e; --gold:#e0b55a; --gold-soft:#3a2f17;
+  --good:#6cc38a; --warn:#e3a54a; --bad:#ef7d70; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--accent)} a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;padding-block:12px;flex-wrap:wrap}
+.brand{font:700 20px/1 var(--display);letter-spacing:-.01em;display:flex;gap:8px;align-items:baseline;color:var(--fg);text-decoration:none}
+.brand small{font:500 11px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+nav{display:flex;gap:2px;flex-wrap:wrap;flex:1;min-width:0}
+nav a{padding:6px 10px;border-radius:6px;text-decoration:none;color:var(--muted);font-weight:500;white-space:nowrap;font-size:14px}
+nav a[aria-current="page"]{background:var(--accent-soft);color:var(--fg)}
+nav a:hover{color:var(--fg)}
+main{padding-block:28px 64px}
+h1{font:700 clamp(28px,4vw,40px)/1.1 var(--display);letter-spacing:-.02em;margin:0 0 10px;text-wrap:balance}
+h2{font:700 22px/1.2 var(--display);margin:0 0 12px;text-wrap:balance}
+h3{font:600 16px/1.3 var(--body);margin:0 0 6px}
+.lead{font-size:17px;max-width:68ch;color:var(--fg);margin:0 0 6px}
+.sub{color:var(--muted);max-width:70ch;margin:0}
+.eyebrow{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.section{margin-top:36px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 14px;align-items:center}
+input[type=search],select,input[type=text],input[type=url],textarea{font:inherit;font-size:14px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 10px;max-width:100%}
+input[type=search]{min-width:220px;flex:1 1 220px}
+.count{font:500 12px var(--mono);color:var(--muted)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0;white-space:nowrap}
+th button{all:unset;cursor:pointer} th button:hover{color:var(--fg)}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);white-space:nowrap}
+tbody tr.click{cursor:pointer} tbody tr.click:hover{background:var(--sunk)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.card p{margin:0;font-size:14px}
+.meta{font-size:13px;color:var(--muted)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font:500 11px var(--mono);padding:2px 7px;border-radius:999px;background:var(--sunk);color:var(--muted);white-space:nowrap}
+.chip.acc{background:var(--accent-soft);color:var(--fg)}
+.chip.gold{background:var(--gold-soft);color:var(--fg)}
+.chip.bad{color:var(--bad)} .chip.good{color:var(--good)} .chip.warn{color:var(--warn)}
+.links{display:flex;gap:10px;flex-wrap:wrap;font-size:13px}
+.links a{overflow-wrap:anywhere}
+.scorebar{display:flex;align-items:center;gap:8px;min-width:140px}
+.scorebar .track{flex:1;height:6px;border-radius:3px;background:var(--sunk);overflow:hidden}
+.scorebar .fill{height:100%;background:var(--accent)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:18px}
+.kpi{border-left:3px solid var(--gold);padding:4px 12px}
+.kpi b{display:block;font:700 26px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.kpi span{font-size:13px;color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}
+@media (max-width:820px){.two{grid-template-columns:minmax(0,1fr)}}
+.list{display:flex;flex-direction:column;gap:10px;padding:0;margin:0;list-style:none}
+.list li{border-bottom:1px solid var(--line);padding-bottom:10px}
+.prose{max-width:72ch} .prose p{margin:0 0 10px}
+.back{font-size:14px;text-decoration:none;display:inline-block;margin-bottom:12px}
+.notice{background:var(--gold-soft);border-radius:8px;padding:10px 14px;font-size:14px;margin:12px 0}
+.empty{padding:40px 16px;text-align:center;color:var(--muted)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
+.steps li::before{content:counter(s);font:700 26px/1 var(--display);color:var(--gold)}
+.btn{font:600 14px var(--body);border:1px solid var(--accent);background:var(--accent);color:var(--surface);padding:8px 14px;border-radius:6px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+form.add{display:grid;gap:10px;max-width:640px}
+form.add label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.tiny{font-size:12px;color:var(--muted)}
+nav a.navcj{background:var(--gold-soft);color:var(--fg);font-weight:600}
+.cjband{background:var(--gold-soft);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:14px}
+.cjband h2{font-size:22px}
+.cjcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media(max-width:820px){.cjcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cjcard{background:var(--surface);border-radius:10px;padding:14px;text-decoration:none;color:var(--fg);display:flex;flex-direction:column;gap:4px;border:1px solid transparent}
+.cjcard:hover,.cjcard:focus-visible{border-color:var(--gold)}
+.cjcard b{font:700 18px var(--display)}
+.cjcard span{font-size:13px;color:var(--muted)}
+.cjcard em{font-style:normal;font:600 12px var(--mono);color:var(--gold-ink,var(--fg));margin-top:4px}
+.newsitem{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+@media(max-width:600px){.newsitem{grid-template-columns:minmax(0,1fr);gap:6px}}
+.newsitem .d{font:500 12px var(--mono);color:var(--muted)}
+.newsitem h3{font-size:16.5px;margin:0 0 4px}
+.newsitem p{margin:0 0 6px;font-size:14.5px}
+.newsitem .why{font-size:13.5px;color:var(--muted)}
+.suggest{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border:1px dashed var(--line);border-radius:10px;padding:12px 16px;margin-top:24px;font-size:14px}
+:root{--t1:#e3ece1;--t2:#b7d4c1;--t3:#7fb598;--t4:#3f8a67;--t5:#1a5a42;--nodata:#e6e8e2;--r-North:#c9a227;--r-West:#c46b4a;--r-Central:#8a6fb0;--r-East:#3f8fb0;--r-Southern:#4f9a5a;--mapline:#ffffff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--t1:#2a3b31;--t2:#3d6150;--t3:#4f8a6c;--t4:#6cb592;--t5:#9fe0bd;--nodata:#2a312c;--r-North:#c9a84a;--r-West:#d0836a;--r-Central:#a28ccc;--r-East:#62acc9;--r-Southern:#6fb97a;--mapline:#111713}}
+:root[data-theme="dark"]{--t1:#2a3b31;--t2:#3d6150;--t3:#4f8a6c;--t4:#6cb592;--t5:#9fe0bd;--nodata:#2a312c;--r-North:#c9a84a;--r-West:#d0836a;--r-Central:#a28ccc;--r-East:#62acc9;--r-Southern:#6fb97a;--mapline:#111713}
+.tier{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;white-space:nowrap}
+.tier i{width:14px;height:14px;border-radius:3px;display:inline-block;flex-shrink:0;border:1px solid var(--line)}
+.cell{display:inline-block;width:28px;height:18px;border-radius:3px;border:1px solid var(--line);vertical-align:middle}
+.scale{display:flex;gap:3px;align-items:stretch;max-width:420px}
+.scale div{flex:1;height:12px;border-radius:2px;position:relative}
+.scale div.on{outline:2px solid var(--fg);outline-offset:2px}
+.scalelbl{display:flex;justify-content:space-between;max-width:420px;font-size:11.5px;color:var(--muted);margin-top:4px}
+.crumbs{font-size:14px;display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;color:var(--muted)}
+.crumbs a{text-decoration:none;padding:0;background:none;color:var(--accent);font-weight:500}
+.homegrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:start}
+@media(max-width:880px){.homegrid{grid-template-columns:minmax(0,1fr)}}
+.mapbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.mapbox svg{width:100%;height:auto;display:block}
+.mapbox path.c{cursor:pointer;stroke:var(--mapline);stroke-width:.6;transition:opacity .15s}
+.mapbox path.c:hover,.mapbox path.c:focus{stroke:var(--fg);stroke-width:1.4;outline:none}
+.mapbox path.na{fill:var(--nodata);stroke:var(--mapline);stroke-width:.6}
+.mapbox circle.c{cursor:pointer;stroke:var(--mapline);stroke-width:1}
+.mapbox .dim{opacity:.28}
+.maptip{font-size:13.5px;min-height:20px;color:var(--muted)}
+.legendrow{display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.legendrow span{display:inline-flex;align-items:center;gap:6px}
+.legendrow i{width:12px;height:12px;border-radius:2px;display:inline-block}
+.regioncards{display:grid;gap:10px}
+.rcard{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.rcard:hover,.rcard:focus-visible{border-color:var(--accent)}
+.rcard .sw{width:10px;height:100%;min-height:40px;border-radius:3px}
+.rcard b{font:700 17px var(--display)}
+.mix{display:flex;height:8px;border-radius:2px;overflow:hidden;width:110px}
+.tilemap{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px}
+.tilemap button{aspect-ratio:1;border:0;border-radius:4px;font:500 10px var(--mono);cursor:pointer;color:var(--fg);padding:0}
+.primer{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.ccards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.ccard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;cursor:pointer}
+.ccard:hover{border-color:var(--accent)}
+.profile{background:var(--fg);color:var(--bg)}
+.profile .wrap{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;padding-block:10px}
+.profile label{display:flex;align-items:center;gap:8px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--bg);opacity:.95}
+.profile select{background:var(--bg);color:var(--fg);border:0;border-radius:6px;padding:7px 10px;font:500 14px var(--body);min-height:36px;max-width:220px}
+.profile button{background:transparent;border:1px solid color-mix(in srgb,var(--bg) 40%,transparent);color:var(--bg);border-radius:6px;padding:6px 12px;font:600 13px var(--body);cursor:pointer;min-height:36px}
+.profile .hint{font-size:13px;opacity:.8;margin-left:auto}
+.foryou{background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:18px}
+.foryou .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.foryou h2{font-size:20px}
+.mini{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.mini li{border-bottom:1px solid var(--line);padding-bottom:8px;font-size:14px}
+.mini li b{display:block}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap}
+.match{font:600 11px var(--mono);background:var(--accent-soft);color:var(--fg);padding:2px 7px;border-radius:999px}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);font:inherit;text-decoration:underline;cursor:pointer}
+.btn-pill{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:7px 14px;font:600 13px var(--body);cursor:pointer;min-height:36px}
+.btn-pill.on{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn-pill.on .count{color:inherit;opacity:.85}
+.drivers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
+.drivers .card h3{font-size:15px}
+@media(max-width:640px){.profile .hint{margin-left:0}.profile select{max-width:100%}}
+@media (prefers-reduced-motion:no-preference){.card,.steps li{transition:border-color .15s}.card:hover{border-color:var(--accent)}}
+</style>
+
+<header><div class="wrap bar">
+  <a class="brand" href="#home">Africa AgriTech Atlas <small>54 countries</small></a>
+  <nav id="nav" aria-label="Sections"></nav>
+</div><div class="profile" id="profile"></div></header>
+<main class="wrap" id="app"><div class="empty">Loading the Atlas…</div></main>
+
+<script>
+const VIEWS=[["home","Home"],["africa","Africa & regions"],["gaps","Gaps"],["startups","Startups"],["people","People"],["organizations","Organizations"],["policies","Regulation"],["benchmarks","Global"],["news","News"],["learn","Learn"]];
+const SEGMENTS=["inputs & seeds","irrigation & water","mechanization","storage & cold chain","processing","logistics & market access","finance & insurance","data, climate & extension","climate & extension","data","energy","transport","digital connectivity","industrial zones"];
+const S={seed:{},entries:[],news:[],loaded:false,stale:false,canWrite:null,f:{}};
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>{u=String(u||"").trim();return /^https?:\/\//i.test(u)?u:""};
+const splitUrls=s=>String(s||"").split(/\s*;\s*|\s+(?=https?:)/).map(safeUrl).filter(Boolean);
+const host=u=>{try{return new URL(u).hostname.replace(/^www\./,"")}catch{return "link"}};
+const linkList=(arr)=>{const u=[...new Set((arr||[]).flatMap(splitUrls))];return u.length?`<div class="links">${u.map(x=>`<a href="${esc(x)}" target="_blank" rel="noopener">${esc(host(x))}</a>`).join("")}</div>`:""};
+const items=k=>{const base=(S.seed[k]&&S.seed[k].items)||[];const add=S.entries.filter(e=>e.collection===k).map(e=>({...e.data,_added:true}));return base.concat(add)};
+const countries=()=>items("countries");
+const cName=iso=>{if(iso==="AU")return "Continental";const c=countries().find(c=>c.iso3===iso);return c?c.name:iso};
+const fmt=(v,d=1)=>v==null||v===""?"–":Number(v).toFixed(d).replace(/\.0$/,"");
+const PILLARS=[["productivity","Productivity"],["inputs_water","Inputs & water"],["policy","Policy"],["infrastructure","Infrastructure"],["finance","Finance access"]];
+function score(c){const a=c.atlas;return a?{v:a.score,n:a.n_pillars,p:a.pillars||{}}:{v:null,n:0,p:{}}}
+const bar=(v,n)=>v==null?"–":`<div class="scorebar"><div class="track"><div class="fill" style="width:${Math.max(2,Math.min(100,v))}%"></div></div><span class="count">${fmt(v,0)}${n<5?`<sup title="${n} of 5 pillars have data">*</sup>`:""}</span></div>`;
+const opt=(vals,sel,all)=>`<option value="">${esc(all)}</option>`+vals.map(v=>`<option value="${esc(v[0])}" ${v[0]===sel?"selected":""}>${esc(v[1])}</option>`).join("");
+const countryOpts=(sel)=>opt(countries().slice().sort((a,b)=>a.name.localeCompare(b.name)).map(c=>[c.iso3,c.name]),sel,"All countries");
+const regionOpts=sel=>opt(["North","West","Central","East","Southern"].map(r=>[r,r+" Africa"]),sel,"All regions");
+const match=(o,q)=>!q||JSON.stringify(o).toLowerCase().includes(q.toLowerCase());
+const statusChip=s=>{s=String(s||"");const cls=/shut|liquid|administration/i.test(s)?"bad":/pivot|restruct|unverified|down round/i.test(s)?"warn":/acquired/i.test(s)?"gold":"good";return `<span class="chip ${cls}">${esc(s.split(/[:(]/)[0].trim()||"unknown")}</span>`};
+const addedChip=o=>o._added?`<span class="chip gold">added</span>`:"";
+
+function nav(){let cur=(location.hash.slice(1)||"home").split("-")[0];if(["country","region","countries","overview"].includes(cur))cur="africa";const L=VIEWS.map(([k,l])=>`<a href="#${k}" ${k===cur?'aria-current="page"':""}>${l}</a>`);L.splice(1,0,`<a href="https://claude.ai/artifact/E4QTs1Hnomm9HAGnsm2AuJ" target="_blank" rel="noopener" class="navcj">Crop Journeys ↗</a>`);$("#nav").innerHTML=L.join("")}
+function filters(key,html){return `<div class="filters" data-f="${key}">${html}</div>`}
+function bindFilters(){document.querySelectorAll(".filters [name]").forEach(el=>{el.addEventListener(el.tagName==="INPUT"&&el.type==="search"?"input":"change",()=>{S.f[el.name]=el.type==="checkbox"?el.checked:el.value;render(true)})})}
+const fv=k=>S.f[k]||"";
+const ROLES=[["student","Student or newcomer"],["builder","Founder or builder"],["funder","Investor or funder"],["policy","Policy or development professional"],["research","Researcher or analyst"]];
+const ls={get(k,d){try{const v=localStorage.getItem("atlas_"+k);return v?JSON.parse(v):d}catch{return d}},set(k,v){try{localStorage.setItem("atlas_"+k,JSON.stringify(v))}catch{}}};
+S.p=Object.assign({role:"",region:"",country:"",segment:""},ls.get("profile",{}));
+function allSegments(){return [...new Set(items("gaps").map(g=>g.segment).concat(items("startups").map(x=>x.segment)).filter(Boolean))].sort()}
+function renderProfile(){
+  const P=S.p;if(P.country&&!P.region)P.region=regionOf(P.country)||"";
+  const cs=countries().filter(c=>c.region===P.region).sort((a,b)=>(b.deep-a.deep)||a.name.localeCompare(b.name));
+  const deep=cs.filter(c=>c.deep),rest=cs.filter(c=>!c.deep);
+  $("#profile").innerHTML=`<div class="wrap"><label for="p_role">I am a<select id="p_role"><option value="">Choose your role</option>${ROLES.map(([k,l])=>`<option value="${k}" ${P.role===k?"selected":""}>${l}</option>`).join("")}</select></label>
+  <label for="p_region">Region<select id="p_region"><option value="">All of Africa</option>${AREGIONS.map(r=>`<option value="${r}" ${P.region===r?"selected":""}>${r} Africa</option>`).join("")}</select></label>
+  <label for="p_country">Country<select id="p_country" ${P.region?"":"disabled"}><option value="">${P.region?"All of "+esc(P.region)+" Africa":"Pick a region first"}</option>${deep.length?`<optgroup label="Deep dives">${deep.map(c=>`<option value="${c.iso3}" ${P.country===c.iso3?"selected":""}>${esc(c.name)}</option>`).join("")}</optgroup>`:""}${rest.length?`<optgroup label="${deep.length?"Other countries":"Countries"}">${rest.map(c=>`<option value="${c.iso3}" ${P.country===c.iso3?"selected":""}>${esc(c.name)}</option>`).join("")}</optgroup>`:""}</select></label>
+  <label for="p_seg">Interested in<select id="p_seg"><option value="">Any part of the chain</option>${allSegments().map(x=>`<option value="${esc(x)}" ${P.segment===x?"selected":""}>${esc(x)}</option>`).join("")}</select></label>
+  ${P.role||P.region||P.country||P.segment?`<button id="p_clear" type="button">Clear</button>`:""}
+  <span class="hint">${P.role?`Tailored for: ${esc((ROLES.find(r=>r[0]===P.role)||[])[1]||"")}`:"Pick a role to tailor the Atlas to you"}</span></div>`;
+  ["p_role","p_region","p_country","p_seg"].forEach(id=>$("#"+id).addEventListener("change",e=>{const k={p_role:"role",p_region:"region",p_country:"country",p_seg:"segment"}[id];S.p[k]=e.target.value;if(k==="region")S.p.country="";ls.set("profile",S.p);if(k==="segment")S.mapmode=null;applyProfileFilters();if(location.hash&&location.hash!=="#home"&&id==="p_role")location.hash="home";else render()}));
+  const cl=$("#p_clear");if(cl)cl.addEventListener("click",()=>{S.p={role:"",region:"",country:"",segment:""};ls.set("profile",S.p);applyProfileFilters();render()});
+}
+function applyProfileFilters(){const P=S.p;const deepC=P.country&&(countries().find(c=>c.iso3===P.country)||{}).deep;
+  Object.assign(S.f,{gs:P.segment,gc:deepC?P.country:"",ss:P.segment,sc:P.country,pc:P.country,oc:P.country,lc:deepC?P.country:""});
+  if(P.role==="funder")S.f.sst="active";}
+function personKind(p){const r=(p.role||"")+" "+(p.organization||"");
+  if(/minister|secretary|prime minister|permanent|principal secretary|deputy/i.test(p.role||""))return "policy";
+  if(/invest|fund|capital|bank|afdb|dfi|acumen|agdevco|partech|novastar/i.test(r))return "funder";
+  if(/kalro|ilri|iita|cgiar|um6p|research|\barc\b|crig|cnra|eiar|institute|university|rab\b/i.test(r))return "research";
+  if(/founder/i.test(p.role||""))return "builder";
+  return "builder"}
+const inC=(arr,iso)=>!iso||(arr||[]).includes(iso);
+const regOK=(isos,allowAU)=>{const P=S.p;if(!P.region||P.country)return true;isos=(isos||[]).filter(Boolean);if(allowAU&&isos.includes("AU"))return true;return isos.some(i=>regionOf(i)===P.region)};
+
+/* ---------- tiers (color groups instead of numbers) ---------- */
+const TIERS=[["Early stage","var(--t1)"],["Emerging","var(--t2)"],["Middle","var(--t3)"],["Advancing","var(--t4)"],["Leading","var(--t5)"]];
+let TIER={};
+function computeTiers(){TIER={};const sc=countries().filter(c=>c.atlas&&c.atlas.score!=null).sort((a,b)=>b.atlas.score-a.atlas.score);const n=sc.length;sc.forEach((c,i)=>{TIER[c.iso3]=4-Math.min(4,Math.floor(i*5/n))})}
+const tierOf=iso=>TIER[iso]??null;
+const tierName=t=>t==null?"Not enough data":TIERS[t][0];
+const tierColor=t=>t==null?"var(--nodata)":TIERS[t][1];
+const pillarTier=v=>v==null?null:v>=80?4:v>=60?3:v>=40?2:v>=20?1:0;
+const tierChip=t=>`<span class="tier"><i style="background:${tierColor(t)}"></i>${esc(tierName(t))}</span>`;
+const pillarCell=v=>{const t=pillarTier(v);return `<span class="cell" style="background:${tierColor(t)}" title="${esc(tierName(t))}"></span>`};
+const tierScale=t=>`<div aria-label="Atlas group: ${esc(tierName(t))}"><div class="scale">${TIERS.map((x,i)=>`<div class="${i===t?"on":""}" style="background:${x[1]}" title="${x[0]}"></div>`).join("")}</div><div class="scalelbl"><span>Early stage</span><span>${t==null?"Not enough data to place this country":"This country: <b>"+esc(tierName(t))+"</b>"}</span><span>Leading</span></div></div>`;
+const crumbs=list=>`<nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a>${list.map(([l,h])=>` <span aria-hidden="true">›</span> ${h?`<a href="#${h}">${esc(l)}</a>`:`<span aria-current="page">${esc(l)}</span>`}`).join("")}</nav>`;
+
+/* ---------- regions ---------- */
+const AREGIONS=["North","West","Central","East","Southern"];
+const regionOf=iso=>(countries().find(c=>c.iso3===iso)||{}).region;
+function regionStats(r){const cs=countries().filter(c=>c.region===r);const mix=[0,0,0,0,0];let nd=0;cs.forEach(c=>{const t=tierOf(c.iso3);t==null?nd++:mix[t]++});
+  const leaders=cs.filter(c=>tierOf(c.iso3)===4).map(c=>c.name);const adv=cs.filter(c=>tierOf(c.iso3)===3).map(c=>c.name);
+  return {cs,mix,nd,deep:cs.filter(c=>c.deep).length,leaders,adv}}
+function mixBar(st){const n=st.cs.length;return `<div class="mix" aria-hidden="true">${st.mix.map((m,i)=>m?`<div style="flex:${m};background:${TIERS[i][1]}"></div>`:"").join("")}${st.nd?`<div style="flex:${st.nd};background:var(--nodata)"></div>`:""}</div>`}
+function regionCards(){return AREGIONS.map(r=>{const st=regionStats(r);const top=(st.leaders.length?st.leaders:st.adv).slice(0,3).join(", ");
+  return `<button type="button" class="rcard" data-rgn="${r}"><span class="sw" style="background:var(--r-${r})"></span><span><b>${r} Africa</b><br><span class="meta">${st.cs.length} countries · ${st.deep} deep dive${st.deep===1?"":"s"}${top?" · Strongest: "+esc(top):""}</span></span>${mixBar(st)}</button>`}).join("")}
+
+/* ---------- map ---------- */
+let MAP; const MAPW=600,MAPH=640;
+const ISLANDS={CPV:[-23.6,15.1],STP:[6.6,0.3],COM:[43.35,-11.7],MUS:[57.55,-20.25],SYC:[55.45,-4.65]};
+function getMap(){if(MAP!==undefined)return MAP;
+  try{const AF=new Set(countries().map(c=>c.iso3));const topo=window.Datamap&&Datamap.prototype.worldTopo;if(!topo||!window.topojson||!window.d3||!d3.geoMercator)throw 0;
+    const obj=topo.objects.world||topo.objects[Object.keys(topo.objects)[0]];
+    const feats=topojson.feature(topo,obj).features.map(f=>{let id=f.id;const nm=(f.properties&&f.properties.name)||"";if(/somaliland/i.test(nm))id="SOM";return {id,f}}).filter(x=>AF.has(x.id)||x.id==="ESH");
+    if(feats.length<40)throw 0;
+    const have=new Set(feats.map(x=>x.id));const pts=Object.entries(ISLANDS).filter(([k])=>AF.has(k)&&!have.has(k));
+    const proj=d3.geoMercator().fitExtent([[10,10],[MAPW-10,MAPH-10]],{type:"FeatureCollection",features:feats.map(x=>x.f).concat(pts.map(([k,c])=>({type:"Feature",geometry:{type:"Point",coordinates:c}})))});
+    const path=d3.geoPath(proj);
+    MAP={shapes:feats.map(x=>({iso:x.id,d:path(x.f),b:path.bounds(x.f)})),dots:pts.map(([k,c])=>{const [x,y]=proj(c);return {iso:k,x,y}})};
+  }catch(e){MAP=null}
+  return MAP}
+const TILES="MAR4,1 DZA5,1 TUN6,1 LBY7,1 EGY8,1 MRT3,2 MLI4,2 NER5,2 TCD6,2 SDN7,2 ERI8,2 CPV1,3 SEN2,3 GMB3,3 BFA4,3 NGA5,3 CAF6,3 SSD7,3 ETH8,3 DJI9,3 GNB2,4 GIN3,4 CIV4,4 GHA5,4 CMR6,4 UGA7,4 KEN8,4 SOM9,4 SLE2,5 LBR3,5 TGO4,5 BEN5,5 GNQ6,5 RWA7,5 TZA8,5 SYC10,5 STP4,6 GAB5,6 COG6,6 BDI7,6 MWI8,6 COM9,6 AGO5,7 COD6,7 ZMB7,7 MOZ8,7 MDG9,7 MUS10,7 NAM5,8 BWA6,8 ZWE7,8 SWZ8,8 ZAF6,9 LSO7,9".split(" ").map(t=>{const m=t.match(/^([A-Z]{3})(\d+),(\d+)$/);return {iso:m[1],col:+m[2],row:+m[3]}});
+function fillFor(iso,mode,hl){if(mode==="tier")return tierColor(tierOf(iso));if(mode==="interest")return hl&&hl.has(iso)?"var(--gold)":"var(--nodata)";const r=regionOf(iso);return r?`var(--r-${r})`:"var(--nodata)"}
+function tipFor(iso){const c=countries().find(x=>x.iso3===iso);if(!c)return "";return `${c.name} · ${c.region} Africa · ${tierName(tierOf(iso))}${c.deep?" · deep dive":""}`}
+function mapPanel({mode="region",region=null,hl=null,toggles=false,zoom=true}={}){
+  const M=getMap();
+  const legend=mode==="tier"?TIERS.map(t=>`<span><i style="background:${t[1]}"></i>${t[0]}</span>`).join("")+`<span><i style="background:var(--nodata)"></i>Not enough data</span>`:mode==="interest"?`<span><i style="background:var(--gold)"></i>Documented gap in your area of interest</span><span><i style="background:var(--nodata)"></i>Not documented (deep dives cover 10 countries)</span>`:AREGIONS.map(r=>`<span><i style="background:var(--r-${r})"></i>${r}</span>`).join("");
+  const tg=toggles?`<div class="pill-row" role="group" aria-label="Color the map by">${[["region","Regions"],["tier","Atlas groups"]].concat(S.p.segment?[["interest","My interest"]]:[]).map(([k,l])=>`<button type="button" class="btn-pill${k===mode?" on":""}" data-mapmode="${k}" aria-pressed="${k===mode}">${l}</button>`).join("")}</div>`:"";
+  let body;
+  if(M){let vb=`0 0 ${MAPW} ${MAPH}`;
+    if(region&&zoom){const bs=M.shapes.filter(s=>regionOf(s.iso)===region).map(s=>s.b).concat(M.dots.filter(d=>regionOf(d.iso)===region).map(d=>[[d.x-8,d.y-8],[d.x+8,d.y+8]]));
+      if(bs.length){const x0=Math.min(...bs.map(b=>b[0][0])),y0=Math.min(...bs.map(b=>b[0][1])),x1=Math.max(...bs.map(b=>b[1][0])),y1=Math.max(...bs.map(b=>b[1][1]));
+        const ratio=MAPW/MAPH;let w=(x1-x0)*1.12+12,h=(y1-y0)*1.12+12;if(w/h>ratio)h=w/ratio;else w=h*ratio;
+        const cx=(x0+x1)/2,cy=(y0+y1)/2;vb=`${cx-w/2} ${cy-h/2} ${w} ${h}`}}
+    const cls=iso=>region&&regionOf(iso)!==region?" dim":"";
+    body=`<svg viewBox="${vb}" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Map of ${region?esc(region)+" Africa":"Africa"}">${M.shapes.map(s=>s.iso==="ESH"?`<path class="na" d="${s.d}"><title>Western Sahara (disputed)</title></path>`:`<path class="c${cls(s.iso)}" d="${s.d}" fill="${fillFor(s.iso,mode,hl)}" data-iso="${s.iso}" tabindex="0" role="link" aria-label="${esc(tipFor(s.iso))}"><title>${esc(tipFor(s.iso))}</title></path>`).join("")}${M.dots.map(d=>`<circle class="c${cls(d.iso)}" cx="${d.x}" cy="${d.y}" r="${region?4:6}" fill="${fillFor(d.iso,mode,hl)}" data-iso="${d.iso}" tabindex="0" role="link" aria-label="${esc(tipFor(d.iso))}"><title>${esc(tipFor(d.iso))}</title></circle>`).join("")}</svg>`;
+  }else{
+    const tl=region?TILES.filter(t=>regionOf(t.iso)===region):TILES;const c0=Math.min(...tl.map(t=>t.col))-1,r0=Math.min(...tl.map(t=>t.row))-1,cols=Math.max(...tl.map(t=>t.col))-c0;
+    const dark=iso=>mode==="tier"&&(tierOf(iso)??0)>=3;
+    body=`<div class="tilemap" style="grid-template-columns:repeat(${Math.max(cols,5)},minmax(0,1fr));max-width:${Math.max(cols,5)*60}px">${tl.map(t=>`<button type="button" data-iso="${t.iso}" style="grid-column:${t.col-c0};grid-row:${t.row-r0};background:${fillFor(t.iso,mode,hl)};${dark(t.iso)?"color:var(--bg)":""}" aria-label="${esc(tipFor(t.iso))}" title="${esc(tipFor(t.iso))}">${t.iso}</button>`).join("")}</div><p class="tiny">Simplified map: one square per country.</p>`;
+  }
+  return `<div class="mapbox">${tg}${body}<div class="maptip" aria-live="polite">Hover or tap a country, then click to open it.</div><div class="legendrow">${legend}</div></div>`}
+function bindMap(root){root.querySelectorAll(".mapbox").forEach(box=>{const tip=box.querySelector(".maptip");
+  box.querySelectorAll("[data-iso]").forEach(el=>{const go=()=>{location.hash="country-"+el.dataset.iso};
+    el.addEventListener("click",go);el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}});
+    const show=()=>{tip.textContent=tipFor(el.dataset.iso)};el.addEventListener("mouseenter",show);el.addEventListener("focus",show)})})}
+
+/* ---------- value-chain focus ("Interested in") ---------- */
+const SEG_INFO={
+ "inputs & seeds":["Upstream","Seed, fertilizer and crop protection that farmers buy before planting.","Inputs are the biggest single lever on yield. Without good seed and fertilizer, nothing later in the chain can make up the difference.",/green revolution|biological|bimas|phosphate|seed|fertili/i,"maize"],
+ "irrigation & water":["On the farm","Getting water to crops when rain is not enough: pumps, canals, drip lines and the water itself.","Rain-fed farms rise and fall with the weather. Irrigation turns one uncertain harvest into reliable, often multiple harvests a year.",/irrigation|drip|water|tubewell/i,"tomatoes"],
+ "mechanization":["On the farm","Tractors, tillers, threshers and other machines, usually rented as a service rather than owned.","Hand tools cap how much land a family can farm and how fast it can plant when the rains come.",/machin|tiller|mechaniz/i,""],
+ "storage & cold chain":["Midstream","Keeping crops safe after harvest: dry stores and hermetic bags for grain, cold rooms and refrigerated trucks for fresh food.","Losses here wipe out the farmer's work after it is done. Good storage also lets farmers sell later at better prices.",/storage|cold|e-commerce/i,"tomatoes"],
+ "processing":["Midstream to downstream","Turning raw crops into products: milling, drying, grinding cocoa, making paste or oil.","Processing is where most value is added. Exporting raw crops sends that value, and the jobs, abroad.",/processing|phosphate|economic zone|value/i,"cocoa"],
+ "logistics & market access":["Midstream","Collecting crops from many small farms, moving them, and connecting farmers to buyers and markets.","Thin, fragmented markets mean low farm prices and high consumer prices, with traders bearing the risk in between.",/e-nam|market|e-commerce|trade|ban/i,"maize"],
+ "finance & insurance":["Enabler, every stage","Loans for inputs and equipment, crop insurance, and payment systems that reach farmers.","Farmers can rarely invest without credit, and one bad season without insurance can wipe them out.",/credit|safra|insurance|upi|pm-kisan|finance|carbon/i,"maize"],
+ "climate & extension":["Enabler, on the farm","Advice to farmers on what and how to plant, plus weather and climate information.","Better advice is one of the cheapest ways to raise yields, and climate change makes it more urgent.",/extension|ai|backyard|land-grant|advisory/i,""],
+ "data":["Enabler, every stage","Farmer registries, crop and price data, and maps that let governments and companies target help.","You cannot deliver subsidies, loans or advice to farmers you cannot identify.",/agristack|registry|data|upi|pm-kisan/i,""],
+ "energy":["Enabler, every stage","Electricity for pumping, cooling, milling and processing, from grids, mini-grids or solar.","Without power, irrigation, cold storage and processing stay out of reach.",/power|energy|solar|economic zone/i,""],
+ "transport":["Enabler, midstream","Rural roads, rail, ports and trucking that move crops to market.","Bad roads raise costs and losses at every step between the farm and the buyer.",/road|infrastructure|economic zone/i,"tomatoes"],
+ "digital connectivity":["Enabler, every stage","Mobile networks and internet access in rural areas.","Digital payments, advice and markets only work where farmers can get online.",/digital|upi|e-commerce|ai/i,""],
+ "industrial zones":["Downstream","Areas with shared power, water and logistics where processors cluster.","Zones can make processing affordable, but many in Africa have struggled without reliable power and anchor investors.",/economic zone|phosphate|industr/i,"cocoa"]
+};
+function segPrimer(){const seg=S.p.segment;if(!seg)return "";const info=SEG_INFO[seg]||["","",""];
+  const au=items("gaps").filter(g=>g.segment===seg&&g.scope==="AU");
+  const where=[...new Set(items("gaps").filter(g=>g.segment===seg&&g.scope!=="AU").map(g=>g.scope))];
+  const st=items("startups").filter(x=>x.segment===seg);const orgs=items("organizations").filter(o=>(o.sector_tags||[]).includes(seg));
+  const bm=info[3]?items("benchmarks").filter(b=>info[3].test(b.theme+" "+b.what_happened)).slice(0,3):[];
+  const journey=info[4]?`<p class="meta">See it in action: the <a href="https://claude.ai/artifact/E4QTs1Hnomm9HAGnsm2AuJ#${info[4]}" target="_blank" rel="noopener">${info[4]} journey</a> in Crop Journeys.</p>`:"";
+  return `<section class="primer section" aria-label="Your area of interest"><div><span class="eyebrow">Your area of interest · ${esc(info[0])}</span><h2 style="font-size:24px;margin-top:4px;text-transform:capitalize">${esc(seg)}</h2><p class="lead" style="margin-top:6px">${esc(info[1])} ${esc(info[2])}</p>${journey}</div>
+  <div class="cols" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+   <div><h3>The evidence</h3><ul class="mini" style="margin-top:8px">${au.length?au.slice(0,2).map(g=>`<li><b>${esc(g.title)}</b><span class="meta">${esc(String(g.evidence||"").slice(0,220))}</span>${g.opportunity?`<span class="meta"><br><b style="display:inline">Opportunity:</b> ${esc(String(g.opportunity).slice(0,180))}</span>`:""}</li>`).join(""):`<li class="meta">No continental figure recorded yet.</li>`}</ul></div>
+   <div><h3>Where it's a documented gap</h3><p class="meta" style="margin:6px 0">${where.length} of the 10 deep-dive countries. Shown in gold on the map.</p><div class="chips">${where.map(i=>`<a class="chip acc" href="#country-${i}" style="text-decoration:none">${esc(cName(i))}</a>`).join("")||'<span class="meta">None among the deep dives</span>'}</div>
+     <h3 style="margin-top:14px">Who's working on it</h3><ul class="mini" style="margin-top:8px">${st.slice(0,4).map(x=>`<li><b>${esc(x.name)}</b><span class="meta">${esc((x.countries||[]).map(cName).join(", "))} · ${esc(String(x.status||"").split(/[:(]/)[0])}</span></li>`).join("")||'<li class="meta">No startups recorded yet: a possible opening.</li>'}</ul><p class="meta" style="margin-top:6px">${st.length} startups and ${orgs.length} organizations in the Atlas work on this.</p></div>
+   <div><h3>Global examples</h3><ul class="mini" style="margin-top:8px">${bm.map(b=>`<li><b>${esc(b.source_country)}: ${esc(b.theme)}</b><span class="meta">${esc(String(b.outcome||"").slice(0,150))}</span></li>`).join("")||'<li class="meta">No matching benchmark yet.</li>'}</ul><p style="margin-top:8px"><a href="#gaps">All ${esc(seg)} gaps →</a> · <a href="#startups">Startups →</a></p></div>
+  </div></section>`}
+function interestSet(){const seg=S.p.segment;return seg?new Set(items("gaps").filter(g=>g.segment===seg&&g.scope!=="AU").map(g=>g.scope)):null}
+
+
+const CJ_URL="https://claude.ai/artifact/E4QTs1Hnomm9HAGnsm2AuJ";
+const CROPJ=[["cocoa","Cocoa","Why farmers get about 11% of a chocolate bar's price",["CIV","GHA"]],["maize","Maize","Store or sell? Try the storage lab",["KEN","TZA","NGA"]],["coffee","Coffee","How washing stations multiplied Rwanda's coffee value",["ETH","RWA"]],["tomatoes","Tomatoes","Ride the truck: why Nigeria loses up to half its crop",["NGA","MAR"]]];
+function cjBand(){return `<section class="cjband section" aria-label="Crop Journeys"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end"><div><span class="eyebrow">Start here if you're new · interactive</span><h2 style="margin-top:4px">Crop Journeys: follow a crop from seed to shelf</h2><p class="sub" style="margin-top:4px">Walk each stage, try a hands-on lab, collect the lingo and test yourself. About 10 minutes per crop.</p></div><a class="btn" href="${CJ_URL}" target="_blank" rel="noopener" style="text-decoration:none">Open Crop Journeys ↗</a></div>
+  <div class="cjcards">${CROPJ.map(([k,n,h,cs])=>`<a class="cjcard" href="${CJ_URL}#${k}" target="_blank" rel="noopener"><b>${n}</b><span>${esc(h)}</span><em>${cs.map(cName).join(" · ")}</em></a>`).join("")}</div></section>`}
+function cjForCountry(iso){const hits=CROPJ.filter(c=>c[3].includes(iso));if(!hits.length)return "";return `<div class="cjband section"><div><span class="eyebrow">Learn by following a crop grown here</span><h2 style="margin-top:4px">${hits.map(h=>h[1]).join(" and ")} in ${esc(cName(iso))}</h2></div><div class="cjcards">${hits.map(([k,n,h])=>`<a class="cjcard" href="${CJ_URL}#${k}" target="_blank" rel="noopener"><b>${n} journey</b><span>${esc(h)}</span><em>Open ↗</em></a>`).join("")}</div></div>`}
+function suggestBox(type,what){return `<div class="suggest"><span><b>Know ${what} that's missing or out of date?</b> Suggest it and the Atlas owner will review it.</span><a class="btn ghost" href="#contribute" data-preset="${type}" style="text-decoration:none">Suggest an addition or correction</a></div>`}
+const relDay=d=>{const t=new Date(),x=new Date(d+"T00:00:00");const diff=Math.round((new Date(t.toDateString())-x)/864e5);return diff===0?"Today":diff===1?"Yesterday":x.toLocaleDateString("en",{day:"numeric",month:"short"})};
+function newsItem(n){return `<article class="newsitem"><span class="d">${esc(relDay(n.date))}</span><div><h3>${esc(n.headline)}</h3><p>${esc(n.summary)}</p>${n.why?`<p class="why"><b>Why it matters:</b> ${esc(n.why)}</p>`:""}<div class="chips">${(n.countries||[]).map(c=>`<span class="chip">${esc(cName(c))}</span>`).join("")}${n.segment?`<span class="chip acc">${esc(n.segment)}</span>`:""}${n.type?`<span class="chip">${esc(n.type)}</span>`:""}${safeUrl(n.url)?`<a href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener" style="font-size:13px">Read at ${esc(n.source||host(n.url))} ↗</a>`:""}</div></div></article>`}
+function newsFiltered(){return S.news.filter(n=>{const P=S.p;if(P.country)return (n.countries||[]).includes(P.country)||(n.countries||[]).includes("AU");if(P.region)return n.region===P.region||n.region==="Continental";return true})}
+function vNews(){const ty=fv("nt"),sg=fv("ns");let list=newsFiltered().filter(n=>(!ty||n.type===ty)&&(!sg||n.segment===sg));
+  const types=[...new Set(S.news.map(n=>n.type).filter(Boolean))].sort(),segs=[...new Set(S.news.map(n=>n.segment).filter(Boolean))].sort();
+  const latest=S.news[0]?S.news[0].date:null;
+  return `<p class="eyebrow">Updated ${latest?esc(relDay(latest).toLowerCase()==="today"?"today":"on "+relDay(latest)):"soon"}</p><h1>What's happening in African agriculture</h1>
+  <p class="lead">Short, plain summaries of the latest developments: funding, policy, markets and infrastructure. Each links to the original report.${S.p.region||S.p.country?` Showing news for ${esc(S.p.country?cName(S.p.country):S.p.region+" Africa")} plus continental stories.`:""}</p>
+  ${filters("n",`<select name="nt" aria-label="Type"><option value="">All types</option>${types.map(t=>`<option value="${esc(t)}" ${t===ty?"selected":""}>${esc(t)}</option>`).join("")}</select><select name="ns" aria-label="Part of the chain"><option value="">Any part of the chain</option>${segs.map(t=>`<option value="${esc(t)}" ${t===sg?"selected":""}>${esc(t)}</option>`).join("")}</select><span class="count">${list.length} stories</span>`)}
+  <div>${list.map(newsItem).join("")||`<div class="empty">${S.news.length?"No stories match. Try a wider region or filter.":"News will appear here once the first update arrives."}</div>`}</div>
+  <p class="tiny" style="margin-top:12px">Summaries are written for the Atlas in plain language; figures come from the linked source. Read the original before citing.</p>`}
+function newsTeaser(){const list=newsFiltered().slice(0,3);if(!list.length)return "";return `<section class="section"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2>Latest news</h2><a href="#news">All news →</a></div><div>${list.map(newsItem).join("")}</div></section>`}
+
+/* ---------- home ---------- */
+function vHome(){
+  const mode=S.mapmode||(S.p.segment?"interest":"region");const fy=forYou(),pr=segPrimer();
+  const none=!S.p.role&&!S.p.segment&&!S.p.country;
+  return `<p class="eyebrow">Africa AgriTech Atlas · 54 countries</p>
+  <h1>Explore agriculture and infrastructure across Africa</h1>
+  <p class="lead">Click a country on the map, or pick a region to start. Tell the Atlas who you are in the dark bar above and it will show what matters most to you.</p>
+  ${cjBand()}
+  <div class="homegrid section" style="margin-top:20px"><div>${mapPanel({mode,hl:interestSet(),toggles:true,region:S.p.region&&!S.p.country?S.p.region:null,zoom:false})}${S.p.region?`<p style="margin-top:8px"><a href="#region-${S.p.region}">Open the ${esc(S.p.region)} Africa page →</a></p>`:""}</div>
+   <div style="display:flex;flex-direction:column;gap:12px"><h2>Choose a region</h2><div class="regioncards">${regionCards()}</div><p><a href="#africa">See the whole of Africa: leaders, drivers and gaps →</a></p>
+   ${none?`<div class="notice"><b>New here?</b> Pick a role in the bar above, such as student or founder, to get a tailored starting point. Or start with Crop Journeys above.</div>`:""}</div></div>
+  ${fy?`<div class="section">${fy}</div>`:""}${pr}
+  ${newsTeaser()}
+  <div class="kpis section">
+    <a class="kpi" href="#gaps" style="text-decoration:none;color:inherit"><b>${items("gaps").length}</b><span>documented gaps →</span></a>
+    <a class="kpi" href="#people" style="text-decoration:none;color:inherit"><b>${items("people").length}</b><span>people to learn from →</span></a>
+    <a class="kpi" href="#startups" style="text-decoration:none;color:inherit"><b>${items("startups").length}</b><span>startups tracked →</span></a>
+    <a class="kpi" href="#benchmarks" style="text-decoration:none;color:inherit"><b>${items("benchmarks").length}</b><span>global examples →</span></a>
+  </div>`}
+
+/* ---------- region ---------- */
+function vRegion(r){
+  if(!AREGIONS.includes(r))return `${crumbs([["Africa","africa"],["Unknown region"]])}<div class="empty">Region not found.</div>`;
+  const st=regionStats(r);const isos=new Set(st.cs.map(c=>c.iso3));
+  const segCount={};items("gaps").filter(g=>isos.has(g.scope)).forEach(g=>segCount[g.segment]=(segCount[g.segment]||0)+1);
+  const topSeg=Object.entries(segCount).sort((a,b)=>b[1]-a[1]).slice(0,4);
+  const starts=items("startups").filter(x=>isos.has(x.hq_iso3));const ppl=items("people").filter(p=>(p.countries||[]).some(i=>isos.has(i)));
+  const blocs=[...new Set(st.cs.flatMap(c=>c.recs||[]))];
+  const cards=st.cs.slice().sort((a,b)=>(tierOf(b.iso3)??-1)-(tierOf(a.iso3)??-1)||a.name.localeCompare(b.name));
+  const firstSentence=t=>{t=String(t||"");const m=t.match(/^.*?[.!?](\s|$)/);return m?m[0]:t};
+  const blurb=c=>{if(c.deep&&c.narrative)return firstSentence(c.narrative);const bits=[];if(c.ag_gdp_pct!=null)bits.push(`${fmt(c.ag_gdp_pct)}% of GDP`);if(c.ag_jobs_pct!=null)bits.push(`${fmt(c.ag_jobs_pct)}% of jobs`);return bits.length?`Agriculture is ${bits.join(" and ")}.${c.electricity_access_pct!=null?` ${fmt(c.electricity_access_pct)}% of people have electricity.`:""}`:"Baseline profile; deep dive not written yet."};
+  return `${crumbs([["Africa","africa"],[r+" Africa"]])}
+  <p class="eyebrow">Region</p><h1>${esc(r)} Africa</h1>
+  <p class="lead">${st.cs.length} countries · ${st.deep} with deep dives · ${starts.length} startups and ${ppl.length} people in the Atlas${blocs.length?" · Trade blocs: "+esc(blocs.join(", ")):""}</p>
+  <div class="homegrid section" style="margin-top:18px"><div>${mapPanel({mode:"tier",region:r})}</div>
+   <div style="display:flex;flex-direction:column;gap:16px">
+    <div><h2>How the region compares</h2><p class="sub" style="margin-top:4px">${st.leaders.length?`Leading: ${esc(st.leaders.join(", "))}. `:""}${st.adv.length?`Advancing: ${esc(st.adv.join(", "))}.`:""}${!st.leaders.length&&!st.adv.length?"No country in this region is in the top two groups yet.":""}</p><div style="margin-top:10px">${mixBar(st)}</div><div class="legendrow" style="margin-top:8px">${TIERS.map((t,i)=>st.mix[i]?`<span><i style="background:${t[1]}"></i>${t[0]}: ${st.mix[i]}</span>`:"").join("")}${st.nd?`<span><i style="background:var(--nodata)"></i>No data: ${st.nd}</span>`:""}</div></div>
+    <div><h2>Most documented gaps here</h2>${topSeg.length?`<ul class="mini" style="margin-top:8px">${topSeg.map(([sg,n])=>`<li><b style="text-transform:capitalize">${esc(sg)}</b><span class="meta">${n} documented gap${n>1?"s":""} across this region's deep dives</span></li>`).join("")}</ul>`:`<p class="meta">No deep dives in this region yet, so gaps are not documented at country level. See the <a href="#gaps">continental gaps</a>.</p>`}</div>
+    ${starts.length?`<div><h2>Startups based here</h2><p class="meta" style="margin-top:6px">${starts.slice(0,8).map(x=>esc(x.name)).join(" · ")}${starts.length>8?" and more":""}</p></div>`:""}
+   </div></div>
+  <div class="section"><h2>Countries in ${esc(r)} Africa</h2><p class="sub">Sorted from leading to early stage. Click one to open it.</p>
+  <div class="ccards" style="margin-top:12px">${cards.map(c=>`<div class="ccard" data-go="country-${c.iso3}" tabindex="0" role="link"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><b>${esc(c.name)}</b>${c.deep?'<span class="chip acc">deep dive</span>':""}</div>${tierChip(tierOf(c.iso3))}<span class="meta">${esc(blurb(c))}</span></div>`).join("")}</div></div>`}
+
+/* ---------- views ---------- */
+function forYou(){
+  const P=S.p;if(!P.role)return "";
+  const iso=P.country,seg=P.segment;const C=iso?countries().find(c=>c.iso3===iso):null;const where=C?C.name:P.region?P.region+" Africa":"Africa";
+  const segOk=x=>!seg||x===seg;
+  const gaps=items("gaps").filter(g=>segOk(g.segment)&&(!iso||g.scope===iso||g.scope==="AU")&&regOK([g.scope],true)).sort((a,b)=>(b.scope===iso)-(a.scope===iso));
+  const starts=items("startups").filter(x=>segOk(x.segment)&&(!iso||inC(x.countries,iso)||x.hq_iso3===iso)&&regOK((x.countries||[]).concat(x.hq_iso3)));
+  const ppl=items("people").filter(x=>inC(x.countries,iso)&&regOK(x.countries));
+  const orgs=items("organizations").filter(o=>inC(o.countries,iso)&&regOK(o.countries));
+  const pols=items("policies").filter(x=>(!iso||x.scope===iso||x.scope==="AU")&&regOK([x.scope],true)).sort((a,b)=>(b.year||0)-(a.year||0));
+  const bench=items("benchmarks");
+  const meta=items("meta")[0]||{};
+  const pillarLine=()=>{if(!C||!C.atlas||C.atlas.score==null)return "";const pr=Object.entries(C.atlas.pillars).filter(x=>x[1]!=null).sort((a,b)=>a[1]-b[1]);const nm=k=>(PILLARS.find(p=>p[0]===k)||[])[1];return `${esc(C.name)} is in the <b>${esc(tierName(tierOf(C.iso3)))}</b> group. Strongest area: ${esc(nm(pr.at(-1)[0]))}; weakest: ${esc(nm(pr[0][0]))}.`};
+  const li=(title,sub,go)=>`<li${go?` class="click" data-go="${go}" style="cursor:pointer"`:""}><b>${esc(title)}</b><span class="meta">${esc(sub)}</span></li>`;
+  const list=(h,rows,more,empty)=>`<div><h2>${h}</h2><ul class="mini" style="margin-top:10px">${rows.length?rows.join(""):`<li class="meta">${empty||"Nothing matches yet. Try a wider focus."}</li>`}</ul>${more?`<p style="margin-top:8px"><a href="#${more[0]}">${more[1]} →</a></p>`:""}</div>`;
+  const ofKind=k=>ppl.filter(x=>personKind(x)===k);
+  const peopleList=(k,h)=>list(h,(ofKind(k).length?ofKind(k):ppl).slice(0,4).map(x=>li(x.name,`${x.role}${x.organization?", "+x.organization:""}${x.talk_to_about?" · Ask about: "+x.talk_to_about:""}`)),["people","All people"]);
+  const gapList=(h,n,field)=>list(h,gaps.slice(0,n).map(g=>li(g.title,`${g.scope==="AU"?"Continental":cName(g.scope)} · ${g.segment} · ${String((field==="opp"?g.opportunity:g.root_causes)||g.evidence||"").slice(0,150)}`)),["gaps","Open the gap map"]);
+  const R={
+   builder:{h:`Problems worth building for in ${where}`,lead:`Start from a documented gap, check who already tried, then talk to operators.${seg?` Focused on ${esc(seg)}.`:""}`,
+     cols:[gapList("Gaps to work on",4,"opp"),
+       list("Who already tried",starts.slice().sort((a,b)=>(/shut|pivot|administration/i.test(b.status))-(/shut|pivot|administration/i.test(a.status))).slice(0,5).map(x=>li(x.name,`${x.segment} · ${String(x.status||"").split(/[:(]/)[0]} · ${x.model||""}`)),["startups","All startups"]),
+       peopleList("builder","Operators to talk to")]},
+   funder:{h:`Where capital is needed in ${where}`,lead:(meta.market_note?"Agtech funding fell about 20% in 2025 to just under US$170m, and debt and grants now outweigh equity. ":"")+(seg?`Focused on ${esc(seg)}.`:""),
+     cols:[list("Active startups",starts.filter(x=>/^active/i.test(x.status||"")).slice(0,5).map(x=>li(x.name,`${x.segment} · ${x.notable_funding||"funding not recorded"}`)),["startups","All startups"]),
+       list("Co-investors and DFIs",items("organizations").filter(o=>o.funder&&inC(o.countries,iso)).slice(0,5).map(o=>li(o.name,o.what||"")),["organizations","All organizations"]),
+       gapList("Gaps with clear demand",3,"opp")]},
+   policy:{h:`What works, and what can be copied, for ${where}`,lead:C?pillarLine():"No country met the Malabo benchmark. The leaders kept one funded plan for a decade or more.",
+     cols:[list("Policies and frameworks",pols.slice(0,5).map(x=>li(x.title,`${x.scope==="AU"?"Continental":cName(x.scope)} · ${x.year||""} · ${x.status||""}`)),["policies","Regulation tracker"]),
+       list("Benchmarks that transfer well",bench.filter(b=>/^high/i.test(b.transferability||"")).slice(0,4).map(b=>li(`${b.source_country}: ${b.theme}`,String(b.outcome||"").slice(0,140))),["benchmarks","All benchmarks"]),
+       peopleList("policy","Officials and agencies")]},
+   research:{h:`Open questions and data gaps for ${where}`,lead:C?`${pillarLine()} ${C.atlas&&C.atlas.n_pillars<5?"One pillar has no data.":""}`:"Irrigation data for most countries dates from around 2012, and 20 countries still lack a CAADP score in the Atlas.",
+     cols:[gapList("Gaps, with root causes",4,"root"),
+       list("Research organizations",orgs.filter(o=>o.type==="research").concat(items("organizations").filter(o=>o.type==="research"&&!inC(o.countries,iso))).slice(0,5).map(o=>li(o.name,o.what||"")),["organizations","All organizations"]),
+       peopleList("research","Researchers to talk to")]},
+   student:{h:`Your starting path${C?" into "+C.name:""}`,lead:"Learn the chain first, then one country, then the people. About three hours a week.",
+     cols:[`<div><h2>Start here</h2><ul class="mini" style="margin-top:10px"><li><b><a href="https://claude.ai/artifact/E4QTs1Hnomm9HAGnsm2AuJ" target="_blank" rel="noopener">Crop Journeys</a></b><span class="meta">Follow cocoa, maize, coffee and tomatoes from seed to shelf</span></li>${li("The 12-week roadmap","From frameworks to your first contribution","learn")}${C?li(`${C.name} profile`,C.deep?"Deep dive with people, gaps and policies":"Baseline profile","country-"+C.iso3):li("Rwanda, Kenya and Morocco","Three different models of success","countries")}</ul></div>`,
+       gapList("Problems to understand",3,"root"),
+       peopleList("research","People to learn from")]}
+  }[P.role];
+  return `<section class="foryou" aria-label="Tailored for you"><div><span class="eyebrow">For you · ${esc((ROLES.find(r=>r[0]===P.role)||[])[1])}${iso?" · "+esc(where):""}${seg?" · "+esc(seg):""}</span><h1 style="font-size:clamp(24px,3vw,32px);margin-top:6px">${esc(R.h)}</h1>${R.lead?`<p class="lead" style="margin-top:6px">${R.lead}</p>`:""}</div>
+  <div class="cols">${R.cols.join("")}</div>
+  <p class="tiny">Other pages are pre-filtered to your focus. Change or clear it in the bar above.</p></section>`;
+}
+
+function vOverview(){
+  const cs=countries();const ranked=cs.map(c=>({c,s:score(c)})).filter(x=>x.s.v!=null).sort((a,b)=>b.s.v-a.s.v);
+  const br=cs.filter(c=>c.caadp_br4_score!=null).sort((a,b)=>b.caadp_br4_score-a.caadp_br4_score).slice(0,8);
+  const meta=(items("meta")[0])||{};
+  const gaps=items("gaps").filter(g=>g.scope==="AU").slice(0,6);
+  return `${crumbs([["Africa"]])}<p class="eyebrow">The big picture · as of 3 Nov 2026</p>
+  <h1>No African country is on track yet. A few are pulling ahead.</h1>
+  <p class="lead">In the AU's 4th CAADP Biennial Review, Rwanda (8.07), Morocco (6.99) and Egypt (6.83) led, all short of the 9.29 benchmark. The leaders share one trait: the same strategy, funded and monitored for a decade or more.</p>
+  <div class="kpis">
+    <div class="kpi"><b>${cs.length}</b><span>countries profiled, ${cs.filter(c=>c.deep).length} deep dives</span></div>
+    <div class="kpi"><b>${items("startups").length}</b><span>startups tracked</span></div>
+    <div class="kpi"><b>${items("people").length}</b><span>people to learn from</span></div>
+    <div class="kpi"><b>${items("policies").length}</b><span>policies and frameworks</span></div>
+    <div class="kpi"><b>${items("gaps").length}</b><span>documented gaps</span></div>
+  </div>
+  <div class="section"><h2>Explore by region</h2><p class="sub">Pick a region to see its countries, leaders and most common gaps.</p><div class="homegrid" style="margin-top:12px"><div>${mapPanel({mode:"region"})}</div><div class="regioncards">${regionCards()}</div></div></div>
+  <div class="two section">
+    <div><h2>CAADP 4th Biennial Review: top scores</h2>
+      <p class="sub">Score out of 10; on-track benchmark 9.29. Only ranks 1–3 are official; 20 reporting countries' scores are still being added. The Atlas score is the broader five-pillar measure.</p>
+      <div class="tablewrap" style="margin-top:12px"><table><thead><tr><th>Country</th><th>Region</th><th class="num">BR score</th><th>Atlas group</th></tr></thead><tbody>
+      ${br.map(c=>{const s=score(c);return `<tr class="click" data-go="country-${c.iso3}"><td>${esc(c.name)}${c.deep?' <span class="chip acc">deep dive</span>':""}</td><td>${esc(c.region)}</td><td class="num">${fmt(c.caadp_br4_score,2)}</td><td>${tierChip(tierOf(c.iso3))}</td></tr>`}).join("")}
+      </tbody></table></div>
+    </div>
+    <div><h2>What the leaders have in common</h2><p class="sub">Eight patterns from comparing the countries that improved fastest, in Africa and worldwide. Most leaders have several of them at once.</p><p style="margin-top:10px"><button type="button" class="linkbtn" data-scroll="drivers">Read all eight drivers with examples ↓</button></p>
+      <ol class="list" style="list-style:decimal;padding-left:20px;margin-top:10px">${(meta.lead_drivers||[]).map(d=>`<li><b>${esc(d.driver)}</b></li>`).join("")}</ol></div>
+  </div>
+  <div class="section" id="drivers"><h2>Why leaders lead</h2><p class="sub">Each driver, what it means and where it has worked.</p><div class="drivers">${(meta.lead_drivers||[]).map((d,i)=>`<div class="card"><span class="eyebrow">Driver ${i+1}</span><h3>${esc(d.driver)}</h3><p>${esc(d.explanation)}</p><p class="meta"><b>Examples:</b> ${esc(typeof d.examples==="string"?d.examples:(d.examples||[]).join("; "))}</p></div>`).join("")}</div></div>
+  <div class="section"><h2>Biggest continental gaps</h2><div class="grid">${gaps.map(gapCard).join("")}</div><p style="margin-top:12px"><a href="#gaps">See all ${items("gaps").length} gaps →</a></p></div>
+  ${meta.market_note?`<div class="section prose"><h2>Funding climate</h2><p>${esc(meta.market_note.summary)}</p>${linkList(meta.market_note.sources)}</div>`:""}
+  <div class="section"><h2>Atlas groups: top 15</h2><p class="sub">Countries are grouped into five color bands by comparing five pillars: productivity, inputs and water, policy commitment, infrastructure and finance access. Each indicator is ranked against the other African countries (policy is scored against the CAADP and 10% spending targets). Each band holds about a fifth of the 52 countries with enough data.</p>
+  <div class="tablewrap" style="margin-top:12px"><table><thead><tr><th class="num">#</th><th>Country</th><th>Atlas group</th></tr></thead><tbody>
+  ${ranked.slice(0,15).map((x,i)=>`<tr class="click" data-go="country-${x.c.iso3}"><td class="num">${i+1}</td><td>${esc(x.c.name)}</td><td>${tierChip(tierOf(x.c.iso3))}</td></tr>`).join("")}
+  </tbody></table></div><p style="margin-top:12px"><a href="#countries">All 54 countries in a table →</a></p></div>`;
+}
+
+function vCountries(){
+  const q=fv("cq"),r=fv("cr"),d=S.f.cd,sort=S.f.csort||"score";
+  let cs=countries().filter(c=>(!r||c.region===r)&&(!d||c.deep)&&match({n:c.name,s:c.summary,f:c.flagship_programs,recs:c.recs},q)).map(c=>({c,s:score(c)}));
+  const key={score:x=>-(x.s.v??-1),name:x=>x.c.name,br:x=>-(x.c.caadp_br4_score??-1),elec:x=>-(x.c.electricity_access_pct??-1),net:x=>-(x.c.internet_users_pct??-1),ag:x=>-(x.c.ag_gdp_pct??-1)}[sort]||(x=>-((x.s.p||{})[sort.slice(2)]??-1));
+  cs.sort((a,b)=>{const A=key(a),B=key(b);return A<B?-1:A>B?1:0});
+  const th=(k,l,cls="")=>`<th class="${cls}"><button data-sort="${k}">${l}${sort===k?" ↓":""}</button></th>`;
+  return `<h1>Country atlas</h1><p class="sub">All 54 countries. Click a row for the profile. Ten countries have deep dives with stakeholders, people, policies and gaps.</p>
+  ${filters("c",`<input type="search" name="cq" placeholder="Search countries, programs, blocs" value="${esc(q)}" aria-label="Search countries"><select name="cr" aria-label="Region">${regionOpts(r)}</select><label class="meta"><input type="checkbox" name="cd" ${d?"checked":""}> Deep dives only</label><span class="count">${cs.length} shown</span>`)}
+  <div class="tablewrap"><table><thead><tr>${th("name","Country")}<th>Region</th><th>Blocs</th>${th("score","Atlas group")}${PILLARS.map(([k,l])=>th("p_"+k,l,"num")).join("")}${th("br","CAADP BR","num")}${th("ag","Ag % GDP","num")}</tr></thead><tbody>
+  ${cs.map(({c,s})=>`<tr class="click" data-go="country-${c.iso3}"><td>${esc(c.name)} ${c.deep?'<span class="chip acc">deep</span>':""}${addedChip(c)}</td><td>${esc(c.region)}</td><td class="meta">${esc((c.recs||[]).join(", "))}</td><td>${tierChip(tierOf(c.iso3))}</td>${PILLARS.map(([k])=>`<td class="num">${pillarCell(s.p[k])}</td>`).join("")}<td class="num">${fmt(c.caadp_br4_score,2)}</td><td class="num">${fmt(c.ag_gdp_pct)}</td></tr>`).join("")}
+  </tbody></table></div><p class="tiny" style="margin-top:8px">Colors run from light (early stage) to dark (leading), relative to other African countries. Sources: FAO and World Bank via Our World in Data, Global Findex 2024, UN SDG 2.a.1, AU 4th CAADP Biennial Review, ITU. See Learn → How the score works.</p>`;
+}
+
+function vCountry(iso){
+  const c=countries().find(x=>x.iso3===iso); if(!c) return `<a class="back" href="#africa">← Africa & regions</a><div class="empty">Country not found.</div>`;
+  const s=score(c); const has=a=>(a||[]).includes(iso);
+  const ppl=items("people").filter(p=>has(p.countries)); const org=items("organizations").filter(o=>has(o.countries));
+  const st=items("startups").filter(x=>has(x.countries)||x.hq_iso3===iso); const pol=items("policies").filter(p=>p.scope===iso); const gp=items("gaps").filter(g=>g.scope===iso);
+  return `${crumbs([["Africa","africa"],[c.region+" Africa","region-"+c.region],[c.name]])}
+  ${tierScale(tierOf(c.iso3))}
+  <p class="eyebrow" style="margin-top:14px">${esc(c.region)} Africa · ${esc((c.recs||[]).join(" · "))} · Capital ${esc(c.capital)}</p>
+  <h1>${esc(c.name)}</h1>
+  <div class="kpis">
+    <div class="kpi"><b style="font-size:20px">${tierChip(tierOf(c.iso3))}</b><span>Atlas group, compared with other African countries</span></div>
+    <div class="kpi"><b>${fmt(c.caadp_br4_score,2)}</b><span>CAADP BR4 score /10</span></div>
+    <div class="kpi"><b>${fmt(c.electricity_access_pct)}%</b><span>electricity access</span></div>
+    <div class="kpi"><b>${fmt(c.internet_users_pct)}%</b><span>internet users</span></div>
+    <div class="kpi"><b>${fmt(c.ag_gdp_pct)}%</b><span>ag share of GDP · ${fmt(c.ag_jobs_pct)}% of jobs</span></div>
+  </div>
+  ${pillarBlock(c)}
+  ${cjForCountry(c.iso3)}
+  <div class="two section"><div class="prose">
+    <h2>${c.deep?"Why it is where it is":"Summary"}</h2><p>${esc(c.narrative||c.summary)}</p>
+    ${c.strengths&&c.strengths.length?`<h3>Strengths</h3><ul>${c.strengths.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+    ${!c.deep?`<p class="notice">No deep dive yet. Add stakeholders, people and policies from the Add entry tab, or ask Claude to research this country.</p>`:""}
+  </div><div>
+    <h2>Flagship programs</h2><ul class="list">${(c.flagship_programs||[]).map(x=>`<li>${esc(x)}</li>`).join("")||'<li class="meta">None recorded</li>'}</ul>
+  </div></div>
+  ${gp.length?`<div class="section"><h2>Gaps</h2><div class="grid">${gp.map(gapCard).join("")}</div></div>`:""}
+  ${ppl.length?`<div class="section"><h2>People to talk to</h2><div class="grid">${ppl.map(personCard).join("")}</div></div>`:""}
+  ${org.length?`<div class="section"><h2>Stakeholders</h2>${orgTable(org)}</div>`:""}
+  ${st.length?`<div class="section"><h2>Startups</h2>${startupTable(st)}</div>`:""}
+  ${pol.length?`<div class="section"><h2>Policy and regulation</h2>${policyTable(pol,false)}</div>`:""}
+  <div class="section"><h3>Sources</h3>${linkList(c.sources)}</div>${suggestBox("people","a person, startup or policy in "+esc(c.name))}`;
+}
+
+function pillarBlock(c){const a=c.atlas;if(!a)return "";const I=a.indicators||{};
+  const rows=[["productivity",[["Cereal yield",I.cereal_yield_t_ha,"t/ha"],["Ag value added per worker",I.ag_va_per_worker_usd,"US$"]]],["inputs_water",[["Fertilizer use",I.fertilizer_kg_ha,"kg/ha"],["Irrigated cropland",I.irrigated_pct_cropland,"%"]]],["policy",[["CAADP review score",I.caadp_br4,"/10"],["Ag share of public spending",I.ag_spend_pct_budget,"% (target 10)"]]],["infrastructure",[["Electricity access",I.electricity_pct,"%"],["Internet users",I.internet_pct,"%"]]],["finance",[["Adults with an account",I.account_pct,"%"]]]];
+  return `<div class="section"><h2>Score by pillar</h2><div class="tablewrap"><table><thead><tr><th>Pillar</th><th>Group</th><th>Indicators</th></tr></thead><tbody>${rows.map(([k,ind])=>`<tr><td>${esc(PILLARS.find(p=>p[0]===k)[1])}</td><td>${tierChip(pillarTier(a.pillars[k]))}</td><td class="meta">${ind.map(([l,v,u])=>`${esc(l)}: <b>${v==null?"no data":esc(Number(v).toLocaleString("en",{maximumFractionDigits:v<10?1:0}))+" "+esc(u)}</b>`).join(" · ")}</td></tr>`).join("")}</tbody></table></div></div>`}
+function gapCard(g){return `<div class="card"><div class="chips"><span class="chip acc">${esc(g.segment)}</span><span class="chip">${esc(cName(g.scope))}</span>${addedChip(g)}</div><h3>${esc(g.title)}</h3>
+  ${g.evidence?`<p><span class="eyebrow">Evidence</span><br>${esc(g.evidence)}</p>`:""}
+  ${g.root_causes?`<p><span class="eyebrow">Root causes</span><br>${esc(Array.isArray(g.root_causes)?g.root_causes.join("; "):g.root_causes)}</p>`:""}
+  ${g.who_is_working?`<p class="meta"><b>Who is working on it:</b> ${esc(Array.isArray(g.who_is_working)?g.who_is_working.join("; "):g.who_is_working)}</p>`:""}
+  ${g.opportunity?`<p class="meta"><b>Opportunity:</b> ${esc(g.opportunity)}</p>`:""}
+  ${linkList([g.evidence_source])}</div>`}
+function vGaps(){
+  const q=fv("gq"),seg=fv("gs"),sc=fv("gc");
+  const segs=[...new Set(items("gaps").map(g=>g.segment).filter(Boolean))].sort();
+  const gs=items("gaps").filter(g=>(!seg||g.segment===seg)&&(!sc||(sc==="AU"?g.scope==="AU":g.scope===sc))&&regOK([g.scope],true)&&match(g,q));
+  return `<h1>Gap map</h1><p class="sub">Unsolved problems, why they persist, who is on them and where a founder, funder or policymaker could act.</p>
+  ${filters("g",`<input type="search" name="gq" placeholder="Search gaps" value="${esc(q)}" aria-label="Search gaps"><select name="gs" aria-label="Segment">${opt(segs.map(s=>[s,s]),seg,"All segments")}</select><select name="gc" aria-label="Scope"><option value="">All scopes</option><option value="AU" ${sc==="AU"?"selected":""}>Continental</option>${countries().filter(c=>c.deep).map(c=>`<option value="${c.iso3}" ${sc===c.iso3?"selected":""}>${esc(c.name)}</option>`).join("")}</select><span class="count">${gs.length} shown</span>`)}
+  <div class="grid">${gs.map(gapCard).join("")||'<div class="empty">No gaps match.</div>'}</div>`;
+}
+
+function startupTable(list){return `<div class="tablewrap"><table><thead><tr><th>Startup</th><th>Segment</th><th>Countries</th><th class="num">Founded</th><th>Status</th><th>Model</th><th>Funding</th></tr></thead><tbody>
+  ${list.map(s=>{const w=safeUrl(s.website);return `<tr><td>${w?`<a href="${esc(w)}" target="_blank" rel="noopener">${esc(s.name)}</a>`:esc(s.name)} ${s.diaspora_founded?'<span class="chip gold">diaspora</span>':""}${addedChip(s)}</td><td class="meta">${esc(s.segment)}</td><td class="meta">${esc((s.countries||[]).join(", "))}</td><td class="num">${esc(s.founded||"–")}</td><td title="${esc(s.status)}">${statusChip(s.status)}</td><td style="min-width:220px">${esc(s.model)}</td><td class="meta" style="min-width:160px">${esc(s.notable_funding)}</td></tr>`}).join("")}</tbody></table></div>`}
+function vStartups(){
+  const q=fv("sq"),seg=fv("ss"),c=fv("sc"),st=fv("sst"),dia=S.f.sd;
+  const segs=[...new Set(items("startups").map(s=>s.segment).filter(Boolean))].sort();
+  const list=items("startups").filter(s=>(!seg||s.segment===seg)&&(!c||(s.countries||[]).includes(c)||s.hq_iso3===c)&&(!dia||s.diaspora_founded)&&regOK((s.countries||[]).concat(s.hq_iso3))&&(!st||(st==="active"?/^active/i.test(s.status||""):!/^active/i.test(s.status||"")))&&match(s,q)).sort((a,b)=>a.name.localeCompare(b.name));
+  const meta=(items("meta")[0]||{}).market_note;
+  return `<h1>Startups</h1><p class="sub">AgTech and agri-infrastructure companies with status checked as of late 2026. Failures are kept on purpose: they show what has already been tried.</p>
+  ${filters("s",`<input type="search" name="sq" placeholder="Search startups" value="${esc(q)}" aria-label="Search startups"><select name="ss" aria-label="Segment">${opt(segs.map(s=>[s,s]),seg,"All segments")}</select><select name="sc" aria-label="Country">${countryOpts(c)}</select><select name="sst" aria-label="Status"><option value="">Any status</option><option value="active" ${st==="active"?"selected":""}>Active</option><option value="other" ${st==="other"?"selected":""}>Shut down, pivoted or acquired</option></select><label class="meta"><input type="checkbox" name="sd" ${dia?"checked":""}> Diaspora-founded</label><span class="count">${list.length} shown</span>`)}
+  ${startupTable(list)}
+  <div class="section"><h2>Funders and investors</h2>${orgTable(items("organizations").filter(o=>o.funder))}</div>
+  ${meta?`<div class="section prose"><h2>Funding climate</h2><p>${esc(meta.summary)}</p>${linkList(meta.sources)}</div>`:""}`;
+}
+
+function personCard(p){return `<div class="card"><div class="chips">${(p.countries||[]).map(c=>`<span class="chip">${esc(cName(c))}</span>`).join("")}${p.diaspora?`<span class="chip gold">diaspora${p.based_in?" · "+esc(p.based_in):""}</span>`:""}${addedChip(p)}</div>
+  <h3>${esc(p.name)}</h3><p class="meta">${esc(p.role)}${p.organization?", "+esc(p.organization):""}</p>
+  ${p.focus?`<p>${esc(p.focus)}</p>`:""}${p.talk_to_about?`<p class="meta"><b>Talk to them about:</b> ${esc(p.talk_to_about)}</p>`:""}
+  ${linkList((p.public_links||[]).concat(p.source?[p.source]:[]))}</div>`}
+function vPeopleSort(list){const k=S.p.role==="student"?"research":S.p.role;return k?list.slice().sort((a,b)=>(personKind(b)===k)-(personKind(a)===k)):list}
+function vPeople(){
+  const q=fv("pq"),c=fv("pc"),dia=S.f.pd;
+  const list=vPeopleSort(items("people").filter(p=>(!c||(p.countries||[]).includes(c))&&(!dia||p.diaspora)&&regOK(p.countries)&&match(p,q)));
+  return `<h1>People</h1><p class="sub">Publicly known experts, officials and builders, with public profile and source links only. Roles change; each card links the page that confirmed it. Reach out with a specific question and a reason you chose them.</p>
+  ${filters("p",`<input type="search" name="pq" placeholder="Search names, roles, topics" value="${esc(q)}" aria-label="Search people"><select name="pc" aria-label="Country">${countryOpts(c)}</select><label class="meta"><input type="checkbox" name="pd" ${dia?"checked":""}> Diaspora only</label><span class="count">${list.length} shown</span>`)}
+  <div class="grid">${list.map(personCard).join("")||'<div class="empty">No people match.</div>'}</div>`;
+}
+
+function orgTable(list){return `<div class="tablewrap"><table><thead><tr><th>Organization</th><th>Type</th><th>Countries</th><th>What they do</th></tr></thead><tbody>
+  ${list.map(o=>{const w=safeUrl(o.website);return `<tr><td>${w?`<a href="${esc(w)}" target="_blank" rel="noopener">${esc(o.name)}</a>`:esc(o.name)}${addedChip(o)}</td><td><span class="chip">${esc(o.subtype||o.type)}</span></td><td class="meta">${esc((o.countries||[]).join(", "))}</td><td style="min-width:240px">${esc(o.what)}</td></tr>`}).join("")}</tbody></table></div>`}
+function vOrgs(){
+  const q=fv("oq"),c=fv("oc"),t=fv("ot");
+  const types=[...new Set(items("organizations").map(o=>o.type).filter(Boolean))].sort();
+  const list=items("organizations").filter(o=>(!c||(o.countries||[]).includes(c))&&(!t||o.type===t)&&regOK(o.countries)&&match(o,q));
+  return `<h1>Organizations</h1><p class="sub">Ministries, regulators, research bodies, development finance, investors, corporates and NGOs.</p>
+  ${filters("o",`<input type="search" name="oq" placeholder="Search organizations" value="${esc(q)}" aria-label="Search organizations"><select name="oc" aria-label="Country">${countryOpts(c)}</select><select name="ot" aria-label="Type">${opt(types.map(x=>[x,x]),t,"All types")}</select><span class="count">${list.length} shown</span>`)}
+  ${orgTable(list)}`;
+}
+
+function policyTable(list,showScope=true){return `<div class="tablewrap"><table><thead><tr><th>Policy</th>${showScope?"<th>Scope</th>":""}<th>Type</th><th class="num">Year</th><th>Status</th><th>Summary</th></tr></thead><tbody>
+  ${list.map(p=>{const l=safeUrl(p.link);return `<tr><td style="min-width:200px">${l?`<a href="${esc(l)}" target="_blank" rel="noopener">${esc(p.title)}</a>`:esc(p.title)}${addedChip(p)}</td>${showScope?`<td>${esc(cName(p.scope))}</td>`:""}<td><span class="chip">${esc(p.type)}</span></td><td class="num">${esc(p.year||"–")}</td><td class="meta" style="min-width:140px">${esc(p.status)}</td><td style="min-width:260px">${esc(p.summary)}</td></tr>`}).join("")}</tbody></table></div>`}
+function vPolicies(){
+  const q=fv("lq"),sc=fv("lc");
+  const list=items("policies").filter(p=>(!sc||p.scope===sc)&&regOK([p.scope],true)&&match(p,q)).sort((a,b)=>(b.year||0)-(a.year||0));
+  return `<h1>Regulation tracker</h1><p class="sub">Continental frameworks (CAADP Kampala 2026–2035, AfCFTA, PIDA, the Fertilizer Action Plan) and national laws, strategies and programs, newest first.</p>
+  ${filters("l",`<input type="search" name="lq" placeholder="Search policies" value="${esc(q)}" aria-label="Search policies"><select name="lc" aria-label="Scope"><option value="">All scopes</option><option value="AU" ${sc==="AU"?"selected":""}>Continental</option>${countries().filter(c=>c.deep).map(c=>`<option value="${c.iso3}" ${sc===c.iso3?"selected":""}>${esc(c.name)}</option>`).join("")}</select><span class="count">${list.length} shown</span>`)}
+  ${policyTable(list)}`;
+}
+
+const GLOBAL={
+ yield:{t:"Cereal yield",u:"t/ha",yr:"2024",dp:1,key:"cereal_yield_t_ha",src:"FAO via Our World in Data",africa:1.35,rows:[["India",3.63],["Brazil",5.0],["Vietnam",6.04],["China",6.49],["Netherlands",6.81],["United States",8.41]]},
+ fert:{t:"Fertilizer use",u:"kg/ha of cropland",yr:"2023",dp:0,key:"fertilizer_kg_ha",src:"FAO via Our World in Data",africa:14.7,rows:[["United States",108],["Netherlands",126],["India",182],["Vietnam",243],["Brazil",285],["China",335]]},
+ vapw:{t:"Value added per farm worker",u:"constant US$",yr:"2025",dp:0,key:"ag_va_per_worker_usd",src:"World Bank WDI via Our World in Data (no comparable US figure)",africa:1766,rows:[["India",2159],["Vietnam",3418],["China",8631],["Brazil",14203],["Netherlands",89045]]}
+};
+const REGION=b=>{const c=String(b.source_country||"");if(/^global|trend/i.test(c)||/trend/i.test(b.theme||""))return "trends";if(/india|china|vietnam|bangladesh|indonesia/i.test(c))return "asia";if(/brazil|united states/i.test(c))return "americas";if(/netherlands|israel|european/i.test(c))return "europe";return "africa"};
+const REGIONS=[["asia","Asia"],["americas","Americas"],["europe","Europe & Middle East"],["africa","African peers"],["trends","Global trends 2024–2026"]];
+const ROLE_KEYS={builder:/ai|biological|machin|mechaniz|e-commerce|digital|irrigation/i,funder:/credit|carbon|finance|safra|e-commerce|economic zone|phosphate/i,policy:/land|reform|policy|regulation|ban|cap |extension|registry|agristack|transfer|delivery|zone/i,research:/research|embrapa|extension|data|gene|wageningen|land-grant/i,student:/green revolution|doi moi|embrapa|land-grant|ai/i};
+function vBench(){
+  const m=fv("gm")||"yield",reg=fv("gr")||"asia",q=fv("bq");const M=GLOBAL[m];
+  const C=S.p.country?countries().find(c=>c.iso3===S.p.country):null;
+  const cv=C&&C.atlas&&C.atlas.indicators?C.atlas.indicators[M.key]:null;
+  const rows=[["Africa (median)",M.africa,"af"]].concat(C&&cv!=null?[[C.name+" (your focus)",cv,"me"]]:[]).concat(M.rows.map(r=>[r[0],r[1],""]));
+  const max=Math.max(...rows.map(r=>r[1]));const f=v=>Number(v).toLocaleString("en",{maximumFractionDigits:M.dp});
+  const ratio=x=>Math.round(x/M.africa*10)/10;
+  const asiaPeer=M.rows.find(r=>r[0]==="India")||M.rows[0];
+  const roleRe=ROLE_KEYS[S.p.role];
+  const all=items("benchmarks").filter(b=>match(b,q));
+  const list=q?all:all.filter(b=>REGION(b)===reg);
+  const sorted=roleRe?list.slice().sort((a,b)=>roleRe.test(b.theme+" "+b.what_happened)-roleRe.test(a.theme+" "+a.what_happened)):list;
+  const lvl=s=>{s=String(s||"");const mm=s.match(/^(High|Medium|Low)/i);return mm?mm[1]:"–"};
+  return `<p class="eyebrow">Global baseline · Asia, the Americas, Europe</p>
+  <h1>A typical African farm grows a third of India's cereal yield and a sixth of America's.</h1>
+  <p class="lead">The gap is mostly inputs and water, not land or labor. Use this page to see how far behind or ahead a country is, and which playbooks closed the gap elsewhere.</p>
+  <div class="section tablewrap" style="padding:20px">
+   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end"><div><h2>${esc(M.t)} (${esc(M.u)}, ${M.yr})</h2><p class="sub">${C?"":"Pick a country in the bar above to add it to the comparison. "}Source: ${esc(M.src)}.</p></div>
+   ${filters("g",`<select name="gm" aria-label="Measure">${Object.entries(GLOBAL).map(([k,v])=>`<option value="${k}" ${k===m?"selected":""}>${esc(v.t)}</option>`).join("")}</select>`)}</div>
+   <div style="display:grid;grid-template-columns:minmax(120px,200px) minmax(0,1fr) auto;gap:10px 14px;align-items:center;margin-top:8px">
+   ${rows.map(([n,v,k])=>`<span style="${k?"font-weight:600":""}">${esc(n)}</span><div style="height:16px;border-radius:3px;background:var(--sunk);overflow:hidden"><div style="height:100%;width:${Math.max(1.5,v/max*100)}%;background:${k==="af"?"var(--gold)":k==="me"?"var(--accent)":"color-mix(in srgb,var(--accent) 45%,var(--sunk))"}"></div></div><span class="num" style="text-align:right">${f(v)}</span>`).join("")}
+   </div>
+   <p class="meta" style="margin-top:12px">${esc(asiaPeer[0])} is at ${ratio(asiaPeer[1])}× Africa's median${C&&cv!=null?`; ${esc(C.name)} is at ${ratio(cv)}×`:""}. Africa's figure is the median of countries with data, so large producers like Egypt and South Africa do not pull it up.</p>
+  </div>
+  <div class="kpis">
+   <div class="kpi"><b>6% vs 37%</b><span>cropland irrigated, Africa vs Asia (IFPRI)</span></div>
+   <div class="kpi"><b>&lt;2 vs ~10</b><span>tractors per 1,000 ha, Africa vs South Asia (FAO)</span></div>
+   <div class="kpi"><b>110m</b><span>farmer IDs in India's AgriStack, Oct 2026</span></div>
+   <div class="kpi"><b>US$3.8bn</b><span>extra paid by African rice buyers after India's 2023 export ban</span></div>
+  </div>
+  <div class="section"><h2>Playbooks that closed the gap</h2><p class="sub">What other countries did, what it achieved, and how well it would transfer to African conditions.${roleRe?" Items most relevant to your role are listed first.":""}</p>
+  <div class="pill-row" role="group" aria-label="Region" style="margin-top:12px">${REGIONS.map(([k,l])=>`<button type="button" class="${k===reg&&!q?"btn-pill on":"btn-pill"}" data-region="${k}" aria-pressed="${k===reg&&!q}">${l} <span class="count">${all.filter(b=>REGION(b)===k).length}</span></button>`).join("")}</div>
+  ${filters("b",`<input type="search" name="bq" placeholder="Search all benchmarks" value="${esc(q)}" aria-label="Search benchmarks"><span class="count">${sorted.length} shown</span>`)}
+  <div class="grid">${sorted.map(b=>`<div class="card"><div class="chips"><span class="chip acc">${esc(b.source_country)}</span><span class="chip ${/^high/i.test(b.transferability)?"good":/^low/i.test(b.transferability)?"bad":"warn"}">${esc(lvl(b.transferability))} transferability</span>${roleRe&&roleRe.test(b.theme+" "+b.what_happened)?'<span class="match">for you</span>':""}${addedChip(b)}</div>
+  <h3>${esc(b.theme)}</h3><p>${esc(b.what_happened)}</p><p class="meta"><b>Outcome:</b> ${esc(b.outcome)}</p><p class="meta"><b>For Africa:</b> ${esc(b.transferability)}</p>${linkList([b.link])}</div>`).join("")||'<div class="empty">No benchmarks match.</div>'}</div></div>`;
+}
+
+function vLearn(){
+  return `<h1>Learning roadmap</h1><p class="lead">About 12 weeks from orientation to a first contribution. Each stage ends with something you make.</p>
+  <p class="notice">New to value chains? Start with <a href="https://claude.ai/artifact/E4QTs1Hnomm9HAGnsm2AuJ" target="_blank" rel="noopener">Crop Journeys</a>: follow cocoa, maize, coffee and tomatoes from seed to shelf, with hands-on labs and a lingo notebook.</p>
+  <ol class="steps section">
+   <li><div><h3>Orient · weeks 1–2</h3><p>Learn the frameworks: Agenda 2063, CAADP (Malabo, then the Kampala Declaration 2026–2035), AfCFTA, PIDA, Mission 300. Start in the <a href="#policies">Regulation tracker</a> filtered to Continental.</p><p class="meta">Make: a one-page map of the institutions (AU, RECs, AfDB, CGIAR, AGRA, FAO).</p></div></li>
+   <li><div><h3>Walk a value chain · weeks 3–4</h3><p>Follow one crop from seed to export: maize, cocoa or horticulture. Use the <a href="#gaps">Gap map</a> to see where value leaks.</p><p class="meta">Make: a value-chain sketch with each loss point tied to a documented gap.</p></div></li>
+   <li><div><h3>Compare countries · weeks 5–6</h3><p>Read three deep dives with different models: <a href="#country-RWA">Rwanda</a> (state-led), <a href="#country-KEN">Kenya</a> (market-led, digital) and <a href="#country-MAR">Morocco</a> (export champion).</p><p class="meta">Make: a short memo on what explains the gap in outcomes.</p></div></li>
+   <li><div><h3>Learn from abroad · week 7</h3><p>Study three <a href="#benchmarks">benchmarks</a> rated High transferability, such as Embrapa, Vietnam's land reform and India's digital public infrastructure.</p><p class="meta">Make: notes on what would and would not transfer, and why.</p></div></li>
+   <li><div><h3>Talk to people · weeks 8–10</h3><p>Pick one country and one gap. Contact 5–8 people from the <a href="#people">People</a> directory with a specific question.</p><p class="meta">Make: interview notes logged against the gap.</p></div></li>
+   <li><div><h3>Contribute · weeks 11–12</h3><p>Choose a path: build (startup or product), fund (investor thesis), shape (policy brief) or research (data project).</p><p class="meta">Make: a problem statement and a first small experiment.</p></div></li>
+  </ol>
+  <div class="section prose"><h2>How the Atlas score works</h2>
+  <p>The score measures how strong a country's farm system and its foundations are, on five equal pillars: productivity (cereal yield, value added per farm worker), inputs and water (fertilizer per hectare, irrigated share of cropland), policy commitment (CAADP review score against the 9.29 benchmark, agriculture's share of public spending against the 10% target), infrastructure (electricity and internet access) and finance access (adults with a bank or mobile-money account).</p>
+  <p>Each indicator is compared with the other African countries, so one outlier cannot swamp the rest. Countries are then placed into five color groups, from Early stage to Leading, each holding about a fifth of the 52 countries with enough data. A country needs data in 4 of 5 pillars to be placed. Read the pillars, not just the total: Rwanda leads on policy but trails on inputs and infrastructure, which is exactly where its gaps are.</p>
+  <p class="tiny">Data: FAO and World Bank via Our World in Data (2023–2025), Global Findex 2024, UN SDG 2.a.1 (2023), AU 4th CAADP Biennial Review (2023), ITU. Irrigated share uses CIA irrigated-area estimates (2012–2020) over FAO cropland, so treat it as approximate.</p></div>
+  <div class="section prose"><h2>How to be useful</h2>
+  <p>Start from a documented gap rather than a technology. Talk to the people closest to the problem before proposing a fix. Check the <a href="#startups">Startups</a> list for who already tried; Gro Intelligence, Wefarm and Sendy all shut down, and their stories are free lessons.</p>
+  <p>Glossary: <b>CAADP</b> Comprehensive Africa Agriculture Development Programme · <b>BR</b> Biennial Review · <b>REC</b> Regional Economic Community · <b>AfCFTA</b> African Continental Free Trade Area · <b>PIDA</b> Programme for Infrastructure Development in Africa · <b>AIDI</b> AfDB Africa Infrastructure Development Index · <b>DFI</b> development finance institution.</p></div>`;
+}
+
+const FORMS={
+  people:[["name","Name"],["role","Role"],["organization","Organization"],["countries","Country codes (ISO-3, comma-separated)"],["focus","Focus"],["talk_to_about","Talk to them about"],["public_links","Public profile links (space-separated)"],["diaspora","Diaspora? (yes/no)"]],
+  startups:[["name","Name"],["countries","Country codes (ISO-3, comma-separated)"],["segment","Segment"],["founded","Founded (year)"],["status","Status"],["model","Business model"],["notable_funding","Notable funding"],["website","Website"]],
+  organizations:[["name","Name"],["type","Type (gov, regulator, research, DFI, investor, corporate, NGO)"],["countries","Country codes (ISO-3, comma-separated)"],["what","What they do"],["website","Website"]],
+  policies:[["title","Title"],["scope","Scope (ISO-3 code, or AU)"],["type","Type (law, strategy, program, treaty)"],["year","Year"],["status","Status"],["summary","Summary"],["link","Link"]],
+  gaps:[["title","Title"],["scope","Scope (ISO-3 code, or AU)"],["segment","Segment"],["root_causes","Root causes"],["evidence","Evidence"],["opportunity","Opportunity"],["evidence_source","Source link"]],
+  benchmarks:[["source_country","Country"],["theme","Theme"],["what_happened","What happened"],["outcome","Outcome"],["transferability","Transferability (High/Medium/Low + why)"],["link","Link"]]
+};
+function vContribute(){
+  const t=S.f.at||"people";
+  const mine=S.entries.slice().sort((a,b)=>String(b.added_at).localeCompare(String(a.added_at))).slice(0,20);
+  return `<h1>Suggest an addition or correction</h1>
+  <p class="lead">The Atlas stays useful only if it stays current. If you know a startup, person, policy or gap that's missing, or something that has changed, tell us here.</p>
+  <div class="kpis" style="margin-top:14px"><div class="kpi"><b style="font-size:18px">1. You suggest</b><span>Fill in what you know and a link that confirms it</span></div><div class="kpi"><b style="font-size:18px">2. It's reviewed</b><span>The Atlas owner checks the source</span></div><div class="kpi"><b style="font-size:18px">3. It appears</b><span>Marked "added" so readers know it's new</span></div></div>
+  <p class="notice">In this prototype, suggestions appear straight away. In the finished site they will wait for review first. Public information only: no personal emails or phone numbers.</p>
+  ${S.canWrite===false?`<p class="notice">You can browse the Atlas, but adding entries needs edit access from the owner.</p>`:S.db===null?`<p class="notice">Adding entries needs a signed-in view of the published Atlas.</p>`:""}
+  <form class="add section" id="addform">
+    <label>Record type<select id="at" name="at">${Object.keys(FORMS).map(k=>`<option value="${k}" ${k===t?"selected":""}>${k[0].toUpperCase()+k.slice(1)}</option>`).join("")}</select></label>
+    ${FORMS[t].map(([k,l])=>`<label>${esc(l)}${/summary|focus|model|what|root|evidence$|opportunity|happened|outcome|transfer/.test(k)?`<textarea id="f_${k}" name="${k}" rows="2"></textarea>`:`<input type="text" id="f_${k}" name="${k}">`}</label>`).join("")}
+    <label>Source link (where you verified this)<input type="url" id="f__source" name="_source" placeholder="https://"></label>
+    <div><button class="btn" type="submit" ${S.canWrite===false||!S.db?"disabled":""}>Add to the Atlas</button> <span id="addmsg" class="meta" role="status"></span></div>
+  </form>
+  <div class="section"><h2>Recently added</h2>${mine.length?`<ul class="list">${mine.map(e=>`<li><span class="chip">${esc(e.collection)}</span> <b>${esc(e.data&&(e.data.name||e.data.title||e.data.theme))}</b> <span class="tiny">${esc(String(e.added_at||"").slice(0,10))}</span></li>`).join("")}</ul>`:`<p class="meta">Nothing added yet. The first entry you add appears here and in its section.</p>`}</div>`;
+}
+async function submitAdd(ev){
+  ev.preventDefault(); const fd=new FormData(ev.target); const t=fd.get("at"); const msg=$("#addmsg");
+  const d={}; for(const [k] of FORMS[t]){let v=String(fd.get(k)||"").trim(); if(!v) continue;
+    if(k==="countries") v=v.split(/[,\s]+/).map(x=>x.toUpperCase()).filter(Boolean);
+    else if(k==="public_links") v=v.split(/\s+/).map(safeUrl).filter(Boolean);
+    else if(k==="diaspora") v=/^y/i.test(v);
+    else if(k==="scope") v=v.toUpperCase();
+    else if(k==="founded"||k==="year") v=Number(v)||v;
+    d[k]=v}
+  const src=safeUrl(fd.get("_source")); if(src){d.source=src; if(t!=="people") d.sources=[src]}
+  if(!(d.name||d.title||d.theme)){msg.textContent="Add a name or title first.";return}
+  msg.textContent="Saving…";
+  try{const id=t+"-"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    await S.db.collection("entries").doc(id).set({collection:t,data:d,added_at:new Date().toISOString()});
+    msg.textContent="Added. It now shows in "+t+"."; ev.target.reset(); $("#at").value=t;
+  }catch(e){msg.textContent=e&&e.code==="quota_exceeded"?"The Atlas database is full. Ask the owner to clean up entries.":"Could not save: you may not have edit access."}
+}
+
+/* ---------- router ---------- */
+function render(keepFocus){
+  const active=keepFocus&&document.activeElement&&document.activeElement.name; const pos=active&&document.activeElement.selectionStart;
+  nav(); let h=location.hash.slice(1)||"home"; if(h==="overview")h="home"; const app=$("#app"); computeTiers();
+  if(!S.loaded){app.innerHTML=S.stale?`<div class="empty">The Atlas data can't be reached yet. Check your connection; the page keeps trying.</div>`:`<div class="empty">Loading the Atlas…</div>`;return}
+  if(!S.seed.countries){app.innerHTML=`<div class="empty"><h2>The Atlas is empty</h2><p>Country, people and startup records appear here once the seed data is loaded.</p></div>`;return}
+  const v=h.startsWith("country-")?vCountry(h.slice(8)):h.startsWith("region-")?vRegion(h.slice(7)):({home:vHome,africa:vOverview,countries:vCountries,gaps:vGaps,startups:vStartups,people:vPeople,organizations:vOrgs,policies:vPolicies,benchmarks:vBench,news:vNews,learn:vLearn,contribute:vContribute}[h]||vHome)();
+  const SUG={startups:["startups","a startup"],people:["people","a person"],organizations:["organizations","an organization"],policies:["policies","a policy"],gaps:["gaps","a gap"],benchmarks:["benchmarks","a global example"]}[h];
+  renderProfile();
+  app.innerHTML=(S.stale?`<p class="notice">Showing saved data; it may be out of date.</p>`:"")+v+(SUG?suggestBox(SUG[0],SUG[1]):"");
+  bindFilters();
+  app.querySelectorAll("[data-go]").forEach(r=>{r.addEventListener("click",e=>{if(e.target.closest("a"))return;location.hash=r.dataset.go});r.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target===r)location.hash=r.dataset.go})});
+  app.querySelectorAll("[data-region]").forEach(b=>b.addEventListener("click",()=>{S.f.gr=b.dataset.region;S.f.bq="";render()}));
+  bindMap(app);
+  app.querySelectorAll("[data-preset]").forEach(a=>a.addEventListener("click",()=>{S.f.at=a.dataset.preset}));
+  app.querySelectorAll("[data-rgn]").forEach(b=>b.addEventListener("click",()=>{location.hash="region-"+b.dataset.rgn}));
+  app.querySelectorAll("[data-mapmode]").forEach(b=>b.addEventListener("click",()=>{S.mapmode=b.dataset.mapmode;render()}));
+  app.querySelectorAll("[data-scroll]").forEach(b=>b.addEventListener("click",()=>{const t=document.getElementById(b.dataset.scroll);if(t)t.scrollIntoView({behavior:"smooth"})}));
+  app.querySelectorAll("[data-sort]").forEach(b=>b.addEventListener("click",()=>{S.f.csort=b.dataset.sort;render()}));
+  const f=$("#addform"); if(f){f.addEventListener("submit",submitAdd);$("#at").addEventListener("change",e=>{S.f.at=e.target.value;render()})}
+  if(active){const el=app.querySelector(`[name="${active}"]`);if(el){el.focus();try{if(pos!=null)el.setSelectionRange(pos,pos)}catch{}}}
+}
+let lastView=null;
+addEventListener("hashchange",()=>{render();const h=location.hash.slice(1);if(h!==lastView){scrollTo(0,0);lastView=h}});
+render();
+
+(async()=>{
+  const db=window.claude?await window.claude.use("db"):null; S.db=db;
+  if(!db){S.loaded=true;render();return}
+  window.claude.use("user").then(u=>{if(u){const c=u.can("data.write");S.canWrite=c;render()}});
+  const timer=setTimeout(()=>{S.stale=true;render()},10000);
+  db.collection("seed").onSnapshot(snap=>{const o={};snap.docs.forEach(d=>{o[d.id]=d.data()});const first=!S.seed.countries;S.seed=o;if(first)applyProfileFilters();
+    if(!snap.metadata.fromCache){clearTimeout(timer);S.stale=false} S.loaded=true;render(true)},
+    ()=>{clearTimeout(timer);S.loaded=true;render()});
+  db.collection("news").onSnapshot(snap=>{S.news=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>String(b.date).localeCompare(String(a.date)));if(S.loaded)render(true)},()=>{});
+  db.collection("entries").onSnapshot(snap=>{S.entries=snap.docs.map(d=>({id:d.id,...d.data()}));if(S.loaded)render(true)},()=>{});
+})();
+</script>
