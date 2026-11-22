@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Atlas color tokens (docs/04-design-system.md). Light first, dark below. */
+:root {
+  --bg: #f5f6f2;
+  --surface: #ffffff;
+  --sunk: #eceee7;
+  --fg: #18231d;
+  --muted: #5b665e;
+  --line: #d9ddd3;
+  --accent: #1f6b4f;
+  --accent-soft: #dcebe3;
+  --gold: #b5821b;
+  --gold-soft: #f3e7cb;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111713;
+    --surface: #18201b;
+    --sunk: #0c110e;
+    --fg: #e7ece6;
+    --muted: #9aa69d;
+    --line: #2c3730;
+    --accent: #6cc39b;
+    --accent-soft: #1f3a2e;
+    --gold: #e0b55a;
+    --gold-soft: #3a2f17;
+    color-scheme: dark;
+  }
+}
+
+/* Make the tokens usable as Tailwind classes, e.g. bg-surface, text-muted, font-display */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunk: var(--sunk);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --font-display: var(--font-display), system-ui, sans-serif;
+  --font-sans: var(--font-body), system-ui, sans-serif;
+  --font-mono: var(--font-data), ui-monospace, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Visible gold focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

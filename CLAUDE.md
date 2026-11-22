@@ -65,4 +65,4 @@ Out of scope for v1: startups and funders directory, regulation tracker, Global 
 - [ ] Phase 4: Launch checks, README, scheduled updates
 - [ ] Phase 5: Chat, downloads, accounts, more deep dives
 
-Notes from the last session: _(none yet)_
+Notes from the last session: Phase 0 skeleton built (Next.js 16, TypeScript, Tailwind 4). Home page shows "Hello, Atlas" in the Atlas fonts and colors, light and dark. Run it with `npm install` then `npm run dev`. Still to do for Phase 0: connect the GitHub repo to Vercel and create the Supabase project.
