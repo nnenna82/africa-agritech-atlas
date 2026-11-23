@@ -63,10 +63,14 @@ The owner wants to be hands-off. Claude builds, tests and ships on its own, and 
 ## Progress
 
 - [x] Phase 0: Set up (skeleton site live on Vercel)
-- [ ] Phase 1: Data in Supabase; Home map; Africa → region → country pages
+- [ ] Phase 1: Data in Supabase (waiting on access token); Home map ✓; Africa → region → country pages ✓
 - [ ] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News
 - [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval
 - [ ] Phase 4: Launch checks, README, scheduled updates
 - [ ] Phase 5: Chat, downloads, accounts, more deep dives
 
-Notes from the last session: Phase 0 done. Live site: https://africa-agritech-atlas.vercel.app/ (Vercel deploys automatically on every push to `main`). Supabase project created (Americas region); `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` are set in Vercel. Phase 1 started: `scripts/build-seed.mjs` builds `supabase/seed-1.sql` and `seed-2.sql` from `data/` (tested locally; counts match). Not yet run in Supabase. The owner wants to be hands-off, so the plan is for Claude to run `schema.sql` and the seed files itself through the Supabase Management API (`api.supabase.com`, SQL endpoint), using a `SUPABASE_ACCESS_TOKEN` the owner adds in the cloud environment settings, never in chat. Next after that: the Home map.
+Notes from the last session (23 Nov 2026): Phase 1 pages are built and live: Home map (real country shapes, Regions / Atlas groups switch, tap-then-open on phones, keyboard Tab + Enter), `/africa`, `/region/[name]`, `/country/[iso3]` and `/countries`, with breadcrumbs, color groups, phone menu button, dark mode. Tested at 400px wide, light and dark, on the live site. Map outlines are pre-built into `lib/africa-map.json` by `scripts/build-map.mjs`.
+
+**One step left for Phase 1: data is not in Supabase yet.** The Supabase credential this cloud environment holds for `api.supabase.com` is rejected ("upstream auth failed"), and no `SUPABASE_ACCESS_TOKEN` is set. Until the tables exist the site reads the same content from the files in `data/` (`lib/data.ts`; the footer has `data-source="files"`). Once the owner adds a fresh Supabase access token in the environment settings (Network secrets for `api.supabase.com`, or a `SUPABASE_ACCESS_TOKEN` variable) and starts a new session, run `supabase/schema.sql`, then `seed-1.sql` and `seed-2.sql` through the Management API SQL endpoint, check row counts against `data/README.md`, and confirm the live footer shows `data-source="supabase"` within an hour (the data cache lasts 1 hour). Then tick Phase 1 and start Phase 2.
+
+Vercel deploys from `main`: work on the session branch, then fast-forward `main` to publish.
