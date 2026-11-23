@@ -86,10 +86,18 @@ export default function AdminPanel({ countries, index }: { countries: CountryLit
   );
 }
 
+/** An expired or already-used login link comes back with an error in the address. */
+function linkError(): string | null {
+  if (typeof window === "undefined") return null;
+  const p = new URLSearchParams(window.location.hash.slice(1) || window.location.search.slice(1));
+  const d = p.get("error_description");
+  return d ? `That login link did not work (${d.replace(/\+/g, " ")}). Links work once and expire after an hour. Please ask for a new one below.` : null;
+}
+
 function Login() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(linkError);
   const [busy, setBusy] = useState(false);
 
   async function send(e: FormEvent) {
@@ -134,7 +142,10 @@ function Login() {
       <button type="submit" disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
         {busy ? "Sending…" : "Email me a login link"}
       </button>
-      <p className="text-xs text-muted">No password. Only the owner&rsquo;s email can review suggestions.</p>
+      <p className="text-xs text-muted">
+        No password. Only the owner&rsquo;s email can review suggestions. Open the emailed link in the same browser
+        you asked from (on a phone, use &ldquo;Open in browser&rdquo; if your email app shows its own window).
+      </p>
     </form>
   );
 }
