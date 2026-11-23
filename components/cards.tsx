@@ -47,15 +47,16 @@ export function GapCard({ gap, scopeName }: { gap: Gap; scopeName: string }) {
   );
 }
 
-export function PersonCard({ person }: { person: Person }) {
+export function PersonCard({ person, nameOf }: { person: Person; nameOf?: (iso: string) => string }) {
   const urls = links(person.public_links).filter(isUrl);
+  const confirmed = links(person.source).filter((u) => isUrl(u) && !urls.includes(u));
   return (
     <Card>
       <div className="flex flex-wrap gap-1.5">
         {(person.countries ?? []).map((c) => (
-          <Chip key={c}>{c}</Chip>
+          <Chip key={c}>{nameOf ? nameOf(c) : c}</Chip>
         ))}
-        {person.diaspora ? <Chip accent>diaspora</Chip> : null}
+        {person.diaspora ? <Chip accent>diaspora{person.based_in ? ` · ${person.based_in}` : ""}</Chip> : null}
       </div>
       <h3 className="mt-2 font-display text-lg font-bold leading-snug">{person.name}</h3>
       <p className="text-sm text-muted">
@@ -69,6 +70,7 @@ export function PersonCard({ person }: { person: Person }) {
         </p>
       ) : null}
       <SourceLinks items={urls} label="Public links" />
+      <SourceLinks items={confirmed} label="Role confirmed at" />
       {person.source && !isUrl(person.source) ? (
         <p className="mt-1 text-xs text-muted">Confirmed by: {person.source}</p>
       ) : null}

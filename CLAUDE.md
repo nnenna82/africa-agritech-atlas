@@ -14,6 +14,7 @@ Owner: Nnenna Madueke (solo project, MIT AI Builder Space). Plain-language expla
 | `docs/04-design-system.md` | Colors, fonts, components, map rules |
 | `docs/05-score-method.md` | How countries are placed into five color groups |
 | `docs/06-feedback-log.md` | What testers asked for, and what changed |
+| `docs/07-user-test.md` | The 5-person Phase 2 test: tasks and results sheet |
 | `prompts/` | Copy-paste prompts for each phase |
 | `data/` | All Atlas content as JSON, one file per table |
 | `supabase/schema.sql` | Starting database schema with access rules |
@@ -64,7 +65,7 @@ The owner wants to be hands-off. Claude builds, tests and ships on its own, and 
 
 - [x] Phase 0: Set up (skeleton site live on Vercel)
 - [x] Phase 1: Data in Supabase, Home map, Africa → region → country pages (live site reads from Supabase since 23 Nov)
-- [ ] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News
+- [ ] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News (all built 23 Nov; waiting on the 5-person test in `docs/07-user-test.md`)
 - [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval
 - [ ] Phase 4: Launch checks, README, scheduled updates
 - [ ] Phase 5: Chat, downloads, accounts, more deep dives
@@ -76,3 +77,7 @@ Added `grant` lines at the end of `schema.sql`: new Supabase projects no longer 
 **Live site confirmed on Supabase (23 Nov):** Vercel already had `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` set for all environments; after the owner redeployed, `/`, `/africa` and `/country/NGA` show `data-source="supabase"`. Checked `/`, `/africa`, `/countries`, `/country/KEN` at 400px in light and dark: all load, no page errors, no sideways scroll. Next session: start Phase 2.
 
 Vercel deploys from `main`: work on the session branch, then fast-forward `main` to publish.
+
+**Phase 2 built (23 Nov, second session):** the bar (`components/BarControls.tsx`, choices saved in the browser via `lib/bar.ts`, key `atlas_bar`), `/gaps`, `/people`, `/news`, For you + interest panels + latest 3 news on Home (`components/HomePanels.tsx`), "My interest" map colors and region fading on the Home map, Crop Journeys gold menu button, band on Home and crop cards on country pages. Crop Journeys is served from `public/crop-journeys.html` (a copy of `prototype/crop-journeys.html` with a doctype, viewport and a "Back to the Atlas" link) so visitors do not need a Claude login. Role, segment and crop lists live in `lib/chain.ts`. The bar's Interested in is the same as the Gap map's "Part of the chain" filter; News keeps its own segment filter (spec). Tested at 400px and 1280px, light and dark, keyboard focus: no page errors, no sideways scroll.
+
+Data notes: only 18 of 68 gaps have `evidence_source`, `opportunity` and `who_is_working`; the other 50 name their source inside the evidence text. Startups, Organizations, Regulation, Global and Learn pages are not in the menu yet (Phase 3). Next: run the 5-person test, log results as Round 3 in `docs/06-feedback-log.md`, then tick Phase 2.

@@ -4,13 +4,15 @@
 // - mouse: hover shows "Country · Region · Group", click opens the country
 // - phone: first tap shows the country and an "Open" button, a second tap opens it
 // - keyboard: Tab moves between countries, Enter opens one
-// - buttons switch the colors between Regions and Atlas groups
+// - buttons switch the colors between Regions, Atlas groups and (if "Interested in" is set) My interest
+// - on Home (followBar), picking a region in the bar fades the other regions
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useRef, useState, type ReactNode, type SyntheticEvent } from "react";
+import { useId, useRef, useState, type ReactNode, type SyntheticEvent } from "react";
+import { useBar } from "@/lib/bar";
 
-export type MapMode = "region" | "tier";
+export type MapMode = "region" | "tier" | "interest";
 type Info = Record<string, { name: string; region: string; group: string }>;
 
 const isoFrom = (e: SyntheticEvent) =>
@@ -20,15 +22,41 @@ export default function MapShell({
   info,
   initialMode,
   allowModeSwitch,
+  followBar = false,
+  interest = {},
   children,
 }: {
   info: Info;
   initialMode: MapMode;
   allowModeSwitch: boolean;
+  /** Follow the bar: fade other regions and offer the "My interest" colors. */
+  followBar?: boolean;
+  /** For each part of the chain, the countries with a documented gap in it. */
+  interest?: Record<string, string[]>;
   children: ReactNode;
 }) {
   const router = useRouter();
-  const [mode, setMode] = useState<MapMode>(initialMode);
+  const bar = useBar();
+  const seg = followBar ? bar.segment : "";
+  // A mode picked by the visitor, remembered together with the interest it was picked for.
+  const [picked, setPicked] = useState<{ mode: MapMode; seg: string } | null>(null);
+  const mode: MapMode =
+    picked && picked.seg === seg && (picked.mode !== "interest" || seg)
+      ? picked.mode
+      : seg
+        ? "interest"
+        : initialMode;
+  const setMode = (m: MapMode) => setPicked({ mode: m, seg });
+  const scopeCls = `map-${useId().replace(/[^a-z0-9]/gi, "")}`;
+  const hits = seg ? (interest[seg] ?? []) : [];
+  const region = followBar ? bar.region : "";
+  // Per-visitor colors are added as a small style block, so the map itself can stay drawn on the server.
+  const css = [
+    hits.length
+      ? `.${scopeCls}.map-mode-interest :is(${hits.map((i) => `[data-iso="${i}"]`).join(",")}){fill:var(--gold)}`
+      : "",
+    region ? `.${scopeCls} .map-country:not([data-region="${region}"]){opacity:.3}` : "",
+  ].join("");
   const [active, setActive] = useState<string | null>(null);
   const lastPointer = useRef<string>("mouse");
   const box = useRef<HTMLDivElement>(null);
@@ -46,13 +74,15 @@ export default function MapShell({
   const current = active ? info[active] : null;
 
   return (
-    <div ref={box} className={`map-mode-${mode} rounded-xl border border-line bg-surface p-3 sm:p-4`}>
+    <div ref={box} className={`${scopeCls} map-mode-${mode} rounded-xl border border-line bg-surface p-3 sm:p-4`}>
+      {css ? <style>{css}</style> : null}
       {allowModeSwitch ? (
         <div className="mb-3 flex flex-wrap gap-2" role="group" aria-label="Color the map by">
           {(
             [
               ["region", "Regions"],
               ["tier", "Atlas groups"],
+              ...(seg ? ([["interest", "My interest"]] as const) : []),
             ] as const
           ).map(([m, label]) => (
             <button
@@ -104,6 +134,18 @@ export default function MapShell({
         }}
       >
         {children}
+        {mode === "interest" ? (
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-muted">
+            <li className="flex items-center gap-1.5">
+              <span aria-hidden="true" className="inline-block h-3 w-3 rounded-sm border border-line bg-gold" />
+              Documented gap in {seg} ({hits.length} {hits.length === 1 ? "country" : "countries"})
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span aria-hidden="true" className="inline-block h-3 w-3 rounded-sm border border-line bg-nodata" />
+              Not documented (deep dives cover 10 countries so far)
+            </li>
+          </ul>
+        ) : null}
       </div>
 
       <div className="mt-3 flex min-h-11 flex-wrap items-center justify-between gap-2 rounded-lg bg-sunk px-3 py-2 text-sm" aria-live="polite">

@@ -27,6 +27,9 @@
   --r-southern: #4f9a5a;
   --map-border: #ffffff;
   --wsah: #d4d7cf;
+  /* The bar stays dark in both modes */
+  --bar: #18231d;
+  --bar-fg: #f5f6f2;
   color-scheme: light;
 }
 
@@ -50,6 +53,8 @@
     --nodata: #2a312c;
     --map-border: #6b7d70;
     --wsah: #3a423c;
+    --bar: #0a0f0c;
+    --bar-fg: #e7ece6;
     color-scheme: dark;
   }
 }
@@ -67,6 +72,8 @@
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-nodata: var(--nodata);
+  --color-bar: var(--bar);
+  --color-bar-fg: var(--bar-fg);
   --font-display: var(--font-display), system-ui, sans-serif;
   --font-sans: var(--font-body), system-ui, sans-serif;
   --font-mono: var(--font-data), ui-monospace, monospace;
@@ -144,5 +151,12 @@ main {
 }
 .map-mode-region .legend-tier,
 .map-mode-tier .legend-region {
+  display: none;
+}
+.map-mode-interest .map-country {
+  fill: var(--nodata);
+}
+.map-mode-interest .legend-tier,
+.map-mode-interest .legend-region {
   display: none;
 }

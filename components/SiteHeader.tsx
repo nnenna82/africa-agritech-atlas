@@ -10,9 +10,12 @@ import { useState } from "react";
 
 const LINKS = [
   { href: "/", label: "Home", match: [] },
-  { href: "/africa", label: "Africa & regions", match: ["/africa", "/region/", "/country/"] },
-  { href: "/countries", label: "All countries", match: ["/countries"] },
-];
+  { href: "/crop-journeys.html", label: "Crop Journeys ↗", match: [], gold: true },
+  { href: "/africa", label: "Africa & regions", match: ["/africa", "/region/", "/country/", "/countries"] },
+  { href: "/gaps", label: "Gaps", match: ["/gaps"] },
+  { href: "/people", label: "People", match: ["/people"] },
+  { href: "/news", label: "News", match: ["/news"] },
+] as { href: string; label: string; match: string[]; gold?: boolean }[];
 
 export default function SiteHeader() {
   const path = usePathname();
@@ -48,6 +51,18 @@ export default function SiteHeader() {
           <ul className="flex flex-col gap-1 pb-2 md:flex-row md:flex-wrap md:pb-0">
             {LINKS.map((l) => {
               const current = isCurrent(l);
+              if (l.gold)
+                return (
+                  <li key={l.href}>
+                    {/* A plain link: Crop Journeys is a separate page, not part of the Next.js app. */}
+                    <a
+                      href={l.href}
+                      className="flex min-h-11 items-center rounded-md bg-gold-soft px-3 text-sm font-semibold text-fg no-underline hover:outline hover:outline-1 hover:outline-gold"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                );
               return (
                 <li key={l.href}>
                   <Link

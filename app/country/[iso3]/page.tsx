@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { CountryCrops } from "@/components/CropJourneys";
 import { GapCard, OrgCard, PersonCard, PolicyCard, StartupCard } from "@/components/cards";
 import { Breadcrumbs, Card, Eyebrow, Kpi, LastChecked, NotEnough, ReviewNote, Section, SourceLinks, TierChip, TierScale } from "@/components/ui";
 import { getAtlas } from "@/lib/data";
@@ -135,6 +136,8 @@ async function CountryContent({ params }: { params: PageProps<"/country/[iso3]">
           )}
         </section>
       </div>
+
+      <CountryCrops iso3={c.iso3} name={c.name} />
 
       {gaps.length ? (
         <Section title="Gaps" intro="Unsolved problems, why they persist, and where someone could act.">

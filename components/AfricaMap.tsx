@@ -55,12 +55,16 @@ export default function AfricaMap({
   allowModeSwitch = true,
   focusRegion,
   label = "Map of Africa",
+  followBar = false,
+  interest,
 }: {
   tiers: Record<string, Tier>;
   mode?: MapMode;
   allowModeSwitch?: boolean;
   focusRegion?: Region;
   label?: string;
+  followBar?: boolean;
+  interest?: Record<string, string[]>;
 }) {
   const viewBox = focusRegion ? regionViewBox(focusRegion) : `0 0 ${MAP.width} ${MAP.height}`;
   // Keep island dots the same size on screen when zoomed in.
@@ -74,7 +78,7 @@ export default function AfricaMap({
     : MAP.countries;
 
   return (
-    <MapShell info={info} initialMode={mode} allowModeSwitch={allowModeSwitch}>
+    <MapShell info={info} initialMode={mode} allowModeSwitch={allowModeSwitch} followBar={followBar} interest={interest}>
       <svg
         viewBox={viewBox}
         className="block h-auto w-full"
@@ -91,13 +95,14 @@ export default function AfricaMap({
             // Countries outside the region in focus are drawn in plain grey and faded.
             ["--fill-region" as string]: faded ? "var(--wsah)" : regionColor(c.region),
             ["--fill-tier" as string]: faded ? "var(--wsah)" : tierColor(t),
-            opacity: faded ? 0.45 : 1,
+            opacity: faded ? 0.45 : undefined,
           };
           const a11y = `${c.name}, ${c.region} Africa, ${tierName(t)}`;
           return (
             <g
               key={c.iso3}
               data-iso={c.iso3}
+              data-region={c.region}
               className={`map-country${focusRegion && !faded ? " map-focus" : ""}`}
               style={style}
               tabIndex={0}
