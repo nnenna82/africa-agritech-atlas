@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Bar from "@/components/Bar";
@@ -24,10 +25,22 @@ const mono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const DESCRIPTION =
+  "A living map of agricultural and infrastructure technology across all 54 African countries: who is building, who funds, who regulates, and where the real problems are.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: { default: "Africa AgriTech Atlas", template: "%s · Africa AgriTech Atlas" },
-  description:
-    "A living map of agricultural and infrastructure technology across all 54 African countries.",
+  description: DESCRIPTION,
+  // The picture and text shown when someone shares a link to the Atlas.
+  openGraph: {
+    type: "website",
+    siteName: "Africa AgriTech Atlas",
+    title: "Africa AgriTech Atlas",
+    description: DESCRIPTION,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "The Africa AgriTech Atlas home page with its map of Africa" }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

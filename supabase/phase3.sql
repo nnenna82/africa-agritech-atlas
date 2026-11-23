@@ -16,7 +16,9 @@ language sql stable security definer set search_path = public as $$
   select exists (select 1 from owners where lower(email) = lower(coalesce(auth.jwt() ->> 'email', '')));
 $$;
 revoke all on function public.is_owner() from public;
-grant execute on function public.is_owner() to anon, authenticated;
+-- Only logged-in people need it (the owner rules apply to "authenticated" only).
+revoke execute on function public.is_owner() from anon;
+grant execute on function public.is_owner() to authenticated;
 
 -- Replace the OWNER_EMAIL placeholder rules with is_owner().
 do $$ declare t text; begin

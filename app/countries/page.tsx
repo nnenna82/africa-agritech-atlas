@@ -49,7 +49,7 @@ export default async function CountriesPage() {
             {rows.map((c) => (
               <tr key={c.iso3} className="border-t border-line hover:bg-sunk">
                 <th scope="row" className="px-3 py-2 text-left font-medium">
-                  <Link href={`/country/${c.iso3}`} className="underline-offset-2 hover:underline">
+                  <Link href={`/country/${c.iso3}`} className="underline underline-offset-2">
                     {c.name}
                   </Link>{" "}
                   {c.deep ? <Chip accent>deep dive</Chip> : null}

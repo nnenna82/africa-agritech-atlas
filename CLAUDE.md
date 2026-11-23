@@ -15,6 +15,7 @@ Owner: Nnenna Madueke (solo project, MIT AI Builder Space). Plain-language expla
 | `docs/05-score-method.md` | How countries are placed into five color groups |
 | `docs/06-feedback-log.md` | What testers asked for, and what changed |
 | `docs/07-user-test.md` | The 5-person Phase 2 test: tasks and results sheet |
+| `docs/08-scheduled-updates.md` | The daily news and monthly freshness prompts, and how they write safely |
 | `prompts/` | Copy-paste prompts for each phase |
 | `data/` | All Atlas content as JSON, one file per table |
 | `supabase/schema.sql` | Starting database schema with access rules |
@@ -67,7 +68,7 @@ The owner wants to be hands-off. Claude builds, tests and ships on its own, and 
 - [x] Phase 1: Data in Supabase, Home map, Africa → region → country pages (live site reads from Supabase since 23 Nov)
 - [x] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News (built 23 Nov; the owner chose to skip the 5-person test for now, `docs/07-user-test.md` is ready if wanted later)
 - [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval (all built 23 Nov; waiting on the owner's first login and one real suggestion approved end to end)
-- [ ] Phase 4: Launch checks, README, scheduled updates
+- [ ] Phase 4: Launch checks, README, scheduled updates (checks, README and update prompts done 23 Nov; scheduled tasks not switched on yet)
 - [ ] Phase 5: Chat, downloads, accounts, more deep dives
 
 Notes from the last session (23 Nov 2026): **Data is now in Supabase.** Project `africa-agritech-atlas`, ref `jaexggkukamqyhxtbwlw` (URL `https://jaexggkukamqyhxtbwlw.supabase.co`, not a secret). Ran `supabase/schema.sql`, `seed-1.sql`, `seed-2.sql` through the Management API SQL endpoint (`POST https://api.supabase.com/v1/projects/jaexggkukamqyhxtbwlw/database/query`). Row counts match `data/README.md` exactly (54 / 139 / 76 / 54 / 70 / 68 / 24 / 20 / 1, suggestions 0). The cloud credential for `api.supabase.com` works for this project, but cannot list projects or read API keys, so always use the ref above.
@@ -87,3 +88,9 @@ Data notes: only 18 of 68 gaps have `evidence_source`, `opportunity` and `who_is
 Owner login and approvals: `supabase/phase3.sql` (already run on the live database) adds a private `owners` table, `is_owner()` and `review_suggestion()`. All "owner write" rules now use `is_owner()` instead of the OWNER_EMAIL placeholder. The owner's email is in the `owners` table only, never in the code (the owner agreed to this on 23 Nov). Approving copies the record into its table (an addition gets a new id ending in `-s<number>`; a correction changes only the filled-in fields and adds the new source link), sets `last_verified` to today, then `app/admin/actions.ts` refreshes the site's cache (tag `atlas`) after checking the owner's login. Tested in SQL inside a rolled-back transaction: visitors can only add pending suggestions with an http(s) link; strangers who log in see nothing and cannot edit; only the owner can approve.
 
 **Owner action needed (Supabase dashboard, cannot be done from Claude's connection):** Authentication → URL Configuration: set Site URL to `https://africa-agritech-atlas.vercel.app` and add `https://africa-agritech-atlas.vercel.app/**` to Redirect URLs. Without this the login email link may point to localhost. Supabase's built-in email sender allows only a few emails per hour, which is fine for one owner.
+
+**Phase 4 (23 Nov, fourth session):** Safety check passed. RLS is on for all 11 tables. Tested on the live site with the public key: visitors can read the 9 content tables; reading suggestions or owners, writing, deleting, and calling review functions are all refused; inserting a suggestion works only as pending. Only the publishable key is in the site's JavaScript; no secret keys in the code or the full git history. Supabase security advisor: the remaining notes are intended (owners has no policies so nobody can read it; is_owner/review_suggestion are callable by logged-in users but only act for the owner). `is_owner()` is no longer callable by logged-out visitors. Added safety headers (`next.config.ts`), `robots.txt` (blocks /admin), `sitemap.xml`, link-preview image (`public/og.png`). Full sweep of every page (incl. all 54 countries) at 400px in light and dark in a fresh browser, with axe accessibility checks: fixed the small header logo tap target, small "Read at" news links, and un-underlined links on /countries. README written with screenshots in `docs/images/`.
+
+Scheduled updates: `supabase/phase4.sql` (run on the live database) adds `add_news(jsonb)` and `flag_for_review(table, id, note)`, callable only by the admin connection, not by visitors or logged-in users. Prompts are in `docs/08-scheduled-updates.md`. The monthly check never edits records: it flags them and sends correction suggestions to /admin.
+
+Test data: suggestion 16 ("TEST from Claude: please reject") is left pending for the owner to try /admin; suggestion 18 (a second test) is already rejected. The owner had not logged in to /admin yet on 23 Nov.

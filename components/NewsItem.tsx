@@ -64,7 +64,7 @@ export default function NewsItem({ item, nameOf }: { item: News; nameOf: (iso: s
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-1 inline-flex min-h-8 items-center text-sm underline underline-offset-2"
+              className="ml-1 inline-flex min-h-11 items-center text-sm underline underline-offset-2"
             >
               Read at {item.source || host(item.url)}
               <span className="sr-only"> (opens in a new tab)</span> ↗
