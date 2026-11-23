@@ -94,11 +94,22 @@ function linkError(): string | null {
   return d ? `That login link did not work (${d.replace(/\+/g, " ")}). Links work once and expire after an hour. Please ask for a new one below.` : null;
 }
 
+/** A login link that points at /admin?token_hash=… (scanner-safe: nothing happens until the owner presses the button). */
+function linkToken(): { token_hash: string; type: "email" | "magiclink" } | null {
+  if (typeof window === "undefined") return null;
+  const p = new URLSearchParams(window.location.search);
+  const token_hash = p.get("token_hash");
+  const type = p.get("type") === "magiclink" ? "magiclink" : "email";
+  return token_hash ? { token_hash, type } : null;
+}
+
 function Login() {
   const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(linkError);
   const [busy, setBusy] = useState(false);
+  const [link, setLink] = useState(linkToken);
 
   async function send(e: FormEvent) {
     e.preventDefault();
@@ -113,13 +124,79 @@ function Login() {
     else setSent(true);
   }
 
+  async function verifyCode(e: FormEvent) {
+    e.preventDefault();
+    setError(null);
+    setBusy(true);
+    const { error: err } = await supabase()!.auth.verifyOtp({ email: email.trim(), token: code.replace(/\s/g, ""), type: "email" });
+    setBusy(false);
+    if (err) setError(`That code did not work (${err.message}). Check it, or ask for a new email.`);
+  }
+
+  async function useLink() {
+    if (!link) return;
+    setError(null);
+    setBusy(true);
+    const { error: err } = await supabase()!.auth.verifyOtp(link);
+    setBusy(false);
+    window.history.replaceState(null, "", "/admin");
+    setLink(null);
+    if (err) setError(`That login link did not work (${err.message}). Links work once and expire after an hour. Please ask for a new one below.`);
+  }
+
+  const alert = error ? (
+    <p role="alert" className="rounded bg-gold-soft p-2 text-sm">
+      {error}
+    </p>
+  ) : null;
+
+  if (link)
+    return (
+      <div className="mt-6 max-w-md space-y-3">
+        <p>You opened a login link from your email. Press the button to finish logging in.</p>
+        {alert}
+        <button type="button" onClick={useLink} disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
+          {busy ? "Logging in…" : "Log in"}
+        </button>
+      </div>
+    );
+
   if (sent)
     return (
-      <p className="mt-6 max-w-xl rounded-lg bg-accent-soft p-4" role="status">
-        <b>Check your email.</b> We sent a login link to {email}. Open it on this device; it brings you back here,
-        logged in. The link works once and expires after an hour.
-      </p>
+      <form onSubmit={verifyCode} className="mt-6 max-w-md space-y-3">
+        <p className="rounded-lg bg-accent-soft p-4" role="status">
+          <b>Check your email.</b> We sent a message to {email}. Type the code from it below. (Email security checks
+          can use up login links before you click them; the code avoids that.)
+        </p>
+        <label htmlFor="a-code" className="block text-sm font-medium">
+          Code from the email
+        </label>
+        <input
+          id="a-code"
+          inputMode="numeric"
+          autoComplete="one-time-code"
+          required
+          pattern="[0-9 ]{6,12}"
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
+          className={`${inputCls} font-mono text-lg tracking-widest`}
+        />
+        {alert}
+        <div className="flex flex-wrap gap-3">
+          <button type="submit" disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
+            {busy ? "Checking…" : "Log in"}
+          </button>
+          <button type="button" onClick={() => setSent(false)} className={`${btn} border border-line text-fg`}>
+            Use a different email
+          </button>
+        </div>
+        <p className="text-xs text-muted">
+          No code in the email, only a link? The login email needs a small change in Supabase; see the note in
+          docs/09-owner-login.md.
+        </p>
+      </form>
     );
+
   return (
     <form onSubmit={send} className="mt-6 max-w-md space-y-3">
       <label htmlFor="a-email" className="block text-sm font-medium">
@@ -134,18 +211,11 @@ function Login() {
         onChange={(e) => setEmail(e.target.value)}
         className={inputCls}
       />
-      {error ? (
-        <p role="alert" className="rounded bg-gold-soft p-2 text-sm">
-          {error}
-        </p>
-      ) : null}
+      {alert}
       <button type="submit" disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
-        {busy ? "Sending…" : "Email me a login link"}
+        {busy ? "Sending…" : "Email me a login code"}
       </button>
-      <p className="text-xs text-muted">
-        No password. Only the owner&rsquo;s email can review suggestions. Open the emailed link in the same browser
-        you asked from (on a phone, use &ldquo;Open in browser&rdquo; if your email app shows its own window).
-      </p>
+      <p className="text-xs text-muted">No password. Only the owner&rsquo;s email can review suggestions.</p>
     </form>
   );
 }

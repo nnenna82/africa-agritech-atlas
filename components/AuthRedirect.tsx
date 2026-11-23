@@ -9,7 +9,7 @@ export default function AuthRedirect() {
   useEffect(() => {
     const { pathname, hash, search } = window.location;
     if (pathname === "/admin") return;
-    const isLogin = /(^|[#&])(access_token|error_description)=/.test(hash) || /[?&]code=/.test(search);
+    const isLogin = /(^|[#&])(access_token|error_description)=/.test(hash) || /[?&](code|token_hash)=/.test(search);
     if (isLogin) window.location.replace(`/admin${search}${hash}`);
   }, []);
   return null;

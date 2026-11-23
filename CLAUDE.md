@@ -16,6 +16,7 @@ Owner: Nnenna Madueke (solo project, MIT AI Builder Space). Plain-language expla
 | `docs/06-feedback-log.md` | What testers asked for, and what changed |
 | `docs/07-user-test.md` | The 5-person Phase 2 test: tasks and results sheet |
 | `docs/08-scheduled-updates.md` | The daily news and monthly freshness prompts, and how they write safely |
+| `docs/09-owner-login.md` | How the owner logs in to /admin, and the Supabase email template it needs |
 | `prompts/` | Copy-paste prompts for each phase |
 | `data/` | All Atlas content as JSON, one file per table |
 | `supabase/schema.sql` | Starting database schema with access rules |
@@ -96,3 +97,5 @@ Scheduled updates: `supabase/phase4.sql` (run on the live database) adds `add_ne
 Test data: suggestion 16 ("TEST from Claude: please reject") is left pending for the owner to try /admin; suggestion 18 (a second test) is already rejected. The owner had not logged in to /admin yet on 23 Nov.
 
 **Scheduled updates are on (23 Nov):** two Claude Code cloud scheduled tasks, each starting a fresh session in this environment (which has the api.supabase.com connection): "Atlas daily news round-up" (`trig_01LQ3BYGRpcEgcDP1CCHvp92`, daily 06:40 UTC) and "Atlas monthly freshness check" (`trig_01Gc8KhA8vEt5uQ92WwCXgFK`, 1st of the month 03:17 UTC). Both follow `docs/08-scheduled-updates.md`, so edit that file to change what they do. First daily run tested on 23 Nov: added 3 stories (FMO/Seed Co, AfDB/Sterling Bank, Sierra Leone AgriConnect). Next: owner logs in to /admin, rejects test suggestion 16, shares the link. Then Phase 5.
+
+**Owner login fix (23 Nov):** the owner's email provider's security scanner (Microsoft IP addresses, seen in auth.sessions) opened the one-time login links first, so the owner saw "Email link is invalid or has expired". /admin now logs in with the emailed code (`verifyOtp` with the code), or with a link to `/admin?token_hash=…` that only logs in when the owner presses "Log in". `components/AuthRedirect.tsx` forwards login links that land on other pages to /admin. Needs the Magic Link email template change described in `docs/09-owner-login.md` (owner does it in the Supabase dashboard).
