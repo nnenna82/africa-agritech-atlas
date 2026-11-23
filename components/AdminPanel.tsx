@@ -9,7 +9,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { refreshAtlas } from "@/app/admin/actions";
 import { date, host } from "@/lib/format";
 import type { CountryLite } from "@/lib/scope";
-import { RECORD_TYPES, toRecord, toValues, type RecordType, type Values } from "@/lib/suggest";
+import { RECORD_TYPES, recordLabel, toRecord, toValues, type RecordType, type Values } from "@/lib/suggest";
 import { supabase } from "@/lib/supabase";
 import type { RecordIndex } from "./SuggestForm";
 import RecordFields, { inputCls } from "./RecordFields";
@@ -235,6 +235,9 @@ function Item({
       <p className="font-mono text-xs uppercase tracking-widest text-muted">
         {s.kind === "correction" ? "Correction" : "New"} · {typeLabel} · sent {date(s.created_at)}
       </p>
+      <h2 className="mt-1 font-display text-xl font-bold leading-snug">
+        {s.kind === "correction" ? (targetLabel ?? "Correction") : recordLabel(s.data)}
+      </h2>
       {targetLabel ? (
         <p className="mt-1">
           Correcting: <b>{targetLabel}</b> <span className="text-sm text-muted">(only filled-in fields will change)</span>
