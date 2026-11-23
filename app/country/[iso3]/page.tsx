@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { CountryCrops } from "@/components/CropJourneys";
+import SuggestBox from "@/components/SuggestBox";
 import { GapCard, OrgCard, PersonCard, PolicyCard, StartupCard } from "@/components/cards";
 import { Breadcrumbs, Card, Eyebrow, Kpi, LastChecked, NotEnough, ReviewNote, Section, SourceLinks, TierChip, TierScale } from "@/components/ui";
 import { getAtlas } from "@/lib/data";
@@ -196,6 +197,8 @@ async function CountryContent({ params }: { params: PageProps<"/country/[iso3]">
         <SourceLinks items={c.sources ?? []} label="Where this profile comes from" />
         <LastChecked value={c.last_verified} />
       </Section>
+
+      <SuggestBox type="people" what={`a person, startup, policy or gap in ${c.name}`} country={c.iso3} />
     </>
   );
 }

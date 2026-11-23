@@ -91,12 +91,16 @@ const ORG_TYPES: Record<string, string> = {
   multilateral: "Multilateral",
 };
 
-export function OrgCard({ org }: { org: Organization }) {
+export const orgTypeLabel = (t: string | null) => (t ? (ORG_TYPES[t] ?? t) : "");
+
+export function OrgCard({ org, nameOf }: { org: Organization; nameOf?: (iso: string) => string }) {
   return (
     <Card>
       <div className="flex flex-wrap gap-1.5">
         {org.type ? <Chip accent>{ORG_TYPES[org.type] ?? org.type}</Chip> : null}
         {org.funder ? <Chip>funder</Chip> : null}
+        {nameOf ? (org.countries ?? []).slice(0, 4).map((c) => <Chip key={c}>{nameOf(c)}</Chip>) : null}
+        {nameOf && (org.countries ?? []).length > 4 ? <Chip>+{(org.countries ?? []).length - 4} more</Chip> : null}
       </div>
       <h3 className="mt-2 font-bold leading-snug">
         {isUrl(org.website) ? (
@@ -161,10 +165,11 @@ export function StartupCard({ startup }: { startup: Startup }) {
   );
 }
 
-export function PolicyCard({ policy }: { policy: Policy }) {
+export function PolicyCard({ policy, scopeName }: { policy: Policy; scopeName?: string }) {
   return (
     <Card>
       <div className="flex flex-wrap gap-1.5">
+        {scopeName ? <Chip>{scopeName}</Chip> : null}
         {policy.type ? <Chip accent>{policy.type}</Chip> : null}
         {policy.year ? <Chip>{policy.year}</Chip> : null}
         {policy.status ? <Chip>{policy.status}</Chip> : null}

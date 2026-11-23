@@ -93,8 +93,12 @@ export default async function Home() {
         <Link href="/people" className="text-fg no-underline hover:underline">
           <Kpi value={atlas.people.length} label="people to learn from →" />
         </Link>
-        <Kpi value={atlas.startups.length} label="startups tracked (own page coming soon; see country pages)" />
-        <Kpi value={atlas.benchmarks.length} label="global examples (page coming soon)" />
+        <Link href="/startups" className="text-fg no-underline hover:underline">
+          <Kpi value={atlas.startups.length} label="startups tracked →" />
+        </Link>
+        <Link href="/global" className="text-fg no-underline hover:underline">
+          <Kpi value={atlas.benchmarks.length} label="global examples →" />
+        </Link>
       </section>
     </>
   );

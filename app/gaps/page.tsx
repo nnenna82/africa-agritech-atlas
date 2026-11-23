@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GapsList from "@/components/GapsList";
+import SuggestBox from "@/components/SuggestBox";
 import { Breadcrumbs, Eyebrow } from "@/components/ui";
 import { getAtlas } from "@/lib/data";
 import { toLite } from "@/lib/scope";
@@ -26,6 +27,7 @@ export default async function GapsPage() {
         </Link>
         .
       </p>
+      <SuggestBox type="gaps" what="a gap" />
     </>
   );
 }

@@ -13,7 +13,11 @@ const LINKS = [
   { href: "/crop-journeys.html", label: "Crop Journeys ↗", match: [], gold: true },
   { href: "/africa", label: "Africa & regions", match: ["/africa", "/region/", "/country/", "/countries"] },
   { href: "/gaps", label: "Gaps", match: ["/gaps"] },
+  { href: "/startups", label: "Startups", match: ["/startups"] },
   { href: "/people", label: "People", match: ["/people"] },
+  { href: "/organizations", label: "Organizations", match: ["/organizations"] },
+  { href: "/regulation", label: "Regulation", match: ["/regulation"] },
+  { href: "/global", label: "Global", match: ["/global"] },
   { href: "/news", label: "News", match: ["/news"] },
 ] as { href: string; label: string; match: string[]; gold?: boolean }[];
 

@@ -184,6 +184,7 @@ function ForYou({ data }: { data: HomeData }) {
               .slice(0, 5)
               .map((x) => ({ title: x.name, sub: `${x.segment ?? ""} · ${statusWord(x.status)} · ${short(x.model, 100)}` }))}
             empty="No startups recorded here yet: a possible opening."
+            more={["/startups", "All startups"]}
           />
           <List title="Operators to talk to" rows={peopleRows()} more={["/people", "All people"]} />
         </>
@@ -201,6 +202,7 @@ function ForYou({ data }: { data: HomeData }) {
               .slice(0, 5)
               .map((x) => ({ title: x.name, sub: `${x.segment ?? ""} · ${short(x.notable_funding, 100) || "funding not recorded"}` }))}
             empty="No active startups recorded here yet."
+            more={["/startups", "All startups"]}
           />
           <List
             title="Co-investors and development lenders"
@@ -209,6 +211,7 @@ function ForYou({ data }: { data: HomeData }) {
               .slice(0, 5)
               .map((o) => ({ title: o.name, sub: short(o.what, 120) }))}
             empty="No funders recorded here yet."
+            more={["/startups", "All funders"]}
           />
           <List title="Gaps with clear demand" rows={gapRows(3, "opportunity")} more={["/gaps", "Open the gap map"]} />
         </>
@@ -228,6 +231,7 @@ function ForYou({ data }: { data: HomeData }) {
               sub: [sc.nameOf(p.scope), p.year, p.status].filter(Boolean).join(" · "),
               href: p.scope !== "AU" ? countryHref(p.scope) : undefined,
             }))}
+            more={["/regulation", "Regulation tracker"]}
           />
           <List
             title="Global examples that transfer well"
@@ -235,6 +239,7 @@ function ForYou({ data }: { data: HomeData }) {
               .filter((b) => /^high/i.test(b.transferability ?? ""))
               .slice(0, 4)
               .map((b) => ({ title: `${b.source_country}: ${b.theme}`, sub: short(b.outcome, 140) }))}
+            more={["/global", "All global examples"]}
           />
           <List title="Officials and agencies" rows={peopleRows()} more={["/people", "All people"]} />
         </>
@@ -256,6 +261,7 @@ function ForYou({ data }: { data: HomeData }) {
             ]
               .slice(0, 5)
               .map((o) => ({ title: o.name, sub: short(o.what, 120) }))}
+            more={["/organizations", "All organizations"]}
           />
           <List title="Researchers to talk to" rows={peopleRows()} more={["/people", "All people"]} />
         </>
@@ -365,6 +371,7 @@ function Interest({ data }: { data: HomeData }) {
               sub: `${(x.countries ?? []).map(sc.nameOf).join(", ")} · ${statusWord(x.status)}`,
             }))}
             empty="No startups recorded yet: a possible opening."
+            more={["/startups", "All startups"]}
           />
           <p className="mt-2 text-sm text-muted">
             {st.length} startups and {orgs.length} organizations in the Atlas work on this.
@@ -375,6 +382,7 @@ function Interest({ data }: { data: HomeData }) {
         title="Global examples"
         rows={bm.map((b) => ({ title: `${b.source_country}: ${b.theme}`, sub: short(b.outcome, 150) }))}
         empty="No matching global example yet."
+        more={["/global", "All global examples"]}
       />
     </Panel>
   );

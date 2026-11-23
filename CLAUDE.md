@@ -65,8 +65,8 @@ The owner wants to be hands-off. Claude builds, tests and ships on its own, and 
 
 - [x] Phase 0: Set up (skeleton site live on Vercel)
 - [x] Phase 1: Data in Supabase, Home map, Africa → region → country pages (live site reads from Supabase since 23 Nov)
-- [ ] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News (all built 23 Nov; waiting on the 5-person test in `docs/07-user-test.md`)
-- [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval
+- [x] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News (built 23 Nov; the owner chose to skip the 5-person test for now, `docs/07-user-test.md` is ready if wanted later)
+- [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval (all built 23 Nov; waiting on the owner's first login and one real suggestion approved end to end)
 - [ ] Phase 4: Launch checks, README, scheduled updates
 - [ ] Phase 5: Chat, downloads, accounts, more deep dives
 
@@ -81,3 +81,9 @@ Vercel deploys from `main`: work on the session branch, then fast-forward `main`
 **Phase 2 built (23 Nov, second session):** the bar (`components/BarControls.tsx`, choices saved in the browser via `lib/bar.ts`, key `atlas_bar`), `/gaps`, `/people`, `/news`, For you + interest panels + latest 3 news on Home (`components/HomePanels.tsx`), "My interest" map colors and region fading on the Home map, Crop Journeys gold menu button, band on Home and crop cards on country pages. Crop Journeys is served from `public/crop-journeys.html` (a copy of `prototype/crop-journeys.html` with a doctype, viewport and a "Back to the Atlas" link) so visitors do not need a Claude login. Role, segment and crop lists live in `lib/chain.ts`. The bar's Interested in is the same as the Gap map's "Part of the chain" filter; News keeps its own segment filter (spec). Tested at 400px and 1280px, light and dark, keyboard focus: no page errors, no sideways scroll.
 
 Data notes: only 18 of 68 gaps have `evidence_source`, `opportunity` and `who_is_working`; the other 50 name their source inside the evidence text. Startups, Organizations, Regulation, Global and Learn pages are not in the menu yet (Phase 3). Next: run the 5-person test, log results as Round 3 in `docs/06-feedback-log.md`, then tick Phase 2.
+
+**Phase 3 built (23 Nov, third session):** `/startups` (with funders and funding climate), `/organizations`, `/regulation` (newest first), `/global` (Africa's median is computed from `countries.json`; comparison countries and the four key figures come from the prototype's `GLOBAL` block, now in `lib/global.ts`), `/suggest` and a "Suggest an addition or correction" box at the end of list and country pages, and `/admin` (not in the menu, hidden from search engines).
+
+Owner login and approvals: `supabase/phase3.sql` (already run on the live database) adds a private `owners` table, `is_owner()` and `review_suggestion()`. All "owner write" rules now use `is_owner()` instead of the OWNER_EMAIL placeholder. The owner's email is in the `owners` table only, never in the code (the owner agreed to this on 23 Nov). Approving copies the record into its table (an addition gets a new id ending in `-s<number>`; a correction changes only the filled-in fields and adds the new source link), sets `last_verified` to today, then `app/admin/actions.ts` refreshes the site's cache (tag `atlas`) after checking the owner's login. Tested in SQL inside a rolled-back transaction: visitors can only add pending suggestions with an http(s) link; strangers who log in see nothing and cannot edit; only the owner can approve.
+
+**Owner action needed (Supabase dashboard, cannot be done from Claude's connection):** Authentication → URL Configuration: set Site URL to `https://africa-agritech-atlas.vercel.app` and add `https://africa-agritech-atlas.vercel.app/**` to Redirect URLs. Without this the login email link may point to localhost. Supabase's built-in email sender allows only a few emails per hour, which is fine for one owner.

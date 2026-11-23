@@ -1,6 +1,7 @@
 -- Africa AgriTech Atlas: starting schema for Supabase (Postgres).
 -- Run in the Supabase SQL editor during Phase 1. Visitors can read; only the owner can write.
--- Replace OWNER_EMAIL below with the owner's login email before running the policies (Phase 3 adds the login).
+-- The OWNER_EMAIL placeholder rules below are replaced by supabase/phase3.sql (run it next).
+-- Never write a real email in this file: the owner's email goes in the private owners table.
 
 create table countries (
   iso3 text primary key,

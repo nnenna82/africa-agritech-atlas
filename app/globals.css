@@ -160,3 +160,8 @@ main {
 .map-mode-interest .legend-region {
   display: none;
 }
+
+/* Tables scroll sideways inside their own box, so words should not be split letter by letter. */
+main table {
+  overflow-wrap: break-word;
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PeopleList from "@/components/PeopleList";
+import SuggestBox from "@/components/SuggestBox";
 import { Breadcrumbs, Eyebrow } from "@/components/ui";
 import { getAtlas } from "@/lib/data";
 import { toLite } from "@/lib/scope";
@@ -22,6 +23,7 @@ export default async function PeoplePage() {
         public links on each card; the Atlas never lists personal emails or phone numbers.
       </p>
       <PeopleList people={atlas.people} countries={atlas.countries.map(toLite)} />
+      <SuggestBox type="people" what="a person" />
     </>
   );
 }

@@ -4,7 +4,7 @@
 // set in Vercel). If Supabase is not set up yet, or a table is missing or empty, that table is
 // read from the backup JSON files in data/ instead, so the site never shows a blank page.
 
-import { cacheLife } from "next/cache";
+import { cacheLife, cacheTag } from "next/cache";
 import type { Atlas, Meta } from "./types";
 
 import countriesFile from "@/data/countries.json";
@@ -42,6 +42,8 @@ async function readTable<T>(table: string, backup: unknown, fallbacks: string[])
 export async function getAtlas(): Promise<Atlas> {
   "use cache";
   cacheLife("hours");
+  // Approving a suggestion on /admin refreshes everything tagged "atlas" straight away.
+  cacheTag("atlas");
 
   const fallbacks: string[] = [];
   const [countries, organizations, people, startups, policies, gaps, benchmarks, news, metaRows] =
