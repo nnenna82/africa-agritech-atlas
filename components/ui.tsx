@@ -75,19 +75,19 @@ export function TierScale({ tier }: { tier: Tier }) {
           />
         ))}
       </div>
-      <div className="mt-2 flex justify-between gap-2 font-mono text-xs text-muted">
+      <div className="mt-1.5 flex justify-between gap-2 whitespace-nowrap font-mono text-xs text-muted">
         <span>Early stage</span>
-        <span className="text-center">
-          {tier == null ? (
-            "Not enough data to place this country"
-          ) : (
-            <>
-              This country: <b className="text-fg">{tierName(tier)}</b>
-            </>
-          )}
-        </span>
         <span>Leading</span>
       </div>
+      <p className="mt-1 text-sm">
+        {tier == null ? (
+          "Not enough data to place this country in a group."
+        ) : (
+          <>
+            This country: <b>{tierName(tier)}</b>
+          </>
+        )}
+      </p>
     </div>
   );
 }

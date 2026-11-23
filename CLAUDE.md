@@ -50,11 +50,15 @@ Out of scope for v1: startups and funders directory, regulation tracker, Global 
 
 ## How we work each session
 
+The owner wants to be hands-off. Claude builds, tests and ships on its own, and only stops to ask when it must.
+
 1. Start fresh. Read this file and the build plan.
-2. One feature at a time. Explain what you're about to do in a sentence first.
-3. After each feature, tell the owner exactly what to click to check it.
-4. When it works: commit and push.
-5. Before ending: update the **Progress** section below.
+2. Build the whole phase (or the whole task asked for), one feature at a time, without waiting for approval between features.
+3. Test everything yourself before calling it done: phone width (about 400px), light and dark mode, keyboard focus, and the live site after each deploy.
+4. Commit when something works and push as you go. Pushing to `main` updates the live site.
+5. **Only stop and ask the owner** before deleting files or data, or when something involves keys, passwords or money (accounts, paid plans, spending limits). Never ask for keys in chat.
+6. At the end, report back in plain words: what was built, anything blocked, and exactly what to check on a phone.
+7. Before ending: update the **Progress** section below.
 
 ## Progress
 
