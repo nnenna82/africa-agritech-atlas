@@ -14,6 +14,8 @@ create table countries (
   electricity_access_pct numeric,
   internet_users_pct numeric,
   caadp_br4_score numeric,
+  aidi_rank int,
+  aidi_score numeric,
   deep boolean default false,
   summary text,
   narrative text,
@@ -21,6 +23,8 @@ create table countries (
   flagship_programs text[] default '{}',
   atlas jsonb,
   sources text[] default '{}',
+  needs_review boolean default false,
+  review_note text,
   last_verified date
 );
 
