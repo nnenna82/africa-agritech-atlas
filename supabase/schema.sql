@@ -98,3 +98,12 @@ end $$;
 alter table suggestions enable row level security;
 create policy "anyone can suggest" on suggestions for insert with check (status = 'pending');
 create policy "owner reviews" on suggestions for all using (auth.jwt() ->> 'email' = 'OWNER_EMAIL');
+
+-- Table access for Supabase's built-in roles. Newer Supabase projects no longer
+-- grant these automatically, so without them visitors get "permission denied".
+-- The policies above still decide which rows each role may touch.
+grant usage on schema public to anon, authenticated;
+grant select on countries, organizations, people, startups, policies, gaps, benchmarks, news, meta to anon, authenticated;
+grant insert, update, delete on countries, organizations, people, startups, policies, gaps, benchmarks, news, meta to authenticated;
+grant insert on suggestions to anon, authenticated;
+grant select, update, delete on suggestions to authenticated;
