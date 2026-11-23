@@ -63,7 +63,7 @@ The owner wants to be hands-off. Claude builds, tests and ships on its own, and 
 ## Progress
 
 - [x] Phase 0: Set up (skeleton site live on Vercel)
-- [ ] Phase 1: Data in Supabase ✓ (loaded 23 Nov); Home map ✓; Africa → region → country pages ✓. Last step: owner adds two Vercel variables (see below)
+- [x] Phase 1: Data in Supabase, Home map, Africa → region → country pages (live site reads from Supabase since 23 Nov)
 - [ ] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News
 - [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval
 - [ ] Phase 4: Launch checks, README, scheduled updates
@@ -73,6 +73,6 @@ Notes from the last session (23 Nov 2026): **Data is now in Supabase.** Project 
 
 Added `grant` lines at the end of `schema.sql`: new Supabase projects no longer give the visitor role (`anon`) table access by default, so without them visitors got "permission denied". Tested as `anon`: can read all content tables; cannot insert, update or delete; cannot read suggestions; can only add a suggestion with status `pending`. `OWNER_EMAIL` in the policies is still a placeholder (fill in during Phase 3 when login is added).
 
-**Waiting on the owner:** the live site still reads from `data/` because Vercel has no Supabase settings. In Vercel → Project → Settings → Environment Variables add `NEXT_PUBLIC_SUPABASE_URL` = `https://jaexggkukamqyhxtbwlw.supabase.co` (no `/rest/v1` on the end) and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` = the Publishable key from Supabase → Project Settings → API Keys, then Redeploy. Next session: confirm the live footer shows `data-source="supabase"` (data cache lasts 1 hour), tick Phase 1, start Phase 2.
+**Live site confirmed on Supabase (23 Nov):** Vercel already had `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` set for all environments; after the owner redeployed, `/`, `/africa` and `/country/NGA` show `data-source="supabase"`. Checked `/`, `/africa`, `/countries`, `/country/KEN` at 400px in light and dark: all load, no page errors, no sideways scroll. Next session: start Phase 2.
 
 Vercel deploys from `main`: work on the session branch, then fast-forward `main` to publish.
