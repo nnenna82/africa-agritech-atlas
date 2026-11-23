@@ -58,11 +58,11 @@ Out of scope for v1: startups and funders directory, regulation tracker, Global 
 
 ## Progress
 
-- [ ] Phase 0: Set up (skeleton site live on Vercel)
+- [x] Phase 0: Set up (skeleton site live on Vercel)
 - [ ] Phase 1: Data in Supabase; Home map; Africa → region → country pages
 - [ ] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News
 - [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval
 - [ ] Phase 4: Launch checks, README, scheduled updates
 - [ ] Phase 5: Chat, downloads, accounts, more deep dives
 
-Notes from the last session: Phase 0 skeleton built (Next.js 16, TypeScript, Tailwind 4). Home page shows "Hello, Atlas" in the Atlas fonts and colors, light and dark. Run it with `npm install` then `npm run dev`. Still to do for Phase 0: connect the GitHub repo to Vercel and create the Supabase project.
+Notes from the last session: Phase 0 done. Live site: https://africa-agritech-atlas.vercel.app/ (Vercel deploys automatically on every push to `main`). Built with Next.js 16, TypeScript, Tailwind 4; Home shows "Hello, Atlas" in the Atlas fonts and colors, light and dark. Run locally with `npm install` then `npm run dev`. Still to do before Phase 1: create the Supabase project and put its keys in `.env.local` and Vercel's environment variables (prompt 5 in `prompts/phase-0-setup.md`).
