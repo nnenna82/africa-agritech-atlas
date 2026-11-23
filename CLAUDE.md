@@ -68,7 +68,7 @@ The owner wants to be hands-off. Claude builds, tests and ships on its own, and 
 - [x] Phase 1: Data in Supabase, Home map, Africa → region → country pages (live site reads from Supabase since 23 Nov)
 - [x] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News (built 23 Nov; the owner chose to skip the 5-person test for now, `docs/07-user-test.md` is ready if wanted later)
 - [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval (all built 23 Nov; waiting on the owner's first login and one real suggestion approved end to end)
-- [ ] Phase 4: Launch checks, README, scheduled updates (checks, README and update prompts done 23 Nov; scheduled tasks not switched on yet)
+- [ ] Phase 4: Launch checks, README, scheduled updates (all done 23 Nov; "done" once the owner shares the link with first real users)
 - [ ] Phase 5: Chat, downloads, accounts, more deep dives
 
 Notes from the last session (23 Nov 2026): **Data is now in Supabase.** Project `africa-agritech-atlas`, ref `jaexggkukamqyhxtbwlw` (URL `https://jaexggkukamqyhxtbwlw.supabase.co`, not a secret). Ran `supabase/schema.sql`, `seed-1.sql`, `seed-2.sql` through the Management API SQL endpoint (`POST https://api.supabase.com/v1/projects/jaexggkukamqyhxtbwlw/database/query`). Row counts match `data/README.md` exactly (54 / 139 / 76 / 54 / 70 / 68 / 24 / 20 / 1, suggestions 0). The cloud credential for `api.supabase.com` works for this project, but cannot list projects or read API keys, so always use the ref above.
@@ -94,3 +94,5 @@ Owner login and approvals: `supabase/phase3.sql` (already run on the live databa
 Scheduled updates: `supabase/phase4.sql` (run on the live database) adds `add_news(jsonb)` and `flag_for_review(table, id, note)`, callable only by the admin connection, not by visitors or logged-in users. Prompts are in `docs/08-scheduled-updates.md`. The monthly check never edits records: it flags them and sends correction suggestions to /admin.
 
 Test data: suggestion 16 ("TEST from Claude: please reject") is left pending for the owner to try /admin; suggestion 18 (a second test) is already rejected. The owner had not logged in to /admin yet on 23 Nov.
+
+**Scheduled updates are on (23 Nov):** two Claude Code cloud scheduled tasks, each starting a fresh session in this environment (which has the api.supabase.com connection): "Atlas daily news round-up" (`trig_01LQ3BYGRpcEgcDP1CCHvp92`, daily 06:40 UTC) and "Atlas monthly freshness check" (`trig_01Gc8KhA8vEt5uQ92WwCXgFK`, 1st of the month 03:17 UTC). Both follow `docs/08-scheduled-updates.md`, so edit that file to change what they do. First daily run tested on 23 Nov: added 3 stories (FMO/Seed Co, AfDB/Sterling Bank, Sierra Leone AgriConnect). Next: owner logs in to /admin, rejects test suggestion 16, shares the link. Then Phase 5.
