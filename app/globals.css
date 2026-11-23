@@ -12,6 +12,21 @@
   --accent-soft: #dcebe3;
   --gold: #b5821b;
   --gold-soft: #f3e7cb;
+  /* Color groups: t1 Early stage … t5 Leading */
+  --t1: #e3ece1;
+  --t2: #b7d4c1;
+  --t3: #7fb598;
+  --t4: #3f8a67;
+  --t5: #1a5a42;
+  --nodata: #e6e8e2;
+  /* Regions */
+  --r-north: #c9a227;
+  --r-west: #c46b4a;
+  --r-central: #8a6fb0;
+  --r-east: #3f8fb0;
+  --r-southern: #4f9a5a;
+  --map-border: #ffffff;
+  --wsah: #d4d7cf;
   color-scheme: light;
 }
 
@@ -27,6 +42,14 @@
     --accent-soft: #1f3a2e;
     --gold: #e0b55a;
     --gold-soft: #3a2f17;
+    --t1: #2a3b31;
+    --t2: #3d6150;
+    --t3: #4f8a6c;
+    --t4: #6cb592;
+    --t5: #9fe0bd;
+    --nodata: #2a312c;
+    --map-border: #6b7d70;
+    --wsah: #3a423c;
     color-scheme: dark;
   }
 }
@@ -43,6 +66,7 @@
   --color-accent-soft: var(--accent-soft);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-nodata: var(--nodata);
   --font-display: var(--font-display), system-ui, sans-serif;
   --font-sans: var(--font-body), system-ui, sans-serif;
   --font-mono: var(--font-data), ui-monospace, monospace;
@@ -67,4 +91,58 @@ body {
     animation: none !important;
     transition: none !important;
   }
+}
+
+html {
+  scroll-padding-top: 16px;
+}
+
+@layer base {
+  a {
+    color: var(--accent);
+  }
+}
+
+/* Long words and links must never push the page sideways on a phone */
+main {
+  overflow-wrap: anywhere;
+}
+
+/* Map shapes. Fill depends on the color mode chosen above the map. */
+.map-country > *,
+.map-wsah {
+  stroke: var(--map-border);
+  stroke-width: 0.7px;
+  vector-effect: non-scaling-stroke;
+}
+.map-country {
+  cursor: pointer;
+  fill: var(--fill-region);
+  transition: opacity 0.15s;
+}
+.map-mode-tier .map-country {
+  fill: var(--fill-tier);
+}
+.map-focus > * {
+  stroke: var(--muted);
+}
+.map-country > circle {
+  stroke: var(--fg);
+  stroke-width: 1px;
+}
+.map-country:hover > *,
+.map-country[data-active="true"] > * {
+  stroke: var(--fg);
+  stroke-width: 2px;
+}
+.map-country:focus {
+  outline: none;
+}
+.map-country:focus-visible > * {
+  stroke: var(--gold);
+  stroke-width: 3px;
+}
+.map-mode-region .legend-tier,
+.map-mode-tier .legend-region {
+  display: none;
 }
