@@ -17,6 +17,7 @@ Owner: Nnenna Madueke (solo project, MIT AI Builder Space). Plain-language expla
 | `docs/07-user-test.md` | The 5-person Phase 2 test: tasks and results sheet |
 | `docs/08-scheduled-updates.md` | The daily news and monthly freshness prompts, and how they write safely |
 | `docs/09-owner-login.md` | How the owner logs in to /admin (email + password) |
+| `docs/10-chat.md` | Ask the Atlas chat: limits, costs, how to switch it on |
 | `prompts/` | Copy-paste prompts for each phase |
 | `data/` | All Atlas content as JSON, one file per table |
 | `supabase/schema.sql` | Starting database schema with access rules |
@@ -70,7 +71,7 @@ The owner wants to be hands-off. Claude builds, tests and ships on its own, and 
 - [x] Phase 2: Gap map, People, the bar, For you and interest panels, Crop Journeys band, News (built 23 Nov; the owner chose to skip the 5-person test for now, `docs/07-user-test.md` is ready if wanted later)
 - [ ] Phase 3: Startups and funders, Regulation, Global page, suggestions with approval (all built 23 Nov; owner logged in and rejected a test suggestion on 24 Nov; still to do: approve one real suggestion from someone else and see it appear)
 - [ ] Phase 4: Launch checks, README, scheduled updates (all done 23 Nov; "done" once the owner shares the link with first real users)
-- [ ] Phase 5: Chat, downloads, accounts, more deep dives
+- [ ] Phase 5: Chat, downloads, accounts, more deep dives (built 24 Nov: Learn page with saved progress, PDF downloads, chat built but off until keys are added, 10 deep dives waiting for approval on /admin)
 
 Notes from the last session (23 Nov 2026): **Data is now in Supabase.** Project `africa-agritech-atlas`, ref `jaexggkukamqyhxtbwlw` (URL `https://jaexggkukamqyhxtbwlw.supabase.co`, not a secret). Ran `supabase/schema.sql`, `seed-1.sql`, `seed-2.sql` through the Management API SQL endpoint (`POST https://api.supabase.com/v1/projects/jaexggkukamqyhxtbwlw/database/query`). Row counts match `data/README.md` exactly (54 / 139 / 76 / 54 / 70 / 68 / 24 / 20 / 1, suggestions 0). The cloud credential for `api.supabase.com` works for this project, but cannot list projects or read API keys, so always use the ref above.
 
@@ -103,3 +104,9 @@ Test data: suggestion 16 ("TEST from Claude: please reject") is left pending for
 **24 Nov:** the owner logged in to /admin (through an emailed link opened before the scanner reached it) and rejected test suggestion 16 from the page; confirmed in the database (both test suggestions now rejected, none pending). The Magic Link email template change in `docs/09-owner-login.md` is still recommended so future logins use a code.
 
 **Owner password login (24 Nov):** Supabase's free plan locks the email templates unless custom SMTP is set up, so the code-in-email plan was dropped. The owner chose a password instead: /admin now logs in with email + password (`signInWithPassword`); the emailed link stays as a backup ("No password yet? Email me a login link"); a "Set or change your password" box (`updateUser`) shows once the owner is logged in. The owner sets the password themselves; Claude never sees it. See `docs/09-owner-login.md`.
+
+**Phase 5 (24 Nov, fifth session):** owner decisions: chat with hard limits; learning progress saved in the browser (no accounts); 10 deep dives chosen by Claude, sent to /admin for approval.
+- `/learn`: 12-week roadmap with tick boxes (localStorage key `atlas_learn`), how groups work, known weak spots (CAADP count computed from data), glossary. In the menu.
+- Downloads: "Download profile as PDF" on country pages and "Download this journey as PDF" in Crop Journeys (print layout in `globals.css` `@media print`; Crop Journeys builds a full write-up of the chosen crop).
+- Chat `/ask` + `/api/ask` (see `docs/10-chat.md`): Anthropic SDK with `PARLEY_BASE_URL`, model `claude-opus-5-5` at low effort, server-side refusal fallback (retries without it if the gateway rejects it), answers only from Atlas records found by word matching (`lib/ask.ts`). Hard caps in Supabase (`supabase/phase5.sql`): daily/monthly spend from real token costs, 10 questions per visitor per day, saved answers for a week. Hidden until `PARLEY_API_KEY` and `SUPABASE_SECRET_KEY` are set in Vercel. Tested locally against a stand-in server (limits, cost, saved answers, fallback retry); never tested against real Parley yet.
+- Deep dives: researched Uganda, Senegal, Zambia, Malawi, Mozambique, Zimbabwe, DR Congo, Cameroon, Tunisia, Burkina Faso. The research agents could not open web pages (network blocked) and ran out of web searches, so every record was confirmed from search results only and Burkina Faso and DR Congo are thin. 219 suggestions are pending on /admin (note "Deep dive: <Country> …"), 22 organizations without a source link were left out, and 3 dates without a source were removed. /admin now has a Group filter and "Approve all in <country>"; approving the country summary (record_type `countries`, owner only) marks the country as a deep dive.

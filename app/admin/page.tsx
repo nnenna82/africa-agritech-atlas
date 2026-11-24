@@ -17,6 +17,7 @@ export default async function AdminPage() {
     policies: list(atlas.policies),
     gaps: list(atlas.gaps),
     benchmarks: list(atlas.benchmarks),
+    countries: atlas.countries.map((c) => ({ id: c.iso3, label: c.name })),
   };
   return (
     <>

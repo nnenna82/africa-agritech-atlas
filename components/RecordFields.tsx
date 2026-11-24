@@ -79,7 +79,7 @@ function FieldInput({
       </label>
     );
 
-  if (f.kind === "textarea" || f.kind === "links")
+  if (f.kind === "textarea" || f.kind === "links" || f.kind === "lines")
     return (
       <div>
         <label htmlFor={id} className={labelCls}>
@@ -88,7 +88,7 @@ function FieldInput({
         {hint}
         <textarea
           id={id}
-          rows={f.kind === "links" ? 2 : 3}
+          rows={f.kind === "links" ? 2 : f.kind === "lines" ? 5 : 3}
           value={str}
           required={required}
           maxLength={1500}

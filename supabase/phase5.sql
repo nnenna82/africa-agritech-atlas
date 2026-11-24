@@ -65,3 +65,14 @@ grant execute on function public.chat_record_cost(numeric) to service_role;
 
 -- Old visitor counts are not needed after a week.
 delete from chat_visitors where day < (now() at time zone 'utc')::date - 7;
+
+-- Deep dives: country summaries can be suggested as corrections to a country (target_id = ISO-3 code),
+-- and approving one marks the country as a deep dive.
+alter table suggestions drop constraint if exists suggestions_record_type_check;
+alter table suggestions add constraint suggestions_record_type_check
+  check (record_type in ('people','startups','organizations','policies','gaps','benchmarks','countries'));
+-- Visitors still cannot suggest country changes directly through the form.
+drop policy if exists "anyone can suggest" on suggestions;
+create policy "anyone can suggest" on suggestions for insert to anon, authenticated
+  with check (status = 'pending' and reviewed_at is null and result_id is null and source_url ~* '^https?://'
+              and record_type <> 'countries');

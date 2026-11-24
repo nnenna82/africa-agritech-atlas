@@ -3,12 +3,13 @@
 
 import { SEGMENTS } from "./chain";
 
-export type RecordType = "people" | "startups" | "organizations" | "policies" | "gaps" | "benchmarks";
+/** "countries" is only used for deep-dive summaries sent to the owner; visitors cannot suggest it. */
+export type RecordType = "people" | "startups" | "organizations" | "policies" | "gaps" | "benchmarks" | "countries";
 
 export type Field = {
   key: string;
   label: string;
-  kind: "text" | "textarea" | "number" | "checkbox" | "country" | "countries" | "select" | "tags" | "links" | "url";
+  kind: "text" | "textarea" | "number" | "checkbox" | "country" | "countries" | "select" | "tags" | "links" | "url" | "lines";
   required?: boolean;
   options?: string[];
   /** For "country": also offer "Continental (all of Africa)". */
@@ -16,6 +17,18 @@ export type Field = {
   hint?: string;
 };
 
+/** Labels for every record type, including country summaries (owner only). */
+export const TYPE_LABELS: Record<RecordType, string> = {
+  people: "Person",
+  startups: "Startup",
+  organizations: "Organization or funder",
+  policies: "Policy or regulation",
+  gaps: "Gap (an unsolved problem)",
+  benchmarks: "Global example",
+  countries: "Country summary (deep dive)",
+};
+
+/** The types a visitor can choose on the suggestion form. */
 export const RECORD_TYPES: { key: RecordType; label: string; one: string }[] = [
   { key: "people", label: "Person", one: "person" },
   { key: "startups", label: "Startup", one: "startup" },
@@ -28,6 +41,12 @@ export const RECORD_TYPES: { key: RecordType; label: string; one: string }[] = [
 export const ORG_TYPES = ["gov", "regulator", "research", "DFI", "investor", "corporate", "NGO", "multilateral"];
 
 export const FIELDS: Record<RecordType, Field[]> = {
+  countries: [
+    { key: "narrative", label: "Why it is where it is", kind: "textarea" },
+    { key: "strengths", label: "Strengths", kind: "lines", hint: "One per line" },
+    { key: "flagship_programs", label: "Flagship programs", kind: "lines", hint: "One per line" },
+    { key: "sources", label: "Sources", kind: "lines", hint: "One link per line" },
+  ],
   people: [
     { key: "name", label: "Name", kind: "text", required: true },
     { key: "role", label: "Role or job title", kind: "text", required: true },
@@ -117,6 +136,12 @@ export function toRecord(type: RecordType, v: Values): Record<string, unknown> {
       if (raw === true) out[f.key] = true;
     } else if (f.kind === "countries" || f.kind === "tags") {
       if (Array.isArray(raw) && raw.length) out[f.key] = raw;
+    } else if (f.kind === "lines") {
+      const list = String(raw ?? "")
+        .split("\n")
+        .map((x) => x.trim())
+        .filter(Boolean);
+      if (list.length) out[f.key] = list;
     } else if (f.kind === "links") {
       const list = String(raw ?? "")
         .split(/\s+/)
@@ -142,7 +167,7 @@ export function toValues(type: RecordType, r: Record<string, unknown>): Values {
     if (x == null) continue;
     if (f.kind === "checkbox") v[f.key] = x === true;
     else if (f.kind === "countries" || f.kind === "tags") v[f.key] = Array.isArray(x) ? x.map(String) : [];
-    else if (f.kind === "links") v[f.key] = Array.isArray(x) ? x.join("\n") : String(x);
+    else if (f.kind === "links" || f.kind === "lines") v[f.key] = Array.isArray(x) ? x.join("\n") : String(x);
     else v[f.key] = String(x);
   }
   return v;

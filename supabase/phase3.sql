@@ -77,8 +77,21 @@ begin
   end if;
 
   tbl := s.record_type;
-  if tbl not in ('people','startups','organizations','policies','gaps','benchmarks') then
+  if tbl not in ('people','startups','organizations','policies','gaps','benchmarks','countries') then
     raise exception 'Unknown record type %', tbl;
+  end if;
+  if tbl = 'countries' then
+    -- Country summaries (deep dives) are always corrections to an existing country, keyed by ISO-3 code.
+    rec := coalesce(edited, s.data) - 'iso3' - 'needs_review' - 'review_note' - 'last_verified';
+    rec := (select coalesce(jsonb_object_agg(key, value), '{}'::jsonb) from jsonb_each(rec)
+            where value not in ('null'::jsonb, '""'::jsonb, '[]'::jsonb));
+    select to_jsonb(c) into existing from countries c where iso3 = s.target_id;
+    if existing is null then raise exception 'No country with code %', s.target_id; end if;
+    rec := existing || rec || jsonb_build_object('deep', true, 'last_verified', current_date, 'needs_review', false, 'review_note', null);
+    delete from countries where iso3 = s.target_id;
+    insert into countries select * from jsonb_populate_record(null::countries, rec);
+    update suggestions set status = 'approved', reviewed_at = now(), result_id = s.target_id where id = sid;
+    return s.target_id;
   end if;
   -- Visitors (and edits) cannot set the review fields directly.
   rec := coalesce(edited, s.data) - 'id' - 'needs_review' - 'review_note' - 'last_verified';

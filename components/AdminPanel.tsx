@@ -9,7 +9,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { refreshAtlas } from "@/app/admin/actions";
 import { date, host } from "@/lib/format";
 import type { CountryLite } from "@/lib/scope";
-import { RECORD_TYPES, recordLabel, toRecord, toValues, type RecordType, type Values } from "@/lib/suggest";
+import { TYPE_LABELS, recordLabel, toRecord, toValues, type RecordType, type Values } from "@/lib/suggest";
 import { supabase } from "@/lib/supabase";
 import type { RecordIndex } from "./SuggestForm";
 import RecordFields, { inputCls } from "./RecordFields";
@@ -29,6 +29,7 @@ type Suggestion = {
 };
 
 const PAGE: Record<RecordType, string> = {
+  countries: "/countries",
   people: "/people",
   startups: "/startups",
   organizations: "/organizations",
@@ -275,9 +276,11 @@ function Review({ session, countries, index }: { session: Session; countries: Co
   const [rows, setRows] = useState<Suggestion[] | null>(null);
   const [tab, setTab] = useState<"pending" | "approved" | "rejected">("pending");
   const [error, setError] = useState<string | null>(null);
+  const [group, setGroup] = useState("");
+  const [bulk, setBulk] = useState<{ done: number; total: number; failed: number } | null>(null);
 
   const load = async () => {
-    const { data, error: err } = await db.from("suggestions").select("*").order("created_at", { ascending: false }).limit(300);
+    const { data, error: err } = await db.from("suggestions").select("*").order("created_at", { ascending: false }).limit(1000);
     if (err) setError(err.message);
     else setRows(data as Suggestion[]);
   };
@@ -289,7 +292,27 @@ function Review({ session, countries, index }: { session: Session; countries: Co
 
   if (error) return <p role="alert" className="mt-6 text-sm">Could not load suggestions: {error}</p>;
   if (!rows) return <p className="mt-6 text-muted">Loading suggestions…</p>;
-  const shown = rows.filter((r) => r.status === tab);
+  // Deep-dive research is sent in batches, one per country; the note starts with "Deep dive: <Country>".
+  const groupOf = (r: Suggestion) => r.note?.match(/^Deep dive: ([^.(]+)/)?.[1].trim() ?? "From visitors";
+  const inTab = rows.filter((r) => r.status === tab);
+  const groups = [...new Set(inTab.map(groupOf))].sort();
+  const activeGroup = groups.includes(group) ? group : "";
+  const shown = inTab.filter((r) => !activeGroup || groupOf(r) === activeGroup);
+
+  async function approveAll() {
+    if (!window.confirm(`Approve and publish all ${shown.length} suggestions in "${activeGroup}"? Spot-check a few sources first.`)) return;
+    setBulk({ done: 0, total: shown.length, failed: 0 });
+    let failed = 0;
+    // Country summaries last, so the country becomes a deep dive once its records are in.
+    const ordered = [...shown].sort((a, b) => Number(a.record_type === "countries") - Number(b.record_type === "countries"));
+    for (let i = 0; i < ordered.length; i++) {
+      const { error: err } = await db.rpc("review_suggestion", { sid: ordered[i].id, decision: "approved", edited: null });
+      if (err) failed++;
+      setBulk({ done: i + 1, total: ordered.length, failed });
+    }
+    await refreshAtlas(session.access_token);
+    await load();
+  }
 
   return (
     <>
@@ -308,6 +331,32 @@ function Review({ session, countries, index }: { session: Session; countries: Co
           </button>
         ))}
       </div>
+      {groups.length > 1 ? (
+        <div className="mt-4 flex flex-wrap items-end gap-3">
+          <label className="text-sm font-medium">
+            Group
+            <select value={activeGroup} onChange={(e) => setGroup(e.target.value)} className={`${inputCls} mt-1 block`}>
+              <option value="">All ({inTab.length})</option>
+              {groups.map((g) => (
+                <option key={g} value={g}>
+                  {g} ({inTab.filter((r) => groupOf(r) === g).length})
+                </option>
+              ))}
+            </select>
+          </label>
+          {tab === "pending" && activeGroup && activeGroup !== "From visitors" ? (
+            <button type="button" onClick={approveAll} disabled={!!bulk && bulk.done < bulk.total} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
+              Approve all {shown.length} in {activeGroup}
+            </button>
+          ) : null}
+        </div>
+      ) : null}
+      {bulk ? (
+        <p className="mt-3 text-sm" role="status">
+          {bulk.done < bulk.total ? `Approving… ${bulk.done} of ${bulk.total}` : `Done: ${bulk.total - bulk.failed} approved`}
+          {bulk.failed ? `, ${bulk.failed} could not be approved (they stay waiting)` : ""}.
+        </p>
+      ) : null}
       {shown.length ? (
         <ul className="mt-6 space-y-6">
           {shown.map((s) => (
@@ -342,7 +391,7 @@ function Item({
   const [values, setValues] = useState<Values>(() => toValues(s.record_type, s.data));
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
-  const typeLabel = RECORD_TYPES.find((r) => r.key === s.record_type)?.label ?? s.record_type;
+  const typeLabel = TYPE_LABELS[s.record_type] ?? s.record_type;
   const targetLabel = s.target_id ? (index[s.record_type].find((r) => r.id === s.target_id)?.label ?? s.target_id) : null;
 
   async function decide(decision: "approved" | "rejected") {
