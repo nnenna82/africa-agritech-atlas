@@ -19,6 +19,7 @@ const LINKS = [
   { href: "/regulation", label: "Regulation", match: ["/regulation"] },
   { href: "/global", label: "Global", match: ["/global"] },
   { href: "/news", label: "News", match: ["/news"] },
+  { href: "/learn", label: "Learn", match: ["/learn"] },
 ] as { href: string; label: string; match: string[]; gold?: boolean }[];
 
 export default function SiteHeader() {

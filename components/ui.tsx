@@ -7,7 +7,7 @@ import { date, host, isUrl } from "@/lib/format";
 
 export function Breadcrumbs({ items }: { items: { label: string; href?: string }[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="mb-3 text-sm">
+    <nav aria-label="Breadcrumb" className="no-print mb-3 text-sm">
       <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
         <li>
           <Link href="/" className="underline-offset-2 hover:underline">

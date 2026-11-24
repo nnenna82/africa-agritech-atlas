@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { CountryCrops } from "@/components/CropJourneys";
 import SuggestBox from "@/components/SuggestBox";
+import PrintButton from "@/components/PrintButton";
 import { GapCard, OrgCard, PersonCard, PolicyCard, StartupCard } from "@/components/cards";
 import { Breadcrumbs, Card, Eyebrow, Kpi, LastChecked, NotEnough, ReviewNote, Section, SourceLinks, TierChip, TierScale } from "@/components/ui";
 import { getAtlas } from "@/lib/data";
@@ -81,7 +82,13 @@ async function CountryContent({ params }: { params: PageProps<"/country/[iso3]">
         {c.recs?.length ? ` · ${c.recs.join(" · ")}` : ""}
         {c.capital ? ` · Capital ${c.capital}` : ""}
       </Eyebrow>
-      <h1 className="mt-2 font-display text-4xl font-bold sm:text-5xl">{c.name}</h1>
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
+        <h1 className="font-display text-4xl font-bold sm:text-5xl">{c.name}</h1>
+        <PrintButton label="Download profile as PDF" />
+      </div>
+      <p className="hidden text-xs text-muted print:block">
+        Africa AgriTech Atlas · africa-agritech-atlas.vercel.app/country/{c.iso3} · Data as of {date(atlas.meta.as_of) ?? "November 2026"}
+      </p>
       {c.deep ? <p className="mt-1 font-mono text-xs text-accent">Deep dive</p> : null}
       <ReviewNote needs={c.needs_review} note={c.review_note} />
 

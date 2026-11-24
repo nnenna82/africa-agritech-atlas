@@ -165,3 +165,46 @@ main {
 main table {
   overflow-wrap: break-word;
 }
+
+/* Printing and "Save as PDF": light colors, no menus, bar, buttons or forms. */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --sunk: #f1f2ee;
+    --fg: #000000;
+    --muted: #3d453f;
+    --line: #c9cec4;
+    --accent: #1f6b4f;
+    --accent-soft: #e6f0ea;
+    --gold: #8a6212;
+    --gold-soft: #f6eedb;
+    --t1: #e3ece1;
+    --t2: #b7d4c1;
+    --t3: #7fb598;
+    --t4: #3f8a67;
+    --t5: #1a5a42;
+    --nodata: #e6e8e2;
+    color-scheme: light;
+  }
+  body > header,
+  body > div:has(form[aria-label="Tailor the Atlas to you"]),
+  .no-print,
+  main aside,
+  a[href^="#main"] {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  section,
+  article,
+  li {
+    break-inside: avoid;
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

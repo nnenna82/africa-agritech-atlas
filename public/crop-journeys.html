@@ -152,6 +152,18 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .done{display:inline-flex;gap:8px;align-items:center;font:600 12px var(--mono);background:var(--gold);color:var(--fg);padding:4px 10px;border-radius:999px;letter-spacing:.04em}
 footer{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
 footer a{overflow-wrap:anywhere}
+
+/* Printing / Save as PDF: show only the full write-up of the chosen crop. */
+#printout{display:none}
+@media print{
+  body *{visibility:hidden}
+  #printout,#printout *{visibility:visible}
+  #printout{display:block;position:absolute;left:0;top:0;width:100%;color:#000;background:#fff;font-size:12pt}
+  #printout h1{font-size:22pt;margin:0 0 6pt}
+  #printout h2{font-size:14pt;margin:14pt 0 4pt}
+  #printout section{break-inside:avoid;border-top:1px solid #ccc;padding-top:6pt}
+  #printout p{margin:3pt 0}
+}
 </style>
 
 <div class="wrap">
@@ -165,6 +177,7 @@ footer a{overflow-wrap:anywhere}
         <button id="lvl-expert" aria-pressed="false">Expert</button>
       </div>
       <span class="small" id="overall"></span>
+      <button class="btn ghost" id="printjourney" type="button">⤓ Download this journey as PDF</button>
     </div>
     <div class="crops" id="crops" role="group" aria-label="Choose a crop"></div>
   </header>
@@ -427,3 +440,27 @@ function fromHash(){const h=location.hash.slice(1);if(CROPS.some(c=>c.id===h)){S
 addEventListener("hashchange",()=>{fromHash();render()});
 fromHash();render();
 </script>
+<script>
+/* "Download this journey as PDF": lay out every stage of the chosen crop, then open the print dialog. */
+(function(){
+  const plain=t=>esc(String(t||"").replace(/\[\[([^\]]+)\]\]/g,"$1"));
+  function build(){
+    const c=crop();
+    const stages=c.stages.map((s,i)=>{
+      const notes=c.compare&&s.vs?c.countries.map(([k,n])=>s.vs[k]?`<p><b>${esc(n)}:</b> ${plain(s.vs[k])}</p>`:"").join("")
+        :c.countries.map(([k,n])=>s.c&&s.c[k]?`<p><b>In ${esc(n)}:</b> ${plain(s.c[k])}</p>`:"").join("");
+      return `<section><h2>Stage ${i+1}: ${esc(s.t)}</h2><p>${plain(s.story)}</p>
+        ${s.who?`<p><b>Who does it:</b> ${esc(s.who)}</p>`:""}<p><b>The number to know:</b> ${esc(s.num)}</p>
+        ${s.v?`<p><b>Where value is added:</b> ${esc(s.v)}</p>`:""}${s.l?`<p><b>Where it leaks:</b> ${esc(s.l)}</p>`:""}
+        ${notes}${s.x?`<p><b>Expert note:</b> ${plain(s.x)}</p>`:""}</section>`}).join("");
+    let box=document.getElementById("printout");
+    if(!box){box=document.createElement("div");box.id="printout";document.body.appendChild(box)}
+    box.innerHTML=`<p>Africa AgriTech Atlas · Crop Journeys · africa-agritech-atlas.vercel.app/crop-journeys.html#${esc(c.id)}</p>
+      <h1>${esc(c.name)}: from seed to shelf</h1><p>${plain(c.intro)}</p>${stages}
+      <section><h2>Sources</h2>${c.src.map(([n,u])=>`<p>${esc(n)}: ${esc(u)}</p>`).join("")}<p>Figures as of November 2026.</p></section>`;
+  }
+  document.getElementById("printjourney").addEventListener("click",()=>{build();window.print()});
+  window.addEventListener("beforeprint",build);
+})();
+</script>
+
