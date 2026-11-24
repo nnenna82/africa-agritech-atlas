@@ -75,7 +75,10 @@ export default function AdminPanel({ countries, index }: { countries: CountryLit
       {owner === null ? (
         <p className="mt-6 text-muted">Checking access…</p>
       ) : owner ? (
-        <Review session={session} countries={countries} index={index} />
+        <>
+          <SetPassword />
+          <Review session={session} countries={countries} index={index} />
+        </>
       ) : (
         <p className="mt-6 rounded-lg bg-gold-soft p-4">
           This account is not the Atlas owner, so it cannot review suggestions. If you are the owner, log out and use
@@ -105,15 +108,29 @@ function linkToken(): { token_hash: string; type: "email" | "magiclink" } | null
 
 function Login() {
   const [email, setEmail] = useState("");
-  const [code, setCode] = useState("");
+  const [password, setPassword] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(linkError);
   const [busy, setBusy] = useState(false);
   const [link, setLink] = useState(linkToken);
 
-  async function send(e: FormEvent) {
+  async function logIn(e: FormEvent) {
     e.preventDefault();
     setError(null);
+    setBusy(true);
+    const { error: err } = await supabase()!.auth.signInWithPassword({ email: email.trim(), password });
+    setBusy(false);
+    if (err)
+      setError(
+        /invalid/i.test(err.message)
+          ? "That email and password do not match. If you have not set a password yet, use the “Email me a login link” button."
+          : `That did not work: ${err.message}`,
+      );
+  }
+
+  async function sendLink() {
+    setError(null);
+    if (!/\S+@\S+\.\S+/.test(email.trim())) return setError("Type your email first, then ask for the link.");
     setBusy(true);
     const { error: err } = await supabase()!.auth.signInWithOtp({
       email: email.trim(),
@@ -124,15 +141,6 @@ function Login() {
     else setSent(true);
   }
 
-  async function verifyCode(e: FormEvent) {
-    e.preventDefault();
-    setError(null);
-    setBusy(true);
-    const { error: err } = await supabase()!.auth.verifyOtp({ email: email.trim(), token: code.replace(/\s/g, ""), type: "email" });
-    setBusy(false);
-    if (err) setError(`That code did not work (${err.message}). Check it, or ask for a new email.`);
-  }
-
   async function useLink() {
     if (!link) return;
     setError(null);
@@ -141,7 +149,7 @@ function Login() {
     setBusy(false);
     window.history.replaceState(null, "", "/admin");
     setLink(null);
-    if (err) setError(`That login link did not work (${err.message}). Links work once and expire after an hour. Please ask for a new one below.`);
+    if (err) setError(`That login link did not work (${err.message}). Please log in with your password, or ask for a new link.`);
   }
 
   const alert = error ? (
@@ -163,42 +171,20 @@ function Login() {
 
   if (sent)
     return (
-      <form onSubmit={verifyCode} className="mt-6 max-w-md space-y-3">
+      <div className="mt-6 max-w-md space-y-3">
         <p className="rounded-lg bg-accent-soft p-4" role="status">
-          <b>Check your email.</b> We sent a message to {email}. Type the code from it below. (Email security checks
-          can use up login links before you click them; the code avoids that.)
+          <b>Check your email.</b> We sent a login link to {email}. Click it <b>straight away</b>, in this browser:
+          email security checks sometimes use links up within a few minutes. If it says the link did not work, ask for
+          a new one.
         </p>
-        <label htmlFor="a-code" className="block text-sm font-medium">
-          Code from the email
-        </label>
-        <input
-          id="a-code"
-          inputMode="numeric"
-          autoComplete="one-time-code"
-          required
-          pattern="[0-9 ]{6,12}"
-          value={code}
-          onChange={(e) => setCode(e.target.value)}
-          className={`${inputCls} font-mono text-lg tracking-widest`}
-        />
-        {alert}
-        <div className="flex flex-wrap gap-3">
-          <button type="submit" disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
-            {busy ? "Checking…" : "Log in"}
-          </button>
-          <button type="button" onClick={() => setSent(false)} className={`${btn} border border-line text-fg`}>
-            Use a different email
-          </button>
-        </div>
-        <p className="text-xs text-muted">
-          No code in the email, only a link? The login email needs a small change in Supabase; see the note in
-          docs/09-owner-login.md.
-        </p>
-      </form>
+        <button type="button" onClick={() => setSent(false)} className={`${btn} border border-line text-fg`}>
+          Back
+        </button>
+      </div>
     );
 
   return (
-    <form onSubmit={send} className="mt-6 max-w-md space-y-3">
+    <form onSubmit={logIn} className="mt-6 max-w-md space-y-3">
       <label htmlFor="a-email" className="block text-sm font-medium">
         Owner email
       </label>
@@ -206,17 +192,81 @@ function Login() {
         id="a-email"
         type="email"
         required
-        autoComplete="email"
+        autoComplete="username"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className={inputCls}
       />
+      <label htmlFor="a-password" className="block text-sm font-medium">
+        Password
+      </label>
+      <input
+        id="a-password"
+        type="password"
+        required
+        autoComplete="current-password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        className={inputCls}
+      />
       {alert}
-      <button type="submit" disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
-        {busy ? "Sending…" : "Email me a login code"}
-      </button>
-      <p className="text-xs text-muted">No password. Only the owner&rsquo;s email can review suggestions.</p>
+      <div className="flex flex-wrap gap-3">
+        <button type="submit" disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
+          {busy ? "Logging in…" : "Log in"}
+        </button>
+        <button type="button" onClick={sendLink} disabled={busy} className={`${btn} border border-line text-fg disabled:opacity-60`}>
+          No password yet? Email me a login link
+        </button>
+      </div>
+      <p className="text-xs text-muted">Only the owner&rsquo;s account can review suggestions.</p>
     </form>
+  );
+}
+
+/** Lets the logged-in owner choose or change their password. The password goes straight to Supabase. */
+function SetPassword() {
+  const [open, setOpen] = useState(false);
+  const [pw, setPw] = useState("");
+  const [pw2, setPw2] = useState("");
+  const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  async function save(e: FormEvent) {
+    e.preventDefault();
+    setMsg(null);
+    if (pw.length < 12) return setMsg({ ok: false, text: "Please use at least 12 characters. A short sentence works well." });
+    if (pw !== pw2) return setMsg({ ok: false, text: "The two passwords do not match." });
+    setBusy(true);
+    const { error } = await supabase()!.auth.updateUser({ password: pw });
+    setBusy(false);
+    if (error) return setMsg({ ok: false, text: `That did not work: ${error.message}` });
+    setPw("");
+    setPw2("");
+    setMsg({ ok: true, text: "Password saved. Next time, log in with your email and this password." });
+  }
+
+  return (
+    <details className="mt-4 max-w-md rounded-lg border border-line bg-surface p-3" open={open} onToggle={(e) => setOpen(e.currentTarget.open)}>
+      <summary className="min-h-11 cursor-pointer py-2 text-sm font-medium">Set or change your password</summary>
+      <form onSubmit={save} className="mt-2 space-y-3">
+        <label htmlFor="p-new" className="block text-sm font-medium">
+          New password <span className="text-muted">(at least 12 characters)</span>
+        </label>
+        <input id="p-new" type="password" autoComplete="new-password" value={pw} onChange={(e) => setPw(e.target.value)} className={inputCls} />
+        <label htmlFor="p-again" className="block text-sm font-medium">
+          Type it again
+        </label>
+        <input id="p-again" type="password" autoComplete="new-password" value={pw2} onChange={(e) => setPw2(e.target.value)} className={inputCls} />
+        {msg ? (
+          <p role={msg.ok ? "status" : "alert"} className={`rounded p-2 text-sm ${msg.ok ? "bg-accent-soft" : "bg-gold-soft"}`}>
+            {msg.text}
+          </p>
+        ) : null}
+        <button type="submit" disabled={busy} className={`${btn} bg-accent text-surface disabled:opacity-60`}>
+          {busy ? "Saving…" : "Save password"}
+        </button>
+      </form>
+    </details>
   );
 }
 

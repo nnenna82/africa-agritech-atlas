@@ -1,38 +1,23 @@
 # Owner login (/admin)
 
-The owner logs in at https://africa-agritech-atlas.vercel.app/admin with a code sent by email. There is no password.
+The owner logs in at https://africa-agritech-atlas.vercel.app/admin with their email and a password they chose. Only the owner's account can review suggestions (the database checks the private `owners` table).
 
-## Why a code, not just a link
+## Why a password
 
-University and work email systems (such as Microsoft's) open every link in incoming email to check it is safe. A normal one-time login link is used up by that check before you click it, and you see "Email link is invalid or has expired". A code you type cannot be used up that way. The link in the email also no longer logs you in by itself: it opens the admin page with a **Log in** button, which security checks do not press.
+The owner's university email system opens every link in incoming email to check it is safe. That uses up one-time login links before the owner can click them ("Email link is invalid or has expired"). Supabase's free plan does not allow changing the login email to carry a code instead (that needs a custom email service, SMTP). A password avoids email altogether.
 
-## One-time setup in Supabase (about 3 minutes)
+## First time: set your password
 
-1. Go to supabase.com, open the **africa-agritech-atlas** project.
-2. Go to **Authentication → Emails** (it may be called **Email Templates**), then open **Magic Link**.
-3. Set **Subject** to:
+1. Log in once with the emailed link: on /admin, type your email and press **No password yet? Email me a login link**. Click the link in the email **straight away**, in the same browser.
+2. On /admin, open **Set or change your password**, type a password of at least 12 characters twice, press **Save password**.
+3. From then on, log in with email + password.
 
-   ```
-   Your Africa AgriTech Atlas login code
-   ```
+The password goes straight from the page to Supabase. It is never stored in the code or seen by Claude.
 
-4. Replace the whole **Body** (message) with:
+## Forgot the password
 
-   ```html
-   <h2>Log in to the Africa AgriTech Atlas</h2>
-   <p>Your login code is:</p>
-   <p style="font-size:28px;font-weight:bold;letter-spacing:4px">{{ .Token }}</p>
-   <p>Type it on the admin page. It works once and expires after an hour.</p>
-   <p>Or open <a href="{{ .SiteURL }}/admin?token_hash={{ .TokenHash }}&type=email">the admin page</a> and press "Log in".</p>
-   <p>If you did not ask for this, you can ignore this email.</p>
-   ```
+Use **Email me a login link** (click it quickly), then set a new password in **Set or change your password**.
 
-5. Press **Save**.
+## Login links that land on another page
 
-This needs the Site URL from Phase 3 (Authentication → URL Configuration → Site URL = `https://africa-agritech-atlas.vercel.app`).
-
-## Logging in
-
-1. Open `/admin`, type your email, press **Email me a login code**.
-2. Type the code from the email and press **Log in**. Or click the link in the email and press **Log in** on the page it opens.
-3. The free email sender allows only a few emails per hour. If one does not arrive, wait a few minutes and check spam.
+`components/AuthRedirect.tsx` forwards any login link that opens another page of the site to /admin. A link to `/admin?token_hash=…` only logs in when the owner presses **Log in** (safe from email scanners), but the default Supabase email does not use that format.

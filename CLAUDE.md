@@ -16,7 +16,7 @@ Owner: Nnenna Madueke (solo project, MIT AI Builder Space). Plain-language expla
 | `docs/06-feedback-log.md` | What testers asked for, and what changed |
 | `docs/07-user-test.md` | The 5-person Phase 2 test: tasks and results sheet |
 | `docs/08-scheduled-updates.md` | The daily news and monthly freshness prompts, and how they write safely |
-| `docs/09-owner-login.md` | How the owner logs in to /admin, and the Supabase email template it needs |
+| `docs/09-owner-login.md` | How the owner logs in to /admin (email + password) |
 | `prompts/` | Copy-paste prompts for each phase |
 | `data/` | All Atlas content as JSON, one file per table |
 | `supabase/schema.sql` | Starting database schema with access rules |
@@ -101,3 +101,5 @@ Test data: suggestion 16 ("TEST from Claude: please reject") is left pending for
 **Owner login fix (23 Nov):** the owner's email provider's security scanner (Microsoft IP addresses, seen in auth.sessions) opened the one-time login links first, so the owner saw "Email link is invalid or has expired". /admin now logs in with the emailed code (`verifyOtp` with the code), or with a link to `/admin?token_hash=…` that only logs in when the owner presses "Log in". `components/AuthRedirect.tsx` forwards login links that land on other pages to /admin. Needs the Magic Link email template change described in `docs/09-owner-login.md` (owner does it in the Supabase dashboard).
 
 **24 Nov:** the owner logged in to /admin (through an emailed link opened before the scanner reached it) and rejected test suggestion 16 from the page; confirmed in the database (both test suggestions now rejected, none pending). The Magic Link email template change in `docs/09-owner-login.md` is still recommended so future logins use a code.
+
+**Owner password login (24 Nov):** Supabase's free plan locks the email templates unless custom SMTP is set up, so the code-in-email plan was dropped. The owner chose a password instead: /admin now logs in with email + password (`signInWithPassword`); the emailed link stays as a backup ("No password yet? Email me a login link"); a "Set or change your password" box (`updateUser`) shows once the owner is logged in. The owner sets the password themselves; Claude never sees it. See `docs/09-owner-login.md`.
