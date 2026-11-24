@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
+import { chatEnabled } from "@/lib/chat-config";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Bar from "@/components/Bar";
@@ -55,7 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <AuthRedirect />
-        <SiteHeader />
+        <SiteHeader chatOn={chatEnabled()} />
         <Bar />
         <main id="main" className="mx-auto w-full min-w-0 max-w-6xl flex-1 px-4 pb-16 pt-6">
           {children}

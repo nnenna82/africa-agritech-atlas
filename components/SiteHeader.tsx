@@ -20,9 +20,10 @@ const LINKS = [
   { href: "/global", label: "Global", match: ["/global"] },
   { href: "/news", label: "News", match: ["/news"] },
   { href: "/learn", label: "Learn", match: ["/learn"] },
-] as { href: string; label: string; match: string[]; gold?: boolean }[];
+  { href: "/ask", label: "Ask the Atlas", match: ["/ask"], chat: true },
+] as { href: string; label: string; match: string[]; gold?: boolean; chat?: boolean }[];
 
-export default function SiteHeader() {
+export default function SiteHeader({ chatOn = false }: { chatOn?: boolean }) {
   const path = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -54,7 +55,7 @@ export default function SiteHeader() {
           className={`${open ? "block" : "hidden"} w-full md:block md:w-auto`}
         >
           <ul className="flex flex-col gap-1 pb-2 md:flex-row md:flex-wrap md:pb-0">
-            {LINKS.map((l) => {
+            {LINKS.filter((l) => !l.chat || chatOn).map((l) => {
               const current = isCurrent(l);
               if (l.gold)
                 return (
